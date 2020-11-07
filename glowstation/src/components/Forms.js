@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./Form.css";
-
+import { Link } from "react-router-dom";
+import "../css/Form.css";
 
 const Forms = (props) => {
   const [hasSubmitted, setSubmitted] = useState(false);
@@ -10,7 +10,6 @@ const Forms = (props) => {
     setSubmitted(true);
     console.log(props.name);
   }
-
 
   return (
     <>
@@ -28,12 +27,16 @@ const Forms = (props) => {
               onChange={(e) => props.setName(e.target.value)}
             />
           </label>
-          <input
-            className="submitb"
-            type="submit"
-            value="submit"
-            disabled={!props.name}
-          />
+          <Link to="/loading">
+            <button
+              className="submitb"
+              type="submit"
+              value="submit"
+              disabled={!props.name}
+            >
+              submit
+            </button>
+          </Link>
         </form>
         {hasSubmitted && (
           <div className="submitm">

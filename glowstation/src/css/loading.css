@@ -1,0 +1,34 @@
+.loadingP {
+    text-align: center;
+    margin-top: 18%;
+    margin-left: -185px;
+
+}
+
+.cirlce {
+    margin-left: -285px;
+    background-color: chocolate;
+    font-size: 550px;
+    height: 150px;
+    width: 150px;
+}
+.App-logo {
+    height: 500px;
+    align-items: center;
+    margin-top: -180px;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-bounce infinite 20s linear;
+    }
+  }
+  
+  @keyframes App-logo-bounce {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
