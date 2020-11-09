@@ -23,7 +23,7 @@ const Loading = () => {
       >
         <span className="sr-only">Loading...</span>
       </Spinner>
-      <h1 className="glow">Loading</h1>
+      <h1 className="glow">Loading.....</h1>
       {redirect && <Redirect to="/home" />}
     </div>
   );
