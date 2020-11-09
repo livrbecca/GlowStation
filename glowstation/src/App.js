@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Forms from "./components/Forms";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Header from "./components/Header";
+//import Header from "./components/Header";
 import Loading from "./components/Loading";
 import Home from './components/Home';
+import Navbar from "./components/Nav";
 
 
 function App() {
@@ -33,7 +34,8 @@ function App() {
       path="/home"
       render={() => (
         <>
-        <Header />
+        {/* <Header /> */}
+        <Navbar />
         <Home name={name} />
         </>
       )}
