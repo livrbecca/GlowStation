@@ -40,11 +40,6 @@ const Forms = (props) => {
             />
           </Link>
         </form>
-        {hasSubmitted && (
-          <div className="submitm">
-            {props.name}? That's a great name. <br /> Ready to glow?
-          </div>
-        )}
       </div>
     </>
   );
