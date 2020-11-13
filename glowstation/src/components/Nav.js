@@ -1,17 +1,17 @@
 import React from "react";
 //import { Link } from "react-router-dom"
-import Nav from 'react-bootstrap/Nav';
+import Nav from "react-bootstrap/Nav";
 import "../css/Nav.css";
-
 
 const Navbar = () => {
   return (
-    <div className="navbar">    
+    <div className="navbar">
+          
       <Nav defaultActiveKey="/home" className="flex-column">
         <Nav.Link href="/home">Home</Nav.Link>
         <Nav.Link eventKey="link-1">Skin Quiz</Nav.Link>
-        <Nav.Link eventKey="link-2">Shop</Nav.Link>
-        <Nav.Link eventKey="link-2">Skin Edcation Station</Nav.Link>
+        <Nav.Link href="/shop">Shop</Nav.Link>
+        <Nav.Link eventKey="link-2">Skin Education Station</Nav.Link>
       </Nav>
     </div>
   );
@@ -27,7 +27,7 @@ export default Navbar;
 //     <React.Fragment>
 //       <div className="navbar">
 //       <Link to="/" className="navlink">
-//       </Link> 
+//       </Link>
 //       <br />
 //       <Link to="/home" className="navlink">
 //         Home
