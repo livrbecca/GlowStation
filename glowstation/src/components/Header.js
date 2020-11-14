@@ -13,7 +13,9 @@ const Header = (props) => {
         <br />
         <Link to="/loading" className="navlink"></Link>
         <br />
-        <Link to="/shop" className="shop"></Link>
+        <Link to="/shop" className="shop">Shop</Link>
+        <br />
+        <Link to="/quiz" className="navlink">Personalised Skin Quiz</Link>
       </div>
     </React.Fragment>
   );

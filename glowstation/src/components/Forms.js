@@ -4,7 +4,7 @@ import "../css/Form.css";
 import Button from "../stories/Button/Button.js";
 
 const Forms = (props) => {
-  const [hasSubmitted, setSubmitted] = useState(false);
+  const [setSubmitted] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -25,6 +25,7 @@ const Forms = (props) => {
               className="inputB"
               type="text"
               value={props.name}
+              // style={{ textTransform: "capitalize" }}
               onChange={(e) => props.setName(e.target.value)}
             />
           </label>

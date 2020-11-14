@@ -45,6 +45,7 @@ h2 {
   box-sizing: border-box;
   text-align: center;
   font-size: 30px;
+  text-transform: capitalize;
 }
 
 .submitb {

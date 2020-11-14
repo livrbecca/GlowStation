@@ -33,7 +33,7 @@
             "hydration": true,
             "hyperigmentaton": false,
             "redness": false,
-            "visablePores": false,
+            "visiblePores": false,
             "dullSkin": true,
             "oilySkin": true,
             "drySkin": true
@@ -110,7 +110,7 @@
             "hydration": false,
             "hyperigmentaton": true,
             "redness": false,
-            "visablePores": true,
+            "visiblePores": true,
             "dullSkin": true,
             "oilySkin": false,
             "drySkin": false
@@ -177,7 +177,7 @@
             "hydration": true,
             "hyperigmentaton": false,
             "redness": true,
-            "visablePores": false,
+            "visiblePores": false,
             "dullSkin": true,
             "oilySkin": true,
             "drySkin": true
@@ -241,7 +241,7 @@
             "hydration": true,
             "hyperigmentaton": true,
             "redness": true,
-            "visablePores": false,
+            "visiblePores": false,
             "dullSkin": true,
             "oilySkin": true,
             "drySkin": true

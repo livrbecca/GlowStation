@@ -7,9 +7,35 @@ import Navbar from "./components/Nav";
 import data from "./models/products.json";
 import Shop from "./components/Shop";
 import Product from "./components/Product";
+import QuizIntro from "./components/QuizIntro";
+import Loading2 from "./components/Loading2";
 
 function App() {
-  const [name, setName] = useState("");
+  const [name, setName] = useLocalStorage("", "");
+  function useLocalStorage(key, initialValue) {
+    const [storedValue, setStoredValue] = useState(() => {
+      try {
+        const item = window.localStorage.getItem(key);
+        return item ? JSON.parse(item) : initialValue;
+      } catch (error) {
+        console.log(error);
+        return initialValue;
+      }
+    });
+
+    const setValue = (value) => {
+      try {
+        const valueToStore =
+          value instanceof Function ? value(storedValue) : value;
+        setStoredValue(valueToStore);
+        window.localStorage.setItem(key, JSON.stringify(valueToStore));
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    return [storedValue, setValue];
+  }
 
   const [products] = useState(data);
 
@@ -42,6 +68,15 @@ function App() {
       />
       <Route
         exact
+        path="/loading2"
+        render={() => (
+          <>
+            <Loading2 />
+          </>
+        )}
+      />
+      <Route
+        exact
         path="/home"
         render={() => (
           <>
@@ -62,6 +97,15 @@ function App() {
                 <Product key={product.id} product={product} />
               ))}
             </div>
+          </>
+        )}
+      />
+      <Route
+        exact
+        path="/quiz"
+        render={() => (
+          <>
+            <QuizIntro name={name} />
           </>
         )}
       />

@@ -25,12 +25,32 @@ h3 {
 }
 
 h4 {
-    font-size: 16px;
-    text-align: center;
+  font-size: 16px;
+  text-align: center;
 }
 
 h2 {
   font-size: 26px;
   font-style: oblique;
-  color: #32004A;
+  color: #32004a;
+}
+
+.buttonArea {
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.btn {
+  background-color: white;
+  border-color: #8b33f0;
+  color: black;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 11px 20px;
+}
+
+.btn:hover {
+  font-size: 18px;
+  background-color: black;
+  color: white;
 }
