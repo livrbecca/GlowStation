@@ -46,7 +46,7 @@ h2 {
 
 .btn {
   background-color: white;
-  border-color: none;
+  border-color: none !important;
   color: black;
   font-weight: bold;
   font-size: 17px;
@@ -55,10 +55,33 @@ h2 {
 
 .btn:hover {
   font-size: 18px;
-  background-color: black;
+  background-color: black !important;
   color: white;
 }
 
-.btn-primary:active {
-  background-color: chartreuse;
+.show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: black !important;
+  border-color: black !important;
+}
+
+.show>.btn-primary.dropdown-toggle:focus {
+  background-color: black !important;
+}
+
+.btn-primary:focus,
+.btn-primary:active:focus,
+.btn-primary:hover {
+  color: #fff;
+  background-color: black !important;
+  border-color: black !important;
+  outline: none !important;
+}
+
+.btn-primary:active,
+.btn-primary:visited {
+  color: #fff;
+  background-color: black !important;
+  border-color: black !important;
+  outline: none !important;
 }
