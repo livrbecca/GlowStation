@@ -21,7 +21,7 @@ const Shop = (props) => {
         
             <DropdownButton
               title="Skin Concern"
-              className=""
+              className="optionButton"
               as={ButtonGroup}
               key={"right"}
               drop={"right"}
@@ -43,10 +43,9 @@ const Shop = (props) => {
             </DropdownButton>
 
             <DropdownButton
-              className=""
+              className="optionButton"
               title="Product Type"
               as={ButtonGroup}
-              key={"right"}
               drop={"right"}
             >
               <Dropdown.Item eventKey="10">Cleansers</Dropdown.Item>
@@ -61,9 +60,8 @@ const Shop = (props) => {
             </DropdownButton>
             <DropdownButton
               title="Skin Type"
-              className=""
+              className="optionButton"
               as={ButtonGroup}
-              key={"right"}
               drop={"right"}
             >
               <Dropdown.Item eventKey="19">Sensitive</Dropdown.Item>
@@ -73,9 +71,8 @@ const Shop = (props) => {
             </DropdownButton>
             <DropdownButton
               title="Brands"
-              className=""
+              className="optionButton"
               as={ButtonGroup}
-              key={"right"}
               drop={"right"}
             >
               <Dropdown.Item eventKey="23">PSA Skin</Dropdown.Item>

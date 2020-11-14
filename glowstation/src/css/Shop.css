@@ -58,3 +58,7 @@ h2 {
   background-color: black;
   color: white;
 }
+
+.btn-primary:active {
+  background-color: chartreuse;
+}
