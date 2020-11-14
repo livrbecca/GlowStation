@@ -40,9 +40,13 @@ h2 {
   margin-top: 15px;
 }
 
+.inner{
+  border:none;
+}
+
 .btn {
   background-color: white;
-  border-color: #8b33f0;
+  border-color: none;
   color: black;
   font-weight: bold;
   font-size: 17px;
