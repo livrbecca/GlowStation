@@ -13,6 +13,7 @@ const Navbar = () => {
         <Nav.Link href="/quiz">Personalised Skin Quiz</Nav.Link>
         </Link>
         <Nav.Link href="/shop">Shop</Nav.Link>
+        <Nav.Link href="/wishlist">Wishlist</Nav.Link>
         <Nav.Link eventKey="link-2">Skin Education Station</Nav.Link>
       </Nav>
     </div>
