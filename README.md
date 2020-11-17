@@ -3,6 +3,7 @@
 This is the start of my personal project for the conclusion of the Black Codher Bootcamp
 
 Getting Started with Create React App
+
 This project was bootstrapped with Create React App.
 
 Available Scripts
