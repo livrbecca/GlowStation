@@ -10,3 +10,5 @@ const QuizIntro = (props) => {
   </div>;
 };
 export default QuizIntro;
+  
+

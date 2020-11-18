@@ -9,6 +9,7 @@ import Shop from "./components/Shop";
 import Product from "./components/Product";
 import QuizIntro from "./components/QuizIntro";
 import Loading2 from "./components/Loading2";
+import ProductPage from "./components/ProductPage";
 
 function App() {
   const [name, setName] = useLocalStorage("", "");
@@ -106,6 +107,16 @@ function App() {
         render={() => (
           <>
             <QuizIntro name={name} />
+          </>
+        )}
+      />
+       <Route
+        exact
+        path="/product"
+        render={() => (
+          <>
+              <Navbar />
+            <ProductPage />
           </>
         )}
       />
