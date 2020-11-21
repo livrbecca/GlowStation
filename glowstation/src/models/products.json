@@ -34,9 +34,7 @@
             "hyperigmentaton": false,
             "redness": false,
             "visiblePores": false,
-            "dullSkin": true,
-            "oilySkin": true,
-            "drySkin": true
+            "dullSkin": true
         },
         "category": {
             "cleansers": false,
@@ -111,9 +109,7 @@
             "hyperigmentaton": true,
             "redness": false,
             "visiblePores": true,
-            "dullSkin": true,
-            "oilySkin": false,
-            "drySkin": false
+            "dullSkin": true
         },
         "category": {
             "cleansers": false,
@@ -178,9 +174,7 @@
             "hyperigmentaton": false,
             "redness": true,
             "visiblePores": false,
-            "dullSkin": true,
-            "oilySkin": true,
-            "drySkin": true
+            "dullSkin": true
         },
         "category": {
             "cleansers": false,
@@ -242,9 +236,7 @@
             "hyperigmentaton": true,
             "redness": true,
             "visiblePores": false,
-            "dullSkin": true,
-            "oilySkin": true,
-            "drySkin": true
+            "dullSkin": true
         },
         "category": {
             "cleansers": false,
