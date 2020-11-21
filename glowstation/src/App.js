@@ -10,6 +10,9 @@ import Product from "./components/Product";
 import QuizIntro from "./components/QuizIntro";
 import Loading2 from "./components/Loading2";
 import ProductPage from "./components/ProductPage";
+import Sidebar from "./components/Sidebar";
+
+
 
 function App() {
   const [name, setName] = useLocalStorage("", "");
@@ -94,6 +97,7 @@ function App() {
             <Navbar />
             <Shop />
             <div className="shopBorder">
+              <Sidebar />
               {products.map((product) => (
                 <Product key={product.id} product={product} />
               ))}

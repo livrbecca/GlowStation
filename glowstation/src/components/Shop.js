@@ -1,14 +1,16 @@
 import React from "react";
 import "../css/Shop.css";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Dropdown from "react-bootstrap/Dropdown";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
+
+
+// import DropdownButton from "react-bootstrap/DropdownButton";
+// import Dropdown from "react-bootstrap/Dropdown";
+// import ButtonGroup from "react-bootstrap/ButtonGroup";
 
 const Shop = (props) => {
   return (
     <div>
-      <div className="buttonArea">
-          <DropdownButton
+      {/* <div className="buttonArea"> */}
+          {/* <DropdownButton
             className="mainButton"
             as={ButtonGroup}
             key={"down"}
@@ -80,9 +82,10 @@ const Shop = (props) => {
               <Dropdown.Item eventKey="25">The Inkey List</Dropdown.Item>
               <Dropdown.Item eventKey="26">COSRX</Dropdown.Item>
             </DropdownButton>
-          </DropdownButton>
-      </div>
+          </DropdownButton> */}
+      {/* </div> */}
       <div className="shopContainer">{props.products}</div>
+    
     </div>
   );
 };

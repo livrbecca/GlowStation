@@ -35,53 +35,11 @@ h2 {
   color: #32004a;
 }
 
-.buttonArea {
-  margin-left: 10px;
-  margin-top: 15px;
-}
 
-.inner{
-  border:none;
-}
 
-.btn {
-  background-color: white;
-  border-color: none !important;
-  color: black;
-  font-weight: bold;
-  font-size: 17px;
-  padding: 11px 20px;
-}
 
-.btn:hover {
-  font-size: 18px;
-  background-color: black !important;
-  color: white;
-}
 
-.show>.btn-primary.dropdown-toggle {
-  color: #fff;
-  background-color: black !important;
-  border-color: black !important;
-}
 
-.show>.btn-primary.dropdown-toggle:focus {
-  background-color: black !important;
-}
 
-.btn-primary:focus,
-.btn-primary:active:focus,
-.btn-primary:hover {
-  color: #fff;
-  background-color: black !important;
-  border-color: black !important;
-  outline: none !important;
-}
 
-.btn-primary:active,
-.btn-primary:visited {
-  color: #fff;
-  background-color: black !important;
-  border-color: black !important;
-  outline: none !important;
-}
+
