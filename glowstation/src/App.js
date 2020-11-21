@@ -12,8 +12,6 @@ import Loading2 from "./components/Loading2";
 import ProductPage from "./components/ProductPage";
 import Sidebar from "./components/Sidebar";
 
-
-
 function App() {
   const [name, setName] = useLocalStorage("", "");
   function useLocalStorage(key, initialValue) {
@@ -114,13 +112,15 @@ function App() {
           </>
         )}
       />
-       <Route
+      <Route
         exact
         path="/product"
         render={() => (
           <>
-              <Navbar />
+            <Navbar />
+            
             <ProductPage />
+            
           </>
         )}
       />

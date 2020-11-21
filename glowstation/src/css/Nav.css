@@ -2,5 +2,12 @@
     background-color: #F2E6FF;
     border-style: solid;
     border-width: 4px;
+}
 
+.navbar a {
+    color: black;
+}
+
+.navbar a:hover{
+    color:#8b33f0;
 }

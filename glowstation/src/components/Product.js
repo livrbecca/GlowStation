@@ -2,21 +2,24 @@ import React from "react";
 import "../css/Shop.css";
 // import ProductPage from "./ProductPage.js";
 import { Link } from "react-router-dom";
+import Button from "../stories/Button/Button.js";
 
 const Product = (props) => {
   let {
     brand,
     name,
-    description: { smallDes },
-    imageLinks: { img1 },
+    priceRange,
+    ingredientList,
+    description: { smallDes, largeDes },
+    soldAt,
+    imageLinks: { img1, img2, img3 },
   } = props.product;
   return (
-    // link to individual product page, link would be props.product Link to
     <Link
       to={{
         pathname: "/product",
         state: {
-          product: props.product
+          product: props.product,
         },
       }}
     >
@@ -25,6 +28,11 @@ const Product = (props) => {
         <h3> {brand}</h3>
         <h2> {name}</h2>
         <h4> {smallDes}</h4>
+        <Button
+        backgroundColor="#F2E6FF"
+        label="View Product"
+        size="medium"
+      />
       </div>
     </Link>
   );

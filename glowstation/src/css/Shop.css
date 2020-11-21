@@ -14,11 +14,21 @@
   padding: 7px;
   text-align: center;
   border-style: solid;
+  border-color: transparent;
   margin-top: 115px;
   margin-right: 11.5px;
   margin-left: 150.5px;
   background-color: white;
+  color: black;
+  
 }
+
+.imgCont:hover {
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+}
+
 
 h3 {
   font-size: 20px;
@@ -32,10 +42,13 @@ h4 {
 h2 {
   font-size: 26px;
   font-style: oblique;
-  color: #32004a;
+  color: black;
 }
 
-
+.storybook-button:hover {
+  color:black;
+  outline-color: black;;
+}
 
 
 
