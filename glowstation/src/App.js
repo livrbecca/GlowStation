@@ -11,7 +11,7 @@ import QuizIntro from "./components/QuizIntro";
 import Loading2 from "./components/Loading2";
 import ProductPage from "./components/ProductPage";
 import Sidebar from "./components/Sidebar";
-import Wishlist from "./components/Wishlist";
+
 
 function App() {
   const [name, setName] = useLocalStorage("", "");
@@ -132,7 +132,7 @@ function App() {
           <>
             <Navbar />
           
-            <Wishlist />
+            
             
           </>
         )}
