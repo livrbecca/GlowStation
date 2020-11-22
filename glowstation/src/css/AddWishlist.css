@@ -6,13 +6,13 @@
 a {
     color:red;
 }
-
-.bi:active {
+/* 
+.bi::after {
     border: solid;
     background-color: red;
     border-width: 1px;
     border-color: red;
-}
+} */
 
 .bi {
     margin-top: -23px;

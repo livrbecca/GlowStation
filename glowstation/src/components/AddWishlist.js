@@ -6,6 +6,9 @@ const AddWishlist = (props) => {
     <>
       <span className="mr-5"></span>
       <svg
+        onClick={() => {
+          console.log("Clicked wishlist icon");
+        }}
         width="1em"
         height="1em"
         viewBox="0 0 16 16"

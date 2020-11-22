@@ -28,17 +28,16 @@ const Sidebar = () => {
                   console.log("button clicked");
                 }}
               >
-                
                 <div id="icondiv">{val.icon}</div>
-                  <DropdownButton className="arrow" title={val.title} key={"right"} drop={"right"}>
-                 
-                  {/* <div id="titlediv">{val.title}</div> */}
-                      {val.topics.map((option) => {
-                          return (
-                            <Dropdown.Item eventKey="1">{option}</Dropdown.Item>
-                          )
-                      })}
-                  
+                <DropdownButton
+                  className="arrow"
+                  title={val.title}
+                  key={"right"}
+                  drop={"right"}
+                >
+                  {val.topics.map((option, index) => {
+                    return <Dropdown.Item key={index}>{option}</Dropdown.Item>;
+                  })}
                 </DropdownButton>
               </li>
             );
