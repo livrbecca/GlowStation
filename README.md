@@ -9,7 +9,7 @@ The quiz will match the users answers with products / a full routine suited to t
 To run the project, in your terminal 
 
 ```
-cd
+cd glowstation
 ```
 into glowstation then 
 
