@@ -7,13 +7,13 @@ const AddWishlist = (props) => {
       <span className="mr-5"></span>
       <svg
         onClick={() => {
-          console.log("Clicked wishlist icon");
+          alert("Added to wishlist");
         }}
         width="1em"
         height="1em"
         viewBox="0 0 16 16"
         className="bi bi-heart"
-        fill="currentColor"
+        fill="currentColor" 
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

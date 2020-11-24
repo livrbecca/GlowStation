@@ -1,0 +1,52 @@
+.white {
+  background-color: transparent;
+  margin-top: 150px;
+}
+
+.pink {
+  background-color: transparent;
+  height: 500px;
+  margin-left: -300px;
+  margin-right: 70px;
+}
+
+.carousel {
+  text-align: center;
+  display: block;
+}
+
+.sliderimg {
+  width: 520px;
+  height: 450px;
+  text-align: center;
+  object-fit: cover;
+}
+
+.alice-carousel__next-btn-item {
+  color: white !important;
+}
+
+.alice-carousel__prev-btn-item {
+    color: white !important;
+  }
+
+.purple {
+  background-color: purple;
+  margin-right: -300px;
+}
+
+.black {
+  background-color: black;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
