@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Button from "../stories/Button/Button.js";
 import Card from "react-bootstrap/Card";
 import AddWishlist from "./AddWishlist";
+import FadeIn from 'react-fade-in';
 
 const Product = (props) => {
   let {
@@ -19,10 +20,9 @@ const Product = (props) => {
 
   return (
     <>
-    
-
+    <FadeIn delay={300} transitionDuration={3000}>
       <div className="imgCont">
-      <AddWishlist />
+        <AddWishlist />
         <Card.Img
           variant="top"
           className="displayPics"
@@ -48,6 +48,7 @@ const Product = (props) => {
           </Link>
         </Card.Body>
       </div>
+      </FadeIn>
     </>
   );
 };

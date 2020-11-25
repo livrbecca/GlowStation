@@ -4,29 +4,22 @@
 }
 
 a {
-    color:red;
+  color: red;
 }
-/* 
-.bi::after {
-    border: solid;
-    background-color: red;
-    border-width: 1px;
-    border-color: red;
-} */
 
 .bi {
-    margin-top: -23px;
-    width: 1.25rem;
-    height: 1.2rem;
+   margin-left: -2px;
+   margin-bottom: 4px;
 }
 
-.bi:hover {
-    border: solid;
-    background-color: red;
-    border-width: 1px;
-    border-color: red;
-    margin-top: -13px;
-    margin-right: 100px;
-    width: 1.45rem;
-    height: 1.6rem;
+.heartbtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.heartbtn:hover {
+  background-color: red;
 }

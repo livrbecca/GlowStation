@@ -14,10 +14,13 @@
     "react-fade-in": "^1.1.1",
     "react-loading": "^2.0.3",
     "react-lottie": "^1.2.3",
+    "react-notification-alert": "0.0.12",
     "react-page-loading": "^1.0.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "react-typing-effect": "^2.0.4",
+    "reveal": "0.0.4",
+    "reveal.js": "file:reveal.js",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
