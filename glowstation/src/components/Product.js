@@ -8,6 +8,7 @@ import AddWishlist from "./AddWishlist";
 import FadeIn from 'react-fade-in';
 
 const Product = (props) => {
+
   let {
     brand,
     name,
@@ -22,7 +23,9 @@ const Product = (props) => {
     <>
     <FadeIn delay={300} transitionDuration={3000}>
       <div className="imgCont">
+        
         <AddWishlist />
+        
         <Card.Img
           variant="top"
           className="displayPics"

@@ -15,6 +15,9 @@ import Sidebar from "./components/Sidebar";
 
 function App() {
   const [name, setName] = useLocalStorage("", "");
+ 
+
+
   function useLocalStorage(key, initialValue) {
     const [storedValue, setStoredValue] = useState(() => {
       try {
@@ -98,7 +101,11 @@ function App() {
             <div className="shopBorder">
               <Sidebar />
               {products.map((product) => (
-                <Product key={product.id} product={product} />
+                <Product
+                  key={product.id}
+                  product={product}
+                  
+                />
               ))}
             </div>
           </>
@@ -119,9 +126,8 @@ function App() {
         render={() => (
           <>
             <Navbar />
-            
+
             <ProductPage />
-            
           </>
         )}
       />
@@ -131,9 +137,11 @@ function App() {
         render={() => (
           <>
             <Navbar />
-          
-            
-            
+
+            <Product
+              name={name}
+             
+            />
           </>
         )}
       />
