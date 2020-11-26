@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&family=Source+Code+Pro&display=swap');
+
 .white {
   background-color: transparent;
   margin-top: 150px;
@@ -27,12 +29,34 @@
 }
 
 .alice-carousel__prev-btn-item {
-    color: white !important;
-  }
+  color: white !important;
+}
 
-.purple {
-  background-color: purple;
+.name {
+  position: relative;
+  top: 60px;
+  font-family: "Original Surfer", cursive;
+  text-align: center;
+}
+
+.brand {
+  font-family: "Original Surfer", cursive;
+  padding-bottom: 60px;
+  position: relative;
+  top: 20px;
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+.descol {
+  background-color: rgb(219, 213, 219);
   margin-right: -300px;
+  height: max-content;
 }
 
 .black {
@@ -40,7 +64,8 @@
 }
 
 .blue {
-  background-color: blue;
+  background-color: rgb(219, 213, 219);
+  width: 140px;
 }
 
 .green {
