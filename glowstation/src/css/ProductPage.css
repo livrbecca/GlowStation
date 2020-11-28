@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Original+Surfer&family=Source+Code+Pro&display=swap');
 
 .white {
-  background-color: transparent;
-  margin-top: 150px;
+  /* background-color: white; */
+  margin-top: 100px;
 }
 
-.pink {
-  background-color: transparent;
+.carouselblock {
+  background-color: white;
   height: 500px;
   margin-left: -300px;
   margin-right: 70px;
+  padding-top: 30px;
+  margin-top: -40px;
+  margin-bottom: 130px;
 }
 
 .carousel {
@@ -24,54 +27,98 @@
   object-fit: cover;
 }
 
-.alice-carousel__next-btn-item {
-  color: white !important;
+.alice-carousel__next-btn-item, .alice-carousel__prev-btn-item {
+  color: black !important;
+  font-weight: bolder;
+  font-size: 1.75rem;
+  
 }
 
-.alice-carousel__prev-btn-item {
-  color: white !important;
+
+.alice-carousel__prev-btn [data-area]::after, .alice-carousel__next-btn [data-area]::after {
+  top: -340px !important;
+}
+
+.alice-carousel__prev-btn-wrapper {
+  width: 50px;
+}
+
+.alice-carousel__next-btn-item {
+  left: 650px;
+}
+
+.alice-carousel__next-btn-wrapper {
+  width: 650px;
+ 
 }
 
 .name {
   position: relative;
-  top: 60px;
+  top: 20px;
   font-family: "Original Surfer", cursive;
   text-align: center;
+  margin-bottom: 40px;
+}
+
+.priceRange {
+  font-size: 1.5rem;
+  color: darkslategrey;
 }
 
 .brand {
   font-family: "Original Surfer", cursive;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   position: relative;
   top: 20px;
   font-size: 25px;
   text-decoration: underline;
 }
 
+.buy {
+  font-family: "Original Surfer", cursive;
+  padding-bottom: 40px;
+  position: relative;
+  top: 20px;
+  font-size: 30px;
+  text-decoration: underline;
+}
+
 .description {
   font-size: 1.5rem;
   margin-bottom: 25px;
+  text-align: justify;
+  padding: 10px;
 }
 
 .descol {
-  background-color: rgb(219, 213, 219);
+  background-color:white;
   margin-right: -300px;
-  height: max-content;
+  height: 700px;
+  margin-top: -40px;
 }
 
 .black {
-  background-color: black;
+  background-color: transparent;
+  margin-bottom:270px;
+  height: 30px;
 }
 
-.blue {
-  background-color: rgb(219, 213, 219);
-  width: 140px;
+.smallDesCol {
+  background-color: white;
+  left: -150px;
+  padding: 20px, 20px;
+  height:100px;
+  top: -235px;
 }
 
-.green {
-  background-color: green;
+.smallDes{
+  font-size: 21px;
+  text-align: justify;
 }
 
-.yellow {
-  background-color: yellow;
+.ingredients {
+  background-color: white;
+  left: -720px;
+  top: -85px;
 }
+

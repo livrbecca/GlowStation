@@ -1,10 +1,16 @@
 import React from "react";
+import Product from "./Product";
 
 
 const Wishlist = (props) => {
   return (
     <>
-      <h2>{props.name}'s Glowing Wishlist</h2>
+      <div>
+        <h2 style={{ textTransform: "capitalize" }}>
+          {props.name}'s Glowing Wishlist
+        </h2>
+        <Product addProduct={props.addProduct} key={props.key} product={props.product} />
+      </div>
     </>
   );
 };

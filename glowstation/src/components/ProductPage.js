@@ -13,47 +13,54 @@ const ProductPage = (props) => {
   let { product } = location.state;
   return (
     <>
-    <h2 className="name">{product.name}</h2>
-    <h2 className="priceRange">{product.priceRange}</h2>
-    <Container>
-      <Row className="white">
-        <Col className="pink">
-          <div className="carousel">
-            <AliceCarousel autoPlay  autoPlayInterval="3000" infinite >
-              <img
-                className="sliderimg"
-                src={product.imageLinks.img1}
-                alt="products"
-              />
+      <h2 className="name">{product.name}</h2>
+      <h3 className="priceRange"> Product Price Range: {product.priceRange}</h3>
+      <Container>
+        <Row className="white">
+          <Col className="carouselblock">
+            <div className="carousel">
+              <AliceCarousel autoPlay autoPlayInterval="3000" infinite>
+                <img
+                  className="sliderimg"
+                  src={product.imageLinks.img1}
+                  alt="products"
+                />
 
-              <img
-                className="sliderimg"
-                src={product.imageLinks.img2}
-                alt="products"
-              />
+                <img
+                  className="sliderimg"
+                  src={product.imageLinks.img2}
+                  alt="products"
+                />
 
-              <img
-                className="sliderimg"
-                src={product.imageLinks.img3}
-                alt="products"
-              />
-            </AliceCarousel>
-          </div>
-        </Col>
-        <Col className="descol">
-        <h2 className="brand">{product.brand}</h2>
-        <div className="descriptionDiv">
-        <h4 className="description">{product.description.largeDes}</h4>
-        </div>
-        </Col>
-      </Row>
-      <Row className="black">
-        <Col className="blue"><h4 className="smallDes">{product.description.smallDes}</h4></Col>
-        <Col className="green"><p>{product.ingredientList}</p></Col>
-        <Col className="yellow"><p>{product.soldAt}</p></Col>
-      </Row>
-    </Container>
-    {/* // <div className="shopContainer"> */}
+                <img
+                  className="sliderimg"
+                  src={product.imageLinks.img3}
+                  alt="products"
+                />
+              </AliceCarousel>
+            </div>
+          </Col>
+          <Col className="descol">
+            <h2 className="brand">{product.brand}</h2>
+            <div className="descriptionDiv">
+              <h4 className="description">{product.description.largeDes}</h4>
+              <br />
+              <h2 className="buy">Where to Buy:</h2>
+              <p>{product.soldAt.join(', ')}</p>
+            </div>
+          </Col>
+        </Row>
+        <Row className="black">
+          <Col className="smallDesCol">
+            <h4 className="smallDes">{product.description.smallDes}</h4>
+          </Col>
+          <Col className="ingredients">
+            <h4>Ingredients</h4>
+            <p>{product.ingredientList.join(", ")}</p>
+          </Col>
+        </Row>
+      </Container>
+      {/* // <div className="shopContainer"> */}
       {/* <Product product={product} />
     //   <h2 className="name">{product.name}</h2>
     //   <h2>{product.brand}</h2>

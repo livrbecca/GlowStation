@@ -11,12 +11,19 @@ import QuizIntro from "./components/QuizIntro";
 import Loading2 from "./components/Loading2";
 import ProductPage from "./components/ProductPage";
 import Sidebar from "./components/Sidebar";
-
+import Wishlist from "./components/Wishlist";
+import AddWishlist from "./components/AddWishlist";
 
 function App() {
   const [name, setName] = useLocalStorage("", "");
- 
 
+  const [wishlist, setWishlist] = useState([]);
+
+  function addProduct(name, id) {
+    const chosenProduct = products.filter((product) => product.id === id);
+    setWishlist([...wishlist, ...chosenProduct]);
+    console.log(wishlist);
+  }
 
   function useLocalStorage(key, initialValue) {
     const [storedValue, setStoredValue] = useState(() => {
@@ -43,7 +50,7 @@ function App() {
     return [storedValue, setValue];
   }
 
-  const [products] = useState(data);
+  const [products, setProducts] = useState(data);
 
   // async function allProducts(value) {
   //   const results = await fetch(`https://WetGrouchyQuotient.liivyylovesyou.repl.co`).then((res) => res.json());
@@ -104,7 +111,7 @@ function App() {
                 <Product
                   key={product.id}
                   product={product}
-                  
+                  addProduct={addProduct}
                 />
               ))}
             </div>
@@ -137,11 +144,18 @@ function App() {
         render={() => (
           <>
             <Navbar />
-
-            <Product
-              name={name}
-             
-            />
+            <div> 
+              {wishlist.map((product)=> (
+                // <Wishlist name={name} addProduct={addProduct} product={product}/>
+                <Product
+                  key={product.id}
+                  product={product}
+                  addProduct={addProduct}
+                />
+              ))}
+            {console.log(name)}
+            {console.log(wishlist)}
+            </div>
           </>
         )}
       />

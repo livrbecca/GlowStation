@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import Button from "../stories/Button/Button.js";
 import Card from "react-bootstrap/Card";
 import AddWishlist from "./AddWishlist";
-import FadeIn from 'react-fade-in';
+import FadeIn from "react-fade-in";
 
 const Product = (props) => {
-
   let {
+    id,
     brand,
     name,
     priceRange,
@@ -21,36 +21,35 @@ const Product = (props) => {
 
   return (
     <>
-    <FadeIn delay={300} transitionDuration={3000}>
-      <div className="imgCont">
-        
-        <AddWishlist />
-        
-        <Card.Img
-          variant="top"
-          className="displayPics"
-          src={img1}
-          alt="products"
-        />
-        <Card.Body>
-          <Card.Subtitle> {brand}</Card.Subtitle>
-          <Card.Title> {name}</Card.Title>
-          <Link
-            to={{
-              pathname: "/product",
-              state: {
-                product: props.product,
-              },
-            }}
-          >
-            <Button
-              backgroundColor="#F2E6FF"
-              label="View Product"
-              size="medium"
-            />
-          </Link>
-        </Card.Body>
-      </div>
+      <FadeIn delay={300} transitionDuration={3000}>
+        <div className="imgCont">
+          <AddWishlist id={id} name={name} addProduct={props.addProduct}/>
+
+          <Card.Img
+            variant="top"
+            className="displayPics"
+            src={img1}
+            alt="products"
+          />
+          <Card.Body>
+            <Card.Subtitle>{brand}</Card.Subtitle>
+            <Card.Title> {name}</Card.Title>
+            <Link
+              to={{
+                pathname: "/product",
+                state: {
+                  product: props.product,
+                },
+              }}
+            >
+              <Button
+                backgroundColor="#F2E6FF"
+                label="View Product"
+                size="medium"
+              />
+            </Link>
+          </Card.Body>
+        </div>
       </FadeIn>
     </>
   );

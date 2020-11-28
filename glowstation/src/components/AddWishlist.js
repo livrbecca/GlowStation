@@ -7,6 +7,12 @@ import Row from "react-bootstrap/Row";
 const AddWishlist = (props) => {
   const [show, setShow] = useState(false);
 
+  function multitask (event) {
+    setShow(true)
+    props.addProduct(props.name, props.id)
+    event.preventDefault();
+  }
+
   return (
     <>
       <Row>
@@ -30,7 +36,7 @@ const AddWishlist = (props) => {
       </Row>
       <span className="mr-5"></span>
 
-      <button onClick={() => setShow(true)} className="heartbtn">
+      <button onClick={(e) => multitask(e)} className="heartbtn">
         <svg
           width="1em"
           height="1em"
