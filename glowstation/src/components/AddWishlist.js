@@ -8,9 +8,9 @@ const AddWishlist = (props) => {
   const [show, setShow] = useState(false);
 
   function multitask (event) {
-    setShow(true)
-    props.addProduct(props.name, props.id)
     event.preventDefault();
+    props.addProduct(props.id)
+    setShow(true)
   }
 
   return (

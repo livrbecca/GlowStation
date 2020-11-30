@@ -16,10 +16,10 @@ import AddWishlist from "./components/AddWishlist";
 
 function App() {
   const [name, setName] = useLocalStorage("", "");
-
+  const [products, setProducts] = useState(data);
   const [wishlist, setWishlist] = useState([]);
 
-  function addProduct(name, id) {
+  function addProduct(id) {
     const chosenProduct = products.filter((product) => product.id === id);
     setWishlist([...wishlist, ...chosenProduct]);
     console.log(wishlist);
@@ -49,8 +49,6 @@ function App() {
 
     return [storedValue, setValue];
   }
-
-  const [products, setProducts] = useState(data);
 
   // async function allProducts(value) {
   //   const results = await fetch(`https://WetGrouchyQuotient.liivyylovesyou.repl.co`).then((res) => res.json());
@@ -145,16 +143,7 @@ function App() {
           <>
             <Navbar />
             <div> 
-              {wishlist.map((product)=> (
-                // <Wishlist name={name} addProduct={addProduct} product={product}/>
-                <Product
-                  key={product.id}
-                  product={product}
-                  addProduct={addProduct}
-                />
-              ))}
-            {console.log(name)}
-            {console.log(wishlist)}
+              <Wishlist name={name} addProduct={addProduct} wishlist={wishlist}/>
             </div>
           </>
         )}

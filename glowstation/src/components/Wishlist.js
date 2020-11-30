@@ -3,16 +3,17 @@ import Product from "./Product";
 
 
 const Wishlist = (props) => {
+  console.log(props.wishlist);
   return (
     <>
-      <div>
-        <h2 style={{ textTransform: "capitalize" }}>
-          {props.name}'s Glowing Wishlist
-        </h2>
-        <Product addProduct={props.addProduct} key={props.key} product={props.product} />
-      </div>
+      <h2 style={{ textTransform: "capitalize" }}>
+        {props.name}'s Glowing Wishlist
+      </h2>
+      {props.wishlist.map((wish)=> (
+        <Product addProduct={props.addProduct} key={wish.id} product={wish} />
+      ))}
     </>
   );
-};
+}
 
 export default Wishlist;
