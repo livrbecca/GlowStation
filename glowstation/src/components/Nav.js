@@ -8,13 +8,13 @@ const Navbar = () => {
     <div className="navbar">
           
       <Nav defaultActiveKey="/home" className="flex-column">
-        <Nav.Link href="/home">Home</Nav.Link>
+        <Link to="/home">Home</Link>
         <Link to="/loading2">
-        <Nav.Link href="/quiz">Personalised Skin Quiz</Nav.Link>
+        <Link to="/quiz">Personalised Skin Quiz</Link>
         </Link>
-        <Nav.Link href="/shop">Shop</Nav.Link>
-        <Nav.Link href="/wishlist">Wishlist</Nav.Link>
-        <Nav.Link href="/product"></Nav.Link>
+        <Link to="/shop">Shop</Link>
+        <Link to="/wishlist">Wishlist</Link>
+        <Link to="/product"></Link>
       </Nav>
     </div>
   );
