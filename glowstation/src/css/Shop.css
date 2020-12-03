@@ -10,7 +10,7 @@
 .imgCont {
   float: left;
   width: 300px;
-  height: 400px;
+  height: 450px;
   padding: 7px;
   text-align: center;
   border-style: solid;
@@ -22,6 +22,23 @@
   background-color: white;
   color: black;
   position: relative;
+}
+.rating span {
+  color: gold;
+  margin: 0.1rem;
+}
+
+.rating span:last-child {
+  color: black;
+}
+.imgCont .rating {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 360px;
+  margin: auto;
 }
 
 .imgCont:hover {
@@ -51,4 +68,9 @@
 
 .h5 {
   font-size: 1.15rem;
+}
+
+a {
+  text-decoration: none;
+  color: black !important;
 }

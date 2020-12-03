@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // import Product from "./Product";
 import "../css/ProductPage.css";
 import Container from "react-bootstrap/Container";
@@ -13,8 +13,9 @@ const ProductPage = (props) => {
   let { product } = location.state;
   return (
     <>
+    <Link className="backtoshop" to="/shop">Back to Shop</Link>
       <h2 className="name">{product.name}</h2>
-      <h3 className="priceRange"> Product Price Range: {product.priceRange}</h3>
+      <h3 className="priceRange">Price: £{product.price}</h3>
       <Container>
         <Row className="white">
           <Col className="carouselblock">
@@ -45,8 +46,6 @@ const ProductPage = (props) => {
             <div className="descriptionDiv">
               <h4 className="description">{product.description.largeDes}</h4>
               <br />
-              <h2 className="buy">Where to Buy:</h2>
-              <p>{product.soldAt.join(', ')}</p>
             </div>
           </Col>
         </Row>

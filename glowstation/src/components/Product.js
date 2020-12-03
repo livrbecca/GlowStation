@@ -6,13 +6,16 @@ import Button from "../stories/Button/Button.js";
 import Card from "react-bootstrap/Card";
 import AddWishlist from "./AddWishlist";
 import FadeIn from "react-fade-in";
+import Rating from "./Rating";
 
 const Product = (props) => {
   let {
     id,
     brand,
     name,
-    priceRange,
+    price,
+    rating,
+    numReviews,
     ingredientList,
     description: { largeDes },
     soldAt,
@@ -23,32 +26,36 @@ const Product = (props) => {
     <>
       <FadeIn delay={300} transitionDuration={3000}>
         <div className="imgCont">
-          <AddWishlist id={id} name={name} addProduct={props.addProduct}/>
-
+          <AddWishlist id={id} name={name} addProduct={props.addProduct} />
           <Card.Img
             variant="top"
             className="displayPics"
             src={img1}
             alt="products"
           />
-          <Card.Body>
-            <Card.Subtitle>{brand}</Card.Subtitle>
-            <Card.Title> {name}</Card.Title>
-            <Link
-              to={{
-                pathname: "/product",
-                state: {
-                  product: props.product,
-                },
-              }}
-            >
+
+          <Link
+            to={{
+              pathname: "/product",
+              state: {
+                product: props.product,
+              },
+            }}
+          >
+            <Card.Body>
+              <Card.Subtitle>{brand}</Card.Subtitle>
+              <Card.Title> {name}</Card.Title>
+
               <Button
                 backgroundColor="#F2E6FF"
                 label="View Product"
                 size="medium"
               />
-            </Link>
-          </Card.Body>
+
+              <br />
+              <Rating rating={rating} numReviews={numReviews} />
+            </Card.Body>
+          </Link>
         </div>
       </FadeIn>
     </>
