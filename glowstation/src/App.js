@@ -12,11 +12,11 @@ import Loading2 from "./components/Loading2";
 import ProductPage from "./components/ProductPage";
 import Sidebar from "./components/Sidebar";
 import Wishlist from "./components/Wishlist";
-// import AddWishlist from "./components/AddWishlist";
+import AddWishlist from "./components/AddWishlist";
 
 function App() {
   const [name, setName] = useLocalStorage("", "");
-  const [products] = useState(data); //setProducts
+  const [products, setProducts] = useState(data);
   const [wishlist, setWishlist] = useState([]);
 
   function addProduct(id) {
