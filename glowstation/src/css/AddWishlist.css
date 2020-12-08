@@ -12,6 +12,12 @@ a {
   margin-bottom: 4px;
 }
 
+.bi-trash-fill {
+  font-size: 19px;
+  position: relative;
+  left: -1px;
+}
+
 .heartbtn {
   position: absolute;
   top: 0;
