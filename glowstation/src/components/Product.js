@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/Shop.css";
 // import ProductPage from "./ProductPage.js";
 import { Link } from "react-router-dom";
@@ -7,7 +7,6 @@ import Card from "react-bootstrap/Card";
 import AddWishlist from "./AddWishlist";
 import FadeIn from "react-fade-in";
 import Rating from "./Rating";
-import RemoveWishlist from "./RemoveWishlist";
 
 const Product = (props) => {
   let {
@@ -23,21 +22,11 @@ const Product = (props) => {
     imageLinks: { img1, img2, img3 },
   } = props.product;
 
-  console.log(props.wishlist);
-  const wishlistId = props.wishlist.map((_) => _.id);
-  console.log(wishlistId);
-  const showHeartButton = wishlistId.includes(id);
-
   return (
     <>
       <FadeIn delay={300} transitionDuration={3000}>
         <div className="imgCont">
-          {!showHeartButton ? (
-            <AddWishlist id={id} name={name} addProduct={props.addProduct} />
-          ) : (
-            <RemoveWishlist removeProduct={props.removeProduct} id={id} />
-          )}
-
+          <AddWishlist id={id} name={name} addProduct={props.addProduct} />
           <Card.Img
             variant="top"
             className="displayPics"
@@ -47,7 +36,7 @@ const Product = (props) => {
 
           <Link
             to={{
-              pathname: `/product/${name}`,
+              pathname: "/product",
               state: {
                 product: props.product,
               },

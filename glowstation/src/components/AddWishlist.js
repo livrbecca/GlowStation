@@ -7,10 +7,10 @@ import Row from "react-bootstrap/Row";
 const AddWishlist = (props) => {
   const [show, setShow] = useState(false);
 
-  function multitask(event) {
+  function multitask (event) {
     event.preventDefault();
-    props.addProduct(props.id);
-    setShow(true);
+    props.addProduct(props.id)
+    setShow(true)
   }
 
   return (
@@ -28,13 +28,12 @@ const AddWishlist = (props) => {
             delay={3000}
             autohide
           >
-            <Toast.Body >
+            <Toast.Body>
               <strong>Added to Wishlist</strong>
             </Toast.Body>
           </Toast>
         </Col>
       </Row>
-
       <span className="mr-5"></span>
 
       <button onClick={(e) => multitask(e)} className="heartbtn">

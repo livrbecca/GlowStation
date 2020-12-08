@@ -12,23 +12,17 @@ import Loading2 from "./components/Loading2";
 import ProductPage from "./components/ProductPage";
 import Sidebar from "./components/Sidebar";
 import Wishlist from "./components/Wishlist";
-//import AddWishlist from "./components/AddWishlist";
+import AddWishlist from "./components/AddWishlist";
 
 function App() {
   const [name, setName] = useLocalStorage("", "");
   const [products, setProducts] = useState(data);
   const [wishlist, setWishlist] = useState([]);
-  console.log(wishlist);
 
   function addProduct(id) {
     const chosenProduct = products.filter((product) => product.id === id);
     setWishlist([...wishlist, ...chosenProduct]);
     console.log(wishlist);
-  }
-
-  function removeProduct(id) {
-    const productRemoved = wishlist.filter((product) => product.id !== id);
-    setWishlist(productRemoved);
   }
 
   function useLocalStorage(key, initialValue) {
@@ -116,8 +110,6 @@ function App() {
                   key={product.id}
                   product={product}
                   addProduct={addProduct}
-                  wishlist={wishlist}
-                  removeProduct={removeProduct}
                 />
               ))}
             </div>
@@ -135,7 +127,7 @@ function App() {
       />
       <Route
         exact
-        path="/product/:name"
+        path="/product"
         render={() => (
           <>
             <Navbar />
@@ -150,8 +142,8 @@ function App() {
         render={() => (
           <>
             <Navbar />
-            <div>
-              <Wishlist name={name} removeProduct={removeProduct} wishlist={wishlist} />
+            <div> 
+              <Wishlist name={name} addProduct={addProduct} wishlist={wishlist}/>
             </div>
           </>
         )}
