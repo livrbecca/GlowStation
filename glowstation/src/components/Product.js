@@ -2,15 +2,17 @@ import React from "react";
 import "../css/Shop.css";
 // import ProductPage from "./ProductPage.js";
 import { Link } from "react-router-dom";
-import Button from "../stories/Button/Button.js";
 import Card from "react-bootstrap/Card";
 import AddWishlist from "./AddWishlist";
 import FadeIn from "react-fade-in";
 import Rating from "./Rating";
+import RemoveWishlist from "./RemoveWishlist";
+//import axios from "axios";
 
 const Product = (props) => {
   let {
     id,
+    slug,
     brand,
     name,
     price,
@@ -22,11 +24,19 @@ const Product = (props) => {
     imageLinks: { img1, img2, img3 },
   } = props.product;
 
+  const wishlistId = props.wishlist.map((_) => _.id);
+  const showHeartButton = wishlistId.includes(id);
+
   return (
     <>
-      <FadeIn delay={300} transitionDuration={3000}>
+      <FadeIn delay={300} transitionDuration={1100}>
         <div className="imgCont">
-          <AddWishlist id={id} name={name} addProduct={props.addProduct} />
+          {!showHeartButton ? (
+            <AddWishlist id={id} name={name} addProduct={props.addProduct} />
+          ) : (
+            <RemoveWishlist removeProduct={props.removeProduct} id={id} />
+          )}
+
           <Card.Img
             variant="top"
             className="displayPics"
@@ -36,7 +46,7 @@ const Product = (props) => {
 
           <Link
             to={{
-              pathname: "/product",
+              pathname: `/product/${slug}`,
               state: {
                 product: props.product,
               },
@@ -46,12 +56,7 @@ const Product = (props) => {
               <Card.Subtitle>{brand}</Card.Subtitle>
               <Card.Title> {name}</Card.Title>
 
-              <Button
-                backgroundColor="#F2E6FF"
-                label="View Product"
-                size="medium"
-              />
-
+              <button className="newb">View Product</button>
               <br />
               <Rating rating={rating} numReviews={numReviews} />
             </Card.Body>

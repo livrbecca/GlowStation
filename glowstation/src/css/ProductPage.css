@@ -54,14 +54,14 @@
 
 .name {
   position: relative;
-  top: 20px;
+  top: 40px;
   font-family: "Original Surfer", cursive;
   text-align: center;
   margin-bottom: 40px;
 }
 
 .priceRange {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: darkslategrey;
 }
 
@@ -74,18 +74,11 @@
   text-decoration: underline;
 }
 
-.buy {
-  font-family: "Original Surfer", cursive;
-  padding-bottom: 40px;
-  position: relative;
-  top: 20px;
-  font-size: 30px;
-  text-decoration: underline;
-}
 
 .description {
   font-size: 1.5rem;
   margin-bottom: 25px;
+  font-family: "Original Surfer", cursive;
   text-align: justify;
   padding: 10px;
 }
@@ -114,11 +107,13 @@
 .smallDes{
   font-size: 21px;
   text-align: justify;
+  font-family: "Original Surfer", cursive;
 }
 
 .ingredients {
   background-color: white;
   left: -720px;
   top: -85px;
+  font-family: "Original Surfer", cursive;
 }
 

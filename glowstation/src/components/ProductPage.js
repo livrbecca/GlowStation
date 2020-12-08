@@ -15,7 +15,6 @@ const ProductPage = (props) => {
     <>
     <Link className="backtoshop" to="/shop">Back to Shop</Link>
       <h2 className="name">{product.name}</h2>
-      <h3 className="priceRange">Price: £{product.price}</h3>
       <Container>
         <Row className="white">
           <Col className="carouselblock">
@@ -42,6 +41,7 @@ const ProductPage = (props) => {
             </div>
           </Col>
           <Col className="descol">
+          <h3 className="priceRange">£{product.price}</h3>
             <h2 className="brand">{product.brand}</h2>
             <div className="descriptionDiv">
               <h4 className="description">{product.description.largeDes}</h4>

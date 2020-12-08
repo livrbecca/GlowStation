@@ -1,6 +1,7 @@
 [
     {
         "id": 0,
+        "slug": "CoQ10Toner",
         "brand": "Indie Lee",
         "name": "CoQ-10 Toner",
         "price": 32,
@@ -62,6 +63,7 @@
     },
     {
         "id": 1,
+        "slug": "HEROINE-Mandelic-and-Licorice-Superfood-Glow-Toner",
         "brand": "PSA Skin",
         "name": "HEROINE Mandelic and Licorice Superfood Glow Toner",
         "price": 28,
@@ -135,6 +137,7 @@
     },
     {
         "id": 2,
+        "slug": "Snow-Mushroom-Moisturiser",
         "brand": "The Inkey List",
         "name": "Snow Mushroom Moisturiser",
         "price": 9,
@@ -198,6 +201,7 @@
     },
     {
         "id": 3,
+        "slug": "Advanced-Snail-96-Mucin-Power-Essence",
         "brand": "COSRX",
         "name": "Advanced Snail 96 Mucin Power Essence",
         "price": 24,

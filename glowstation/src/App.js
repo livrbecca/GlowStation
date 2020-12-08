@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Forms from "./components/Forms";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Loading from "./components/Loading";
 import Home from "./components/Home";
 import Navbar from "./components/Nav";
-import data from "./models/products.json";
+//import data from "./models/products.json";
 import Shop from "./components/Shop";
 import Product from "./components/Product";
 import QuizIntro from "./components/QuizIntro";
@@ -12,17 +12,38 @@ import Loading2 from "./components/Loading2";
 import ProductPage from "./components/ProductPage";
 import Sidebar from "./components/Sidebar";
 import Wishlist from "./components/Wishlist";
-import AddWishlist from "./components/AddWishlist";
+import axios from "axios";
+//import AddWishlist from "./components/AddWishlist";
 
 function App() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      let response = await axios.get(`http://localhost:5000/api/products`);
+      return response.data;
+      // console.log(response.data);
+    };
+    const dataResults = async () => {
+      let res = await fetchData();
+      setProducts(res);
+    };
+
+    dataResults();
+  },[]);
   const [name, setName] = useLocalStorage("", "");
-  const [products, setProducts] = useState(data);
+  //const [products, setProducts] = useState(data);
+
   const [wishlist, setWishlist] = useState([]);
 
   function addProduct(id) {
     const chosenProduct = products.filter((product) => product.id === id);
     setWishlist([...wishlist, ...chosenProduct]);
-    console.log(wishlist);
+  }
+
+  function removeProduct(id) {
+    const productRemoved = wishlist.filter((product) => product.id !== id);
+    setWishlist(productRemoved);
   }
 
   function useLocalStorage(key, initialValue) {
@@ -105,11 +126,14 @@ function App() {
             <Shop />
             <div className="shopBorder">
               <Sidebar />
+
               {products.map((product) => (
                 <Product
                   key={product.id}
                   product={product}
                   addProduct={addProduct}
+                  wishlist={wishlist}
+                  removeProduct={removeProduct}
                 />
               ))}
             </div>
@@ -127,7 +151,7 @@ function App() {
       />
       <Route
         exact
-        path="/product"
+        path="/product/:name"
         render={() => (
           <>
             <Navbar />
@@ -142,8 +166,12 @@ function App() {
         render={() => (
           <>
             <Navbar />
-            <div> 
-              <Wishlist name={name} addProduct={addProduct} wishlist={wishlist}/>
+            <div>
+              <Wishlist
+                name={name}
+                removeProduct={removeProduct}
+                wishlist={wishlist}
+              />
             </div>
           </>
         )}

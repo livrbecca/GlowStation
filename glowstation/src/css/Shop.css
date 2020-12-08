@@ -47,12 +47,12 @@
   border-width: 3px;
 }
 
-.storybook-button:hover {
+.newb:hover {
   color: black;
   outline-color: black;
 }
 
-.imgCont .storybook-button {
+.imgCont .newb {
   display: inline-block;
   position: absolute;
   bottom: 0;

@@ -5,11 +5,11 @@ import { Redirect } from "react-router-dom";
 
 const Loading2 = () => {
   const [redirect, setRedirect] = useState(false);
-  console.log(redirect);
+ 
 
   useEffect(() => {
     setTimeout(() => setRedirect(true), 6000);
-    console.log(redirect);
+    
   }, [redirect]);
 
   return (

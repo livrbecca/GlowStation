@@ -2,12 +2,14 @@
   "name": "glowstation",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
     "@testing-library/user-event": "^12.2.0",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
+    "express": "^4.17.1",
     "react": "^17.0.1",
     "react-alice-carousel": "^2.0.2",
     "react-bootstrap": "^1.4.0",
@@ -59,6 +61,11 @@
     "@storybook/preset-create-react-app": "^3.1.5",
     "@storybook/react": "^6.0.28",
     "babel-loader": "^8.1.0",
+    "nodemon": "^2.0.6",
     "react-is": "^17.0.1"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "reveal.js",
+  "author": "",
+  "license": "ISC"
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/Form.css";
-import Button from "../stories/Button/Button.js";
+
 
 const Forms = (props) => {
   const [setSubmitted] = useState(false);
@@ -30,15 +30,12 @@ const Forms = (props) => {
             />
           </label>
           <Link to="/loading">
-            <Button
+            <button
               className="submitb"
               type="submit"
               value="submit"
               disabled={!props.name}
-              label="Submit"
-              primary
-              size="large"
-            />
+            >Submit</button>
           </Link>
         </form>
       </div>
