@@ -28,6 +28,15 @@
             "oily": true,
             "dry": true
         },
+        "skinConcern222": [
+            "Acne & Blackheads",
+            "Texture",
+            "Brightening & Hyperpigmentation",
+            "Lines & Wrinkles",
+            "Redness",
+            "Visable Pores",
+            "Lines & wrinkles"
+          ],
         "skinConcern": {
             "acne": false,
             "texture": false,
@@ -102,6 +111,15 @@
             "oily": false,
             "dry": true
         },
+        "skinConcern222": [
+            "Acne & Blackheads",
+            "Texture",
+            "Brightening & Hyperpigmentation",
+            "Lines & Wrinkles",
+            "Redness",
+            "Visable Pores",
+            "Lines & wrinkles"
+          ],
         "skinConcern": {
             "acne": true,
             "texture": true,
@@ -166,6 +184,16 @@
             "oily": true,
             "dry": true
         },
+        "skinConcern222": [
+            "Acne & Blackheads",
+            "Texture",
+            "Eye Concerns",
+            "Brightening & Hyperpigmentation",
+            "Lines & Wrinkles",
+            "Redness",
+            "Visable Pores",
+            "Lines & wrinkles"
+          ],
         "skinConcern": {
             "acne": true,
             "texture": false,
@@ -227,6 +255,15 @@
             "oily": true,
             "dry": true
         },
+        "skinConcern222": [
+            "Acne & Blackheads",
+            "Texture",
+            "Brightening & Hyperpigmentation",
+            "Lines & Wrinkles",
+            "Redness",
+            "Visable Pores",
+            "Lines & wrinkles"
+          ],
         "skinConcern": {
             "acne": true,
             "texture": true,

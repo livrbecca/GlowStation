@@ -125,7 +125,7 @@ function App() {
             <Navbar />
             <Shop />
             <div className="shopBorder">
-              <Sidebar />
+              <Sidebar products={products} />
 
               {products.map((product) => (
                 <Product

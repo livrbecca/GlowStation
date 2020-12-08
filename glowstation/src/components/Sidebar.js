@@ -5,7 +5,26 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+
+  const test = (code, topic) => {
+
+    console.log(props.products);
+   const filteredProducts = props.products.filter((product)=> {
+     
+      if (code === "skinConcern" ) {
+          return (
+            product.skinConcern222.includes(topic)
+          ) 
+      }
+      return false
+    });
+    console.log(filteredProducts);
+
+    
+  };
+
+
   return (
     <div>
       <DropdownButton
@@ -36,7 +55,16 @@ const Sidebar = () => {
                   drop={"right"}
                 >
                   {val.topics.map((option, index) => {
-                    return <Dropdown.Item key={index}>{option}</Dropdown.Item>;
+                    return (
+                      <Dropdown.Item
+                        onClick={() => {
+                         test(val.code, option);
+                        }}
+                        key={index}
+                      >
+                        {option}
+                      </Dropdown.Item>
+                    );
                   })}
                 </DropdownButton>
               </li>
