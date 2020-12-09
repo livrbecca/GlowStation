@@ -44,10 +44,13 @@ const ProductPage = (props) => {
               </AliceCarousel>
             </div>
             <div>
-                <p className="ingredients">
-                 <b><u>Ingredient List</u></b> <br /> {product.ingredientList.join(", ")}
-                </p>
-              </div>
+              <p className="ingredients">
+                <b>
+                  <u>Ingredient List</u>
+                </b>{" "}
+                <br /> {product.ingredientList.join(", ")}
+              </p>
+            </div>
           </Col>
           <Col className="descol">
             <h3 className="priceRange">£{product.price}</h3>
@@ -80,9 +83,14 @@ const ProductPage = (props) => {
               <button className="addToCart">Add to Cart</button>
             </div>
             <div className="descriptionDiv">
-              <p className="description">{product.description.largeDes}</p>
+              <p className="description">{product.description.smallDes}</p>
               <Collapsible trigger="More Info >">
-                <p className="description">{product.description.smallDes}</p>
+                <p className="description">{product.description.largeDes}</p>
+              </Collapsible>
+              <Collapsible trigger="How to use >">
+                <p className="description">
+                  add a 'how to use' to the backend json file
+                </p>
               </Collapsible>
             </div>
           </Col>
