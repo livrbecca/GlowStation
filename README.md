@@ -2,17 +2,20 @@
 
 Introduction to my personal project for the Black Codher Bootcamp.
 
-Glow station is an online skincare store which presents users with a range of prices when deciding which products to purchase.
-The website also contains a quiz. The user will answer questions relevant to them, and at the end be presented with a personalised skincare routine based off their quiz answers.
-The quiz will match the users answers with products / a full routine suited to them.
+Glow Station is a skincare E-commerce store with a focus on skin-education. The main feature is the 'Routine Builder', which allows users to answer questions based on their skin type, and the Routine Builder will generate a custom, personalised skincare routine for them to use based off their answers. After recieving their results, users can either add those items directly to cart and checkout, or they can naviagte to the 'Shop' section for more product selection.
 
-To run the project, in your terminal 
+To run the project, in your terminal :
 
 ```
 cd glowstation
-```
-into glowstation then 
 
+npm install
+
+cd backend
+
+npm install
+```
+then in glowstation,
 ```
 npm start
 ```
