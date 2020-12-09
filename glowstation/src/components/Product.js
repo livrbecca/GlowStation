@@ -22,6 +22,7 @@ const Product = (props) => {
     description: { largeDes },
     soldAt,
     imageLinks: { img1, img2, img3 },
+    howTo,
   } = props.product;
 
   const wishlistId = props.wishlist.map((_) => _.id);

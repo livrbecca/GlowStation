@@ -89,7 +89,7 @@ const ProductPage = (props) => {
               </Collapsible>
               <Collapsible trigger="How to use >">
                 <p className="description">
-                  add a 'how to use' to the backend json file
+                  {product.howTo}
                 </p>
               </Collapsible>
             </div>
