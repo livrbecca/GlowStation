@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "slug": "CoQ10Toner",
+        "slug": "CoQ-10-Toner",
         "brand": "Indie Lee",
         "name": "CoQ-10 Toner",
         "price": 32,
@@ -22,44 +22,21 @@
             " Ethylhexylglycerin",
             "Potassium Sorbate"
         ],
-        "skinType": {
-            "sensitive": true,
-            "combination": true,
-            "oily": true,
-            "dry": true
-        },
+        "skinType": [
+            "Sensitive",
+            "Combination",
+            "Oily",
+            "Dry"
+        ],
         "skinConcern222": [
-            "Acne & Blackheads",
-            "Texture",
-            "Brightening & Hyperpigmentation",
             "Lines & Wrinkles",
-            "Redness",
-            "Visable Pores",
-            "Lines & wrinkles"
-          ],
-        "skinConcern": {
-            "acne": false,
-            "texture": false,
-            "blackheads": false,
-            "darkCircles": false,
-            "linesAndWrinkes": true,
-            "hydration": true,
-            "hyperigmentaton": false,
-            "redness": false,
-            "visiblePores": false,
-            "dullSkin": true
-        },
-        "category": {
-            "cleansers": false,
-            "tonersAndEssence": true,
-            "mists": true,
-            "exfoliators": false,
-            "serums": false,
-            "moisturisers": false,
-            "oils": false,
-            "SPF": false,
-            "masks": false
-        },
+            "Hydration",
+            "Brightening & Hyperpigmentation"
+        ],
+        "category": [
+            "Mists",
+            "Toners & Essence"
+        ],
         "description": {
             "smallDes": "Aloe Vera and Hyaluronic acid provide added hydration and help balance the skin's pH level. Skin feels brighter, tighter and generally much perkier after use.",
             "largeDes": "This is the ultimate skin quencher for complexions that often feel tight and uncomfortably dry. It’s good for those with ageing concerns, as its star ingredient - CoQ-10 - works to boost the skin’s natural repair and defence mechanisms for a smoother complexion over time. It also contains hyaluronic acid (an impressive humectant), which works to help the skin retain much-needed moisture, while soothing aloe vera, chamomile and cucumber keep skin calm and contented. Think of this as a skin-softening precursor to your serum or moisturiser."
@@ -105,44 +82,23 @@
             "Xanthan Gum",
             "Sodium Gluconate"
         ],
-        "skinType": {
-            "sensitive": true,
-            "combination": true,
-            "oily": false,
-            "dry": true
-        },
+        "skinType": [
+            "Sensitive",
+            "Combination",
+            "Oily",
+            "Dry"
+        ],
         "skinConcern222": [
             "Acne & Blackheads",
             "Texture",
             "Brightening & Hyperpigmentation",
-            "Lines & Wrinkles",
-            "Redness",
-            "Visable Pores",
-            "Lines & wrinkles"
-          ],
-        "skinConcern": {
-            "acne": true,
-            "texture": true,
-            "blackheads": false,
-            "darkCircles": false,
-            "linesAndWrinkes": false,
-            "hydration": false,
-            "hyperigmentaton": true,
-            "redness": false,
-            "visiblePores": true,
-            "dullSkin": true
-        },
-        "category": {
-            "cleansers": false,
-            "tonersAndEssence": true,
-            "mists": false,
-            "exfoliators": true,
-            "serums": false,
-            "moisturisers": false,
-            "oils": false,
-            "SPF": false,
-            "masks": false
-        },
+            "Dull Skin",
+            "Visable Pores"
+        ],
+        "category": [
+            "Toners & Essence",
+            "Exfoliators"
+        ],
         "description": {
             "smallDes": "This toner gets your pores gleaming with AHAs and botanical extracts, brightens skin tone, calms irritation and blemishes, as well as replenishes moisture.",
             "largeDes": "An exfoliating toner. This toner will be the hero (or heroine) for your skin. Designed to reduce blemishes, refine pores, and enhance your glow, the HEROINE Mandelic and Licorice Superfood Glow Toner uses 6% mandelic and lactic acid, niacinamide, licorice root and botanical extracts to make pores appear tighter and clearer. Perfect for brightening the complexion, calming irritation and replenishing moisture, this toner needs to make an appearance in your routine."
@@ -178,45 +134,19 @@
             "Glyceryl Polyacrylate",
             "Trisodium Ethylenediamine Disuccinate"
         ],
-        "skinType": {
-            "sensitive": true,
-            "combination": true,
-            "oily": true,
-            "dry": true
-        },
+        "skinType": [
+            "Sensitive",
+            "Oily"
+        ],
         "skinConcern222": [
-            "Acne & Blackheads",
-            "Texture",
-            "Eye Concerns",
-            "Brightening & Hyperpigmentation",
+            "Hydration",
             "Lines & Wrinkles",
             "Redness",
-            "Visable Pores",
-            "Lines & wrinkles"
-          ],
-        "skinConcern": {
-            "acne": true,
-            "texture": false,
-            "blackheads": false,
-            "darkCircles": false,
-            "linesAndWrinkes": true,
-            "hydration": true,
-            "hyperigmentaton": false,
-            "redness": true,
-            "visiblePores": false,
-            "dullSkin": true
-        },
-        "category": {
-            "cleansers": false,
-            "tonersAndEssence": false,
-            "mists": false,
-            "exfoliators": false,
-            "serums": false,
-            "moisturisers": true,
-            "oils": false,
-            "SPF": false,
-            "masks": false
-        },
+            "Brightening & Hyperpigmentation"
+        ],
+        "category": [
+            "Moisturisers"
+        ],
         "description": {
             "smallDes": "This super-hydrating, lightweight jelly moisturizer helps to soothe, calm and reduce the appearance of redness, while providing an instant cooling effect on the skin",
             "largeDes": "Discover the boundless benefits of the beauty world’s latest buzz skincare ingredient with The INKEY List’s Snow Mushroom Moisturiser; a multitasking face lotion that deeply hydrates while providing soothing anti-inflammatory properties and promoting collagen production for a cushiony, dewy, glowing complexion. In synergy with a 2% concentration amino acid-based humectant, the formula is supercharged with Snow Mushroom (or Tremella Fuciformis), a jelly-like fungus that has been used in Chinese medicines and skincare for millennia. Its gelatinous structure, combined with high levels of polysaccharide molecules, act similarly to Hyaluronic acid, by binding moisture to the skin, but has the capacity to penetrate even deeper thanks to its smaller molecular structure. Enriched with Madecassoside, an active ingredient derived from the Centella Asiatica plant, offers anti-itching and anti-irritation powers to calm redness and sensitivities."
@@ -249,44 +179,21 @@
             "Carbomer",
             "Phenoxyethanol"
         ],
-        "skinType": {
-            "sensitive": true,
-            "combination": true,
-            "oily": true,
-            "dry": true
-        },
+        "skinType": [
+            "Sensitive",
+            "Combination",
+            "Oily",
+            "Dry"
+        ],
         "skinConcern222": [
-            "Acne & Blackheads",
-            "Texture",
             "Brightening & Hyperpigmentation",
             "Lines & Wrinkles",
-            "Redness",
-            "Visable Pores",
-            "Lines & wrinkles"
-          ],
-        "skinConcern": {
-            "acne": true,
-            "texture": true,
-            "blackheads": false,
-            "darkCircles": false,
-            "linesAndWrinkes": true,
-            "hydration": true,
-            "hyperigmentaton": true,
-            "redness": true,
-            "visiblePores": false,
-            "dullSkin": true
-        },
-        "category": {
-            "cleansers": false,
-            "tonersAndEssence": true,
-            "mists": false,
-            "exfoliators": false,
-            "serums": false,
-            "moisturisers": true,
-            "oils": false,
-            "SPF": false,
-            "masks": false
-        },
+            "Hydration"
+        ],
+        "category": [
+            "Toners & Essence",
+            "Serums"
+        ],
         "description": {
             "smallDes": "Absorbing almost instantly to hydrate, soothe and moisturise - perfect when your skin is in need of a little pick-me-up",
             "largeDes": "This COSRX Advanced Snail 96 Mucin Power Essence comprises 96% of skin friendly snail secretion filtrate that is effective at repairing damaged skin, improving skin elasticity and maintaining hydration level all day long. It only contains essential ingredients, that nourish, repair and revitalise the skin."

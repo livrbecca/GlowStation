@@ -39,10 +39,4 @@ export const SidebarData = [
     icon: <img src="skintype.png" className="icon" alt="concern icon" />,
     topics: ["Sensitive", "Oily", "Dry", "Combination"],
   },
-  {
-    title: "Brands",
-    code: "brand",
-    icon: <img src="brands.png" className="icon" alt="brands icon" />,
-    topics: ["Indie Lee", "PSA Skin", "The Inkey List", "COSRX"],
-  },
 ];
