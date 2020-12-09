@@ -14,9 +14,39 @@
   width: 450px;
   height: 650px;
   position: relative;
-  left: 790px;
+  left: 730px;
 }
 
 .advert1:hover {
   border: 0.5rem gold solid;
+}
+
+.advert2 {
+  width: 400px;
+  height: 450px;
+  position: relative;
+  top: -584px;
+  left: 130px;
+}
+
+.advert2:hover,
+.advert3:hover,
+.advert4:hover {
+  border: 0.5rem gold solid;
+}
+
+.advert3 {
+  width: 510px;
+  height: 310px;
+  position: relative;
+  left: 1350px;
+  top: -1154px;
+}
+
+.advert4 {
+  width: 510px;
+  height: 310px;
+  position: relative;
+  left: 1350px;
+  top: -1128px;
 }

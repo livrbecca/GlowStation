@@ -22,6 +22,21 @@ const Home = (props) => {
           <img className="advert1" src="advert3.png" alt="advert" />
         </AliceCarousel>
       </Link>
+      <div className="shopAd">
+        <Link to="/shop">
+          <img className="advert2" src="advert4.png" alt="snail mucin" />
+        </Link>
+      </div>
+      <div className="shopAd2">
+        <Link to="/shop">
+          <img className="advert3" src="advert5.png" alt="Allies of Skin Cleanser" />
+        </Link>
+      </div>
+      <div className="shopAd3">
+        <Link to="/shop">
+          <img className="advert4" src="advert6.png" alt="Serums" />
+        </Link>
+      </div>
     </div>
   );
 };
