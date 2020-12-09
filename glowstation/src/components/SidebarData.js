@@ -12,7 +12,8 @@ export const SidebarData = [
       "Brightening & Hyperpigmentation",
       "Lines & Wrinkles",
       "Redness",
-      "Visable Pores",
+      "Visible Pores",
+      "Hydration",
     ],
   },
   {

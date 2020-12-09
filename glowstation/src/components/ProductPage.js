@@ -43,24 +43,32 @@ const ProductPage = (props) => {
                 />
               </AliceCarousel>
             </div>
+            <div>
+                <p className="ingredients">
+                 <b><u>Ingredient List</u></b> <br /> {product.ingredientList.join(", ")}
+                </p>
+              </div>
           </Col>
           <Col className="descol">
             <h3 className="priceRange">£{product.price}</h3>
             <h2 className="brand">{product.brand}</h2>
+            <div className="status">Status: </div>
+            <div>
+              {product.countInStock > 0 ? (
+                <span className="success">In Stock</span>
+              ) : (
+                <span className="danger">Unavailable</span>
+              )}
+            </div>
             <div className="infoArea">
-              <div className="status">Status: </div>
-              <div>
-                {product.countInStock > 0 ? (
-                  <span className="success">In Stock</span>
-                ) : (
-                  <span className="danger">Unavailable</span>
-                )}
-              </div>
-
               <div className="qtyArea">
-                <div>Qty</div>
+                <div className="qty">Qty:</div>
                 <div>
-                  <select value={qty} onChange={(e) => setQty(e.target.value)}>
+                  <select
+                    className="num"
+                    value={qty}
+                    onChange={(e) => setQty(e.target.value)}
+                  >
                     {[...Array(product.countInStock).keys()].map((x) => (
                       <option key={x + 1} value={x + 1}>
                         {x + 1}
@@ -72,14 +80,9 @@ const ProductPage = (props) => {
               <button className="addToCart">Add to Cart</button>
             </div>
             <div className="descriptionDiv">
-              <Collapsible trigger="Description >">
-                <p className="description">{product.description.largeDes}</p>
-              </Collapsible>
+              <p className="description">{product.description.largeDes}</p>
               <Collapsible trigger="More Info >">
                 <p className="description">{product.description.smallDes}</p>
-              </Collapsible>
-              <Collapsible trigger="Ingredients >">
-                <p className="description">{product.ingredientList.join(", ")}</p>
               </Collapsible>
             </div>
           </Col>

@@ -34,9 +34,9 @@
             "Brightening & Hyperpigmentation",
             "Lines & Wrinkles",
             "Redness",
-            "Visable Pores",
+            "Visible Pores",
             "Lines & wrinkles"
-          ],
+        ],
         "skinConcern": {
             "acne": false,
             "texture": false,
@@ -117,9 +117,9 @@
             "Brightening & Hyperpigmentation",
             "Lines & Wrinkles",
             "Redness",
-            "Visable Pores",
+            "Visible Pores",
             "Lines & wrinkles"
-          ],
+        ],
         "skinConcern": {
             "acne": true,
             "texture": true,
@@ -191,9 +191,9 @@
             "Brightening & Hyperpigmentation",
             "Lines & Wrinkles",
             "Redness",
-            "Visable Pores",
+            "Visible Pores",
             "Lines & wrinkles"
-          ],
+        ],
         "skinConcern": {
             "acne": true,
             "texture": false,
@@ -261,9 +261,9 @@
             "Brightening & Hyperpigmentation",
             "Lines & Wrinkles",
             "Redness",
-            "Visable Pores",
+            "Visible Pores",
             "Lines & wrinkles"
-          ],
+        ],
         "skinConcern": {
             "acne": true,
             "texture": true,

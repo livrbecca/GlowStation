@@ -58,6 +58,7 @@
   font-family: "Solway", serif;
   text-align: center;
   margin-bottom: 40px;
+  font-size: 3rem;
 }
 
 .priceRange {
@@ -90,8 +91,6 @@
 
 .Collapsible__contentInner {
   background-color: rgb(131, 125, 125, 0.2);
-  
-
 }
 
 .infoArea {
@@ -111,7 +110,7 @@
 .descol {
   background-color: rgb(255, 255, 255, 0.4);
   margin-right: -300px;
-  height: 700px;
+  height: fit-content;
   margin-top: -40px;
   top: 66px;
 }
@@ -138,7 +137,61 @@
 
 .ingredients {
   background-color: white;
-  left: -720px;
-  top: -85px;
+  position: relative;
+  top: -65px;
+  padding: 9px;
+  left: 49px;
   font-family: "Solway", serif;
+}
+
+.addToCart {
+  border-radius: 0.3rem;
+  padding: 0.9rem;
+  border: 0.2rem rgba(39, 243, 12, 0.1) solid;
+  font-size: 1rem;
+  font-weight: bolder;
+  font-family: "Solway", serif;
+  background-color: rgb(255, 215, 0);
+}
+
+.addToCart:hover {
+  border: 0.1rem green solid;
+}
+
+.num {
+  font-size: 20px;
+  padding: 3px;
+  position: relative;
+  left: 79px;
+  top: -11px;
+}
+
+.qty {
+  font-weight: bolder;
+  position: relative;
+  font-size: 1rem;
+  top: 15px;
+  left: 39px;
+}
+
+.success {
+  color: green;
+  font-weight: bolder;
+  font-family: "Solway", serif;
+}
+
+.danger {
+  color: red;
+  font-weight: bolder;
+  font-family: "Solway", serif;
+}
+
+.backtoshop {
+  font-weight: bolder;
+  font-family: "Solway", serif;
+  font-size: 1.5rem;
+}
+
+.backtoshop:hover {
+  color: gold;
 }
