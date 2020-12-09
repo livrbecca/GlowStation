@@ -1,4 +1,22 @@
 .welcomeMessage {
-    margin: auto;
-    margin-top: 90px;
+  margin: auto;
+  margin-top: 90px;
+}
+
+.alice-carousel__next-btn-item,
+.alice-carousel__prev-btn-item {
+  color: black !important;
+  font-weight: bolder;
+  font-size: 1.75rem;
+}
+
+.advert1 {
+  width: 450px;
+  height: 650px;
+  position: relative;
+  left: 790px;
+}
+
+.advert1:hover {
+  border: 0.5rem gold solid;
 }
