@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&family=Source+Code+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Solway&display=swap");
 
 .white {
   /* background-color: white; */
@@ -6,13 +6,14 @@
 }
 
 .carouselblock {
-  background-color: white;
+  background-color: transparent;
   height: 500px;
   margin-left: -300px;
   margin-right: 70px;
   padding-top: 30px;
   margin-top: -40px;
   margin-bottom: 130px;
+  top: 35px;
 }
 
 .carousel {
@@ -27,15 +28,15 @@
   object-fit: cover;
 }
 
-.alice-carousel__next-btn-item, .alice-carousel__prev-btn-item {
+.alice-carousel__next-btn-item,
+.alice-carousel__prev-btn-item {
   color: black !important;
   font-weight: bolder;
   font-size: 1.75rem;
-  
 }
 
-
-.alice-carousel__prev-btn [data-area]::after, .alice-carousel__next-btn [data-area]::after {
+.alice-carousel__prev-btn [data-area]::after,
+.alice-carousel__next-btn [data-area]::after {
   top: -340px !important;
 }
 
@@ -49,13 +50,12 @@
 
 .alice-carousel__next-btn-wrapper {
   width: 650px;
- 
 }
 
 .name {
   position: relative;
   top: 40px;
-  font-family: "Original Surfer", cursive;
+  font-family: "Solway", serif;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -66,7 +66,7 @@
 }
 
 .brand {
-  font-family: "Original Surfer", cursive;
+  font-family: "Solway", serif;
   padding-bottom: 40px;
   position: relative;
   top: 20px;
@@ -74,46 +74,71 @@
   text-decoration: underline;
 }
 
+.descriptionDiv {
+  position: relative;
+  top: -55px;
+}
+
+.Collapsible__trigger {
+  color: white;
+  font-family: "Solway", serif;
+  font-size: 25px;
+  background-color: slateblue;
+  text-decoration: underline;
+  text-decoration: underline;
+}
+
+.Collapsible__contentInner {
+  background-color: rgb(131, 125, 125, 0.2);
+  
+
+}
+
+.infoArea {
+  position: relative;
+  left: 610px;
+  top: -90px;
+}
 
 .description {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 25px;
-  font-family: "Original Surfer", cursive;
+  font-family: "Solway", serif;
   text-align: justify;
   padding: 10px;
 }
 
 .descol {
-  background-color:white;
+  background-color: rgb(255, 255, 255, 0.4);
   margin-right: -300px;
   height: 700px;
   margin-top: -40px;
+  top: 66px;
 }
 
 .black {
   background-color: transparent;
-  margin-bottom:270px;
+  margin-bottom: 270px;
   height: 30px;
 }
 
 .smallDesCol {
-  background-color: white;
+  background-color: rgb(255, 255, 255, 0.4);
   left: -150px;
   padding: 20px, 20px;
-  height:100px;
+  height: 100px;
   top: -235px;
 }
 
-.smallDes{
+.smallDes {
   font-size: 21px;
   text-align: justify;
-  font-family: "Original Surfer", cursive;
+  font-family: "Solway", serif;
 }
 
 .ingredients {
   background-color: white;
   left: -720px;
   top: -85px;
-  font-family: "Original Surfer", cursive;
+  font-family: "Solway", serif;
 }
-

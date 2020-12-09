@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 // import Product from "./Product";
 import "../css/ProductPage.css";
@@ -7,13 +7,17 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import Collapsible from "react-collapsible";
 
 const ProductPage = (props) => {
+  const [qty, setQty] = useState(1);
   let location = useLocation();
   let { product } = location.state;
   return (
     <>
-    <Link className="backtoshop" to="/shop">Back to Shop</Link>
+      <Link className="backtoshop" to="/shop">
+        Back to Shop
+      </Link>
       <h2 className="name">{product.name}</h2>
       <Container>
         <Row className="white">
@@ -41,21 +45,43 @@ const ProductPage = (props) => {
             </div>
           </Col>
           <Col className="descol">
-          <h3 className="priceRange">£{product.price}</h3>
+            <h3 className="priceRange">£{product.price}</h3>
             <h2 className="brand">{product.brand}</h2>
-            <div className="descriptionDiv">
-              <h4 className="description">{product.description.largeDes}</h4>
-              <br />
+            <div className="infoArea">
+              <div>Status: </div>
+              <div>
+                {product.countInStock > 0 ? (
+                  <span className="success">In Stock</span>
+                ) : (
+                  <span className="danger">Unavailable</span>
+                )}
+              </div>
+
+              <div className="row">
+                <div>Qty</div>
+                <div>
+                  <select value={qty} onChange={(e) => setQty(e.target.value)}>
+                    {[...Array(product.countInStock).keys()].map((x) => (
+                      <option key={x + 1} value={x + 1}>
+                        {x + 1}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+              <button className="primary block">Add to Cart</button>
             </div>
-          </Col>
-        </Row>
-        <Row className="black">
-          <Col className="smallDesCol">
-            <h4 className="smallDes">{product.description.smallDes}</h4>
-          </Col>
-          <Col className="ingredients">
-            <h4>Ingredients</h4>
-            <p>{product.ingredientList.join(", ")}</p>
+            <div className="descriptionDiv">
+              <Collapsible trigger="Description >">
+                <p className="description">{product.description.largeDes}</p>
+              </Collapsible>
+              <Collapsible trigger="More Info >">
+                <p className="description">{product.description.smallDes}</p>
+              </Collapsible>
+              <Collapsible trigger="Ingredients >">
+                <p className="description">{product.ingredientList.join(", ")}</p>
+              </Collapsible>
+            </div>
           </Col>
         </Row>
       </Container>
