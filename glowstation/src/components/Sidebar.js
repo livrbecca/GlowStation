@@ -6,24 +6,15 @@ import Dropdown from "react-bootstrap/Dropdown";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 
 const Sidebar = (props) => {
-
   const test = (code, topic) => {
-
-    console.log(props.products);
-   const filteredProducts = props.products.filter((product)=> {
-     
-      if (code === "skinConcern" ) {
-          return (
-            product.skinConcern222.includes(topic)
-          ) 
+    const filteredProducts = props.products.filter((product) => {
+      if (code === "skinConcern") {
+        return product.skinConcern222.includes(topic);
       }
-      return false
+      return false;
     });
     console.log(filteredProducts);
-
-    
   };
-
 
   return (
     <div>
@@ -40,13 +31,7 @@ const Sidebar = (props) => {
         <ul className="SidebarList">
           {SidebarData.map((val, key) => {
             return (
-              <li
-                key={key}
-                className="row"
-                onClick={() => {
-                  console.log("button clicked");
-                }}
-              >
+              <li key={key} className="row" onClick={() => {}}>
                 <div id="icondiv">{val.icon}</div>
                 <DropdownButton
                   className="arrow"
@@ -58,7 +43,7 @@ const Sidebar = (props) => {
                     return (
                       <Dropdown.Item
                         onClick={() => {
-                         test(val.code, option);
+                          test(val.code, option);
                         }}
                         key={index}
                       >

@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export const SidebarData = [
   {
     title: "Skin Concern",
@@ -14,7 +13,6 @@ export const SidebarData = [
       "Lines & Wrinkles",
       "Redness",
       "Visable Pores",
-      "Lines & wrinkles",
     ],
   },
   {
