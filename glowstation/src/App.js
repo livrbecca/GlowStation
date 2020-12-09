@@ -30,7 +30,7 @@ function App() {
     };
 
     dataResults();
-  },[]);
+  }, []);
   const [name, setName] = useLocalStorage("", "");
   //const [products, setProducts] = useState(data);
 

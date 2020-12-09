@@ -6,10 +6,14 @@ import Dropdown from "react-bootstrap/Dropdown";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 
 const Sidebar = (props) => {
-  const test = (code, topic) => {
+  const filterBy = (code, topic) => {
     const filteredProducts = props.products.filter((product) => {
       if (code === "skinConcern") {
         return product.skinConcern222.includes(topic);
+      } else if (code === "category") {
+        return product.category.includes(topic);
+      } else if (code === "skinType") {
+        return product.skinType.includes(topic);
       }
       return false;
     });
@@ -43,7 +47,7 @@ const Sidebar = (props) => {
                     return (
                       <Dropdown.Item
                         onClick={() => {
-                          test(val.code, option);
+                          filterBy(val.code, option);
                         }}
                         key={index}
                       >
