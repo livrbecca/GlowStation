@@ -48,7 +48,7 @@ const ProductPage = (props) => {
             <h3 className="priceRange">£{product.price}</h3>
             <h2 className="brand">{product.brand}</h2>
             <div className="infoArea">
-              <div>Status: </div>
+              <div className="status">Status: </div>
               <div>
                 {product.countInStock > 0 ? (
                   <span className="success">In Stock</span>
@@ -57,7 +57,7 @@ const ProductPage = (props) => {
                 )}
               </div>
 
-              <div className="row">
+              <div className="qtyArea">
                 <div>Qty</div>
                 <div>
                   <select value={qty} onChange={(e) => setQty(e.target.value)}>
@@ -69,7 +69,7 @@ const ProductPage = (props) => {
                   </select>
                 </div>
               </div>
-              <button className="primary block">Add to Cart</button>
+              <button className="addToCart">Add to Cart</button>
             </div>
             <div className="descriptionDiv">
               <Collapsible trigger="Description >">

@@ -18,6 +18,20 @@ import axios from "axios";
 function App() {
   const [products, setProducts] = useState([]);
 
+  const filterBy = (code, topic) => {
+    const filteredProducts = products.filter((product) => {
+      if (code === "skinConcern") {
+        return product.skinConcern222.includes(topic);
+      } else if (code === "category") {
+        return product.category.includes(topic);
+      } else if (code === "skinType") {
+        return product.skinType.includes(topic);
+      }
+      return false;
+    });
+    console.log(filteredProducts);
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       let response = await axios.get(`http://localhost:5000/api/products`);
@@ -32,8 +46,6 @@ function App() {
     dataResults();
   }, []);
 
-
-  
   const [name, setName] = useLocalStorage("", "");
   //const [products, setProducts] = useState(data);
 
@@ -128,7 +140,7 @@ function App() {
             <Navbar />
             <Shop />
             <div className="shopBorder">
-              <Sidebar products={products} />
+              <Sidebar filterBy={filterBy} />
 
               {products.map((product) => (
                 <Product
