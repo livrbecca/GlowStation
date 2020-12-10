@@ -34,20 +34,20 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      let response = await axios.get(`http://localhost:5000/api/products`);
+      let response = await axios.get(`http://localhost:5000/products`);
+      console.log(response.data);
       return response.data;
-      // console.log(response.data);
     };
     const dataResults = async () => {
       let res = await fetchData();
-      setProducts(res);
+      console.log(res);
+      setProducts(res.products);
     };
 
     dataResults();
   }, []);
 
   const [name, setName] = useLocalStorage("", "");
-  //const [products, setProducts] = useState(data);
 
   const [wishlist, setWishlist] = useState([]);
 
