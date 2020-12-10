@@ -2,6 +2,9 @@ const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
 const { MONGO_URI } = require("./config");
 const app = express();
+const cors = require("cors");
+
+app.use(cors());
 
 const uri = MONGO_URI;
 const client = new MongoClient(uri, {

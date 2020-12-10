@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Solway&display=swap");
 
+body {
+  overflow: scroll;
+}
+
 .white {
   /* background-color: white; */
   margin-top: 100px;
@@ -97,6 +101,7 @@
   position: relative;
   left: 610px;
   top: -90px;
+  width: 130px;
 }
 
 .description {
@@ -104,7 +109,7 @@
   margin-bottom: 25px;
   font-family: "Solway", serif;
   text-align: justify;
-  padding: 10px;
+  padding: 4px;
 }
 
 .descol {
@@ -156,13 +161,14 @@
 
 .addToCart:hover {
   border: 0.1rem green solid;
+  transition: all 0.3s ease;
 }
 
 .num {
   font-size: 20px;
   padding: 3px;
   position: relative;
-  left: 79px;
+  left: 51px;
   top: -11px;
 }
 
@@ -171,7 +177,7 @@
   position: relative;
   font-size: 1rem;
   top: 15px;
-  left: 39px;
+  left: 17px;
 }
 
 .success {
@@ -190,8 +196,11 @@
   font-weight: bolder;
   font-family: "Solway", serif;
   font-size: 1.5rem;
+  text-decoration: none !important;
 }
 
 .backtoshop:hover {
-  color: gold;
+  background-color: black !important;
+  color: white !important;
+  text-decoration: underline !important;
 }

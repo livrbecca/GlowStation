@@ -19,6 +19,7 @@
 
 .advert1:hover {
   border: 0.5rem gold solid;
+  transition: all 0.3s ease;
 }
 
 .advert2 {
@@ -33,6 +34,7 @@
 .advert3:hover,
 .advert4:hover {
   border: 0.5rem gold solid;
+  transition: all 0.3s ease;
 }
 
 .advert3 {
@@ -49,4 +51,31 @@
   position: relative;
   left: 1350px;
   top: -1128px;
+}
+
+/* 
+train animation */
+
+.train {
+  position: absolute;
+  top: 119px;
+  left: 539px;
+  /* bottom: -105px; */
+  height: 217px;
+  width: 1500px;
+  right: 0px;
+  background: url(https://docs.google.com/uc?export=download&id=0B2PO2Lr7Bv2QandQOVZSTjBETGs);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  animation: move-train 14s linear infinite;
+}
+
+ @keyframes move-train {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2990px);
+  }
 }
