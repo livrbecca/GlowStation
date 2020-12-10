@@ -60,7 +60,7 @@ app.get("/products/category/:category", async (req, res) => {
 
 // By Skin type
 
-app.get("/products/skintype/:skinType", async (req, res) => {
+app.get("/products/skinType/:skinType", async (req, res) => {
   const matchingSkinType = await client
     .db("glow")
     .collection("products")
@@ -75,7 +75,7 @@ app.get("/products/skintype/:skinType", async (req, res) => {
 
 // By Concern
 
-app.get("/products/concern/:skinConcern222", async (req, res) => {
+app.get("/products/skinConcern/:skinConcern222", async (req, res) => {
   const matchingConcern = await client
     .db("glow")
     .collection("products")

@@ -13,34 +13,30 @@ import ProductPage from "./components/ProductPage";
 import Sidebar from "./components/Sidebar";
 import Wishlist from "./components/Wishlist";
 import axios from "axios";
+
 //import AddWishlist from "./components/AddWishlist";
 
 function App() {
   const [products, setProducts] = useState([]);
 
-  const filterBy = (code, topic) => {
-    const filteredProducts = products.filter((product) => {
-      if (code === "skinConcern") {
-        return product.skinConcern222.includes(topic);
-      } else if (code === "category") {
-        return product.category.includes(topic);
-      } else if (code === "skinType") {
-        return product.skinType.includes(topic);
-      }
-      return false;
-    });
-    console.log(filteredProducts);
+  const filterBy = async (code, topic) => {
+    let response = await axios.get(
+      `http://localhost:5000/products/${code}/${topic}`
+    );
+    console.log(response);
+
+    setProducts(response.data.data);
   };
 
   useEffect(() => {
     const fetchData = async () => {
       let response = await axios.get(`http://localhost:5000/products`);
-      console.log(response.data);
+
       return response.data;
     };
     const dataResults = async () => {
       let res = await fetchData();
-      console.log(res);
+
       setProducts(res.products);
     };
 

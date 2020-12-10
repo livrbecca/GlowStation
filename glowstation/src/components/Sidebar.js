@@ -5,10 +5,8 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 
+
 const Sidebar = (props) => {
-
-
-
   return (
     <div>
       <DropdownButton
@@ -32,15 +30,15 @@ const Sidebar = (props) => {
                   key={"right"}
                   drop={"right"}
                 >
-                  {val.topics.map((option, index) => {
+                  {val.topics.map((topic, index) => {
                     return (
                       <Dropdown.Item
                         onClick={() => {
-                         props.filterBy(val.code, option);
+                          props.filterBy(val.code, topic);
                         }}
                         key={index}
                       >
-                        {option}
+                        {topic}
                       </Dropdown.Item>
                     );
                   })}

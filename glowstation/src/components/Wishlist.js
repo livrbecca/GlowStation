@@ -2,7 +2,7 @@ import React from "react";
 import Product from "./Product";
 
 const Wishlist = (props) => {
-  console.log(props.wishlist);
+  
 
   return (
     <div>
