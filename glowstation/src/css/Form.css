@@ -75,4 +75,25 @@ h2 {
   padding-top: 30px;
 }
 
+.train {
+  position: absolute;
+  top: 830px;
+  height: 217px;
+  width: 1500px;
+  right: 0px;
+  background: url(https://docs.google.com/uc?export=download&id=0B2PO2Lr7Bv2QandQOVZSTjBETGs);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  animation: move-train 10s linear infinite;
+}
+
+ @keyframes move-train {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1890px);
+  }
+}
 

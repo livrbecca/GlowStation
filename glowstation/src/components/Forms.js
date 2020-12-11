@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/Form.css";
 
-
 const Forms = (props) => {
   const [setSubmitted] = useState(false);
 
@@ -14,6 +13,7 @@ const Forms = (props) => {
 
   return (
     <>
+      <div class="train"></div>
       <div className="formP">
         <form onSubmit={(e) => handleSubmit(e)}>
           <label>
@@ -35,7 +35,9 @@ const Forms = (props) => {
               type="submit"
               value="submit"
               disabled={!props.name}
-            >Submit</button>
+            >
+              Submit
+            </button>
           </Link>
         </form>
       </div>

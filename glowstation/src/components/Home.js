@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Home = (props) => {
   return (
     <>
-      <div class="train"></div>
+     
 
       <div className="welcomeMessage">
             

@@ -56,26 +56,3 @@
 /* 
 train animation */
 
-.train {
-  position: absolute;
-  top: 119px;
-  left: 539px;
-  /* bottom: -105px; */
-  height: 217px;
-  width: 1500px;
-  right: 0px;
-  background: url(https://docs.google.com/uc?export=download&id=0B2PO2Lr7Bv2QandQOVZSTjBETGs);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: contain;
-  animation: move-train 14s linear infinite;
-}
-
- @keyframes move-train {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-2990px);
-  }
-}
