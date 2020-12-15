@@ -23,8 +23,8 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
-  
     console.log("we are in addToCart");
+   
     setCart([...cart, product]);
   };
 
@@ -133,7 +133,7 @@ function App() {
         render={() => (
           <>
             <Navbar cart={cart} />
-            <CartScreen cart={cart} />
+            <CartScreen cart={cart} addToCart={addToCart} />
           </>
         )}
       />
@@ -162,7 +162,7 @@ function App() {
                   key={product.id}
                   product={product}
                   addProduct={addProduct}
-                  addToCart={addToCart} 
+                  addToCart={addToCart}
                   wishlist={wishlist}
                   removeProduct={removeProduct}
                 />
