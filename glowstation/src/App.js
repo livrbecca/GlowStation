@@ -19,12 +19,13 @@ import CartScreen from "./components/CartScreen";
 
 function App() {
   const [products, setProducts] = useState([]);
+
   const [cart, setCart] = useState([]);
 
-  const addToCart = (product, id) => {
+  const addToCart = (product) => {
+  
     console.log("we are in addToCart");
-    const addedProduct = products.filter((product) => product.id === id);
-    setCart([...cart, addedProduct]);
+    setCart([...cart, product]);
   };
 
   const filterBy = async (code, topic) => {
@@ -132,7 +133,7 @@ function App() {
         render={() => (
           <>
             <Navbar cart={cart} />
-            <CartScreen cart={cart}/>
+            <CartScreen cart={cart} />
           </>
         )}
       />
@@ -151,7 +152,7 @@ function App() {
         path="/shop"
         render={() => (
           <>
-            <Navbar cart={cart}/>
+            <Navbar cart={cart} />
             <Shop />
             <div className="shopBorder">
               <Sidebar filterBy={filterBy} />
@@ -184,9 +185,9 @@ function App() {
         path="/product/:name"
         render={() => (
           <>
-            <Navbar cart={cart}/>
+            <Navbar cart={cart} />
 
-            <ProductPage addToCart={addToCart} />
+            <ProductPage cart={cart} addToCart={addToCart} />
           </>
         )}
       />
