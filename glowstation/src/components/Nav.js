@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import "../css/Nav.css";
 
-const Navbar = () => {
+
+const Navbar = (props) => {
   return (
     <div className="navbar">
       <Link to="/home">
@@ -15,6 +16,7 @@ const Navbar = () => {
         <Link to="/loading2">Routine Builder</Link>
         <Link to="/shop">Shop</Link>
         <Link to="/wishlist">Wishlist</Link>
+        <Link to="/cart">Cart ({props.cart.length})</Link>
         <Link to="/product"></Link>
       </Nav>
     </div>

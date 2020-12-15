@@ -13,11 +13,19 @@ import ProductPage from "./components/ProductPage";
 import Sidebar from "./components/Sidebar";
 import Wishlist from "./components/Wishlist";
 import axios from "axios";
+import CartScreen from "./components/CartScreen";
 
 //import AddWishlist from "./components/AddWishlist";
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (product, id) => {
+    console.log("we are in addToCart");
+    const addedProduct = products.filter((product) => product.id === id);
+    setCart([...cart, addedProduct]);
+  };
 
   const filterBy = async (code, topic) => {
     let response = await axios.get(
@@ -120,10 +128,20 @@ function App() {
       />
       <Route
         exact
+        path="/cart"
+        render={() => (
+          <>
+            <Navbar cart={cart} />
+            <CartScreen cart={cart}/>
+          </>
+        )}
+      />
+      <Route
+        exact
         path="/home"
         render={() => (
           <>
-            <Navbar />
+            <Navbar cart={cart} />
             <Home name={name} />
           </>
         )}
@@ -133,7 +151,7 @@ function App() {
         path="/shop"
         render={() => (
           <>
-            <Navbar />
+            <Navbar cart={cart}/>
             <Shop />
             <div className="shopBorder">
               <Sidebar filterBy={filterBy} />
@@ -143,6 +161,7 @@ function App() {
                   key={product.id}
                   product={product}
                   addProduct={addProduct}
+                  addToCart={addToCart} 
                   wishlist={wishlist}
                   removeProduct={removeProduct}
                 />
@@ -165,9 +184,9 @@ function App() {
         path="/product/:name"
         render={() => (
           <>
-            <Navbar />
+            <Navbar cart={cart}/>
 
-            <ProductPage />
+            <ProductPage addToCart={addToCart} />
           </>
         )}
       />
@@ -176,7 +195,7 @@ function App() {
         path="/wishlist"
         render={() => (
           <>
-            <Navbar />
+            <Navbar cart={cart} />
             <div>
               <Wishlist
                 name={name}

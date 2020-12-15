@@ -13,6 +13,7 @@ const ProductPage = (props) => {
   const [qty, setQty] = useState(1);
   let location = useLocation();
   let { product } = location.state;
+
   return (
     <>
       <Link className="backtoshop" to="/shop">
@@ -80,7 +81,12 @@ const ProductPage = (props) => {
                   </select>
                 </div>
               </div>
-              <button className="addToCart">Add to Cart</button>
+              <button
+                className="addToCart"
+                onClick={() => props.addToCart(product)}
+              >
+                Add to Cart
+              </button>
             </div>
             <div className="descriptionDiv">
               <p className="description">{product.description.smallDes}</p>
@@ -88,9 +94,7 @@ const ProductPage = (props) => {
                 <p className="description">{product.description.largeDes}</p>
               </Collapsible>
               <Collapsible trigger="How to use >">
-                <p className="description">
-                  {product.howTo}
-                </p>
+                <p className="description">{product.howTo}</p>
               </Collapsible>
             </div>
           </Col>
