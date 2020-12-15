@@ -28,6 +28,8 @@ h1 {
   font-weight: 500;
   line-height: 1;
   margin-top: 35px;
+  position: relative;
+  top: -50px;
 }
 
 .startButton:hover {
@@ -37,4 +39,40 @@ h1 {
   border-width: 2px;
   border-radius: 18px;
   border-color: gold;
+ 
+}
+
+.train {
+  position: absolute;
+  top: 830px;
+  height: 217px;
+  width: 1500px;
+  right: -690px;
+  background: url(https://docs.google.com/uc?export=download&id=0B2PO2Lr7Bv2QandQOVZSTjBETGs);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  animation: move-train 14s linear infinite;
+}
+
+ @keyframes move-train {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-3190px);
+  }
+}
+
+.aboard {
+  font-weight: lighter;
+  font-style: italic;
+  position: relative;
+  top: -100px;
+  font-size: 1.9rem;
+}
+
+.quiztitle{
+  position: relative;
+  top: -50px;
 }

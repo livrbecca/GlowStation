@@ -26,6 +26,7 @@ connect();
 app.use(cors());
 
 app.get("/products", async (req, res) => {
+  
   // use glowstation; db.products; find all
   const allProducts = await client
     .db("glow")

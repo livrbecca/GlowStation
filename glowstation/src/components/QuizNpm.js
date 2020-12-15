@@ -1,8 +1,8 @@
-// import Quiz from "react-quiz-component";
+//import Quiz from "react-quiz-component";
 // import { Link } from "react-router-dom";
 // import React from "react";
 
-const quiz = {
+export const quiz = {
   quizTitle:
     "Routine Builder. findOne the perfect skincare routine right for you!",
   quizSynopsis:
@@ -15,11 +15,15 @@ const quiz = {
       answers: ["Oily", "Dry", "Combination", "Sensitive"],
       correctAnswer: [1, 2, 3, 4],
       point: "20",
-      // should generate a cleanser, moisturiser and SPF that matches the skin type, be stored in a variablwe ready to be displayed at the end
+      // should generate a cleanser, moisturiser and SPF that matches the skin type, be stored in a variable ready to be displayed at the end
       // the filter command in Mongodb would be:
-      // db.products.findOne({$and:[{"category":"Cleansers"},{"skinType":"Oily"}]});
+      // db.products.findOne({$and:[{"category":"Cleansers"},{"skinType":"Dry"}]});
       // db.products.findOne({$and:[{"category":"Moisturisers"},{"skinType":"${case}"}]});
       // db.products.findOne({$and:[{"category":"SPF"},{"skinType":"${case}"}]});
+      // http://localhost:5000/products?category=SPF&skinType=Oily
+      // http://localhost:5000/products?category=SPF,Cleanesers, Mosterisure&skinType=Oily
+
+
     },
     {
       question:
@@ -41,7 +45,7 @@ const quiz = {
       // answer should be stored in a variable
       // serums, toner, exfoliator
       // db.products.findOne({$and:[{"category":"Serums"},{"skinConcern":"Acne & Blackheads"}]});
-      // db.products.findOne({$and:[{"category":"Serums"},{"skinConcern":"${case}"}]});
+   
     },
     {
       question:
@@ -63,7 +67,7 @@ const quiz = {
       // answer should be stored in a variable
       // serums, toner, exfoliator
       // db.products.findOne({$and:[{"category":"Toners & Mists"},{"skinConcern":"Acne & Blackheads"}]});
-      // db.products.findOne({$and:[{"category":"Toners & Mists"},{"skinConcern":"${case}"}]});
+      
     },
     {
       question: "Select a final skin concern you would like to address.",
@@ -84,7 +88,7 @@ const quiz = {
       // answer should be stored in a variable
       // serums, toner, exfoliator
       // db.products.findOne({$and:[{"category":"Exfoliators"},{"skinConcern":"Brightening & Hyperpigmentation"}]});
-      // db.products.findOne({$and:[{"category":"Exfoliators"},{"skinConcern":"${case}"}]});
+      
     },
   ],
   appLocale: {
@@ -100,4 +104,3 @@ const quiz = {
   },
 };
 
-export default quiz;

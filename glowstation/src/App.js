@@ -15,6 +15,7 @@ import Wishlist from "./components/Wishlist";
 import axios from "axios";
 import CartScreen from "./components/CartScreen";
 import Wrapper from "./components/Wrapper";
+import QuizContainer from "./components/QuizContainer";
 
 //import AddWishlist from "./components/AddWishlist";
 
@@ -178,6 +179,15 @@ function App() {
         render={() => (
           <>
             <Wrapper name={name} />
+          </>
+        )}
+      />
+        <Route
+        exact
+        path="/routinebuilder"
+        render={() => (
+          <>
+            <QuizContainer />
           </>
         )}
       />
