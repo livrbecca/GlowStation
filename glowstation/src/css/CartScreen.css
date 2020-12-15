@@ -1,0 +1,25 @@
+.picture {
+  width: 170px;
+  height: 169px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  position: relative;
+  left: 930px;
+  top: -140px;
+}
+
+.row1 {
+  background-color: rgb(243, 221, 225);
+  font-size: 24px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+}

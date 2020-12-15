@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/Wrapper.css";
 import { Link } from "react-router-dom";
+import QuizContainer from "./QuizContainer";
 
 const Wrapper = (props) => {
   return (
@@ -13,7 +14,7 @@ const Wrapper = (props) => {
           {props.name}'s Routine Builder
         </h1>
         <h2>Answer these questions as accurately as possible</h2>
-        <button className="startButton" type="submit" onClick={() => {}}>
+        <button className="startButton" type="submit">
           Lets Glow!
         </button>
       </div>

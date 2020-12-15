@@ -27,7 +27,7 @@ const Home = (props) => {
           </AliceCarousel>
         </Link>
         <div className="shopAd">
-          <Link to="/shop">
+          <Link to=''>
             <img className="advert2" src="advert4.png" alt="snail mucin" />
           </Link>
         </div>

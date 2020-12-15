@@ -20,7 +20,6 @@ const Product = (props) => {
     numReviews,
     ingredientList,
     description: { largeDes },
-    soldAt,
     imageLinks: { img1, img2, img3 },
     howTo,
   } = props.product;
@@ -62,7 +61,10 @@ const Product = (props) => {
               <Rating rating={rating} numReviews={numReviews} />
             </Card.Body>
           </Link>
-          <button className="addTo" onClick={() => props.addToCart()}>
+          <button
+            className="addTo"
+            onClick={() => props.addToCart(props.product)}
+          >
             Add to Cart
             <svg
               xmlns="http://www.w3.org/2000/svg"

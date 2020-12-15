@@ -1,6 +1,6 @@
-import Quiz from "react-quiz-component";
-import { Link } from "react-router-dom";
-import React from "react";
+// import Quiz from "react-quiz-component";
+// import { Link } from "react-router-dom";
+// import React from "react";
 
 const quiz = {
   quizTitle:
@@ -66,8 +66,7 @@ const quiz = {
       // db.products.findOne({$and:[{"category":"Toners & Mists"},{"skinConcern":"${case}"}]});
     },
     {
-      question:
-        "Select a final skin concern you would like to address.",
+      question: "Select a final skin concern you would like to address.",
       questionType: "text",
       answerSelectionType: "single",
       answers: [
@@ -88,6 +87,17 @@ const quiz = {
       // db.products.findOne({$and:[{"category":"Exfoliators"},{"skinConcern":"${case}"}]});
     },
   ],
+  appLocale: {
+    landingHeaderText: "<questionLength> Questions",
+    question: "Question",
+    startQuizBtn: "Start Quiz",
+    resultFilterAll: "All",
+    resultFilterCorrect: "Correct",
+    resultFilterIncorrect: "Incorrect",
+    nextQuestionBtn: "Next",
+    resultPageHeaderText:
+      "Next Stop - Your results!",
+  },
 };
 
 export default quiz;

@@ -14,8 +14,6 @@ const ProductPage = (props) => {
   let location = useLocation();
   let { product } = location.state;
 
-
-
   return (
     <>
       <Link className="backtoshop" to="/shop">
@@ -85,7 +83,7 @@ const ProductPage = (props) => {
               </div>
               <button
                 className="addToCart"
-                onClick={() => props.addToCart(props.id)}
+                onClick={() => props.addToCart(product)}
               >
                 Add to Cart
               </button>

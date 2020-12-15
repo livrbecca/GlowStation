@@ -7,13 +7,14 @@ import Navbar from "./components/Nav";
 //import data from "./models/products.json";
 import Shop from "./components/Shop";
 import Product from "./components/Product";
-import QuizIntro from "./components/QuizIntro";
+
 import Loading2 from "./components/Loading2";
 import ProductPage from "./components/ProductPage";
 import Sidebar from "./components/Sidebar";
 import Wishlist from "./components/Wishlist";
 import axios from "axios";
 import CartScreen from "./components/CartScreen";
+import Wrapper from "./components/Wrapper";
 
 //import AddWishlist from "./components/AddWishlist";
 
@@ -23,8 +24,8 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
-    console.log("we are in addToCart");
-   
+    console.log("we are in addToCart", product);
+
     setCart([...cart, product]);
   };
 
@@ -133,7 +134,7 @@ function App() {
         render={() => (
           <>
             <Navbar cart={cart} />
-            <CartScreen cart={cart} addToCart={addToCart} />
+            <CartScreen cart={cart} />
           </>
         )}
       />
@@ -176,7 +177,7 @@ function App() {
         path="/quiz"
         render={() => (
           <>
-            <QuizIntro name={name} />
+            <Wrapper name={name} />
           </>
         )}
       />
