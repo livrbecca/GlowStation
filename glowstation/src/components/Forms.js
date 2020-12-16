@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/Form.css";
+import { Typewriter } from 'react-typewriting-effect'
+import 'react-typewriting-effect/dist/index.css'
 
 const Forms = (props) => {
   const [setSubmitted] = useState(false);
@@ -18,9 +20,13 @@ const Forms = (props) => {
         <form onSubmit={(e) => handleSubmit(e)}>
           <label>
             <h1 className="siteName">
-              Welcome to <i className="glow">Glow Station</i>
+            <Typewriter
+            stopBlinkinOnComplete="true"
+             string="Welcome to " />
+              <i className="glow">Glow Station</i>
             </h1>
-            <h2>What's your name?</h2>
+            <Typewriter className="smallName" string="What's your name?" />
+            <br />
             <input
               className="inputB"
               type="text"

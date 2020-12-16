@@ -23,6 +23,7 @@
     "react-quiz-component": "^0.3.7",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "react-typewriting-effect": "^1.0.4",
     "react-typing-effect": "^2.0.4",
     "reveal": "0.0.4",
     "reveal.js": "file:reveal.js",

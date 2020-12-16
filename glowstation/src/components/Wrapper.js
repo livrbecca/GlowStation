@@ -1,6 +1,9 @@
 import React from "react";
 import "../css/Wrapper.css";
 import { Link } from "react-router-dom";
+import { Typewriter } from "react-typewriting-effect";
+import "react-typewriting-effect/dist/index.css";
+
 
 
 const Wrapper = (props) => {
@@ -11,7 +14,7 @@ const Wrapper = (props) => {
       </Link>
       <div className="Wrapper">
         <h1 className="aboard">
-        All Aboard the Glow Station Train! 
+        <Typewriter delay={80} string="All Aboard the Glow Station Train! " />
         </h1>
         <h1 className="quiztitle" style={{ textTransform: "capitalize" }}>
          {props.name}'s Routine Builder

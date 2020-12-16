@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import "../css/loading.css";
 import { Redirect } from "react-router-dom";
+import { Typewriter } from "react-typewriting-effect";
+import "react-typewriting-effect/dist/index.css";
 
 const Loading2 = () => {
   const [redirect, setRedirect] = useState(false);
- 
 
   useEffect(() => {
     setTimeout(() => setRedirect(true), 6000);
-    
   }, [redirect]);
 
   return (
@@ -23,9 +23,13 @@ const Loading2 = () => {
       >
         <span className="sr-only">Loading...</span>
       </Spinner>
-      <h1 className="glow">Loading Personalised Quiz...</h1>
+      <h1 className="glow">
+        <Typewriter delay={210} string="Loading Routine Builder..." />
+      </h1>
       <br />
-      <h1 className="glow">Formulating Questions...</h1>
+      <h1 className="glow">
+        <Typewriter delay={80} string="Formulating Questions..." />
+      </h1>
       {redirect && <Redirect to="/quiz" />}
     </div>
   );

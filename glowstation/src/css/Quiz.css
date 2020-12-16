@@ -1,4 +1,4 @@
-.questions {
+.box {
   background-color: rgb(210, 183, 233);
   margin: auto;
   height: 580px;
@@ -33,8 +33,8 @@
 .selectionBtn:hover {
   font-weight: bolder;
   border-style: solid;
-  font-size: 24px;
-  border-width: 2px;
+  font-size: 22px;
+  border-width: 21x;
   border-radius: 18px;
   border-color: gold;
 }
@@ -85,4 +85,9 @@
 .one{
     position: relative;
    top: -35px;
+}
+
+.Q1, .Q2, .Q3, .Q4{
+  position: relative;
+  top: -90px;
 }

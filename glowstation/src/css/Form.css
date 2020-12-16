@@ -96,3 +96,7 @@ h2 {
     transform: translateX(-3190px);
   }
 }
+
+.smallName{
+  font-size: 2rem;
+}

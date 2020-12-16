@@ -1,14 +1,29 @@
 import React from "react";
 import "../css/Quiz.css";
+import { Typewriter } from "react-typewriting-effect";
+import "react-typewriting-effect/dist/index.css";
+import { Link } from "react-router-dom";
 
 const Quiz = () => {
   return (
     <>
+      <Link to="/home">
+        <button>Home</button>
+      </Link>
       <div className="questions">
         <div className="toggleOne">
           <div className="box">
-            <h1 className="Q1">What is your skin type?</h1>
-            <h4 className="one">Select One.</h4>
+            <h1 className="Q1">
+              {/* DETERMINES category: 
+            Cleansers,
+            Moisturisers,
+            SPF
+            */}
+              <Typewriter delay={99} string="What is your skin type?" />
+            </h1>
+            <h4 className="one">
+              <Typewriter string="select one." />
+            </h4>
             <button onClick={() => {}} className="selectionBtn">
               Oily
             </button>
@@ -23,12 +38,17 @@ const Quiz = () => {
             </button>
           </div>
         </div>
-        {/* <div className="toggleTwo">
+        <div className="toggleTwo">
           <div className="box">
-            <div className="Q2">
-              Select <b>primary</b> a skin concern. You'll have the chance to
-              select <b>2</b> more in upcoming questions.
-            </div>
+            <h1 className="Q2">
+              {/* DETERMINES category: 
+            Serums
+            */}
+              <Typewriter
+                delay={180}
+                string=" Select a primary skin concern."
+              />
+            </h1>
             <button onClick={() => {}} className="selectionBtn">
               Acne & Blackheads
             </button>
@@ -57,10 +77,15 @@ const Quiz = () => {
         </div>
         <div className="toggleThree">
           <div className="box">
-            <div className="Q3">
-              Select <b>secondary</b> a skin concern. You'll have the chance to
-              select <b>1</b> more in upcoming questions.
-            </div>
+            <h1 className="Q3">
+              {/* DETERMINES category: 
+            Exfoliators
+            */}
+              <Typewriter
+                delay={280}
+                string=" Select a secondary skin concern."
+              />
+            </h1>
             <button onClick={() => {}} className="selectionBtn">
               Acne & Blackheads
             </button>
@@ -89,9 +114,12 @@ const Quiz = () => {
         </div>
         <div className="toggleFour">
           <div className="box">
-            <div className="Q4">
-              Select a final skin concern you would like to address.
-            </div>
+            <h1 className="Q4">
+              {/* DETERMINES category: 
+            Toners & Essence
+            */}
+              <Typewriter string="Select a final skin concern you would like to address." />
+            </h1>
             <button onClick={() => {}} className="selectionBtn">
               Acne & Blackheads
             </button>
@@ -117,10 +145,8 @@ const Quiz = () => {
               Hydration
             </button>
           </div>
-        </div> */}
-        <div className="next">
-          <button className="nextBtn">Next</button>
         </div>
+        <div className="next"></div>
       </div>
 
       <div className="results">
