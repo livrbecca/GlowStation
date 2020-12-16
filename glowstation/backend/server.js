@@ -59,6 +59,34 @@ app.get("/products/category/:category", async (req, res) => {
   });
 });
 
+app.get("/products/filter", async (req, res) => {
+  let categories, skinType;
+
+  // parsing query parameters
+  if (req.query.category) {
+    categories = req.query.category.split(",");
+    console.log(categories);
+  }
+
+  skinType = req.query.skinType;
+
+  // use glowstation; db.products; find all
+  const allProducts = await client
+    .db("glow")
+    .collection("products")
+    .find({ $and: [ 
+       { "category": {$in: categories} },
+       { "skinType": skinType }
+      ]
+    })
+    .toArray();
+
+  res.json({
+    message: "Here are all your products!",
+    products: allProducts,
+  });
+});
+
 // By Skin type
 
 app.get("/products/skinType/:skinType", async (req, res) => {

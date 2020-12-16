@@ -24,10 +24,18 @@ function App() {
 
   const [cart, setCart] = useState([]);
 
-  const addToCart = (product) => {
-    console.log("we are in addToCart", product);
+  const addToCart = (product, quantity) => {
+    console.log("we are in addToCart - product:", product);
+    console.log("we are in addToCart - quantity:", quantity);
 
-    setCart([...cart, product]);
+    let rslt = [];
+    for(let i = 0; i < quantity; i++) {
+      rslt.push(product)
+    }
+    
+    let newCart = [...cart, ...rslt];
+    console.log(newCart)
+    setCart(newCart);
   };
 
   const filterBy = async (code, topic) => {
