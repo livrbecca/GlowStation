@@ -7,7 +7,6 @@ import Navbar from "./components/Nav";
 //import data from "./models/products.json";
 import Shop from "./components/Shop";
 import Product from "./components/Product";
-
 import Loading2 from "./components/Loading2";
 import ProductPage from "./components/ProductPage";
 import Sidebar from "./components/Sidebar";
@@ -15,7 +14,10 @@ import Wishlist from "./components/Wishlist";
 import axios from "axios";
 import CartScreen from "./components/CartScreen";
 import Wrapper from "./components/Wrapper";
-// import QuizContainer from "./components/QuizContainer";
+import Quiz from "react-quiz-component";
+import { quiz } from "./components/Quiznpm";
+
+//import QuizContainer from "./components/QuizContainer";
 
 //import AddWishlist from "./components/AddWishlist";
 
@@ -24,8 +26,15 @@ function App() {
 
   const [cart, setCart] = useState([]);
 
-  const addToCart = (product) => {
-    console.log("we are in addToCart", product);
+  const addToCart = (product, quantity) => {
+    let rslt = [];
+
+    for (let i = 0; i < quantity; i++) {
+      rslt.push(product);
+    }
+
+    let newCart = [...cart, ...rslt];
+    console.log(newCart);
 
     setCart([...cart, product]);
   };
@@ -93,12 +102,12 @@ function App() {
     return [storedValue, setValue];
   }
 
-  // async function allProducts(value) {
-  //   const results = await fetch(`https://WetGrouchyQuotient.liivyylovesyou.repl.co`).then((res) => res.json());
-  //   if (!results.error) {
-  //     setProducts(results.items);
-  //   }
-  // }
+  const [quizResult, setQuizResult] = useState();
+  useEffect(() => {
+    if (quizResult) {
+      console.log("quizResult", quizResult);
+    }
+  }, [quizResult]);
 
   return (
     <Router>
@@ -182,15 +191,20 @@ function App() {
           </>
         )}
       />
-        {/* <Route
+      <Route
         exact
         path="/routinebuilder"
         render={() => (
           <>
-            <QuizContainer />
+            <Quiz
+              quiz={quiz}
+              shuffle={false}
+              showInstantFeedback={true}
+              onComplete={setQuizResult}
+            />
           </>
         )}
-      /> */}
+      />
       <Route
         exact
         path="/product/:name"

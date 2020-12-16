@@ -1,19 +1,19 @@
 .picture {
-  width: 170px;
-  height: 169px;
+  width: 100px;
+  height: 100px;
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bolder;
 }
 
 .price {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bold;
   position: relative;
-  left: 930px;
-  top: -140px;
+  left: 700px;
+  top: -80px;
 }
 
 .row1 {
@@ -22,4 +22,14 @@
   border-width: 2px;
   border-color: black;
   border-style: solid;
+  width: 900px;
+  height: fit-content;
+}
+
+.container {
+  /* width: 1190px;
+  margin: auto; */
+  top: 50px;
+  position: relative;
+  left: 60px;
 }

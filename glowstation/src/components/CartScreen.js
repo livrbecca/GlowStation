@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/CartScreen.css";
 
 // <Product wishlist={[]} product={item} />
 
 const CartScreen = (props) => {
+  const [qty, setQty] = useState(1);
   console.log(props);
   return (
     <div>
@@ -11,7 +12,10 @@ const CartScreen = (props) => {
         <h2>Cart Screen</h2>
         <div className="container">
           <div className="row1">
-            {" "}
+          <h2>
+                Subtotal ({props.cart.reduce((a, c) => a + c.qty, 0)} items) : £
+                {props.cart.reduce((a, c) => a + c.price * c.qty, 0)}
+              </h2>
             {props.cart.map((item) => (
               <div key={item.id}>
                 <h3 className="title">{item.name}</h3>
@@ -20,9 +24,22 @@ const CartScreen = (props) => {
                   src={item.imageLinks.img1}
                   alt={item.name}
                 />
-                <h3 className="price"> Price: £{item.price}</h3>
+                <h3 className="price"> Price:£{item.price}</h3>
+                <div className="qty">Qty:</div>
+                <select
+                    className="num"
+                    value={qty}
+                    onChange={(e) =>setQty(e.target.value)}
+                  >
+                    {[...Array(item.countInStock).keys()].map((x) => (
+                      <option key={x + 1} value={x + 1}>
+                        {x + 1}
+                      </option>
+                    ))}
+                  </select>
               </div>
             ))}
+            
           </div>
         </div>
       </>
