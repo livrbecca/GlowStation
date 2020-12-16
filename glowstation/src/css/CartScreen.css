@@ -17,7 +17,7 @@
 }
 
 .row1 {
-  background-color: rgb(243, 221, 225);
+  background-color: rgba(199, 162, 231, 0.61);
   font-size: 24px;
   border-width: 2px;
   border-color: black;
@@ -26,10 +26,16 @@
   height: fit-content;
 }
 
-.container {
+.container2 {
   /* width: 1190px;
   margin: auto; */
   top: 50px;
   position: relative;
   left: 60px;
+}
+
+.num{
+  position: relative;
+  left: 820px;
+  top: -117px;
 }

@@ -1,5 +1,5 @@
 .Wrapper {
-  background-color: transparent;
+  background-color: rgb(210, 183, 233);
   margin: auto;
   height: 580px;
   width: 1299px;
@@ -10,7 +10,7 @@
   border-radius: 25px;
   text-align: center;
   align-content: center;
-  box-shadow: 10px -10px 500px rgba(0, 0, 0, 0.9);
+  box-shadow: 10px -10px 500px rgb(210, 183, 233);
 }
 
 h1 {
@@ -21,11 +21,13 @@ h1 {
 
 .startButton {
   color: black;
-  background-color: rgb(124, 238, 124);
   font-size: 22px;
   padding: 15px 25px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
   font-weight: 500;
+  border-width: 2px;
+  border-radius: 18px;
+  font-weight: bolder;
   line-height: 1;
   margin-top: 35px;
   position: relative;
@@ -39,7 +41,6 @@ h1 {
   border-width: 2px;
   border-radius: 18px;
   border-color: gold;
- 
 }
 
 .train {
@@ -55,7 +56,7 @@ h1 {
   animation: move-train 14s linear infinite;
 }
 
- @keyframes move-train {
+@keyframes move-train {
   0% {
     transform: translateX(0);
   }
@@ -72,7 +73,7 @@ h1 {
   font-size: 1.9rem;
 }
 
-.quiztitle{
+.quiztitle {
   position: relative;
   top: -50px;
 }

@@ -1,0 +1,88 @@
+.questions {
+  background-color: rgb(210, 183, 233);
+  margin: auto;
+  height: 580px;
+  width: 1299px;
+  margin-top: 7.5%;
+  padding: 13em 19em;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 25px;
+  text-align: center;
+  align-content: center;
+  box-shadow: 10px -10px 500px rgb(210, 183, 233);
+}
+
+.selectionBtn,
+.resultsBtn,
+.nextBtn {
+  color: black;
+  font-size: 22px;
+  padding: 15px 25px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  font-weight: 500;
+  border-width: 2px;
+  border-radius: 18px;
+  font-weight: bolder;
+  line-height: 1;
+  margin-top: 35px;
+  position: relative;
+  top: -50px;
+}
+
+.selectionBtn:hover {
+  font-weight: bolder;
+  border-style: solid;
+  font-size: 24px;
+  border-width: 2px;
+  border-radius: 18px;
+  border-color: gold;
+}
+
+.selectionBtn:focus {
+  background-color: gold;
+}
+
+.resultsBtn:hover {
+  font-weight: bolder;
+  border-style: solid;
+  font-size: 24px;
+  border-width: 3px;
+  border-radius: 18px;
+  border-color: green;
+ 
+}
+
+.resultsBtn{
+    background-color: rgba(116, 224, 116, 0.822);
+    width: 20%;
+    position: relative;
+    left: 855px;
+}
+
+.nextBtn:hover {
+  font-weight: bolder;
+  border-style: solid;
+  font-size: 24px;
+  border-width: 4px;
+  border-radius: 18px;
+  border-color: black;
+  
+}
+
+.nextBtn{
+    position: relative;
+    left: 565px;
+    top: 69px;
+}
+
+.resultsBtn{
+    position: relative;
+    right: -965px;
+    top: 5px;
+}
+
+.one{
+    position: relative;
+   top: -35px;
+}

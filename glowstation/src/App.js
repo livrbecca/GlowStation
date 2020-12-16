@@ -14,8 +14,7 @@ import Wishlist from "./components/Wishlist";
 import axios from "axios";
 import CartScreen from "./components/CartScreen";
 import Wrapper from "./components/Wrapper";
-import Quiz from "react-quiz-component";
-import { quiz } from "./components/Quiznpm";
+import Quiz from "./components/Quiz";
 
 //import QuizContainer from "./components/QuizContainer";
 
@@ -102,12 +101,7 @@ function App() {
     return [storedValue, setValue];
   }
 
-  const [quizResult, setQuizResult] = useState();
-  useEffect(() => {
-    if (quizResult) {
-      console.log("quizResult", quizResult);
-    }
-  }, [quizResult]);
+
 
   return (
     <Router>
@@ -196,12 +190,7 @@ function App() {
         path="/routinebuilder"
         render={() => (
           <>
-            <Quiz
-              quiz={quiz}
-              shuffle={false}
-              showInstantFeedback={true}
-              onComplete={setQuizResult}
-            />
+           <Quiz />
           </>
         )}
       />

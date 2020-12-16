@@ -10,7 +10,7 @@ const CartScreen = (props) => {
     <div>
       <>
         <h2>Cart Screen</h2>
-        <div className="container">
+        <div className="container2">
           <div className="row1">
           <h2>
                 Subtotal ({props.cart.reduce((a, c) => a + c.qty, 0)} items) : £
@@ -25,7 +25,6 @@ const CartScreen = (props) => {
                   alt={item.name}
                 />
                 <h3 className="price"> Price:£{item.price}</h3>
-                <div className="qty">Qty:</div>
                 <select
                     className="num"
                     value={qty}

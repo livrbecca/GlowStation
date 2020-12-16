@@ -11,6 +11,9 @@
 }
 
 .advert1 {
+  border-style: solid;
+  border-width: 0.75rem;
+  border-color: rgb(199, 162, 231);
   width: 450px;
   height: 650px;
   position: relative;
@@ -23,6 +26,9 @@
 }
 
 .advert2 {
+  border-style: solid;
+  border-width: 0.75rem;
+  border-color: rgb(199, 162, 231);
   width: 400px;
   height: 450px;
   position: relative;
@@ -38,6 +44,9 @@
 }
 
 .advert3 {
+  border-style: solid;
+  border-width: 0.75rem;
+  border-color: rgb(199, 162, 231);
   width: 510px;
   height: 310px;
   position: relative;
@@ -46,6 +55,9 @@
 }
 
 .advert4 {
+  border-style: solid;
+  border-width: 0.75rem;
+  border-color: rgb(199, 162, 231);
   width: 510px;
   height: 310px;
   position: relative;

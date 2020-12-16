@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Solway&display=swap");
 
 body {
-  background-color: #ceaff1;
+  background-image: url(https://image.freepik.com/free-photo/white-grey-marble-texture-background-natural-tile-stone-floor_38607-501.jpg);
   font-family: "Solway", serif;
 }
 
 .siteName {
   font-size: 80px;
+  color: black;
 }
 
 .glow {
@@ -31,7 +32,7 @@ h2 {
 
 .formP {
   text-align: center;
-  color: white;
+  color: black;
   bottom: 25px;
   margin-top: 280px;
   margin-left: -200px;

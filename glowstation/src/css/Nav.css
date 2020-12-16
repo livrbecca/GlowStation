@@ -1,11 +1,11 @@
 .navbar {
-  background-color: #f2e6ff;
+  background-color: rgba(210, 183, 233, 0.822);
   border-style: solid;
   border-width: 4px;
 }
 
 .navbar a {
-  color: black;
+  color: black !important;
 }
 
 .glowNav {
