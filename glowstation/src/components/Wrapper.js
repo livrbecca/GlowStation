@@ -26,7 +26,7 @@ const Wrapper = (props) => {
         </button>
         </Link>
       </div>
-      <div class="train"></div>
+      <div className="train"></div>
     </div>
   );
 };

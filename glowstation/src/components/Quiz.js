@@ -15,6 +15,7 @@ const Quiz = () => {
           <div className="box">
             <h1 className="Q1">
               {/* DETERMINES category: 
+            
             Cleansers,
             Moisturisers,
             SPF
@@ -149,8 +150,10 @@ const Quiz = () => {
         <div className="next"></div>
       </div>
 
-      <div className="results">
+      <div className="loading3">
+        <Link to="/loading3">
         <button className="resultsBtn">Get Results</button>
+        </Link>
       </div>
     </>
   );

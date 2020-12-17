@@ -172,21 +172,21 @@ body {
   transition: all 0.3s ease;
 }
 
-.num {
+/* .num {
   font-size: 20px;
   padding: 3px;
   position: relative;
-  left: 51px;
+  left: 61px;
   top: -11px;
-}
+} */
 
-.qty {
+/* .qty {
   font-weight: bolder;
   position: relative;
   font-size: 1rem;
   top: 15px;
   left: 17px;
-}
+} */
 
 .success {
   color: green;

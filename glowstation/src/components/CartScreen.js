@@ -6,6 +6,7 @@ import "../css/CartScreen.css";
 const CartScreen = (props) => {
   const [qty, setQty] = useState(1);
   console.log(props);
+  console.log(props.cart)
   return (
     <div>
       <>
@@ -15,7 +16,9 @@ const CartScreen = (props) => {
           <h2>
                 Subtotal ({props.cart.reduce((a, c) => a + c.qty, 0)} items) : £
                 {props.cart.reduce((a, c) => a + c.price * c.qty, 0)}
+              
               </h2>
+              
             {props.cart.map((item) => (
               <div key={item.id}>
                 <h3 className="title">{item.name}</h3>
@@ -40,6 +43,7 @@ const CartScreen = (props) => {
             ))}
             
           </div>
+          
         </div>
       </>
     </div>

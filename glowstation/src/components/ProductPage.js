@@ -65,7 +65,7 @@ const ProductPage = (props) => {
               )}
             </div>
             <div className="infoArea">
-              <div className="qtyArea">
+              {/* <div className="qtyArea">
                 <div className="qty">Qty:</div>
                 <div>
                   <select
@@ -80,7 +80,7 @@ const ProductPage = (props) => {
                     ))}
                   </select>
                 </div>
-              </div>
+              </div> */}
               <button
                 className="addToCart"
                 onClick={() => props.addToCart(product)}

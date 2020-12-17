@@ -15,6 +15,8 @@ import axios from "axios";
 import CartScreen from "./components/CartScreen";
 import Wrapper from "./components/Wrapper";
 import Quiz from "./components/Quiz";
+import ResultsScreen from "./components/ResultsScreen";
+import Loading3 from "./components/Loading3";
 
 //import QuizContainer from "./components/QuizContainer";
 
@@ -32,8 +34,8 @@ function App() {
       rslt.push(product);
     }
 
-    let newCart = [...cart, ...rslt];
-    console.log(newCart);
+    //let newCart = [...cart, ...rslt];
+   // console.log(newCart);
 
     setCart([...cart, product]);
   };
@@ -134,6 +136,15 @@ function App() {
       />
       <Route
         exact
+        path="/loading3"
+        render={() => (
+          <>
+            <Loading3 />
+          </>
+        )}
+      />
+      <Route
+        exact
         path="/cart"
         render={() => (
           <>
@@ -191,6 +202,16 @@ function App() {
         render={() => (
           <>
            <Quiz />
+          </>
+        )}
+      />
+       <Route
+        exact
+        path="/results"
+        render={() => (
+          <>
+           <Navbar cart={cart} />
+           <ResultsScreen name={name}/>
           </>
         )}
       />

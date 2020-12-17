@@ -15,7 +15,7 @@ const Forms = (props) => {
 
   return (
     <>
-      <div class="train"></div>
+      <div className="train"></div>
       <div className="formP">
         <form onSubmit={(e) => handleSubmit(e)}>
           <label>
