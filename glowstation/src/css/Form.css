@@ -75,11 +75,13 @@ h2 {
   padding-top: 30px;
 }
 
-.train {
+.train2 {
   position: absolute;
-  top: 830px;
-  height: 217px;
+  top: 770px;
+  height: 127px;
   width: 1500px;
+  padding: 0;
+  margin: 0;
   right: -690px;
   background: url(https://docs.google.com/uc?export=download&id=0B2PO2Lr7Bv2QandQOVZSTjBETGs);
   background-repeat: no-repeat;
@@ -88,15 +90,15 @@ h2 {
   animation: move-train 14s linear infinite;
 }
 
-@keyframes move-train {
+/* @keyframes move-train {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-3190px);
   }
-}
+} */
 
-.smallName{
+.smallName {
   font-size: 2rem;
 }

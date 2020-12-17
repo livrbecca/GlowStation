@@ -27,7 +27,7 @@ const CartScreen = (props) => {
                   src={item.imageLinks.img1}
                   alt={item.name}
                 />
-                <h3 className="price"> Price:£{item.price}</h3>
+                <h3 className="price"> Price:£{item.price * qty}</h3>
                 <select
                     className="num"
                     value={qty}
