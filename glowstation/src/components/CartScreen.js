@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import "../css/CartScreen.css";
+import CartProduct from "./CartProduct";
 
 // <Product wishlist={[]} product={item} />
 
 const CartScreen = (props) => {
-  const [qty, setQty] = useState(1);
+  const [subtotal, setSubtotal] = useState(0);
+  const [price, setPrice] = useState(0);
+
   console.log(props);
   console.log(props.cart);
 
@@ -15,32 +18,24 @@ const CartScreen = (props) => {
         <div className="container2">
           <div className="row1">
             <h2>
-              Subtotal ({props.cart.reduce((accumulator, product) => accumulator + qty, 0)} items) : £
-              {props.cart.reduce((accumulator, product) => accumulator + product.price * qty, 0)}
+              Subtotal (
+              
+              items ) : £
+              {props.cart.reduce(
+                (accumulator, product) =>
+                  accumulator + product.price * quantity,
+                0
+              )}
             </h2>
 
             {props.cart.map((item) => (
-              <div key={item.id}>
-                <h3 className="title">{item.name}</h3>
-                <img
-                  className="picture"
-                  src={item.imageLinks.img1}
-                  alt={item.name}
-                />
-                <h3 className="price"> Price:£{item.price * qty}</h3>
-                <select
-                  id={item.id}
-                  className="num"
-                  value={qty}
-                  onChange={(e) => setQty(e.target.value)}
-                >
-                  {[...Array(item.countInStock).keys()].map((x) => (
-                    <option key={x + 1} value={x + 1}>
-                      {x + 1}
-                    </option>
-                  ))}
-                </select>
-              </div>
+              <CartProduct
+                item={item}
+                subtotal={subtotal}
+                setSubtotal={setSubtotal}
+                price={price}
+                setPrice={setPrice}
+              />
             ))}
           </div>
         </div>

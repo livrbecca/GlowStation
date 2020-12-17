@@ -22,6 +22,7 @@ const Product = (props) => {
     description: { largeDes },
     imageLinks: { img1, img2, img3 },
     howTo,
+    qty,
   } = props.product;
 
   const wishlistId = props.wishlist.map((_) => _.id);
@@ -63,7 +64,7 @@ const Product = (props) => {
           </Link>
           <button
             className="addTo"
-            onClick={() => props.addToCart(props.product)}
+            onClick={() => props.addToCart(props.product, 1)}
           >
             Add to Cart
             <svg

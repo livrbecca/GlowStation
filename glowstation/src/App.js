@@ -28,15 +28,9 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product, quantity) => {
-    let rslt = [];
-
-    for (let i = 0; i < quantity; i++) {
-      rslt.push(product);
-    }
-
-    //let newCart = [...cart, ...rslt];
-   // console.log(newCart);
-
+    product.qty += quantity;
+    console.log(product);
+    console.log(quantity)
     setCart([...cart, product]);
   };
 
@@ -102,8 +96,6 @@ function App() {
 
     return [storedValue, setValue];
   }
-
-
 
   return (
     <Router>
@@ -201,17 +193,17 @@ function App() {
         path="/routinebuilder"
         render={() => (
           <>
-           <Quiz />
+            <Quiz />
           </>
         )}
       />
-       <Route
+      <Route
         exact
         path="/results"
         render={() => (
           <>
-           <Navbar cart={cart} />
-           <ResultsScreen name={name}/>
+            <Navbar cart={cart} />
+            <ResultsScreen name={name} />
           </>
         )}
       />
