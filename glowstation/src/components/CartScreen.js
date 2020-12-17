@@ -18,14 +18,7 @@ const CartScreen = (props) => {
         <div className="container2">
           <div className="row1">
             <h2>
-              Subtotal (
-              
-              items ) : £
-              {props.cart.reduce(
-                (accumulator, product) =>
-                  accumulator + product.price * quantity,
-                0
-              )}
+              Subtotal ({subtotal} items): £ {price}
             </h2>
 
             {props.cart.map((item) => (

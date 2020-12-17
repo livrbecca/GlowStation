@@ -7,7 +7,7 @@ import Collapsible from "react-collapsible";
 const ResultsScreen = (props) => {
   return (
     <>
-      <h2 className="nameTitle">
+      <h2 style={{ textTransform: "capitalize" }} className="nameTitle">
         {props.name}
         <Typewriter
           stopBlinkinOnComplete="true"

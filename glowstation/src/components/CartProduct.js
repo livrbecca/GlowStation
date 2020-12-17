@@ -1,13 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const CartProduct = ({ item, subtotal, setSubtotal, price, setPrice }) => {
   const [quantity, setQuantity] = useState(1);
 
-  function calculateSubtotal () {
-      let price = quantity * item.price
-      setSubtotal = 
+  function calculateSubtotal() {
+    let total = subtotal;
+    setSubtotal(total + quantity);
   }
-
+  function calculatePrice() {
+    let old_price = price;
+    let item_price = item.price * quantity;
+    setPrice(old_price + item_price);
+  }
+  useEffect(() => {
+    calculateSubtotal();
+    calculatePrice();
+  }, [quantity]);
   return (
     <div key={item.id}>
       <h3 className="title">{item.name}</h3>

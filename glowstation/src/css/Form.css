@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Solway&display=swap");
 
 body {
-  background-image: url(https://image.freepik.com/free-photo/white-grey-marble-texture-background-natural-tile-stone-floor_38607-501.jpg);
+  /* background-image: url(https://image.freepik.com/free-photo/white-grey-marble-texture-background-natural-tile-stone-floor_38607-501.jpg); */
   font-family: "Solway", serif;
+  background-color: whitesmoke;
 }
 
 .siteName {
