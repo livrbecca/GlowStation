@@ -17,6 +17,7 @@
   margin-top: -180px;
   z-index: -1;
   position: relative;
+  border-radius: 50%;
 }
 
 @media (prefers-reduced-motion: no-preference) {

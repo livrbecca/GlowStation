@@ -1,30 +1,79 @@
 .Wrapper {
-  background-color: lightblue;
-  max-width: 50%;
+  background-color: rgb(210, 183, 233);
   margin: auto;
+  height: 580px;
+  width: 1299px;
   margin-top: 4.5%;
   padding: 13em 19em;
   border-style: solid;
-  border-width: 15px;
-  border-radius:25px;
+  border-width: 10px;
+  border-radius: 25px;
   text-align: center;
   align-content: center;
-  box-shadow:  10px -10px 500px  rgba(0,0,0,0.9);
+  box-shadow: 10px -10px 500px rgb(210, 183, 233);
 }
 
-h1{
-    font-weight: bold;
-    margin-bottom: 50px;
-    margin-top: -51px;
+h1 {
+  font-weight: bold;
+  margin-bottom: 50px;
+  margin-top: -51px;
 }
 
 .startButton {
-    color: white;
-    background-color: green;
-    font-size: 16px;
-    padding: 15px 25px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-    font-weight: 500;
-    line-height: 1;
-    margin-top: 35px;
+  color: black;
+  font-size: 22px;
+  padding: 15px 25px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  font-weight: 500;
+  border-width: 2px;
+  border-radius: 18px;
+  font-weight: bolder;
+  line-height: 1;
+  margin-top: 35px;
+  position: relative;
+  top: -50px;
+}
+
+.startButton:hover {
+  font-weight: bolder;
+  border-style: solid;
+  font-size: 24px;
+  border-width: 2px;
+  border-radius: 18px;
+  border-color: gold;
+}
+
+.train {
+  position: absolute;
+  top: 800px;
+  height: 217px;
+  width: 1500px;
+  right: -690px;
+  background: url(https://docs.google.com/uc?export=download&id=0B2PO2Lr7Bv2QandQOVZSTjBETGs);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  animation: move-train 14s linear infinite;
+}
+
+@keyframes move-train {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-3190px);
+  }
+}
+
+.aboard {
+  font-weight: lighter;
+  font-style: italic;
+  position: relative;
+  top: -100px;
+  font-size: 1.9rem;
+}
+
+.quiztitle {
+  position: relative;
+  top: -50px;
 }

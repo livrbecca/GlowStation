@@ -1,9 +1,13 @@
 [
     {
         "id": 0,
+        "slug": "CoQ10Toner",
         "brand": "Indie Lee",
         "name": "CoQ-10 Toner",
-        "priceRange": "££",
+        "price": 32,
+        "countInStock": 3,
+        "rating": 5,
+        "numReviews": 12,
         "ingredientList": [
             "Water (Aqua/Eau)",
             "Aloe Barbadensis",
@@ -24,6 +28,15 @@
             "oily": true,
             "dry": true
         },
+        "skinConcern222": [
+            "Acne & Blackheads",
+            "Texture",
+            "Brightening & Hyperpigmentation",
+            "Lines & Wrinkles",
+            "Redness",
+            "Visible Pores",
+            "Lines & wrinkles"
+        ],
         "skinConcern": {
             "acne": false,
             "texture": false,
@@ -51,11 +64,6 @@
             "smallDes": "Aloe Vera and Hyaluronic acid provide added hydration and help balance the skin's pH level. Skin feels brighter, tighter and generally much perkier after use.",
             "largeDes": "This is the ultimate skin quencher for complexions that often feel tight and uncomfortably dry. It’s good for those with ageing concerns, as its star ingredient - CoQ-10 - works to boost the skin’s natural repair and defence mechanisms for a smoother complexion over time. It also contains hyaluronic acid (an impressive humectant), which works to help the skin retain much-needed moisture, while soothing aloe vera, chamomile and cucumber keep skin calm and contented. Think of this as a skin-softening precursor to your serum or moisturiser."
         },
-        "soldAt": [
-            "https://www.cultbeauty.co.uk/indie-lee-coq-10-toner.html?variant_id=9678",
-            "https://abeautifulworld.co.uk/products/coq-10-toner",
-            "https://www.selfridges.com/GB/en/cat/indie-lee-coq-10-toner-125ml_475-3006731-164492/"
-        ],
         "imageLinks": {
             "img1": "https://images.selfridges.com/is/image/selfridges/475-3006731-164492_M?$PDP_M_ZOOM$",
             "img2": "https://cdn.cultbeauty.co.uk/resized/680x854/slots-img/ind/ind003_indielee_coq10toner_30ml_2_1560x1960-8z7zz.jpg",
@@ -64,9 +72,13 @@
     },
     {
         "id": 1,
+        "slug": "HEROINE-Mandelic-and-Licorice-Superfood-Glow-Toner",
         "brand": "PSA Skin",
         "name": "HEROINE Mandelic and Licorice Superfood Glow Toner",
-        "priceRange": "££",
+        "price": 28,
+        "countInStock": 9,
+        "rating": 4,
+        "numReviews": 19,
         "ingredientList": [
             "Aqua (Water)",
             "Polysorbate 20",
@@ -99,6 +111,15 @@
             "oily": false,
             "dry": true
         },
+        "skinConcern222": [
+            "Acne & Blackheads",
+            "Texture",
+            "Brightening & Hyperpigmentation",
+            "Lines & Wrinkles",
+            "Redness",
+            "Visible Pores",
+            "Lines & wrinkles"
+        ],
         "skinConcern": {
             "acne": true,
             "texture": true,
@@ -126,11 +147,6 @@
             "smallDes": "This toner gets your pores gleaming with AHAs and botanical extracts, brightens skin tone, calms irritation and blemishes, as well as replenishes moisture.",
             "largeDes": "An exfoliating toner. This toner will be the hero (or heroine) for your skin. Designed to reduce blemishes, refine pores, and enhance your glow, the HEROINE Mandelic and Licorice Superfood Glow Toner uses 6% mandelic and lactic acid, niacinamide, licorice root and botanical extracts to make pores appear tighter and clearer. Perfect for brightening the complexion, calming irritation and replenishing moisture, this toner needs to make an appearance in your routine."
         },
-        "soldAt": [
-            "https://www.beautybay.com/p/psa-skin/heroine-mandelic-and-licorice-superfood-glow-toner/",
-            "https://www.asos.com/psa/psa-skin-heroine-mandelic-licorice-superfood-glow-toner-100ml/prd/21694963",
-            "https://www.libertylondon.com/uk/heroine-mandelic-and-licorice-superfood-toner-100ml-000711174.html"
-        ],
         "imageLinks": {
             "img1": "https://i8.amplience.net/i/liberty/000711174-R368321006-1?$large$&qlt=90&fmt=webp&strip=true",
             "img2": "https://i8.amplience.net/i/liberty/000711174-R368321006-2?$hi-res$",
@@ -139,9 +155,13 @@
     },
     {
         "id": 2,
+        "slug": "Snow-Mushroom-Moisturiser",
         "brand": "The Inkey List",
         "name": "Snow Mushroom Moisturiser",
-        "priceRange": "£",
+        "price": 9,
+        "countInStock": 21,
+        "rating": 5,
+        "numReviews": 32,
         "ingredientList": [
             "Aqua (Water/ Eau)",
             "Butylene Glycol",
@@ -164,6 +184,16 @@
             "oily": true,
             "dry": true
         },
+        "skinConcern222": [
+            "Acne & Blackheads",
+            "Texture",
+            "Eye Concerns",
+            "Brightening & Hyperpigmentation",
+            "Lines & Wrinkles",
+            "Redness",
+            "Visible Pores",
+            "Lines & wrinkles"
+        ],
         "skinConcern": {
             "acne": true,
             "texture": false,
@@ -191,11 +221,6 @@
             "smallDes": "This super-hydrating, lightweight jelly moisturizer helps to soothe, calm and reduce the appearance of redness, while providing an instant cooling effect on the skin",
             "largeDes": "Discover the boundless benefits of the beauty world’s latest buzz skincare ingredient with The INKEY List’s Snow Mushroom Moisturiser; a multitasking face lotion that deeply hydrates while providing soothing anti-inflammatory properties and promoting collagen production for a cushiony, dewy, glowing complexion. In synergy with a 2% concentration amino acid-based humectant, the formula is supercharged with Snow Mushroom (or Tremella Fuciformis), a jelly-like fungus that has been used in Chinese medicines and skincare for millennia. Its gelatinous structure, combined with high levels of polysaccharide molecules, act similarly to Hyaluronic acid, by binding moisture to the skin, but has the capacity to penetrate even deeper thanks to its smaller molecular structure. Enriched with Madecassoside, an active ingredient derived from the Centella Asiatica plant, offers anti-itching and anti-irritation powers to calm redness and sensitivities."
         },
-        "soldAt": [
-            "https://www.boots.com/the-inkey-list-snow-mushroom%C2%A0moisturiser-30ml-10271190",
-            "https://www.theinkeylist.com/products/snow-mushroom",
-            "https://www.lookfantastic.com/the-inkey-list-snow-mushroom/12211784.html"
-        ],
         "imageLinks": {
             "img1": "https://cdn.shopify.com/s/files/1/0428/8498/9091/products/slider-1-desktop-2x_9157d867-515e-4c8d-a843-49588c6c0e46_300x_crop_center.jpg?v=1599119651",
             "img2": "https://cdn.shopify.com/s/files/1/0428/8498/9091/products/slider-4-desktop-2x_f7e8c8f8-ad95-473a-9929-ae0f08b22df0_300x_crop_center.jpg?v=1599119651",
@@ -204,9 +229,13 @@
     },
     {
         "id": 3,
+        "slug": "Advanced-Snail-96-Mucin-Power-Essence",
         "brand": "COSRX",
         "name": "Advanced Snail 96 Mucin Power Essence",
-        "priceRange": "££",
+        "price": 24,
+        "countInStock": 33,
+        "rating": 5,
+        "numReviews": 22,
         "ingredientList": [
             "Snail Secretion Filtrate",
             "Betaine, Butylene Glycol",
@@ -226,6 +255,15 @@
             "oily": true,
             "dry": true
         },
+        "skinConcern222": [
+            "Acne & Blackheads",
+            "Texture",
+            "Brightening & Hyperpigmentation",
+            "Lines & Wrinkles",
+            "Redness",
+            "Visible Pores",
+            "Lines & wrinkles"
+        ],
         "skinConcern": {
             "acne": true,
             "texture": true,
@@ -253,11 +291,6 @@
             "smallDes": "Absorbing almost instantly to hydrate, soothe and moisturise - perfect when your skin is in need of a little pick-me-up",
             "largeDes": "This COSRX Advanced Snail 96 Mucin Power Essence comprises 96% of skin friendly snail secretion filtrate that is effective at repairing damaged skin, improving skin elasticity and maintaining hydration level all day long. It only contains essential ingredients, that nourish, repair and revitalise the skin."
         },
-        "soldAt": [
-            "https://www.feelunique.com/p/COSRX-Advanced-Snail-96-Mucin-Power-Essence-100ml",
-            "https://refreshskincare.co.uk/products/cosrx-advanced-snail-96-mucin-power-essence-100ml",
-            "https://www.k-beauty.co.uk/products/skin-care-k-beauty-uk-cosrx-advanced-snail-96-mucin-power-essence"
-        ],
         "imageLinks": {
             "img1": "https://assets.feelunique.com/f_auto,t_product_large/v1/live/product/main-image/112669/wcdjingtbw9bymi4trtf.jpg",
             "img2": "https://cdn.shopify.com/s/files/1/0022/1678/8014/products/cosrx-advanced-snail-96-mucin-power-essence-skincare-korean-skincare-2_460x.jpeg?v=1589403705",

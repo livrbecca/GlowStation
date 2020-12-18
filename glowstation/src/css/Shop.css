@@ -10,7 +10,7 @@
 .imgCont {
   float: left;
   width: 300px;
-  height: 400px;
+  height: 440px;
   padding: 7px;
   text-align: center;
   border-style: solid;
@@ -19,23 +19,37 @@
   margin-bottom: 30px;
   margin-right: 11.5px;
   margin-left: 150.5px;
-  background-color: white;
+  background-color:rgb(210, 183, 233);
   color: black;
   position: relative;
+}
+.rating span {
+  color: gold;
+  margin: 0.1rem;
+}
+
+.rating span:last-child {
+  color: black;
+}
+.imgCont .rating {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 360px;
+  margin: auto;
 }
 
 .imgCont:hover {
   border-color: black;
   border-style: solid;
-  border-width: 3px;
+  border-width: 5px;
 }
 
-.storybook-button:hover {
-  color: black;
-  outline-color: black;
-}
 
-.imgCont .storybook-button {
+
+.imgCont .addTo {
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -52,3 +66,22 @@
 .h5 {
   font-size: 1.15rem;
 }
+
+a {
+  text-decoration: none;
+  color: black !important;
+}
+
+.addTo:hover {
+  background-color: rgb(148, 235, 148);
+}
+
+
+/* .imgCont .addTo {
+  display: inline-block;
+  position: absolute;
+  top: 454px;
+  left: 0;
+  right: 0;
+  margin: auto;
+} */

@@ -5,11 +5,11 @@ import { Redirect } from "react-router-dom";
 import { Typewriter } from "react-typewriting-effect";
 import "react-typewriting-effect/dist/index.css";
 
-const Loading2 = () => {
+const Loading3 = () => {
   const [redirect, setRedirect] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setRedirect(true), 6000);
+    setTimeout(() => setRedirect(true), 8000);
   }, [redirect]);
 
   return (
@@ -24,15 +24,12 @@ const Loading2 = () => {
         <span className="sr-only">Loading...</span>
       </Spinner>
       <h1 className="glow">
-        <Typewriter delay={210} string="Loading Routine Builder..." />
+        <Typewriter delay={210} string="Fetching your results..." />
       </h1>
-      <br />
-      <h1 className="glow">
-        <Typewriter delay={80} string="Formulating Questions..." />
-      </h1>
-      {redirect && <Redirect to="/quiz" />}
+
+      {redirect && <Redirect to="/results" />}
     </div>
   );
 };
 
-export default Loading2;
+export default Loading3;

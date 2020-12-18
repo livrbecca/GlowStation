@@ -1,13 +1,47 @@
 .navbar {
-    background-color: #F2E6FF;
-    border-style: solid;
-    border-width: 4px;
+  background-color: rgba(210, 183, 233, 0.822);
+  border-style: solid;
+  border-width: 4px;
 }
 
 .navbar a {
-    color: black;
+  color: black !important;
 }
 
-.navbar a:hover{
-    color:#8b33f0;
+.glowNav {
+  position: relative;
+  font-size: 4.5rem;
+}
+
+.glowNav:hover{
+    text-shadow: 2px 2px 4px purple;
+    transition: all 0.3s ease;
+}
+
+/* a {
+  text-decoration: none !important;
+  color: black !important;
+} */
+
+.glowNav {
+  animation: color-change 5s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: darksalmon;
+  }
+  50% {
+    color: chocolate;
+  }
+  100% {
+    color: goldenrod;
+  }
+}
+
+.links{
+  text-align: left;
+  margin-right: 140px;
+  font-size: 25px;
+
 }

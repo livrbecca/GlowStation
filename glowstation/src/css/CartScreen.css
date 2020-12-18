@@ -1,0 +1,41 @@
+.picture {
+  width: 100px;
+  height: 100px;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: relative;
+  left: 700px;
+  top: -80px;
+}
+
+.row1 {
+  background-color: rgba(199, 162, 231, 0.61);
+  font-size: 24px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  width: 900px;
+  height: fit-content;
+}
+
+.container2 {
+  /* width: 1190px;
+  margin: auto; */
+  top: 50px;
+  position: relative;
+  left: 60px;
+}
+
+.num{
+  position: relative;
+  left: 820px;
+  top: -117px;
+}

@@ -5,9 +5,22 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   return (
     <div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-funnel-fill"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"
+        />
+      </svg>
       <DropdownButton
         className="mainButton"
         as={ButtonGroup}
@@ -21,13 +34,7 @@ const Sidebar = () => {
         <ul className="SidebarList">
           {SidebarData.map((val, key) => {
             return (
-              <li
-                key={key}
-                className="row"
-                onClick={() => {
-                  console.log("button clicked");
-                }}
-              >
+              <li key={key} className="row" onClick={() => {}}>
                 <div id="icondiv">{val.icon}</div>
                 <DropdownButton
                   className="arrow"
@@ -35,8 +42,17 @@ const Sidebar = () => {
                   key={"right"}
                   drop={"right"}
                 >
-                  {val.topics.map((option, index) => {
-                    return <Dropdown.Item key={index}>{option}</Dropdown.Item>;
+                  {val.topics.map((topic, index) => {
+                    return (
+                      <Dropdown.Item
+                        onClick={() => {
+                          props.filterBy(val.code, topic);
+                        }}
+                        key={index}
+                      >
+                        {topic}
+                      </Dropdown.Item>
+                    );
                   })}
                 </DropdownButton>
               </li>

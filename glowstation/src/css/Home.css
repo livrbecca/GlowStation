@@ -1,4 +1,70 @@
 .welcomeMessage {
-    margin: auto;
-    margin-top: 90px;
+  margin: auto;
+  margin-top: 90px;
 }
+
+.alice-carousel__next-btn-item,
+.alice-carousel__prev-btn-item {
+  color: black !important;
+  font-weight: bolder;
+  font-size: 1.75rem;
+}
+
+.advert1 {
+  border-style: solid;
+  border-width: 0.3rem;
+  border-color: rgb(199, 162, 231);
+  width: 450px;
+  height: 650px;
+  position: relative;
+  left: 730px;
+}
+
+.advert1:hover {
+  border: 0.5rem gold solid;
+  transition: all 0.3s ease;
+}
+
+.advert2 {
+  border-style: solid;
+  border-width: 0.3rem;
+  border-color: rgb(199, 162, 231);
+  width: 400px;
+  height: 450px;
+  position: relative;
+  top: -584px;
+  left: 130px;
+}
+
+.advert2:hover,
+.advert3:hover,
+.advert4:hover {
+  border: 0.5rem gold solid;
+  transition: all 0.3s ease;
+}
+
+.advert3 {
+  border-style: solid;
+  border-width: 0.3rem;
+  border-color: rgb(199, 162, 231);
+  width: 510px;
+  height: 310px;
+  position: relative;
+  left: 1350px;
+  top: -1154px;
+}
+
+.advert4 {
+  border-style: solid;
+  border-width: 0.3rem;
+  border-color: rgb(199, 162, 231);
+  width: 510px;
+  height: 310px;
+  position: relative;
+  left: 1350px;
+  top: -1128px;
+}
+
+/* 
+train animation */
+

@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Solway&display=swap");
+
 body {
-  background-color: #ceaff1;
+  /* background-image: url(https://image.freepik.com/free-photo/white-grey-marble-texture-background-natural-tile-stone-floor_38607-501.jpg); */
+  font-family: "Solway", serif;
+  background-color: whitesmoke;
 }
 
 .siteName {
   font-size: 80px;
+  color: black;
 }
 
 .glow {
@@ -15,7 +20,7 @@ body {
     color: darksalmon;
   }
   50% {
-    color: greenyellow;
+    color: chocolate;
   }
   100% {
     color: goldenrod;
@@ -28,7 +33,7 @@ h2 {
 
 .formP {
   text-align: center;
-  color: white;
+  color: black;
   bottom: 25px;
   margin-top: 280px;
   margin-left: -200px;
@@ -71,4 +76,30 @@ h2 {
   padding-top: 30px;
 }
 
+.train2 {
+  position: absolute;
+  top: 770px;
+  height: 127px;
+  width: 1500px;
+  padding: 0;
+  margin: 0;
+  right: -690px;
+  background: url(https://docs.google.com/uc?export=download&id=0B2PO2Lr7Bv2QandQOVZSTjBETGs);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  animation: move-train 14s linear infinite;
+}
 
+/* @keyframes move-train {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-3190px);
+  }
+} */
+
+.smallName {
+  font-size: 2rem;
+}
