@@ -7,9 +7,23 @@ import CartProduct from "./CartProduct";
 const CartScreen = (props) => {
   const [subtotal, setSubtotal] = useState(0);
   const [price, setPrice] = useState(0);
+  const [values, setValues] = useState([]);
 
-  console.log(props);
-  console.log(props.cart);
+  function renderProduct(item, total, price){
+    setValues([...values, {id: item.id, total: total, price: price}])
+  }
+  function calculateValues() {
+    let total = 0;
+    let amount = 0;
+    // eslint-disable-next-line array-callback-return
+    values.map((item) => {
+      total += item.total
+      amount += item.price
+    })
+    setSubtotal(total);
+    setPrice(amount);
+  }
+
 
   return (
     <div>
@@ -20,16 +34,18 @@ const CartScreen = (props) => {
             <h2>
               Subtotal ({subtotal} items): £ {price}
             </h2>
-
-            {props.cart.map((item) => (
+            
+            {props.cart.map((item) =>  {
+              
+              return(
               <CartProduct
+                key={item.id}
                 item={item}
-                subtotal={subtotal}
-                setSubtotal={setSubtotal}
-                price={price}
-                setPrice={setPrice}
-              />
-            ))}
+                values ={values}
+                setValues ={setValues} 
+              />)
+              
+              })}
           </div>
         </div>
       </>
