@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/CartScreen.css";
 import CartProduct from "./CartProduct";
 
@@ -33,6 +33,10 @@ const CartScreen = (props) => {
     setSubtotal(total);
     setPrice(amount);
   }
+  useEffect(() => {
+    calculateValues()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [values])
 
 
   return (
@@ -45,17 +49,13 @@ const CartScreen = (props) => {
               Subtotal ({subtotal} items): £ {price}
             </h2>
             
-            {props.cart.map((item) =>  {
-              
-              return(
+            {props.cart.map((item) =>  (
               <CartProduct
                 key={item.id}
                 item={item}
-                values ={values}
-                setValues ={setValues} 
+                updateValues={updateValues}
               />)
-              
-              })}
+              )}
           </div>
         </div>
       </>
