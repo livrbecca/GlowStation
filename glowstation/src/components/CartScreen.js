@@ -9,8 +9,18 @@ const CartScreen = (props) => {
   const [price, setPrice] = useState(0);
   const [values, setValues] = useState([]);
 
-  function renderProduct(item, count, price){
-    setValues([...values, {id: item.id, count: count, price: price}])
+  function idExists(id){
+    return values.some(e => e.id === id)
+  }
+
+  function updateValues(item, count, price){
+    if (!idExists(item.id)){
+      setValues([...values, {id: item.id, count: count, price: price}])
+    } else {
+      const itemIndex = values.findIndex(e => e.id === item.id)
+      let tempValues = [...values];
+      tempValues[itemIndex] = {...tempValues[itemIndex], count: count, price: price}
+    }
   }
   function calculateValues() {
     let total = 0;
