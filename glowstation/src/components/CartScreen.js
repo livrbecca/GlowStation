@@ -9,15 +9,15 @@ const CartScreen = (props) => {
   const [price, setPrice] = useState(0);
   const [values, setValues] = useState([]);
 
-  function renderProduct(item, total, price){
-    setValues([...values, {id: item.id, total: total, price: price}])
+  function renderProduct(item, count, price){
+    setValues([...values, {id: item.id, count: count, price: price}])
   }
   function calculateValues() {
     let total = 0;
     let amount = 0;
     // eslint-disable-next-line array-callback-return
     values.map((item) => {
-      total += item.total
+      total += item.count
       amount += item.price
     })
     setSubtotal(total);
