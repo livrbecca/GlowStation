@@ -1,33 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-const CartProduct = ({ item, subtotal, setSubtotal, price, setPrice }) => {
+const CartProduct = ({ item, updateValues, values }) => {
   const [quantity, setQuantity] = useState(1);
 
-  function calculateSubtotal() {
-    let total = subtotal;
-    setSubtotal(total + quantity);
+  const subprice = item.price * quantity;
+  
+  const handleChange = (e) => {
+    setQuantity(Number(e.target.value))
   }
-  function calculatePrice() {
-    let old_price = price;
-    let item_price = item.price * quantity;
-    setPrice(old_price + item_price);
-  }
-  useEffect(() => {
-    calculateSubtotal();
-    calculatePrice();
-  }, [quantity]);
+
   return (
     <div key={item.id}>
       <h3 className="title">{item.name}</h3>
       <img className="picture" src={item.imageLinks.img1} alt={item.name} />
-      <h3 className="price"> Price:£{item.price * quantity}</h3>
+      <h3 className="price"> Price:£{subprice}</h3>
       <select
         id={item.id}
         className="num"
         value={quantity}
         onChange={(e) => {
-          setQuantity(Number(e.target.value));
-          console.log(item);
+          handleChange(e);
+          updateValues(item, Number(e.target.value), (item.price * Number(e.target.value)))
         }}
       >
         {[...Array(item.countInStock).keys()].map((x) => (
