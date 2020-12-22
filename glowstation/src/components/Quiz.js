@@ -1,17 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../css/Quiz.css";
 import { Typewriter } from "react-typewriting-effect";
 import "react-typewriting-effect/dist/index.css";
 import { Link } from "react-router-dom";
 
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+
 const Quiz = () => {
+  const myRef = useRef(null);
+  let executeScroll = () => scrollToRef(myRef);
+
+  const myRef1 = useRef(null);
+  let executeScroll1 = () => scrollToRef(myRef1);
+
+  const myRef3 = useRef(null);
+  let executeScroll3 = () => scrollToRef(myRef3);
+
+  // ref={myRef}
+
   return (
     <>
       <Link to="/home">
         <button>Home</button>
       </Link>
       <div className="questions">
-        <div className="toggleOne">
+        <div onClick={executeScroll} className="toggleOne">
           <div className="box">
             <h1 className="Q1">
               {/* DETERMINES category: 
@@ -37,9 +50,10 @@ const Quiz = () => {
             <button onClick={() => {}} className="selectionBtn">
               Sensitive
             </button>
+            <button>next</button>
           </div>
         </div>
-        <div className="toggleTwo">
+        <div ref={myRef} onClick={executeScroll1} className="toggleTwo">
           <div className="box">
             <h1 className="Q2">
               {/* DETERMINES category: 
@@ -74,9 +88,10 @@ const Quiz = () => {
             <button onClick={() => {}} className="selectionBtn">
               Hydration
             </button>
+            <button >next</button>
           </div>
         </div>
-        <div className="toggleThree">
+        <div ref={myRef1} onClick={executeScroll3} className="toggleThree">
           <div className="box">
             <h1 className="Q3">
               {/* DETERMINES category: 
@@ -111,9 +126,10 @@ const Quiz = () => {
             <button onClick={() => {}} className="selectionBtn">
               Hydration
             </button>
+            <button >next</button>
           </div>
         </div>
-        <div className="toggleFour">
+        <div ref={myRef3} className="toggleFour">
           <div className="box">
             <h1 className="Q4">
               {/* DETERMINES category: 
@@ -147,12 +163,12 @@ const Quiz = () => {
             </button>
           </div>
         </div>
-        <div className="next"></div>
       </div>
 
       <div className="loading3">
         <Link to="/loading3">
-        <button className="resultsBtn">Get Results</button>
+          {/* button to be disabled until final question answered */}
+          <button className="resultsBtn">Get Results</button>
         </Link>
       </div>
     </>

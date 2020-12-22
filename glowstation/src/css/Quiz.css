@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .box {
   background-color: rgb(210, 183, 233);
   margin: auto;
@@ -11,6 +15,8 @@
   text-align: center;
   align-content: center;
   box-shadow: 10px -10px 500px rgb(210, 183, 233);
+  margin-bottom: 19px;
+  margin-top: 150px;
 }
 
 .selectionBtn,
@@ -36,7 +42,7 @@
   font-size: 22px;
   border-width: 21x;
   border-radius: 18px;
-  border-color: gold;
+  border-color: rgb(129, 95, 158);
 }
 
 .selectionBtn:focus {
@@ -50,44 +56,30 @@
   border-width: 3px;
   border-radius: 18px;
   border-color: green;
- 
 }
 
-.resultsBtn{
-    background-color: rgba(116, 224, 116, 0.822);
-    width: 20%;
-    position: relative;
-    left: 855px;
+.resultsBtn {
+  background-color: rgba(116, 224, 116, 0.822);
+  width: 20%;
+  position: relative;
+  left: 810px;
+  top: 4px;
+  margin-bottom: 9px;
 }
 
-.nextBtn:hover {
-  font-weight: bolder;
-  border-style: solid;
-  font-size: 24px;
-  border-width: 4px;
-  border-radius: 18px;
-  border-color: black;
-  
+.one {
+  position: relative;
+  top: -35px;
 }
 
-.nextBtn{
-    position: relative;
-    left: 565px;
-    top: 69px;
-}
-
-.resultsBtn{
-    position: relative;
-    right: -965px;
-    top: 5px;
-}
-
-.one{
-    position: relative;
-   top: -35px;
-}
-
-.Q1, .Q2, .Q3, .Q4{
+.Q1,
+.Q2,
+.Q3,
+.Q4 {
   position: relative;
   top: -90px;
+}
+
+.loading3 {
+  align-content: center;
 }
