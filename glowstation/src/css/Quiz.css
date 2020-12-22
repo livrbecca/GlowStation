@@ -2,6 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 .box {
   background-color: rgb(210, 183, 233);
   margin: auto;
@@ -10,7 +11,8 @@ html {
   margin-top: 7.5%;
   padding: 13em 19em;
   border-style: solid;
-  border-width: 10px;
+  border-width: 3px;
+  border-color: rgb(198, 160, 231);
   border-radius: 25px;
   text-align: center;
   align-content: center;

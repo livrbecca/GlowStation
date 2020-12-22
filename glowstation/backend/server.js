@@ -25,8 +25,9 @@ connect();
 
 app.use(cors());
 
+
+
 app.get("/products", async (req, res) => {
-  
   // use glowstation; db.products; find all
   const allProducts = await client
     .db("glow")
@@ -38,6 +39,45 @@ app.get("/products", async (req, res) => {
     message: "Here are all your products!",
     products: allProducts,
   });
+});
+
+app.get("/products/results", async (req, res) => {
+  let categories, skinType;
+  if (req.query.category) {
+    categories = req.query.category.split("", "");
+    console.log(categories);
+  }
+  skinType = req.query.skinType;
+
+  const resultsQ1 = await client
+    .db("glow")
+    .collection("products")
+    .find({ $and: [{ "category": { $in: categories } }, { "skinType": skinType }] })
+    .toArray();
+
+  res.json({ message: "routine builder results", data: resultsQ1 });
+  // should be something like
+  // localhost:5000/products/results?category=Moisturisers&skinType=Redness
+});
+
+app.get("/products/results", async (req, res) => {
+  let categories
+  let skinConcern;
+  if (req.query.category) {
+    categories = req.query.category.split("", "");
+    console.log(categories);
+  }
+  skinConcern = req.query.skinConcern222;
+
+  const resultsQ1 = await client
+    .db("glow")
+    .collection("products")
+    .find({ $and: [{ "category": { $in: categories } }, { "skinConcern222": skinConcern }] })
+    .toArray();
+
+  res.json({ message: "routine builder results", data: resultsQ1 });
+  // should be something like
+  // localhost:5000/products/results?category=Moisturisers&skinType=Redness
 });
 
 //Categorys work, but only lists one product
