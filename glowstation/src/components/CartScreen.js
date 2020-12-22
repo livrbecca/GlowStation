@@ -20,6 +20,7 @@ const CartScreen = (props) => {
       const itemIndex = values.findIndex(e => e.id === item.id)
       let tempValues = [...values];
       tempValues[itemIndex] = {...tempValues[itemIndex], count: count, price: price}
+      setValues(tempValues) 
     }
   }
   function calculateValues() {
@@ -33,11 +34,12 @@ const CartScreen = (props) => {
     setSubtotal(total);
     setPrice(amount);
   }
+
   useEffect(() => {
+    console.log(values)
     calculateValues()
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [values])
-
 
   return (
     <div>
