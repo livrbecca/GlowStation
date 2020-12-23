@@ -7,11 +7,10 @@ import { Link } from "react-router-dom";
 const Home = (props) => {
   return (
     <>
-     
-
       <div className="welcomeMessage">
-            
-        <h1 style={{ textTransform: "capitalize" }}>Welcome {props.name}</h1>
+        <h1 style={{ textTransform: "capitalize" }}>Hi {props.name}, welcome to Glow Station</h1>
+        <h2>Take the Routine <br /> Builder <br />  Today</h2>
+        <img className="landing" src="landingpic.png" alt="collage" />
         <Link to="/loading2">
           <AliceCarousel
             animationDuration="600"
@@ -27,7 +26,7 @@ const Home = (props) => {
           </AliceCarousel>
         </Link>
         <div className="shopAd">
-          <Link to=''>
+          <Link to="">
             <img className="advert2" src="advert4.png" alt="snail mucin" />
           </Link>
         </div>
@@ -42,7 +41,7 @@ const Home = (props) => {
         </div>
         <div className="shopAd3">
           <Link to="/shop">
-          <img className="advert4" src="advert6.png" alt="Serums" />
+            <img className="advert4" src="advert6.png" alt="Serums" />
           </Link>
         </div>
       </div>

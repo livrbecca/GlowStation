@@ -65,6 +65,14 @@
   top: -1128px;
 }
 
+.landing{
+  height: 700px;
+  width: 1000px;
+  position: relative;
+  left: 800px;
+  top: -90px;
+}
+
 /* 
 train animation */
 

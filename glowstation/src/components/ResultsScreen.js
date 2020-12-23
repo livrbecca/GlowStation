@@ -4,11 +4,12 @@ import { Typewriter } from "react-typewriting-effect";
 import "react-typewriting-effect/dist/index.css";
 import Collapsible from "react-collapsible";
 
-const ResultsScreen = (props) => {
+const ResultsScreen = ({ name, cleanser, moisturiser, SPF }) => {
+  console.log(moisturiser.data[0].name);
   return (
     <>
       <h2 style={{ textTransform: "capitalize" }} className="nameTitle">
-        {props.name}
+        {name}
         <Typewriter
           stopBlinkinOnComplete="true"
           string="'s Routine Builder results."
@@ -52,8 +53,8 @@ const ResultsScreen = (props) => {
               grime/dirt gathered in your sleep. This is also the pefect time to
               remind you to change your pillow cases weekly!
             </p>
-            <p>"Cleanser.imageLinks.img1"</p>
-            <p>"Cleanser.name"</p>
+            <p>{cleanser}</p>
+            <p>{cleanser}</p>
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -87,8 +88,12 @@ const ResultsScreen = (props) => {
               lock in all the goodness applied above and keeps your skin
               hydrated throughout the day. Apply to damp skin.
             </p>
-            <p>"Moisturiser.imageLinks.img1"</p>
-            <p>"Moisturiser.name"</p>
+            <p>{moisturiser.data[0].name}</p>
+            <p>{moisturiser.data[0].price}</p>
+            <img
+              src={moisturiser.data[0].imageLinks.img1}
+              alt={moisturiser.data[0].name}
+            />
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -114,11 +119,11 @@ const ResultsScreen = (props) => {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-moon"
+              className="bi bi-moon"
               viewBox="0 0 16 16"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z"
               />
             </svg>
@@ -188,11 +193,11 @@ const ResultsScreen = (props) => {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-gem"
+              className="bi bi-gem"
               viewBox="0 0 16 16"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6l3-4zm11.386 3.785l-1.806-2.41-.776 2.413 2.582-.003zm-3.633.004l.961-2.989H4.186l.963 2.995 5.704-.006zM5.47 5.495l5.062-.005L8 13.366 5.47 5.495zm-1.371-.999l-.78-2.422-1.818 2.425 2.598-.003zM1.499 5.5l2.92-.003 2.193 6.82L1.5 5.5zm7.889 6.817l2.194-6.828 2.929-.003-5.123 6.831z"
               />
             </svg>

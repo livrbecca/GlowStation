@@ -23,6 +23,10 @@ import Loading3 from "./components/Loading3";
 //import AddWishlist from "./components/AddWishlist";
 
 function App() {
+  const [moisturiser, setMoisturiser] = useState([]);
+  const [SPF, setSPF] = useState([]);
+  const [cleanser, setCleanser] = useState([]);
+
   const [products, setProducts] = useState([]);
 
   const [cart, setCart] = useState([]);
@@ -30,7 +34,7 @@ function App() {
   const addToCart = (product, quantity) => {
     product.qty += quantity;
     console.log(product);
-    console.log(quantity)
+    console.log(quantity);
     setCart([...cart, product]);
   };
 
@@ -193,7 +197,7 @@ function App() {
         path="/routinebuilder"
         render={() => (
           <>
-            <Quiz />
+            <Quiz setMoisturiser={setMoisturiser} setSPF={setSPF} setCleanser={setCleanser} />
           </>
         )}
       />
@@ -203,7 +207,7 @@ function App() {
         render={() => (
           <>
             <Navbar cart={cart} />
-            <ResultsScreen name={name} />
+            <ResultsScreen name={name} moisturiser={moisturiser} SPF={SPF} cleanser={cleanser}/>
           </>
         )}
       />

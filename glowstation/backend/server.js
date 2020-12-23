@@ -25,8 +25,6 @@ connect();
 
 app.use(cors());
 
-
-
 app.get("/products", async (req, res) => {
   // use glowstation; db.products; find all
   const allProducts = await client
@@ -44,15 +42,16 @@ app.get("/products", async (req, res) => {
 app.get("/products/results", async (req, res) => {
   let categories, skinType;
   if (req.query.category) {
-    categories = req.query.category.split("", "");
+    categories = req.query.category.split(",");
     console.log(categories);
   }
   skinType = req.query.skinType;
+  console.log(skinType);
 
   const resultsQ1 = await client
     .db("glow")
     .collection("products")
-    .find({ $and: [{ "category": { $in: categories } }, { "skinType": skinType }] })
+    .find({ $and: [{ category: { $in: categories } }, { skinType: skinType }] })
     .toArray();
 
   res.json({ message: "routine builder results", data: resultsQ1 });
@@ -61,7 +60,7 @@ app.get("/products/results", async (req, res) => {
 });
 
 app.get("/products/results", async (req, res) => {
-  let categories
+  let categories;
   let skinConcern;
   if (req.query.category) {
     categories = req.query.category.split("", "");
@@ -72,7 +71,12 @@ app.get("/products/results", async (req, res) => {
   const resultsQ1 = await client
     .db("glow")
     .collection("products")
-    .find({ $and: [{ "category": { $in: categories } }, { "skinConcern222": skinConcern }] })
+    .find({
+      $and: [
+        { category: { $in: categories } },
+        { skinConcern222: skinConcern },
+      ],
+    })
     .toArray();
 
   res.json({ message: "routine builder results", data: resultsQ1 });
