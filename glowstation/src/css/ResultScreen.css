@@ -20,7 +20,7 @@
   padding-bottom: 15px;
 }
 .PMWrapper {
-  background-color:rgba(235, 235, 202, 0.651);
+  background-color: rgba(235, 235, 202, 0.651);
   height: fit-content;
   width: 550px;
   border-color: rgba(122, 122, 240, 0.651);
@@ -33,7 +33,7 @@
 }
 
 .optionalWrapper {
-  background-color:rgba(235, 235, 202, 0.651);
+  background-color: rgba(235, 235, 202, 0.651);
   height: fit-content;
   width: 550px;
   border-color: rgba(115, 243, 104, 0.651);
@@ -59,4 +59,9 @@
   width: 90em;
   font-weight: bolder;
   background-color: rgba(210, 183, 233, 0.651);
+}
+
+img {
+  width: 250px;
+  height: 250px;
 }

@@ -59,27 +59,27 @@ app.get("/products/results", async (req, res) => {
   // localhost:5000/products/results?category=Moisturisers&skinType=Redness
 });
 
-app.get("/products/results", async (req, res) => {
+app.get("/products/res", async (req, res) => {
   let categories;
-  let skinConcern;
+  let skinConcern222;
   if (req.query.category) {
-    categories = req.query.category.split("", "");
+    categories = req.query.category.split(",");
     console.log(categories);
   }
-  skinConcern = req.query.skinConcern222;
+  skinConcern222 = req.query.skinConcern222;
 
-  const resultsQ1 = await client
+  const resultsQ2 = await client
     .db("glow")
     .collection("products")
     .find({
       $and: [
         { category: { $in: categories } },
-        { skinConcern222: skinConcern },
+        { skinConcern222: skinConcern222 },
       ],
     })
     .toArray();
 
-  res.json({ message: "routine builder results", data: resultsQ1 });
+  res.json({ message: "routine builder results", data: resultsQ2 });
   // should be something like
   // localhost:5000/products/results?category=Moisturisers&skinType=Redness
 });

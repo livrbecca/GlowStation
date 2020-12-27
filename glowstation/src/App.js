@@ -26,6 +26,12 @@ function App() {
   const [moisturiser, setMoisturiser] = useState([]);
   const [SPF, setSPF] = useState([]);
   const [cleanser, setCleanser] = useState([]);
+  const [mask, setMask] = useState([]);
+  const [mist, setMist] = useState([]);
+  const [oil, setOil] = useState([]);
+  const [serum, setSerum] = useState([]);
+  const [exfoliator, setExfoliator] = useState([]);
+  const [toner, setToner] = useState([]);
 
   const [products, setProducts] = useState([]);
 
@@ -197,7 +203,17 @@ function App() {
         path="/routinebuilder"
         render={() => (
           <>
-            <Quiz setMoisturiser={setMoisturiser} setSPF={setSPF} setCleanser={setCleanser} />
+            <Quiz
+              setMoisturiser={setMoisturiser}
+              setSPF={setSPF}
+              setCleanser={setCleanser}
+              setMask={setMask}
+              setMist={setMist}
+              setOil={setOil}
+              setSerum={setSerum}
+              setExfoliator={setExfoliator}
+              setToner={setToner}
+            />
           </>
         )}
       />
@@ -207,7 +223,18 @@ function App() {
         render={() => (
           <>
             <Navbar cart={cart} />
-            <ResultsScreen name={name} moisturiser={moisturiser} SPF={SPF} cleanser={cleanser}/>
+            <ResultsScreen
+              name={name}
+              moisturiser={moisturiser}
+              SPF={SPF}
+              cleanser={cleanser}
+              mask={mask}
+              mist={mist}
+              oil={oil}
+              serum={serum}
+              exfoliator={exfoliator}
+              toner={toner}
+            />
           </>
         )}
       />

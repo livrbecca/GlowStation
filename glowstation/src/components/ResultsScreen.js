@@ -4,8 +4,9 @@ import { Typewriter } from "react-typewriting-effect";
 import "react-typewriting-effect/dist/index.css";
 import Collapsible from "react-collapsible";
 
-const ResultsScreen = ({ name, cleanser, moisturiser, SPF }) => {
-  console.log(moisturiser.data[0].name);
+
+const ResultsScreen = ({ name, cleanser, moisturiser, SPF, mask, mist, oil, serum, exfoliator, toner}) => {
+  // console.log(moisturiser.data[0].name);
   return (
     <>
       <h2 style={{ textTransform: "capitalize" }} className="nameTitle">
@@ -53,8 +54,12 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF }) => {
               grime/dirt gathered in your sleep. This is also the pefect time to
               remind you to change your pillow cases weekly!
             </p>
-            <p>{cleanser}</p>
-            <p>{cleanser}</p>
+            {/* <p>{cleanser.data[0].name}</p>
+            <p>{cleanser.data[0].price}</p>
+            <img
+              src={cleanser.data[0].imageLinks.img1}
+              alt={cleanser.data[0].name}
+            /> */}
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -65,8 +70,12 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF }) => {
               your cleanser didn't catch. You can apply this with your hands and
               pat it into skin, or use a cotton pad and swipe.
             </p>
-            <p>"Toner.imageLinks.img1"</p>
-            <p>"Toner.name"</p>
+            {/* <p>{toner.data[0].name}</p>
+            <p>{toner.data[0].price}</p>
+            <img
+              src={toner.data[0].imageLinks.img1}
+              alt={toner.data[0].name}
+            /> */}
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -77,8 +86,12 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF }) => {
               (found in the optional section) then apply the serum. Pat, don't
               rub!
             </p>
-            <p>"Serum.imageLinks.img1"</p>
-            <p>"Serum.name"</p>
+            <p>{serum.data[0].name}</p>
+            <p>{serum.data[0].price}</p>
+            <img
+              src={serum.data[0].imageLinks.img1}
+              alt={serum.data[0].name}
+            />
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -105,8 +118,12 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF }) => {
               do that you. We're trying to glow, not look like Casper the
               friendly ghost.
             </p>
-            <p>"SPF.imageLinks.img1"</p>
-            <p>"SPF.name"</p>
+            {/* <p>{SPF.data[0].name}</p>
+            <p>{SPF.data[0].price}</p>
+            <img
+              src={SPF.data[0].imageLinks.img1}
+              alt={SPF.data[0].name}
+            /> */}
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -137,15 +154,23 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF }) => {
               and not getting a build up of dirt. Be sure to wash your face or
               at least 60 seconds, no less!
             </p>
-            <p>"Cleanser.imageLinks.img1"</p>
-            <p>"Cleanser.name"</p>
+            {/* <p>{cleanser.data[0].name}</p>
+            <p>{cleanser.data[0].price}</p>
+            <img
+              src={cleanser.data[0].imageLinks.img1}
+              alt={cleanser.data[0].name}
+            /> */}
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
           <Collapsible trigger=" 2. Toner / Essence >">
             <p>Same as the AM routine, adds hydration and removes residue.</p>
-            <p>"Toner.imageLinks.img1"</p>
-            <p>"Toner.name"</p>
+            {/* <p>{toner.data[0].name}</p>
+            <p>{toner.data[0].price}</p>
+            <img
+              src={toner.data[0].imageLinks.img1}
+              alt={toner.data[0].name}
+            /> */}
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -158,8 +183,12 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF }) => {
               gradually increase. After exfolating, mist your face (optional) to
               reset your skin's PH.{" "}
             </p>
-            <p>"Exfoliator.imageLinks.img1"</p>
-            <p>"Exfoliator.name"</p>
+            {/* <p>{exfoliator.data[0].name}</p>
+            <p>{exfoliator.data[0].price}</p>
+            <img
+              src={exfoliator.data[0].imageLinks.img1}
+              alt={exfoliator.data[0].name}
+            /> */}
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -168,8 +197,12 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF }) => {
               Same as the AM routine, addresses concerns. Apply on damp skin as
               damp skin is more permeable!
             </p>
-            <p>"Serum.imageLinks.img1"</p>
-            <p>"Serum.name"</p>
+            <p>{serum.data[0].name}</p>
+            <p>{serum.data[0].price}</p>
+            <img
+              src={serum.data[0].imageLinks.img1}
+              alt={serum.data[0].name}
+            />
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -179,8 +212,12 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF }) => {
               helps lock in all the goodness and keep your skin hydrated. Apply
               to damp skin.
             </p>
-            <p>"Moisturiser.imageLinks.img1"</p>
-            <p>"Moisturiser.name"</p>
+            <p>{moisturiser.data[0].name}</p>
+            <p>{moisturiser.data[0].price}</p>
+            <img
+              src={moisturiser.data[0].imageLinks.img1}
+              alt={moisturiser.data[0].name}
+            />
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -208,8 +245,12 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF }) => {
               routine after your moisturiser for a face that feels and looks
               like silk.
             </p>
-            <p>"Oil.imageLinks.img1"</p>
-            <p>"Oil.name"</p>
+            {/* <p>{oil.data[0].name}</p>
+            <p>{oil.data[0].price}</p>
+            <img
+              src={oil.data[0].imageLinks.img1}
+              alt={oil.data[0].name}
+            /> */}
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -221,8 +262,12 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF }) => {
               mist, serum, mist, moisturiser, oil. You always want a hydrating
               mist (and toner / essence), not an exfoliating one.
             </p>
-            <p>"Mist.imageLinks.img1"</p>
-            <p>"Mist.name"</p>
+            {/* <p>{mist.data[0].name}</p>
+            <p>{mist.data[0].price}</p>
+            <img
+              src={mist.data[0].imageLinks.img1}
+              alt={mist.data[0].name}
+            /> */}
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -233,8 +278,12 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF }) => {
               cleansing. After removal, follow with toner and the rest of your
               routine.
             </p>
-            <p>"Mask.imageLinks.img1"</p>
-            <p>"Mask.name"</p>
+            {/* <p>{mask.data[0].name}</p>
+            <p>{mask.data[0].price}</p>
+            <img
+              src={mask.data[0].imageLinks.img1}
+              alt={mask.data[0].name}
+            /> */}
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>

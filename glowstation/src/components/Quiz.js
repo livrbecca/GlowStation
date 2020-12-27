@@ -10,8 +10,9 @@ import Axios from "axios";
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
 const Quiz = (props) => {
-  //scroll functionality
   console.log(props.setMoisturiser);
+  console.log(props.setSerum);
+  //scroll functionality
   const myRef = useRef(null);
   let executeScroll = () => scrollToRef(myRef);
 
@@ -19,15 +20,16 @@ const Quiz = (props) => {
   let executeScroll1 = () => scrollToRef(myRef1);
 
   let skinType = "";
+  let skinConcern222 = "";
 
-  async function resultsCat(skinType) {
-    const category = ["Cleanser", "Moisturisers", "SPF"];
+  async function skinTypeCategories(skinType) {
+    const category = ["Cleanser", "Moisturisers", "SPF", "Mask"];
 
     // let response = await Axios.get(
     //   `localhost:5000/products/results?category=${category[0]}&skinType=${skinType}`
     // ).then((res) => res.data);
     // console.log(response)
-    // setCleanser(response);
+    // props.setCleanser(response);
 
     let response = await Axios.get(
       `http://localhost:5000/products/results?category=${category[1]}&skinType=${skinType}`
@@ -39,7 +41,28 @@ const Quiz = (props) => {
     //   `localhost:5000/products/results?category=${category[2]}&skinType=${skinType}`
     // ).then((res) => res.data);
     // console.log(response)
-    // setSPF(response);
+    // props.setSPF(response);
+
+    // response = await Axios.get(
+    //   `localhost:5000/products/results?category=${category[3]}&skinType=${skinType}`
+    // ).then((res) => res.data);
+    // console.log(response)
+    // props.setMask(response);
+  }
+
+  async function skinConcernCategories(skinConcern222) {
+    const category = ["Serums", "Mists", "Oil", "Exfoliator", "Toner"];
+
+    let response = await Axios.get(
+      `http://localhost:5000/products/res?category=${category[0]}&skinConcern222=${skinConcern222}`
+    ).then((res) => res.data);
+    console.log(response.data);
+    props.setSerum(response);
+  }
+
+  function getBothResults() {
+    skinConcernCategories(skinConcern222);
+    skinTypeCategories(skinType);
   }
 
   return (
@@ -55,7 +78,8 @@ const Quiz = (props) => {
             
             Cleansers,
             Moisturisers,
-            SPF
+            SPF,
+            Mask (optional)
             */}
               <Typewriter delay={99} string="What is your skin type?" />
             </h1>
@@ -95,7 +119,10 @@ const Quiz = (props) => {
                 string=" Select a primary skin concern."
               />
             </h1>
-            <RadioGroup horizontal>
+            <RadioGroup
+              onChange={(value) => (skinConcern222 = value)}
+              horizontal
+            >
               <RadioButton rootColor="purple" value="Acne & Blackheads">
                 Acne & Blackheads
               </RadioButton>
@@ -142,7 +169,7 @@ const Quiz = (props) => {
         <Link to="/loading3">
           {/* button to be disabled until final question answered */}
           <button
-            onClick={() => resultsCat(skinType)}
+            onClick={() => getBothResults(skinConcern222, skinType)}
             type="submit"
             className="resultsBtn"
           >
@@ -153,9 +180,5 @@ const Quiz = (props) => {
     </>
   );
 };
-// using [results, setResults] = useState([]) from above
-// let { cleanser, toner, exfoliator, serum, moisturiser, SPF } = results
-//setResults(results) - pass this to the results page
-// setResults={setResults}
 
 export default Quiz;
