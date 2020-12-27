@@ -38,8 +38,9 @@
 
 .advert2:hover,
 .advert3:hover,
-.advert4:hover {
-  border: 0.5rem gold solid;
+.advert4:hover,
+.adButton:hover {
+  border: 0.3rem gold solid;
   transition: all 0.3s ease;
 }
 
@@ -65,14 +66,90 @@
   top: -1128px;
 }
 
-.landing{
-  height: 700px;
-  width: 1000px;
+.landing {
+  height: 550px;
+  width: 1150px;
   position: relative;
-  left: 800px;
-  top: -90px;
+  left: 269px;
+  top: -450px;
 }
 
-/* 
-train animation */
+.largeTextAd {
+  font-size: 120px;
+  font-style: italic;
+}
+
+.miniTextAd {
+  font-size: 35x;
+  position: relative;
+  left: 120px;
+}
+
+.adButton {
+  position: relative;
+  left: 130px;
+  top: -230px;
+  color: black;
+  border-color: rgb(199, 162, 231);
+  font-size: 19px;
+  padding: 15px 25px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  font-weight: 500;
+  border-width: 2px;
+  border-radius: 18px;
+  line-height: 1;
+}
+
+.together {
+  margin: auto;
+  margin-top: 20px;
+  border-style: solid;
+  border-width: 0.3rem;
+  border-color: rgb(199, 162, 231);
+  height: 700px;
+  width: 1620px;
+  margin-bottom: 130px;
+  overflow: hidden;
+}
+
+.together:hover{
+  border-width: 0.6rem;
+  transition: all 0.3s ease;
+}
+
+.groupOfAds{
+  position: relative;
+  top: 90px;
+}
+
+.countDownWrapper{
+  margin: auto;
+  text-align: center;
+  width: 900px;
+  height: 250px;
+  margin-bottom: 139px;
+}
+
+.count{
+  width: 900px;
+  height: 250px;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: red;
+  height: 50px;
+  /* width: 700px; */
+}
+
+.C1 {
+  font-size: 65px;
+}
+
+
+.C2 {
+  font-size: 30px;
+}
+
+.wishLink{
+  margin-top: 37px;
+}
 

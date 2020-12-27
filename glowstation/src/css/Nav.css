@@ -42,7 +42,10 @@
 
 .links{
   text-align: left;
-  margin-right: 140px;
+  margin-right: 131px;
+  margin-left: 0.5px;
   font-size: 25px;
+  position: relative;
+  left: 60px;
 
 }

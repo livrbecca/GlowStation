@@ -23,6 +23,12 @@ const Navbar = (props) => {
         <Link className="links" to="/wishlist">
           Wishlist
         </Link>
+        <Link className="links" to="/skineducation">
+          Skin Education
+        </Link>
+        <Link className="links" to="/about">
+          About Glow Station
+        </Link>
         <Link className="links" to="/cart">
           Cart ({props.cart.length})
         </Link>
