@@ -394,7 +394,9 @@
             "Combination"
         ],
         "skinConcern222": [
-            "Brightening & Hyperpigmentation"
+            "Brightening & Hyperpigmentation",
+            "Lines & Wrinkles",
+            "Hydration"
         ],
         "category": [
             "Oils"
@@ -409,6 +411,301 @@
             "img3": "https://cdn.cultbeauty.co.uk/slots-img/srnsrn007_sundayriley_junohydroactivecellularfaceoil_15ml_1_1560x1960-m16u7jpg"
         },
         "howTo": "Massage as many drops (usually 5-7) as needed into face, neck, and décolletage. Can be blended or layered with any face product.",
+        "qty": 0
+    },
+    {
+        "id": 8,
+        "slug": "Salicylic-Acid-Cleanser",
+        "brand": "The Inkey List",
+        "name": "Salicylic Acid Cleanser",
+        "price": 10.99,
+        "countInStock": 7,
+        "rating": 5,
+        "numReviews": 115,
+        "ingredientList": [
+            "Aqua (Water)",
+            "Propanediol",
+            "Glycerin",
+            "Sodium Methyl Cocoyl Taurate",
+            "Cocamidopropyl Betaine",
+            "PEG-120 Methyl Glucose Dioleate",
+            "Salicylic Acid",
+            "PEG-150 Pentaerythrityl Tetrastearate",
+            "PEG-6 Caprylic/Capric Glycerides",
+            "Betaine",
+            "Zinc PCA",
+            "Phenoxyethanol",
+            "Sodium Chloride",
+            "Allantoin",
+            "Sodium Hydroxide",
+            "Coco-Glucoside",
+            "Glyceryl Oleate",
+            "Benzyl Alcohol",
+            "Coconut Acid",
+            "Ethylhexylglycerin",
+            "Sodium Benzoate",
+            "Citric Acid",
+            "Hydrogenated Palm Glycerides Citrate"
+        ],
+        "skinType": [
+            "Oily"
+        ],
+        "skinConcern222": [
+            "Acne & Blackheads",
+            "Texture",
+            "Visible Pores"
+        ],
+        "category": [
+            "Cleansers",
+            "Exfoliators"
+        ],
+        "description": {
+            "smallDes": "The Inkey List’s aim is simple: break through beauty jargon to deliver a straightforward take on skin care’s most-wanted ingredients (at astoundingly reasonable, ‘give-it-a-go’ prices). This brand new Salicylic Acid Cleanser - better known as a Beta Hydroxy Acid (BHA) - helps to effectively cleanse skin, removing make up, dirt and unclog pores to reduce the appearance of enlarged pores and minimise excess oils.",
+            "largeDes": "A must-have for those with acne-prone skin, this Salicylic Acid Cleanser is formulated with a zinc compound to help control excess sebum, while allantoin - an anti-irritant, helps soothe and protect skin. This hard-working multi-use product not only does the job of removing make up, it controls excess oil to reduce sebum, reduces the appearance of enlarged pores, blackheads and breakouts as well as promoting a more even skin tone. Simply use this morning and/or evening, then rinse thoroughly with water and follow with your favourite serums. We promise you'll love the results!"
+        },
+        "imageLinks": {
+            "img1": "https://cdn.cultbeauty.co.uk/resized/1200x1440/slots-img/ink/ink000_theinkeylist_salicylic_acid_cleanser_1560x1960-h7ma2.jpg",
+            "img2": "https://cdn.cultbeauty.co.uk/resized/1200x1440/slots-img/thetheinkeylist_salicylicacidcleanser_3_1560x1960-aco3kjpg",
+            "img3": "https://cdn.shopify.com/s/files/1/0370/9111/5143/products/SalAcidHero1000x1000_600x_crop_center.jpg?v=1608642722"
+        },
+        "howTo": "Use AM and PM. Gently massage a small amount onto dampened face and neck. Rinse thoroughly with water and follow with preferred serums and moisturiser.",
+        "qty": 0
+    },
+    {
+        "id": 9,
+        "slug": "Soy-Face-Cleanser",
+        "brand": "Fresh",
+        "name": "Soy Face Cleanser",
+        "price": 30,
+        "countInStock": 12,
+        "rating": 4.5,
+        "numReviews": 139,
+        "ingredientList": [
+            "Aqua (Water)",
+            "Coco-Glucoside",
+            "Glycerin",
+            "Butylene Glycol",
+            "PEG-7 Glyceryl Cocoate",
+            "Xanthan Gum",
+            "Glycine Soja (Soybean) Oil",
+            "Helianthus Annuus (Sunflower) Seed Oil",
+            "Borago Officinalis Seed Oil",
+            "Aloe Barbadensis Leaf Juice",
+            "Cucumis Sativus (Cucumber) Fruit Extract",
+            "Rosa Damascena Extract",
+            "Rosa Damascena Flower Water",
+            "Centaurea Cyanus Flower Extract",
+            "Glycine Soja (Soybean) Sterols",
+            "Panax Ginseng Root Extract",
+            "Rosa Damascena Flower Oil",
+            "Malva Sylvestris (Mallow) Flower Extract",
+            "Tocopherol",
+            "Ascorbyl Palmitate",
+            "PEG-120 Methyl Glucose Dioleate",
+            "Benzoic Acid",
+            "Disodium EDTA"
+        ],
+        "skinType": [
+            "Sensitive"
+        ],
+        "skinConcern222": [
+            "Texture",
+            "Brightening & Hyperpigmentation"
+        ],
+        "category": [
+            "Cleansers"
+        ],
+        "description": {
+            "smallDes": "A best-selling 3-in-1 face wash that gently melts away makeup and mascara (without the sting!), removes impurities & tones for clean, balanced skin.",
+            "largeDes": "This pH-balanced gel cleanser for all skin types has a cult following for the way it removes makeup—even mascara—without drying for soft, supple skin. It's made with amino acid-rich soy proteins, calming cucumber extract, and balancing rosewater. Sensitive skin? It also soothes and tones."
+        },
+        "imageLinks": {
+            "img1": "https://cdn.cultbeauty.co.uk/resized/1200x1440/slots-img/xxxxxxxx_fresh_soyfacecleanser_150ml_1_1560x1960-xy7nzjpg",
+            "img2": "https://cdn.cultbeauty.co.uk/resized/1200x1440/slots-img/frefre002_fresh_soyfacecleanser_5_1560x1960-hvbbgjpg",
+            "img3": ""
+        },
+        "howTo": "Wet the skin and massage over the face and eyes, then rinse. Use daily, morning and night.",
+        "qty": 0
+    },
+    {
+        "id": 10,
+        "slug": "Lait-Creme-Concentre",
+        "brand": "Embryolisse ",
+        "name": "Lait-Creme Concentre",
+        "price": 14.50,
+        "countInStock": 16,
+        "rating": 5,
+        "numReviews": 163,
+        "ingredientList": [
+            "Aqua",
+            "Paraffinum Liquidum",
+            "Stearic Acid",
+            "Glyceryl Stearate",
+            "Triethanolamine",
+            "Cera Alba",
+            "Cetyl Palmitate",
+            "Butyrospermum Parkii",
+            "Steareth-10",
+            "Polyacrylamide C13-14 Isoparaffin",
+            "Laureth-7",
+            "Aloe Barbadensis",
+            "Soy Protein"
+        ],
+        "skinType": [
+            "Dry",
+            "Sensitive"
+        ],
+        "skinConcern222": [
+            "Redness",
+            "Hydration",
+            "Texture"
+        ],
+        "category": [
+            "Cleansers"
+        ],
+        "description": {
+            "smallDes": "This miracle moisturiser is packed with nutrients and water to transform skin from dull, dehydrated and lacklustre to soft, supple and radiant. Simply massage in and allow to sink in, morning and night. It can also be used to remove make-up and can be left on as a repairing mask.",
+            "largeDes": "A real beauty secret, favoured by dermatologists for decades; a combination of ingredients of natural origin, rich in essential fatty acids and vitamins. Provides the skin with all the nutrients and water needed for its balance, and accelerates cell renewal. Moisturises, nourishes and repairs, the skin becomes supple. It is plumped, smoothed, and incredibly soft. Signs of dryness and discomfort disappear. Embryolisse Lait-Crème Concentré's creamy milk texture leaves a satin film, even on dry skin. The skin’s surface is softer and more radiant and revitalised."
+        },
+        "imageLinks": {
+            "img1": "https://cdn.cultbeauty.co.uk/resized/1200x1440/media/catalog/product/3/3/33049900_embryolisse_laitcremeconcentre_75ml_sizedproduct_800x960.jpg",
+            "img2": "https://cdn.cultbeauty.co.uk/resized/1200x1440/slots-img/emb/embryolisse_laitcremeconcentre_2_1560x1960-zgue5.jpg",
+            "img3": "https://images.squarespace-cdn.com/content/v1/57b7e1189f7456e36f22aa3e/1553328141304-4YD8MXR0CVTB2G4EACFF/ke17ZwdGBToddI8pDm48kGwqNa-TSATgABi909OK27Z7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UQSxQa_pE67Ig1CszvlZo11NCLvqIlshiNC_JCcjnOmqOV4zqrbdg_2AqIEjj1Z3Fg/embryolisse-lait-creme-concentre-review-philippines-2.jpg"
+        },
+        "howTo": "Apply Embryolisse Lait-Crème Concentré morning and/or evening to clean, dry face. Massage in gently without applying pressure, and leave to penetrate into the skin. Embryolisse Lait-Crème Concentré can also be used to cleanse the skin or remove make-up, as a repairing mask, an after-shave cream or as a baby-care product.",
+        "qty": 0
+    },
+    {
+        "id": 11,
+        "slug": "Skin-Balancing-Cleanser",
+        "brand": "Paula's Choice",
+        "name": "Skin Balancing Cleanser",
+        "price": 19,
+        "countInStock": 8,
+        "rating": 4,
+        "numReviews": 48,
+        "ingredientList": [
+            "Aqua",
+            "Sodium Cocoyl Isethionate",
+            "Sodium Lauroamphoacetate",
+            "Stearic Acid",
+            "Glycerin",
+            "Glycol Distearate",
+            "Helianthus Annuus (Sunflower) Seed Oil ",
+            "Acrylates Copolymer",
+            "Cetearyl Alcohol",
+            "Aloe Barbadensis Leaf Juice"
+        ],
+        "skinType": [
+            "Combination",
+            "Oily"
+        ],
+        "skinConcern222": [
+            "Acne & Blackheads",
+            "Visible Pores",
+            "Texture"
+        ],
+        "category": [
+            "Cleansers"
+        ],
+        "description": {
+            "smallDes": "This foaming cleanser removes dirt, excess oil and makeup without stripping skin.",
+            "largeDes": "A cleanser for combination to oily skin should keep the skin balanced, removing excess oil while keeping the skin’s natural protective layer intact. This gentle yet effective cleanser cleanses skin without stripping it and is ideal if you suffer from blackheads or enlarged pores."
+        },
+        "imageLinks": {
+            "img1": "https://www.paulaschoice.co.uk/dw/image/v2/BBJJ_PRD/on/demandware.static/-/Sites-paulaschoice-catalog/default/dwe3ca83aa/images/1150-lifestyle.jpg?sw=460&sh=700&sm=fit",
+            "img2": "https://images-na.ssl-images-amazon.com/images/I/718PZc1o2rL._AC_SX679_.jpg",
+            "img3": "https://www.paulaschoice.co.uk/on/demandware.static/-/Sites-paulaschoice-catalog/default/dw5778777c/images/1150-swatch.jpg"
+        },
+        "howTo": "Use morning and evening. Splash the face and eyes generously with water. Apply a small amount of cleanser to your face using vigorous yet gentle circular motions. Rinse well. Repeat or use with a clean washcloth to remove heavy makeup.",
+        "qty": 0
+    },
+    {
+        "id": 12,
+        "slug": "Watermelon-Glow-Ultra-Fine #-Mist",
+        "brand": "Glow Recipe",
+        "name": "Watermelon Glow Ultra-Fine Mist",
+        "price": 20,
+        "countInStock": 4,
+        "rating": 3.5,
+        "numReviews": 77,
+        "ingredientList": [
+            "Citrullus Lanatus (Watermelon) Fruit Extract",
+            "Citrullus Lanatus (Watermelon) Seed Oil",
+            "Oryza Sativa (Rice) Germ Oil",
+            "Moringa Oleifera Seed Extract",
+            "Glycine Soja (Soybean) Sterols",
+            "Hyaluronic Acid",
+            "Soy Amino Acids",
+            "Centella Asiatica Extract",
+            "Hibiscus Sabdariffa Flower Extract",
+            "Glycyrrhiza Glabra (Licorice) Root Extract",
+            "Fragrance"
+        ],
+        "skinType": [
+            "Dry",
+            "Combination",
+            "Sensitive"
+        ],
+        "skinConcern222": [
+            "Hydration",
+            "Brightening & Hyperpigmentation"
+        ],
+        "category": [
+            "Mists"
+        ],
+        "description": {
+            "smallDes": "Prepare to fall head over heels for this all-new (and absolutely adorable) Watermelon Glow Ultra-Fine Mist! Made with 84% watermelon, hydrating hyaluronic acid and hibiscus flower AHAs, this ultra-hydrating and gently soothing super-fine mist will be your Holy Grail go-to come summertime. ",
+            "largeDes": "Inspired by the K-beauty fog mist trend, it has a super delicate, lightweight spray that refreshes and enhances skin and make up. It’s also a bi-phase formula packed with hydrating oils and power actives. Just shake it and spray throughout the day whenever you need a glow boost. Jam-packed with watermelon extracts, hydrating hyaluronic acid and hibiscus flower AHAs this super-fine mist packs a hydrating punch. Essential for dry or dehydrated skin types as well as those wanting a dewy, healthy glow, we guarantee this will become one of your go-to favourites.  "
+        },
+        "imageLinks": {
+            "img1": "https://cdn.cultbeauty.co.uk/resized/1200x1440/slots-img/glogloglo007_glowrecipe_watermelonmist_1560x1960-bnlx6jpg-x60lfjpg",
+            "img2": "https://cdn.cultbeauty.co.uk/resized/1200x1440/slots-img/gloglo007_glowrecipe_watermelonmist_3_1560x1960-pk1b0jpg",
+            "img3": "https://cdn.cultbeauty.co.uk/resized/1200x1440/slots-img/gloglo007_glowrecipe_watermelonmist_8_1560x1960-h70hijpg"
+        },
+        "howTo": "Spritz in a halo across your face for maximum hydration benefits",
+        "qty": 0
+    },
+    {
+        "id": 13,
+        "slug": "Rosewater-&-Glycerin",
+        "brand": "Heritage Store",
+        "name": "Rosewater & Glycerin",
+        "price": 10,
+        "countInStock": 18,
+        "rating": 5,
+        "numReviews": 39,
+        "ingredientList": [
+            "Aqua (Water)",
+            "Glycerin",
+            "Purified water",
+            "Pure Rose Oil",
+            "Natural Vegetable Glycerin"
+        ],
+        "skinType": [
+            "Dry",
+            "Combination",
+            "Oily",
+            "Sensitive"
+        ],
+        "skinConcern222": [
+            "Brightening & Hyperpigmentation",
+            "Hydration",
+            "Lines & Wrinkles"
+        ],
+        "category": [
+            "Mists"
+        ],
+        "description": {
+            "smallDes": "Super lightweight water-based formula that instantly hydrates your skin with a subtle floral rose scent. Smooth over your face and body for soft, moisturized skin.",
+            "largeDes": "Uniting hydroessential rose, with the brand’s signature Vor-Mag water and glycerin, this calming and hydrating mist is incredibly versatile – not to mention incredibly clean. The glycerin acts as a humectant – attracting and retaining water in a bid to supplement cells’ reservoirs – while the Vor-mag water (meaning that the water has been magnetised and ‘vortexed’ to increase its energy and vibration) works in tandem with the healing and mood-elevating rosewater to leave skin feeling supple, soft and ‘springy’. Simply mist over face, hair and scalp to hydrate and rebalance whenever you start to feel fraught."
+        },
+        "imageLinks": {
+            "img1": "https://cdn.cultbeauty.co.uk/resized/1200x1440/slots-img/hsthst004_237ml_heritagestore_rosewaterandglycerin_237ml_1_1560x1960-rzoh5jpg",
+            "img2": "https://s7g10.scene7.com/is/image/UrbanOutfittersEU/0193245680003_000_b?$redesign-zoom-5x$",
+            "img3": "https://s7g10.scene7.com/is/image/UrbanOutfittersEU/0193245680003_000_d?$redesign-zoom-5x$"
+        },
+        "howTo": "Apply directly onto face and neck to hydrate and refresh skin. Use as a setting spray after make up, and to give a natural glow. Spray onto hair and scalp to moisturiser and soothe. Combine with your favourite facial mask.",
         "qty": 0
     }
 ]
