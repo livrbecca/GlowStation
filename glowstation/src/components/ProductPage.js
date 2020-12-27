@@ -10,7 +10,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import Collapsible from "react-collapsible";
 
 const ProductPage = (props) => {
-  const [qty, setQty] = useState(1);
+  const [qty] = useState(1);
   let location = useLocation();
   let { product } = location.state;
 

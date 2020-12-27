@@ -5,7 +5,7 @@ import "react-typewriting-effect/dist/index.css";
 import Collapsible from "react-collapsible";
 
 
-const ResultsScreen = ({ name, cleanser, moisturiser, SPF, mask, mist, oil, serum, exfoliator, toner}) => {
+const ResultsScreen = ({name, cleanser, moisturiser, SPF, mask, mist, oil, serum, exfoliator, toner}) => {
   // console.log(moisturiser.data[0].name);
   return (
     <>
@@ -56,8 +56,7 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF, mask, mist, oil, seru
             </p>
             {/* <p>{cleanser.data[0].name}</p>
             <p>{cleanser.data[0].price}</p>
-            <img
-              src={cleanser.data[0].imageLinks.img1}
+            <img className="productpic" src={cleanser.data[0].imageLinks.img1}
               alt={cleanser.data[0].name}
             /> */}
             <button>Add to cart</button>
@@ -72,8 +71,7 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF, mask, mist, oil, seru
             </p>
             {/* <p>{toner.data[0].name}</p>
             <p>{toner.data[0].price}</p>
-            <img
-              src={toner.data[0].imageLinks.img1}
+            <img className="productpic" src={toner.data[0].imageLinks.img1}
               alt={toner.data[0].name}
             /> */}
             <button>Add to cart</button>
@@ -88,8 +86,7 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF, mask, mist, oil, seru
             </p>
             <p>{serum.data[0].name}</p>
             <p>{serum.data[0].price}</p>
-            <img
-              src={serum.data[0].imageLinks.img1}
+            <img className="productpic" src={serum.data[0].imageLinks.img1}
               alt={serum.data[0].name}
             />
             <button>Add to cart</button>
@@ -103,8 +100,7 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF, mask, mist, oil, seru
             </p>
             <p>{moisturiser.data[0].name}</p>
             <p>{moisturiser.data[0].price}</p>
-            <img
-              src={moisturiser.data[0].imageLinks.img1}
+            <img className="productpic" src={moisturiser.data[0].imageLinks.img1}
               alt={moisturiser.data[0].name}
             />
             <button>Add to cart</button>
@@ -120,8 +116,7 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF, mask, mist, oil, seru
             </p>
             {/* <p>{SPF.data[0].name}</p>
             <p>{SPF.data[0].price}</p>
-            <img
-              src={SPF.data[0].imageLinks.img1}
+            <img className="productpic" src={SPF.data[0].imageLinks.img1}
               alt={SPF.data[0].name}
             /> */}
             <button>Add to cart</button>
@@ -156,8 +151,7 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF, mask, mist, oil, seru
             </p>
             {/* <p>{cleanser.data[0].name}</p>
             <p>{cleanser.data[0].price}</p>
-            <img
-              src={cleanser.data[0].imageLinks.img1}
+            <img className="productpic" src={cleanser.data[0].imageLinks.img1}
               alt={cleanser.data[0].name}
             /> */}
             <button>Add to cart</button>
@@ -167,8 +161,7 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF, mask, mist, oil, seru
             <p>Same as the AM routine, adds hydration and removes residue.</p>
             {/* <p>{toner.data[0].name}</p>
             <p>{toner.data[0].price}</p>
-            <img
-              src={toner.data[0].imageLinks.img1}
+            <img className="productpic" src={toner.data[0].imageLinks.img1}
               alt={toner.data[0].name}
             /> */}
             <button>Add to cart</button>
@@ -185,8 +178,7 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF, mask, mist, oil, seru
             </p>
             {/* <p>{exfoliator.data[0].name}</p>
             <p>{exfoliator.data[0].price}</p>
-            <img
-              src={exfoliator.data[0].imageLinks.img1}
+            <img className="productpic" src={exfoliator.data[0].imageLinks.img1}
               alt={exfoliator.data[0].name}
             /> */}
             <button>Add to cart</button>
@@ -199,8 +191,7 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF, mask, mist, oil, seru
             </p>
             <p>{serum.data[0].name}</p>
             <p>{serum.data[0].price}</p>
-            <img
-              src={serum.data[0].imageLinks.img1}
+            <img className="productpic" src={serum.data[0].imageLinks.img1}
               alt={serum.data[0].name}
             />
             <button>Add to cart</button>
@@ -214,8 +205,7 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF, mask, mist, oil, seru
             </p>
             <p>{moisturiser.data[0].name}</p>
             <p>{moisturiser.data[0].price}</p>
-            <img
-              src={moisturiser.data[0].imageLinks.img1}
+            <img className="productpic" src={moisturiser.data[0].imageLinks.img1}
               alt={moisturiser.data[0].name}
             />
             <button>Add to cart</button>
@@ -247,8 +237,7 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF, mask, mist, oil, seru
             </p>
             {/* <p>{oil.data[0].name}</p>
             <p>{oil.data[0].price}</p>
-            <img
-              src={oil.data[0].imageLinks.img1}
+            <img className="productpic" src={oil.data[0].imageLinks.img1}
               alt={oil.data[0].name}
             /> */}
             <button>Add to cart</button>
@@ -264,8 +253,7 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF, mask, mist, oil, seru
             </p>
             {/* <p>{mist.data[0].name}</p>
             <p>{mist.data[0].price}</p>
-            <img
-              src={mist.data[0].imageLinks.img1}
+            <img className="productpic" src={mist.data[0].imageLinks.img1}
               alt={mist.data[0].name}
             /> */}
             <button>Add to cart</button>
@@ -280,8 +268,7 @@ const ResultsScreen = ({ name, cleanser, moisturiser, SPF, mask, mist, oil, seru
             </p>
             {/* <p>{mask.data[0].name}</p>
             <p>{mask.data[0].price}</p>
-            <img
-              src={mask.data[0].imageLinks.img1}
+            <img className="productpic" src={mask.data[0].imageLinks.img1}
               alt={mask.data[0].name}
             /> */}
             <button>Add to cart</button>

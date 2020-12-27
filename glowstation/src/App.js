@@ -7,7 +7,6 @@ import Navbar from "./components/Nav";
 //import data from "./models/products.json";
 import Shop from "./components/Shop";
 import Product from "./components/Product";
-import Loading2 from "./components/Loading2";
 import ProductPage from "./components/ProductPage";
 import Sidebar from "./components/Sidebar";
 import Wishlist from "./components/Wishlist";
@@ -16,7 +15,7 @@ import CartScreen from "./components/CartScreen";
 import Wrapper from "./components/Wrapper";
 import Quiz from "./components/Quiz";
 import ResultsScreen from "./components/ResultsScreen";
-import Loading3 from "./components/Loading3";
+
 
 //import QuizContainer from "./components/QuizContainer";
 
@@ -123,7 +122,7 @@ function App() {
         path="/loading"
         render={() => (
           <>
-            <Loading />
+            <Loading redirect="/home" />
           </>
         )}
       />
@@ -132,7 +131,7 @@ function App() {
         path="/loading2"
         render={() => (
           <>
-            <Loading2 />
+           <Loading redirect="/quiz" />
           </>
         )}
       />
@@ -141,7 +140,7 @@ function App() {
         path="/loading3"
         render={() => (
           <>
-            <Loading3 />
+           <Loading redirect="/results" />
           </>
         )}
       />
@@ -234,6 +233,9 @@ function App() {
               serum={serum}
               exfoliator={exfoliator}
               toner={toner}
+              addProduct={addProduct}
+              addToCart={addToCart}
+              wishlist={wishlist}
             />
           </>
         )}

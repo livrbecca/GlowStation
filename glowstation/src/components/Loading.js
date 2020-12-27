@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import "../css/loading.css";
 import { Redirect } from "react-router-dom";
-import { Typewriter } from "react-typewriting-effect";
 import "react-typewriting-effect/dist/index.css";
 
-const Loading = () => {
+const Loading = (props) => {
   const [redirect, setRedirect] = useState(false);
 
   useEffect(() => {
@@ -23,12 +22,12 @@ const Loading = () => {
       >
         <span className="sr-only">Loading...</span>
       </Spinner>
-      <h1 className="glow">
-        <Typewriter delay={280} string="Loading..." />
-      </h1>
-      {redirect && <Redirect to="/home" />}
+ 
+      {redirect && <Redirect to={props.redirect} />}
     </div>
   );
 };
+
+// "/home" 
 
 export default Loading;
