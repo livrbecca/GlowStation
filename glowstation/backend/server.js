@@ -84,6 +84,8 @@ app.get("/products/res", async (req, res) => {
   // localhost:5000/products/results?category=Moisturisers&skinType=Redness
 });
 
+
+//FILTER BUTTON
 //Categorys work, but only lists one product
 // error with findMany & find, only 'findOne' works
 //Unsure how to search 'ones with spaces and & sign

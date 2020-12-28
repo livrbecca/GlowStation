@@ -109,7 +109,6 @@
   height: 700px;
   width: 1620px;
   margin-bottom: 130px;
-  overflow: hidden;
 }
 
 .together:hover{
@@ -119,7 +118,7 @@
 
 .groupOfAds{
   position: relative;
-  top: 90px;
+  top: 49px;
 }
 
 .countDownWrapper{

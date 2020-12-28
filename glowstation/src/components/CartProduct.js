@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
-const CartProduct = ({ item, updateValues, values }) => {
-  const [quantity, setQuantity] = useState(1);
+const CartProduct = ({ item, updateValues }) => {
+  const [quantity, setQuantity] = useState(item.qty);
 
   const subprice = item.price * quantity;
   
   const handleChange = (e) => {
     setQuantity(Number(e.target.value))
+    item.qty = Number(e.target.value)
   }
 
   return (
@@ -20,7 +21,7 @@ const CartProduct = ({ item, updateValues, values }) => {
         value={quantity}
         onChange={(e) => {
           handleChange(e);
-          updateValues(item, Number(e.target.value), (item.price * Number(e.target.value)))
+          updateValues(item, item.qty, (item.price * item.qty))
         }}
       >
         {[...Array(item.countInStock).keys()].map((x) => (
