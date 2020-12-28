@@ -6,7 +6,9 @@ import Collapsible from "react-collapsible";
 
 
 const ResultsScreen = ({name, cleanser, moisturiser, SPF, mask, mist, oil, serum, exfoliator, toner}) => {
-  // console.log(moisturiser.data[0].name);
+  //  console.log(moisturiser.data[0].name);
+  //  console.log(cleanser.data[0].name);
+  //  console.log(mist.data[0].name);
   return (
     <>
       <h2 style={{ textTransform: "capitalize" }} className="nameTitle">
@@ -54,11 +56,11 @@ const ResultsScreen = ({name, cleanser, moisturiser, SPF, mask, mist, oil, serum
               grime/dirt gathered in your sleep. This is also the pefect time to
               remind you to change your pillow cases weekly!
             </p>
-            {/* <p>{cleanser.data[0].name}</p>
+            <p>{cleanser.data[0].name}</p>
             <p>{cleanser.data[0].price}</p>
             <img className="productpic" src={cleanser.data[0].imageLinks.img1}
               alt={cleanser.data[0].name}
-            /> */}
+            />
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -149,11 +151,11 @@ const ResultsScreen = ({name, cleanser, moisturiser, SPF, mask, mist, oil, serum
               and not getting a build up of dirt. Be sure to wash your face or
               at least 60 seconds, no less!
             </p>
-            {/* <p>{cleanser.data[0].name}</p>
+            <p>{cleanser.data[0].name}</p>
             <p>{cleanser.data[0].price}</p>
             <img className="productpic" src={cleanser.data[0].imageLinks.img1}
               alt={cleanser.data[0].name}
-            /> */}
+            />
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -251,11 +253,11 @@ const ResultsScreen = ({name, cleanser, moisturiser, SPF, mask, mist, oil, serum
               mist, serum, mist, moisturiser, oil. You always want a hydrating
               mist (and toner / essence), not an exfoliating one.
             </p>
-            {/* <p>{mist.data[0].name}</p>
+            <p>{mist.data[0].name}</p>
             <p>{mist.data[0].price}</p>
             <img className="productpic" src={mist.data[0].imageLinks.img1}
               alt={mist.data[0].name}
-            /> */}
+            />
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>

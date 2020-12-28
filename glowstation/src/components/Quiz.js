@@ -23,15 +23,15 @@ const Quiz = (props) => {
   let skinConcern222 = "";
 
   async function skinTypeCategories(skinType) {
-    const category = ["Cleanser", "Moisturisers", "SPF", "Mask"];
-
-    // let response = await Axios.get(
-    //   `localhost:5000/products/results?category=${category[0]}&skinType=${skinType}`
-    // ).then((res) => res.data);
-    // console.log(response)
-    // props.setCleanser(response);
+    const category = ["Cleansers", "Moisturisers", "SPF", "Mask"];
 
     let response = await Axios.get(
+      `http://localhost:5000/products/results?category=${category[0]}&skinType=${skinType}`
+    ).then((res) => res.data);
+    console.log(response)
+    props.setCleanser(response);
+
+    response = await Axios.get(
       `http://localhost:5000/products/results?category=${category[1]}&skinType=${skinType}`
     ).then((res) => res.data);
     console.log(response.data);
@@ -58,6 +58,30 @@ const Quiz = (props) => {
     ).then((res) => res.data);
     console.log(response.data);
     props.setSerum(response);
+
+    response = await Axios.get(
+      `http://localhost:5000/products/res?category=${category[1]}&skinConcern222=${skinConcern222}`
+    ).then((res) => res.data);
+    console.log(response.data);
+    props.setMist(response);
+
+    // response = await Axios.get(
+    //   `http://localhost:5000/products/res?category=${category[2]}&skinConcern222=${skinConcern222}`
+    // ).then((res) => res.data);
+    // console.log(response.data);
+    // props.setOil(response);
+
+    // response = await Axios.get(
+    //   `http://localhost:5000/products/res?category=${category[3]}&skinConcern222=${skinConcern222}`
+    // ).then((res) => res.data);
+    // console.log(response.data);
+    // props.setExfoliator(response);
+
+    // response = await Axios.get(
+    //   `http://localhost:5000/products/res?category=${category[4]}&skinConcern222=${skinConcern222}`
+    // ).then((res) => res.data);
+    // console.log(response.data);
+    // props.setToner(response);
   }
 
   function getBothResults() {

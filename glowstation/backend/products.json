@@ -323,7 +323,7 @@
     },
     {
         "id": 6,
-        "slug": "Skin-Perfecting-2%-BHA-Liquid-Exfoliant",
+        "slug": "Skin-Perfecting-2-%-BHA-Liquid-Exfoliant",
         "brand": "Paula's Choice",
         "name": "Skin Perfecting 2% BHA Liquid Exfoliant",
         "price": 28,
@@ -706,6 +706,117 @@
             "img3": "https://s7g10.scene7.com/is/image/UrbanOutfittersEU/0193245680003_000_d?$redesign-zoom-5x$"
         },
         "howTo": "Apply directly onto face and neck to hydrate and refresh skin. Use as a setting spray after make up, and to give a natural glow. Spray onto hair and scalp to moisturiser and soothe. Combine with your favourite facial mask.",
+        "qty": 0
+    },
+    {
+        "id": 14,
+        "slug": "Ceramidin-Cream",
+        "brand": "Dr. Jart+",
+        "name": "Ceramidin Cream",
+        "price": 35,
+        "countInStock": 9,
+        "rating": 4,
+        "numReviews": 23,
+        "ingredientList": [
+            "Water",
+            "Glycerin",
+            "Dipropylene Glycol,",
+            "Cetearyl Alcohol",
+            "Caprylic/Capric Triglyceride",
+            "Hydrogenated Poly(C6-14 Olefin)",
+            "Hydrogenated Polydecene",
+            "Ceramide NP",
+            "Algae Extract",
+            "Eclipta Prostrata Leaf Extract",
+            "Cetearyl Glucoside",
+            "Hydrogenated Lecithin",
+            "Beta Vulgaris (Beet) Root Extract",
+            "Throbroma Caco (Cocoa) Seed Extract",
+            "Curuma Longa (Turmeric) Root Extract",
+            "Avena Sativa (Oat) Kernel Extract",
+            "Hyaluronic Acid",
+            "Salvia Officinalis (Sage) Oil",
+            "Ceramide Ap"
+        ],
+        "skinType": [
+            "Dry",
+            "Sensitive"
+        ],
+        "skinConcern222": [
+            "Hydration",
+            "Redness",
+            ""
+        ],
+        "category": [
+            "Moisturisers"
+        ],
+        "description": {
+            "smallDes": "Quench dry, dehydrated skin with the Dr.Jart+ Ceramidin™ Cream; a deeply-moisturising and reparative cream that ensures long-lasting skin hydration by locking in moisture and shielding against water loss.",
+            "largeDes": "Supercharged with the skincare brand’s proprietary 5-Cera Complex, designed to reinforce the skin’s natural barrier, even in harsh climates, the rich and silky, balm-textured cream melts rapidly into skin, saturating it with an ultra-moisturising cocktail of Bifida Ferment Lysate, Beetroot and Hyaluronic Acid. Dry, irritated, stressed skin is transformed instantly, leaving you with a supple, plump and radiant complexion."
+        },
+        "imageLinks": {
+            "img1": "https://s2.thcdn.com//productimg/960/960/12099664-9724696845686997.jpg",
+            "img2": "https://s2.thcdn.com//productimg/960/960/12099664-1354696845748317.jpg",
+            "img3": "https://s2.thcdn.com//productimg/960/960/12099664-2224696845963327.jpg"
+        },
+        "howTo": "Apply morning and night on clean, dry skin to deeply moisturise. For maximum moisture, apply after Ceramidin Liquid and top off with Ceramidin Facial Mask.",
+        "qty": 0
+    },
+    {
+        "id": 15,
+        "slug": "Natural-Moisturizing-Factors-+-HA",
+        "brand": "The Ordinary",
+        "name": "Natural Moisturizing Factors + HA",
+        "price": 4.90,
+        "countInStock": 18,
+        "rating": 3.5,
+        "numReviews": 123,
+        "ingredientList": [
+            "Aqua (Water)",
+            "Caprylic/Capric Triglyceride",
+            "Cetyl Alcohol",
+            "Propanediol",
+            "Stearyl Alcohol",
+            "Glycerin",
+            "Sodium Hyaluronate",
+            "Aspartic Acid",
+            "Glycine",
+            "Alanine",
+            "Serine",
+            "Valine",
+            "Isoleucine",
+            "Proline",
+            "Threonine",
+            "Histidine",
+            "Glucose",
+            "Maltose",
+            "Trehalose",
+            "Sodium PCA",
+            "PCA",
+            "Allantoin"
+        ],
+        "skinType": [
+            "Dry",
+            "Oily",
+            "Combination",
+            "Sensitive"
+        ],
+        "skinConcern222": [
+            "Hydration"
+        ],
+        "category": [
+            "Moisturisers"
+        ],
+        "description": {
+            "smallDes": "Offering immediate hydration and lasting results, this non-greasy formula is fuelled by Natural Moisturising Factors (NMF). Delivering a direct topical supplement of multiple amino acids, fatty acids, hyaluronic acid and other compounds that are naturally present in skin, NMFs keep the outer layer of the skin protected and perfectly hydrated. (It's available in 30ml or 100ml sizes).",
+            "largeDes": "Providing a direct topical supplement of Natural Moisturising Factor (often impaired in parched, thirsty skin) components, this non-greasy cream offers both immediate hydration and lasting results with continued use. NMFs are made up of multiple amino acids, fatty acids, urea, ceramides, hyaluronic acid and many other compounds that are naturally present in skin to keep its outer layers protected and well-hydrated. Delivering a supercharged boost of these heroic hydrating compounds, this lightweight cream can be applied after serums for superlative surface moisturisation. "
+        },
+        "imageLinks": {
+            "img1": "https://cdn.cultbeauty.co.uk/resized/1200x1440/slots-img/ord/ord009_theordinary_naturalmoisturizingfactors_ha_1560x1960-ffnv1.jpg",
+            "img2": "https://cdn.cultbeauty.co.uk/resized/1200x1440/slots-img/ord/ord009_theordinary_naturalmoisturizingfactors_ha_2_1560x1960-o5w37.jpg",
+            "img3": "https://s1.thcdn.com/productimg/960/960/11638505-1374554512132904.jpg"
+        },
+        "howTo": "Apply after serums as needed for effective surface hydration.",
         "qty": 0
     }
 ]
