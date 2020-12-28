@@ -262,6 +262,7 @@ function App() {
                 name={name}
                 removeProduct={removeProduct}
                 wishlist={wishlist}
+                addToCart={addToCart}
               />
             </div>
           </>

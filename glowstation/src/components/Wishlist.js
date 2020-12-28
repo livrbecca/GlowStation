@@ -15,6 +15,7 @@ const Wishlist = (props) => {
           key={wish.id}
           product={wish}
           wishlist={props.wishlist}
+          addToCart={props.addToCart}
         />
       ))}
     </div>
