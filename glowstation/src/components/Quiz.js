@@ -23,12 +23,12 @@ const Quiz = (props) => {
   let skinConcern222 = "";
 
   async function skinTypeCategories(skinType) {
-    const category = ["Cleansers", "Moisturisers", "SPF", "Mask"];
+    const category = ["Cleansers", "Moisturisers", "SPF", "Masks"];
 
     let response = await Axios.get(
       `http://localhost:5000/products/results?category=${category[0]}&skinType=${skinType}`
     ).then((res) => res.data);
-    console.log(response)
+    console.log(response);
     props.setCleanser(response);
 
     response = await Axios.get(
@@ -51,7 +51,7 @@ const Quiz = (props) => {
   }
 
   async function skinConcernCategories(skinConcern222) {
-    const category = ["Serums", "Mists", "Oil", "Exfoliator", "Toner"];
+    const category = ["Serums", "Mists", "Oils", "Exfoliators", "Toners & Essence"];
 
     let response = await Axios.get(
       `http://localhost:5000/products/res?category=${category[0]}&skinConcern222=${skinConcern222}`
@@ -154,10 +154,6 @@ const Quiz = (props) => {
               <RadioButton rootColor="purple" value="Texture">
                 {" "}
                 Texture{" "}
-              </RadioButton>
-
-              <RadioButton rootColor="purple" value="Eye Concerns">
-                Eye Concerns{" "}
               </RadioButton>
 
               <RadioButton

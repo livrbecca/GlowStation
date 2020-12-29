@@ -81,7 +81,7 @@ app.get("/products/res", async (req, res) => {
 
   res.json({ message: "routine builder results", data: resultsQ2 });
   // should be something like
-  // localhost:5000/products/results?category=Moisturisers&skinType=Redness
+  // localhost:5000/products/results?category=Moisturisers&skinConcern222=Oily
 });
 
 //Categorys work, but only lists one product
