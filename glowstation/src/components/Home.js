@@ -111,6 +111,11 @@ const Home = (props) => {
             <img className="advert4" src="advert6.png" alt="Serums" />
           </Link>
         </div>
+        <div className="shopAd4">
+          <Link to="/skineducation">
+            <img className="advert5" src="educationAd.png" alt="skin education advert" />
+          </Link>
+        </div>
       </div>
     </>
   );

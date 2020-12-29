@@ -11,29 +11,29 @@ const Navbar = (props) => {
       </Link>
           
       <Nav defaultActiveKey="/home" className="LI">
-        <Link className="links" to="/home">
+        {/* <Link className="links" to="/home">
           Home
-        </Link>
-        <Link className="links" to="/loading2">
+        </Link> */}
+        {/* <Link className="links" to="/loading2">
           Routine Builder
-        </Link>
-        <Link className="links" to="/shop">
+        </Link> */}
+        {/* <Link className="links" to="/shop">
           Shop
-        </Link>
+        </Link> */}
         <Link className="links" to="/wishlist">
           Wishlist
         </Link>
-        <Link className="links" to="/skineducation">
+        {/* <Link className="links" to="/skineducation">
           Skin Education
-        </Link>
-        <Link className="links" to="/about">
+        </Link> */}
+        {/* <Link className="links" to="/about">
           About Glow Station
-        </Link>
+        </Link> */}
         <Link className="links" to="/cart">
           Cart ({props.cart.length})
         </Link>
         <Link to="/product"></Link>
-      </Nav>
+      </Nav> 
     </div>
   );
 };

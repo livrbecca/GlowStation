@@ -12,11 +12,7 @@
 .glowNav {
   position: relative;
   font-size: 4.5rem;
-}
-
-.glowNav:hover{
-    text-shadow: 2px 2px 4px purple;
-    transition: all 0.3s ease;
+  left: 150%;
 }
 
 /* a {
