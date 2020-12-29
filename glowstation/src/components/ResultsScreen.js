@@ -116,11 +116,11 @@ const ResultsScreen = ({name, cleanser, moisturiser, SPF, mask, mist, oil, serum
               do that you. We're trying to glow, not look like Casper the
               friendly ghost.
             </p>
-            {/* <p>{SPF.data[0].name}</p>
+            <p>{SPF.data[0].name}</p>
             <p>{SPF.data[0].price}</p>
             <img className="productpic" src={SPF.data[0].imageLinks.img1}
               alt={SPF.data[0].name}
-            /> */}
+            />
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -178,11 +178,11 @@ const ResultsScreen = ({name, cleanser, moisturiser, SPF, mask, mist, oil, serum
               gradually increase. After exfolating, mist your face (optional) to
               reset your skin's PH.{" "}
             </p>
-            {/* <p>{exfoliator.data[0].name}</p>
+            <p>{exfoliator.data[0].name}</p>
             <p>{exfoliator.data[0].price}</p>
             <img className="productpic" src={exfoliator.data[0].imageLinks.img1}
               alt={exfoliator.data[0].name}
-            /> */}
+            />
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -237,11 +237,11 @@ const ResultsScreen = ({name, cleanser, moisturiser, SPF, mask, mist, oil, serum
               routine after your moisturiser for a face that feels and looks
               like silk.
             </p>
-            {/* <p>{oil.data[0].name}</p>
+            <p>{oil.data[0].name}</p>
             <p>{oil.data[0].price}</p>
             <img className="productpic" src={oil.data[0].imageLinks.img1}
               alt={oil.data[0].name}
-            /> */}
+            />
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>
@@ -268,11 +268,11 @@ const ResultsScreen = ({name, cleanser, moisturiser, SPF, mask, mist, oil, serum
               cleansing. After removal, follow with toner and the rest of your
               routine.
             </p>
-            {/* <p>{mask.data[0].name}</p>
+            <p>{mask.data[0].name}</p>
             <p>{mask.data[0].price}</p>
             <img className="productpic" src={mask.data[0].imageLinks.img1}
               alt={mask.data[0].name}
-            /> */}
+            />
             <button>Add to cart</button>
             <button>Add to wishlist</button>
           </Collapsible>

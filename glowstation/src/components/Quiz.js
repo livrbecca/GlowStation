@@ -19,11 +19,14 @@ const Quiz = (props) => {
   const myRef1 = useRef(null);
   let executeScroll1 = () => scrollToRef(myRef1);
 
+  const myRef2 = useRef(null);
+  let executeScroll2 = () => scrollToRef(myRef2);
+
   let skinType = "";
   let skinConcern222 = "";
 
-  async function skinTypeCategories(skinType) {
-    const category = ["Cleansers", "Moisturisers", "SPF", "Masks"];
+  async function setQ1(skinType) {
+    const category = ["Cleansers", "Moisturisers", "SPF", "Masks", "Oils"];
 
     let response = await Axios.get(
       `http://localhost:5000/products/results?category=${category[0]}&skinType=${skinType}`
@@ -37,21 +40,37 @@ const Quiz = (props) => {
     console.log(response.data);
     props.setMoisturiser(response);
 
-    // response = await Axios.get(
-    //   `localhost:5000/products/results?category=${category[2]}&skinType=${skinType}`
-    // ).then((res) => res.data);
-    // console.log(response)
-    // props.setSPF(response);
+    response = await Axios.get(
+      `http://localhost:5000/products/results?category=${category[2]}&skinType=${skinType}`
+    ).then((res) => res.data);
+    console.log(response);
+    props.setSPF(response);
 
-    // response = await Axios.get(
-    //   `localhost:5000/products/results?category=${category[3]}&skinType=${skinType}`
-    // ).then((res) => res.data);
-    // console.log(response)
-    // props.setMask(response);
+    response = await Axios.get(
+      `http://localhost:5000/products/results?category=${category[3]}&skinType=${skinType}`
+    ).then((res) => res.data);
+    console.log(response);
+    props.setMask(response);
+
+    response = await Axios.get(
+      `http://localhost:5000/products/results?category=${category[4]}&skinType=${skinType}`
+    ).then((res) => res.data);
+    console.log(response);
+    props.setOil(response);
   }
 
-  async function skinConcernCategories(skinConcern222) {
-    const category = ["Serums", "Mists", "Oils", "Exfoliators", "Toners & Essence"];
+  async function setQ2(skinConcern222) {
+    const category = ["Exfoliators"];
+
+    let response = await Axios.get(
+      `http://localhost:5000/products/res?category=${category[0]}&skinConcern222=${skinConcern222}`
+    ).then((res) => res.data);
+    console.log(response.data);
+    props.setExfoliator(response);
+  }
+
+  async function setQ3(skinConcern222) {
+    const category = ["Serums", "Mists"];
 
     let response = await Axios.get(
       `http://localhost:5000/products/res?category=${category[0]}&skinConcern222=${skinConcern222}`
@@ -59,34 +78,23 @@ const Quiz = (props) => {
     console.log(response.data);
     props.setSerum(response);
 
+    // response = await Axios.get(
+    //   `http://localhost:5000/products/res?category=${category[1]}&skinConcern222=${skinConcern222}`
+    // ).then((res) => res.data);
+    // console.log(response.data);
+    // props.setToner(response);
+
     response = await Axios.get(
       `http://localhost:5000/products/res?category=${category[1]}&skinConcern222=${skinConcern222}`
     ).then((res) => res.data);
     console.log(response.data);
     props.setMist(response);
-
-    // response = await Axios.get(
-    //   `http://localhost:5000/products/res?category=${category[2]}&skinConcern222=${skinConcern222}`
-    // ).then((res) => res.data);
-    // console.log(response.data);
-    // props.setOil(response);
-
-    // response = await Axios.get(
-    //   `http://localhost:5000/products/res?category=${category[3]}&skinConcern222=${skinConcern222}`
-    // ).then((res) => res.data);
-    // console.log(response.data);
-    // props.setExfoliator(response);
-
-    // response = await Axios.get(
-    //   `http://localhost:5000/products/res?category=${category[4]}&skinConcern222=${skinConcern222}`
-    // ).then((res) => res.data);
-    // console.log(response.data);
-    // props.setToner(response);
   }
 
   function getBothResults() {
-    skinConcernCategories(skinConcern222);
-    skinTypeCategories(skinType);
+    setQ3(skinConcern222);
+    setQ2(skinConcern222);
+    setQ1(skinType);
   }
 
   return (
@@ -98,35 +106,23 @@ const Quiz = (props) => {
         <div onClick={executeScroll} className="toggleOne">
           <div className="box">
             <h1 className="Q1">
-              {/* DETERMINES category: 
-            
-            Cleansers,
-            Moisturisers,
-            SPF,
-            Mask (optional)
-            */}
               <Typewriter delay={99} string="What is your skin type?" />
             </h1>
-            <h4 className="one">
-              <Typewriter string="select one." />
-            </h4>
             <RadioGroup onChange={(value) => (skinType = value)} horizontal>
               <RadioButton rootColor="purple" value="Oily">
-                {" "}
-                Oily{" "}
+                Oily
               </RadioButton>
 
               <RadioButton rootColor="purple" value="Dry">
-                {" "}
-                Dry{" "}
+                Dry
               </RadioButton>
 
               <RadioButton rootColor="purple" value="Combination">
-                Combination{" "}
+                Combination
               </RadioButton>
 
               <RadioButton rootColor="purple" value="Sensitive">
-                Sensitive{" "}
+                Sensitive
               </RadioButton>
             </RadioGroup>
           </div>
@@ -135,12 +131,9 @@ const Quiz = (props) => {
         <div onClick={executeScroll1} className="toggleTwo">
           <div className="box">
             <h1 className="Q2">
-              {/* DETERMINES category: 
-            Serums
-            */}
               <Typewriter
                 delay={180}
-                string=" Select a primary skin concern."
+                string="Do you want to address any of the concerns below?"
               />
             </h1>
             <RadioGroup
@@ -148,48 +141,65 @@ const Quiz = (props) => {
               horizontal
             >
               <RadioButton rootColor="purple" value="Acne & Blackheads">
-                Acne & Blackheads
+                Reducing Acne & Blackheads
               </RadioButton>
 
               <RadioButton rootColor="purple" value="Texture">
-                {" "}
-                Texture{" "}
+                Reducing Texture
+              </RadioButton>
+
+              <RadioButton rootColor="purple" value="Visible Pores">
+                Minimising Visible Pores
               </RadioButton>
 
               <RadioButton
                 rootColor="purple"
                 value="Brightening & Hyperpigmentation"
               >
-                Brightening & Hyperpigmentation
-              </RadioButton>
-
-              <RadioButton rootColor="purple" value="Lines & Wrinkles">
-                Lines & Wrinkles
-              </RadioButton>
-
-              <RadioButton rootColor="purple" value="Redness">
-                {" "}
-                Redness{" "}
-              </RadioButton>
-
-              <RadioButton rootColor="purple" value="Visible Pores">
-                Visible Pores{" "}
-              </RadioButton>
-
-              <RadioButton rootColor="purple" value="Hydration">
-                Hydration{" "}
+                Nope
               </RadioButton>
             </RadioGroup>
           </div>
         </div>
         <div ref={myRef1}></div>
+        <div onClick={executeScroll2} className="toggleThree">
+          <div className="box">
+            <h1 className="Q3">
+              <Typewriter delay={180} string="Select a skincare goal" />
+            </h1>
+            <RadioGroup
+              onChange={(value) => (skinConcern222 = value)}
+              horizontal
+            >
+              <RadioButton rootColor="purple" value="Hydration">
+                Fix Tight, Dehydrated Skin
+              </RadioButton>
+
+              <RadioButton rootColor="purple" value="Redness">
+                Reducing Redness
+              </RadioButton>
+
+              <RadioButton rootColor="purple" value="Lines & Wrinkles">
+                Reduce Fine Lines and Wrinkles
+              </RadioButton>
+
+              <RadioButton
+                rootColor="purple"
+                value="Brightening & Hyperpigmentation"
+              >
+                Brighten Skin / Reduce Dark Marks
+              </RadioButton>
+            </RadioGroup>
+          </div>
+        </div>
+        <div ref={myRef2}></div>
       </div>
 
       <div className="loading3">
         <Link to="/loading3">
           {/* button to be disabled until final question answered */}
           <button
-            onClick={() => getBothResults(skinConcern222, skinType)}
+            onClick={() => getBothResults(skinConcern222, skinType, skinConcern222)}
             type="submit"
             className="resultsBtn"
           >

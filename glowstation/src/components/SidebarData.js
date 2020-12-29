@@ -8,7 +8,6 @@ export const SidebarData = [
     topics: [
       "Acne & Blackheads",
       "Texture",
-      "Eye Concerns",
       "Brightening & Hyperpigmentation",
       "Lines & Wrinkles",
       "Redness",

@@ -30,7 +30,7 @@ const Product = (props) => {
 
   return (
     <>
-      <FadeIn delay={300} transitionDuration={1100}>
+      <FadeIn transitionDuration={800}>
         <div className="imgCont">
           {!showHeartButton ? (
             <AddWishlist id={id} name={name} addProduct={props.addProduct} />
