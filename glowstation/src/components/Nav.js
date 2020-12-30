@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import "../css/Nav.css";
+import Layout from "./Layout";
 
 const Navbar = (props) => {
   return (
@@ -20,19 +21,20 @@ const Navbar = (props) => {
         {/* <Link className="links" to="/shop">
           Shop
         </Link> */}
-        <Link className="links" to="/wishlist">
-          Wishlist
-        </Link>
         {/* <Link className="links" to="/skineducation">
           Skin Education
         </Link> */}
         {/* <Link className="links" to="/about">
           About Glow Station
         </Link> */}
+        <Link className="links RB" to="/loading2">
+          Routine Builder
+        </Link>
         <Link className="links" to="/cart">
           Cart ({props.cart.length})
         </Link>
         <Link to="/product"></Link>
+        <Layout />
       </Nav> 
     </div>
   );

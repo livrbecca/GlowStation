@@ -1,0 +1,56 @@
+#toggle {
+  cursor: pointer;
+  color: black;
+  font-size: 30px;
+  margin-left: 20px;
+  background: transparent;
+  border: none;
+  padding: 10px;
+  position: relative;
+  top: -5px;
+  right: 55px;
+}
+
+#close {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 20px;
+  border: none;
+  padding: 15px;
+  position: relative;
+  right: -123px;
+  top: 35px;
+  background: transparent;
+}
+
+.burgerbar {
+  height: 44vh;
+  text-align: center;
+  background-color: rgb(217, 194, 230);
+  opacity: 0.85;
+  color: white;
+  width: 350px;
+  position: fixed;
+  z-index: 200;
+  right: -100%;
+  top: 90px;
+  animation: slide-open 0.45s forwards;
+}
+
+.burgerbar.close {
+    right: 0;
+    animation: slide-closed 2s forwards;
+}
+
+@keyframes slide-open {
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slide-closed {
+    100% {
+      right: -100%;
+    }
+  }
+  
