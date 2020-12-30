@@ -10,7 +10,7 @@ body {
 }
 
 .carouselblock {
-  background-color: rgba(0, 0, 0, 0.822);
+  background-color: transparent;
   height: 500px;
   margin-left: -300px;
   margin-right: 70px;
@@ -27,7 +27,7 @@ body {
 
 .sliderimg {
   width: 520px;
-  height: 450px;
+  height: 650px;
   text-align: center;
   object-fit: cover;
 }
@@ -41,7 +41,7 @@ body {
 
 .alice-carousel__prev-btn [data-area]::after,
 .alice-carousel__next-btn [data-area]::after {
-  top: -340px !important;
+  top: -440px !important;
 }
 
 .alice-carousel__prev-btn-wrapper {
@@ -63,6 +63,7 @@ body {
   text-align: center;
   margin-bottom: 40px;
   font-size: 3rem;
+  font-weight: bolder;
 }
 
 .priceRange {
@@ -75,7 +76,7 @@ body {
   padding-bottom: 40px;
   position: relative;
   top: 20px;
-  color: slateblue;
+  color: rgb(30, 18, 105);
   font-size: 25px;
   text-decoration: underline;
 }
@@ -86,10 +87,10 @@ body {
 }
 
 .Collapsible__trigger {
-  color: white;
+  color: black;
   font-family: "Solway", serif;
   font-size: 25px;
-  background-color: slateblue;
+  background-color:rgba(199, 162, 231, 0.438);
   text-decoration: underline;
   text-decoration: underline;
 }
@@ -158,17 +159,18 @@ body {
 }
 
 .addToCart {
-  border-radius: 0.3rem;
+  border-radius: 0.1rem;
+  height: 50px;
+  width: 150px;
   padding: 0.9rem;
-  border: 0.2rem gold solid;
+  border: 0.1rem rgb(199, 162, 231) solid;
   font-size: 1rem;
   font-weight: bolder;
   font-family: "Solway", serif;
-  background-color: rgba(255, 217, 0, 0.644);
 }
 
 .addToCart:hover {
-  border: 0.1rem green solid;
+  border: 0.1rem rgb(7, 190, 7) solid;
   transition: all 0.3s ease;
 }
 
@@ -206,6 +208,7 @@ body {
   font-size: 1.5rem;
   color: black !important;
   text-decoration: none !important;
+  margin-left: 30px;
 }
 
 .backtoshop:hover {

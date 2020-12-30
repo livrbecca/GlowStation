@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import "../css/Nav.css";
 import Layout from "./Layout";
+import Search from "./Search";
 
 const Navbar = (props) => {
   return (
@@ -10,7 +11,7 @@ const Navbar = (props) => {
       <Link to="/home">
         <h2 className="glowNav">Glow Station</h2>
       </Link>
-          
+      <Search /> 
       <Nav defaultActiveKey="/home" className="LI">
         {/* <Link className="links" to="/home">
           Home
@@ -34,8 +35,8 @@ const Navbar = (props) => {
           Cart ({props.cart.length})
         </Link>
         <Link to="/product"></Link>
-        <Layout />
-      </Nav> 
+        <Layout wishlist={props.wishlist} />
+      </Nav>
     </div>
   );
 };

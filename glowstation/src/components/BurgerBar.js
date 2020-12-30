@@ -9,7 +9,7 @@ const BurgerBar = (props) => {
     e.preventDefault();
     setBurgerbarClass("burgerbar close");
     setTimeout(() => {
-        props.close()
+      props.close();
     }, 1000);
   };
 
@@ -27,7 +27,7 @@ const BurgerBar = (props) => {
           Shop
         </Link>
         <Link className="links" to="/wishlist">
-          Wishlist
+          Wishlist( {props.wishlist.length})
         </Link>
         <Link className="links" to="/skineducation">
           Skin Education

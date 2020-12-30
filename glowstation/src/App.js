@@ -16,7 +16,6 @@ import Wrapper from "./components/Wrapper";
 import Quiz from "./components/Quiz";
 import ResultsScreen from "./components/ResultsScreen";
 
-
 //import QuizContainer from "./components/QuizContainer";
 
 //import AddWishlist from "./components/AddWishlist";
@@ -51,6 +50,7 @@ function App() {
 
     setProducts(response.data.data);
   };
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -131,7 +131,7 @@ function App() {
         path="/loading2"
         render={() => (
           <>
-           <Loading redirect="/quiz" />
+            <Loading redirect="/quiz" />
           </>
         )}
       />
@@ -140,7 +140,7 @@ function App() {
         path="/loading3"
         render={() => (
           <>
-           <Loading redirect="/results" />
+            <Loading redirect="/results" />
           </>
         )}
       />
@@ -149,7 +149,7 @@ function App() {
         path="/cart"
         render={() => (
           <>
-            <Navbar cart={cart} />
+            <Navbar wishlist={wishlist} cart={cart} />
             <CartScreen cart={cart} />
           </>
         )}
@@ -159,7 +159,7 @@ function App() {
         path="/home"
         render={() => (
           <>
-            <Navbar cart={cart} />
+            <Navbar wishlist={wishlist} cart={cart} />
             <Home name={name} />
           </>
         )}
@@ -169,8 +169,8 @@ function App() {
         path="/shop"
         render={() => (
           <>
-            <Navbar cart={cart} />
-            <Shop />
+            <Navbar wishlist={wishlist} cart={cart} />
+            <Shop filterBy={filterBy} />
             <div className="shopBorder">
               <Sidebar filterBy={filterBy} />
 
@@ -221,7 +221,7 @@ function App() {
         path="/results"
         render={() => (
           <>
-            <Navbar cart={cart} />
+            <Navbar wishlist={wishlist} cart={cart} />
             <ResultsScreen
               name={name}
               moisturiser={moisturiser}
@@ -245,7 +245,7 @@ function App() {
         path="/product/:name"
         render={() => (
           <>
-            <Navbar cart={cart} />
+            <Navbar wishlist={wishlist} cart={cart} />
 
             <ProductPage cart={cart} addToCart={addToCart} />
           </>
@@ -256,7 +256,7 @@ function App() {
         path="/wishlist"
         render={() => (
           <>
-            <Navbar cart={cart} />
+            <Navbar wishlist={wishlist} cart={cart} />
             <div>
               <Wishlist
                 name={name}

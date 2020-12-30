@@ -3,7 +3,7 @@ import BurgerBar from "./BurgerBar";
 import Toggle from "./Toggle";
 import "../css/BurgerBar.css";
 
-const Layout = ({ children }) => {
+const Layout = (props, { children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const openHandler = () => {
@@ -20,7 +20,7 @@ const burgerbarCloseHandler = () => {
 
   let burgerbar;
   if (sidebarOpen) {
-    burgerbar = <BurgerBar close={burgerbarCloseHandler} burgerbar={"burgerbar"} />;
+    burgerbar = <BurgerBar wishlist={props.wishlist} close={burgerbarCloseHandler} burgerbar={"burgerbar"} />;
   }
   return (
     <>

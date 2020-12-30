@@ -1,0 +1,27 @@
+.searchB {
+  position: relative;
+  left: 444px;
+  top: -40px;
+  background: black;
+  font-size: 20px;
+  width: 46px;
+  height: 47px;
+}
+
+.searchIcon {
+  position: relative;
+  top: -2px;
+}
+
+.form-control {
+  font-size: 23px;
+  position: relative;
+  left: 125px;
+  top: 25px;
+}
+
+.wholeSearch{
+    position: relative;
+    left: 10px;
+    top: 6px;
+}

@@ -1,6 +1,6 @@
 .welcomeMessage {
   margin-top: 90px;
-  margin-left: 30px;
+  margin-left: 260px;
 }
 
 .alice-carousel__next-btn-item,
@@ -29,10 +29,10 @@
   border-style: solid;
   border-width: 0.3rem;
   border-color: rgb(199, 162, 231);
-  width: 360px;
-  height: 450px;
+  width: 340px;
+  height: 420px;
   position: relative;
-  top: -584px;
+  top: -750px;
   left: 260px;
 }
 
@@ -40,7 +40,8 @@
 .advert3:hover,
 .advert4:hover,
 .adButton:hover,
-.advert5:hover {
+.advert5:hover,
+.advert6:hover {
   border: 0.3rem gold solid;
   transition: all 0.3s ease;
 }
@@ -53,14 +54,14 @@
   height: 310px;
   position: relative;
   left: 1280px;
-  top: -1154px;
+  top: -1179px;
 }
 
 .advert4 {
   border-style: solid;
   border-width: 0.3rem;
   border-color: rgb(199, 162, 231);
-  width: 410px;
+  width: 450px;
   height: 310px;
   position: relative;
   left: 1280px;
@@ -74,37 +75,52 @@
   width: 1200px;
   height: 710px;
   position: relative;
-  top: -1000px;
+  top: -1200px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top:10px;
+}
+
+
+.advert6 {
+  border-style: solid;
+  border-width: 0.3rem;
+  border-color: rgb(199, 162, 231);
+  width: 450px;
+  height: 250px;
+  position: relative;
+  top: -1350px;
+  left: 220px;
 }
 
 .landing {
-  height: 450px;
-  width: 900px;
+  height: 350px;
+  width: 600px;
   position: relative;
-  left: 269px;
-  top: -390px;
+  left: 529px;
+  top: -360px;
 }
 
 .largeTextAd {
-  font-size: 110px;
+  font-size: 90px;
   font-style: italic;
+  margin-left: 120px;
 }
 
 .miniTextAd {
-  font-size: 40x;
+  font-size: 25x;
   position: relative;
-  left: 120px;
+  left: 20px;
+  margin-left: 120px;
 }
 
 .adButton {
   position: relative;
-  left: 130px;
+  left: 80px;
   top: -170px;
   color: black;
-  background-color:  rgba(199, 162, 231, 0.493);
+  background-color: rgba(199, 162, 231, 0.493);
   border-color: rgb(199, 162, 231);
   font-size: 19px;
   padding: 15px 25px;
@@ -117,14 +133,15 @@
 
 .together {
   margin: auto;
-  margin-top: 20px;
+  margin-top: 40px;
   border-style: solid;
   border-width: 0.3rem;
   border-color: rgb(199, 162, 231);
-  height: 700px;
-  width: 1400px;
+  height: 500px;
+  width: 1200px;
   margin-bottom: 120px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .together:hover {
@@ -142,7 +159,8 @@
   text-align: center;
   width: 900px;
   height: 250px;
-  margin-bottom: 159px;
+  margin-bottom: 280px;
+  margin-top: 200px;
 }
 
 .count {
@@ -150,7 +168,7 @@
   height: 250px;
   border-style: solid;
   border-width: 0.1rem;
-  border-color: red;
+  border-color: rgb(199, 162, 231);
   height: 50px;
   /* width: 700px; */
 }

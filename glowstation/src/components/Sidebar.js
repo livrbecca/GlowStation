@@ -7,13 +7,13 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 
 const Sidebar = (props) => {
   return (
-    <div>
+    <div className="filterContainer">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
         height="16"
         fill="currentColor"
-        className="bi bi-funnel-fill"
+        className="funnel"
         viewBox="0 0 16 16"
       >
         <path
@@ -34,7 +34,7 @@ const Sidebar = (props) => {
         <ul className="SidebarList">
           {SidebarData.map((val, key) => {
             return (
-              <li key={key} className="row" onClick={() => {}}>
+              <li key={key} className="row">
                 <div id="icondiv">{val.icon}</div>
                 <DropdownButton
                   className="arrow"

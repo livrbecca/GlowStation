@@ -1,8 +1,8 @@
 .navbar {
-  background-color: rgba(210, 183, 233, 0.822);
-  border-style: solid;
+  background-color: white;
+  /* border-style: solid;
   border-width: 4px;
-  border-color:  rgba(210, 183, 233, 0.822);
+  border-color: rgba(210, 183, 233, 0.822); */
 }
 
 .navbar a {
@@ -18,13 +18,10 @@
 .glowNav {
   position: relative;
   font-size: 4.5rem;
-  left: 150%;
+  left: 6%; 
+  font-weight: bolder;
 }
 
-/* a {
-  text-decoration: none !important;
-  color: black !important;
-} */
 
 .glowNav {
   animation: color-change 5s infinite;
@@ -32,22 +29,21 @@
 
 @keyframes color-change {
   0% {
-    color: darksalmon;
+    color: black;
   }
   50% {
-    color: chocolate;
+    color: rgb(151, 79, 28);
   }
   100% {
-    color: goldenrod;
+    color: rgb(212, 159, 22);
   }
 }
 
-.links{
+.links {
   text-align: left;
   margin-right: 131px;
   margin-left: 0.5px;
   font-size: 25px;
   position: relative;
   left: 60px;
-
 }

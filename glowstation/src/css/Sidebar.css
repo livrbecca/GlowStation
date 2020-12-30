@@ -4,6 +4,16 @@
   height: 321px;
 } */
 
+.filterContainer {
+  position: relative;
+  top: -60px;
+}
+
+.funnel{
+  position: relative;
+  left: 12px;
+}
+
 .icon {
   width: 60px;
   height: 50px;
@@ -14,6 +24,7 @@
   width: 245px;
   height: 80px;
   padding: 0;
+
   margin-left: -41px;
   list-style-type: none;
   justify-content: left;
@@ -21,10 +32,16 @@
   cursor: pointer;
 }
 
+.SidebarList{
+  font-size: 18px !important;
+}
+
 .filterBy {
-  font-size: 18px;
+  font-size: 19px;
   color: black;
 }
+
+
 
 .SidebarList .row:hover {
   background-color: #f2e6ff;
@@ -49,15 +66,15 @@
   background-color: transparent !important;
   color: black !important;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 18px;
   padding: 11px 20px;
   height: 90px;
-  width:150px;
-  box-shadow: none!important;
+  width: 150px;
+  box-shadow: none !important;
 }
 
 .btn:hover {
-  font-size: 18px;
+  font-size: 19px;
   background-color: transparent !important;
   color: black !important;
   border-width: 0 !important;

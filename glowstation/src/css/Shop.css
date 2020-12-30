@@ -13,13 +13,11 @@
   height: 440px;
   padding: 7px;
   text-align: center;
-  border-style: solid;
-  border-color: transparent;
   margin-top: 1px;
-  margin-bottom: 30px;
+  margin-bottom: 90px;
   margin-right: 11.5px;
-  margin-left: 150.5px;
-  background-color:rgba(210, 183, 233, 0.247);
+  margin-left: 135px;
+  background-color: transparent;
   color: black;
   position: relative;
 }
@@ -37,30 +35,22 @@
   bottom: 0;
   left: 0;
   right: 0;
-  top: 360px;
+  top: 395px;
   margin: auto;
 }
 
 .imgCont:hover {
-  border-color: black;
-  border-style: solid;
-  border-width: 5px;
-}
-
-
-
-.imgCont .addTo {
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  cursor: pointer;
 }
 
 .card-title {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+  font-size: 20px;
+}
+
+.card-subtitle{
+  font-size: 18px;
 }
 
 .h5 {
@@ -76,12 +66,55 @@ a {
   background-color: rgb(148, 235, 148);
 }
 
+.togetherIntro {
+  position: relative;
+  left: 8%;
+  width: 1700px;
+}
 
-/* .imgCont .addTo {
-  display: inline-block;
-  position: absolute;
-  top: 454px;
-  left: 0;
-  right: 0;
-  margin: auto;
-} */
+.skincareCaps {
+  position: relative;
+  left: 43%;
+  top: 65px;
+  width: 50px;
+}
+
+.introText {
+  text-align: center;
+  width: 600px;
+  position: relative;
+  left: 43%;
+  top: -245px;
+}
+
+.maleSkincare {
+  width: 470px;
+  height: 320px;
+  position: relative;
+  left: 15%;
+}
+
+.miniCircle {
+  position: relative;
+  top: -80px;
+  width: 135px;
+  height: 110px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.circleAds {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-left: 150px;
+  margin-bottom: 85px;
+}
+
+.circleText {
+  position: relative;
+  right: 9%;
+  top: 20px;
+}
