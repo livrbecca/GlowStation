@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../css/Shop.css";
 
 const Shop = (props) => {
@@ -6,6 +7,9 @@ const Shop = (props) => {
   let topic = ["Cleansers", "Serums", "Moisturisers", "Masks"];
   return (
     <div>
+      <Link to="loading2">
+      <img className="moneyOff" src="percentOff.png" alt="money off"/>
+      </Link>
       <div className="togetherIntro">
         <h2 className="skincareCaps">
           <i>SKINCARE.</i>

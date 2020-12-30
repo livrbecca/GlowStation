@@ -3,6 +3,7 @@
   margin-left: 260px;
 }
 
+
 .alice-carousel__next-btn-item,
 .alice-carousel__prev-btn-item {
   color: black !important;
@@ -79,9 +80,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top:10px;
+  margin-top: 10px;
 }
-
 
 .advert6 {
   border-style: solid;

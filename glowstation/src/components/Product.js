@@ -56,7 +56,7 @@ const Product = (props) => {
             <Card.Body>
               <Card.Subtitle>{brand}</Card.Subtitle>
               <Card.Title> {name}</Card.Title>
-              <Card.Subtitle>£{price}</Card.Subtitle>
+              <Card.Subtitle><b>£{price}</b></Card.Subtitle>
 
               <Rating rating={rating} numReviews={numReviews} />
             </Card.Body>
