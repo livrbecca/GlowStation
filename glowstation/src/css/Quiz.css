@@ -22,8 +22,7 @@ html {
 }
 
 .selectionBtn,
-.resultsBtn,
-.nextBtn {
+.resultsBtn {
   color: black;
   font-size: 22px;
   padding: 15px 25px;

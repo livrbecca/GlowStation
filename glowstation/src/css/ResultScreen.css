@@ -1,6 +1,6 @@
 .resultDivs {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
   margin-top: 2%;

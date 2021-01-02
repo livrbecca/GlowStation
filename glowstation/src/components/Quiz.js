@@ -109,19 +109,19 @@ const Quiz = (props) => {
               <Typewriter delay={99} string="What is your skin type?" />
             </h1>
             <RadioGroup onChange={(value) => (skinType = value)} horizontal>
-              <RadioButton rootColor="purple" value="Oily">
+              <RadioButton className="selectionBtn" rootColor="purple" value="Oily">
                 Oily
               </RadioButton>
 
-              <RadioButton rootColor="purple" value="Dry">
+              <RadioButton className="selectionBtn" rootColor="purple" value="Dry">
                 Dry
               </RadioButton>
 
-              <RadioButton rootColor="purple" value="Combination">
+              <RadioButton className="selectionBtn" rootColor="purple" value="Combination">
                 Combination
               </RadioButton>
 
-              <RadioButton rootColor="purple" value="Sensitive">
+              <RadioButton className="selectionBtn" rootColor="purple" value="Sensitive">
                 Sensitive
               </RadioButton>
             </RadioGroup>
@@ -140,20 +140,20 @@ const Quiz = (props) => {
               onChange={(value) => (skinConcern222 = value)}
               horizontal
             >
-              <RadioButton rootColor="purple" value="Acne & Blackheads">
+              <RadioButton className="selectionBtn!" rootColor="purple" value="Acne & Blackheads">
                 Reducing Acne & Blackheads
               </RadioButton>
 
-              <RadioButton rootColor="purple" value="Texture">
+              <RadioButton className="selectionBtn" rootColor="purple" value="Texture">
                 Reducing Texture
               </RadioButton>
 
-              <RadioButton rootColor="purple" value="Visible Pores">
+              <RadioButton className="selectionBtn" rootColor="purple" value="Visible Pores">
                 Minimising Visible Pores
               </RadioButton>
 
               <RadioButton
-                rootColor="purple"
+                className="selectionBtn" rootColor="purple"
                 value="Brightening & Hyperpigmentation"
               >
                 Nope
@@ -171,20 +171,20 @@ const Quiz = (props) => {
               onChange={(value) => (skinConcern222 = value)}
               horizontal
             >
-              <RadioButton rootColor="purple" value="Hydration">
+              <RadioButton className="selectionBtn" rootColor="purple" value="Hydration">
                 Fix Tight, Dehydrated Skin
               </RadioButton>
 
-              <RadioButton rootColor="purple" value="Redness">
+              <RadioButton className="selectionBtn" rootColor="purple" value="Redness">
                 Reducing Redness
               </RadioButton>
 
-              <RadioButton rootColor="purple" value="Lines & Wrinkles">
+              <RadioButton className="selectionBtn" rootColor="purple" value="Lines & Wrinkles">
                 Reduce Fine Lines and Wrinkles
               </RadioButton>
 
               <RadioButton
-                rootColor="purple"
+                className="selectionBtn" rootColor="purple"
                 value="Brightening & Hyperpigmentation"
               >
                 Brighten Skin / Reduce Dark Marks
