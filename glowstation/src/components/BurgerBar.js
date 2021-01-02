@@ -27,7 +27,7 @@ const BurgerBar = (props) => {
           Shop
         </Link>
         <Link className="links" to="/wishlist">
-          Wishlist( {props.wishlist.length})
+          Wishlist ({props.wishlist.length})
         </Link>
         <Link className="links" to="/skineducation">
           Skin Education

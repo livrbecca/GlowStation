@@ -9,6 +9,7 @@ import Rating from "./Rating";
 import RemoveWishlist from "./RemoveWishlist";
 //import axios from "axios";
 
+
 const Product = (props) => {
   let {
     id,
@@ -18,12 +19,10 @@ const Product = (props) => {
     price,
     rating,
     numReviews,
-    ingredientList,
-    description: { largeDes },
-    imageLinks: { img1, img2, img3 },
-    howTo,
-    qty,
+    imageLinks: { img1 }
   } = props.product;
+
+  const slugEncoded = encodeURIComponent(slug);
 
   const wishlistId = props.wishlist.map((_) => _.id);
   const showHeartButton = wishlistId.includes(id);
@@ -47,7 +46,7 @@ const Product = (props) => {
 
           <Link
             to={{
-              pathname: `/product/${slug}`,
+              pathname: `/product/${slugEncoded}`,
               state: {
                 product: props.product,
               },
@@ -56,7 +55,9 @@ const Product = (props) => {
             <Card.Body>
               <Card.Subtitle>{brand}</Card.Subtitle>
               <Card.Title> {name}</Card.Title>
-              <Card.Subtitle><b>£{price}</b></Card.Subtitle>
+              <Card.Subtitle>
+                <b>£{price.toFixed(2)}</b>
+              </Card.Subtitle>
 
               <Rating rating={rating} numReviews={numReviews} />
             </Card.Body>

@@ -23,7 +23,7 @@ const Home = (props) => {
             </Link>
             and recieve
             <b>
-              <i>15%</i>
+              <i> 15%</i>
             </b>{" "}
             off your first order.
           </h3>

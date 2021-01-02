@@ -16,9 +16,6 @@ import Wrapper from "./components/Wrapper";
 import Quiz from "./components/Quiz";
 import ResultsScreen from "./components/ResultsScreen";
 
-//import QuizContainer from "./components/QuizContainer";
-
-//import AddWishlist from "./components/AddWishlist";
 
 function App() {
   const [moisturiser, setMoisturiser] = useState([]);
@@ -30,9 +27,7 @@ function App() {
   const [serum, setSerum] = useState([]);
   const [exfoliator, setExfoliator] = useState([]);
   const [toner, setToner] = useState([]);
-
   const [products, setProducts] = useState([]);
-
   const [cart, setCart] = useState([]);
 
   const addToCart = (product, quantity) => {
@@ -51,6 +46,14 @@ function App() {
     setProducts(response.data.data);
   };
 
+  const getAllProducts = async () => {
+    let response = await axios.get(
+      `http://localhost:5000/products`
+    );
+    console.log(response);
+
+    setProducts(response.data.products);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -170,7 +173,7 @@ function App() {
         render={() => (
           <>
             <Navbar wishlist={wishlist} cart={cart} />
-            <Shop filterBy={filterBy} />
+            <Shop filterBy={filterBy} getAllProducts={getAllProducts} />
             <div className="shopBorder">
               <Sidebar filterBy={filterBy} />
 

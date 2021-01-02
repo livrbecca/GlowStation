@@ -38,6 +38,9 @@ const Shop = (props) => {
           className="miniCircle"
           src="https://i.pinimg.com/originals/05/1f/a7/051fa701556a73d25960dfa611b64af2.gif"
           alt="shop all"
+          onClick={() => {
+            props.getAllProducts();
+          }}
         />
         <h4 className="circleText">All</h4>
         <br />
