@@ -1,14 +1,15 @@
-import React from "react";
+import React  from "react";
 import { Form } from "react-bootstrap";
 import "../css/Search.css";
 
 const Search = (props) => {
+ 
   return (
     <div className="searchArea">
       <div className="wholeSearch">
         <Form>
           <Form.Group>
-            <Form.Control type="text" placeholder="Search Glow Station" />
+            <Form.Control type="text" name="text" placeholder="Search Glow Station" />
           </Form.Group>
           <button className="searchB" type="submit">
             <svg

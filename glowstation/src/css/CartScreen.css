@@ -12,7 +12,7 @@
   font-size: 1.2rem;
   font-weight: bold;
   position: relative;
-  left: 700px;
+  left: 600px;
   top: -80px;
 }
 
@@ -32,10 +32,20 @@
   top: 50px;
   position: relative;
   left: 60px;
+  width: min-content;
 }
 
 .num{
   position: relative;
-  left: 820px;
+  left: 830px;
   top: -117px;
+}
+
+.checkout{
+  position: absolute;
+  left: 1300px;
+  top: 280px;
+  font-size: 24px;
+  background-color: darkorange;
+  border-color: transparent;
 }

@@ -19,103 +19,127 @@ const ResultsScreen = ({
     <>
       <h2 style={{ textTransform: "capitalize" }} className="nameTitle">
         {name}
-        <Typewriter
-          stopBlinkinOnComplete="true"
-          string="'s Routine Builder results."
-        />
+        <Typewriter string="'s Routine." /> &darr;
       </h2>
-      <p className="intro">
-        The order you layer your skincare products is important. The wrong order
-        can lead to either pilling (where your products don't absorb and roll up
-        into little gritty balls), or the products become ineffective becasue
-        they're not being used as intended or absorbed by the skin correctly.
-        Follow this custom routine built just for you to layer your products
-        correctly and have the perfect routine for your needs. The Routine
-        Builder gives you your ideal AM (morning) and PM (night-time) routine.
-        As well as products that aren't <i>necessary</i> but complementary in
-        the Optional box. These products can also aid in meeting your skincare
-        goals so be use to check them out.
-      </p>
+
       <div className="resultDivs">
         <div className="resultBox">
+          <p>STEP ONE</p>
           <p>{cleanser.data[0].name}</p>
-          <p>{cleanser.data[0].price}</p>
+          <p>£{cleanser.data[0].price.toFixed(2)}</p>
           <img
             className="productpic"
             src={cleanser.data[0].imageLinks.img1}
             alt={cleanser.data[0].name}
           />
+          <p className="iconDes">{cleanser.data[0].description.smallDes}</p>
+          <button className="addButtons">Add to Wishlist</button>
+          <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
-          {" "}
+          <p>STEP TWO - Optional</p>
           <p>{mask.data[0].name}</p>
-          <p>{mask.data[0].price}</p>
+          <p>£{mask.data[0].price.toFixed(2)}</p>
           <img
             className="productpic"
             src={mask.data[0].imageLinks.img1}
             alt={mask.data[0].name}
           />
+          <p className="iconDes">{mask.data[0].description.smallDes}</p>
+          <button className="addButtons">Add to Wishlist</button>
+          <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
-          {/* <p>{toner.data[0].name}</p>
-            <p>{toner.data[0].price}</p>
-            <img className="productpic" src={toner.data[0].imageLinks.img1}
-              alt={toner.data[0].name}
-            /> */}
+          {/* <p>STEP THREE</p>
+          <p>{toner.data[0].name}</p>
+          <p>£{toner.data[0].price.toFixed(2)}</p>
+          <img
+            className="productpic"
+            src={toner.data[0].imageLinks.img1}
+            alt={toner.data[0].name}
+          />
+          <p className="iconDes">{toner.data[0].description.smallDes}</p>
+
+          <button className="addButtons">Add to Wishlist</button>
+          <button className="addButtons">Add to Cart</button> */}
         </div>
         <div className="resultBox">
+          <p>STEP FOUR</p>
           <p>{exfoliator.data[0].name}</p>
-          <p>{exfoliator.data[0].price}</p>
+          <p>£{exfoliator.data[0].price.toFixed(2)}</p>
           <img
             className="productpic"
             src={exfoliator.data[0].imageLinks.img1}
             alt={exfoliator.data[0].name}
           />
+          <p className="iconDes">{exfoliator.data[0].description.smallDes}</p>
+          <button className="addButtons">Add to Wishlist</button>
+          <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
+          <p>STEP FIVE - Optional</p>
           <p>{mist.data[0].name}</p>
-          <p>{mist.data[0].price}</p>
+          <p>£{mist.data[0].price.toFixed(2)}</p>
           <img
             className="productpic"
             src={mist.data[0].imageLinks.img1}
             alt={mist.data[0].name}
           />
+          <p className="iconDes">{mist.data[0].description.smallDes}</p>
+          <button className="addButtons">Add to Wishlist</button>
+          <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
+          <p>STEP SIX</p>
           <p>{serum.data[0].name}</p>
-          <p>{serum.data[0].price}</p>
+          <p>£{serum.data[0].price.toFixed(2)}</p>
           <img
             className="productpic"
             src={serum.data[0].imageLinks.img1}
             alt={serum.data[0].name}
           />
+          <p className="iconDes">{serum.data[0].description.smallDes}</p>
+          <button className="addButtons">Add to Wishlist</button>
+          <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
+          <p>STEP SEVEN</p>
           <p>{moisturiser.data[0].name}</p>
-          <p>{moisturiser.data[0].price}</p>
+          <p>£{moisturiser.data[0].price.toFixed(2)}</p>
           <img
             className="productpic"
             src={moisturiser.data[0].imageLinks.img1}
             alt={moisturiser.data[0].name}
           />
+          <p className="iconDes">{moisturiser.data[0].description.smallDes}</p>
+          <button className="addButtons">Add to Wishlist</button>
+          <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
+          <p>OPTIONAL</p>
           <p>{oil.data[0].name}</p>
-          <p>{oil.data[0].price}</p>
+          <p>£{oil.data[0].price.toFixed(2)}</p>
           <img
             className="productpic"
             src={oil.data[0].imageLinks.img1}
             alt={oil.data[0].name}
           />
+          <p className="iconDes">{oil.data[0].description.smallDes}</p>
+          <button className="addButtons">Add to Wishlist</button>
+          <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
+          <p>RECOMMENDED FOR AM USE.</p>
           <p>{SPF.data[0].name}</p>
-          <p>{SPF.data[0].price}</p>
+          <p>£{SPF.data[0].price.toFixed(2)}</p>
           <img
             className="productpic"
             src={SPF.data[0].imageLinks.img1}
             alt={SPF.data[0].name}
           />
+          <p className="iconDes">{SPF.data[0].description.smallDes}</p>
+          <button className="addButtons">Add to Wishlist</button>
+          <button className="addButtons">Add to Cart</button>
         </div>
       </div>
     </>

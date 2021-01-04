@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import "../css/Home.css";
 
 const RBadvert = () => {
   return (
+    <Link to="/loading2">
     <div className="together">
       <h2 className="largeTextAd">
         Take the Routine <br /> Builder <br /> Today
@@ -12,6 +14,7 @@ const RBadvert = () => {
       </h3>
       <img className="landing" src="landingpic.png" alt="collage" />
     </div>
+    </Link>
   );
 };
 

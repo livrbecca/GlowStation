@@ -13,7 +13,7 @@ const CartProduct = ({ item, updateValues, values }) => {
     <div key={item.id}>
       <h3 className="title">{item.name}</h3>
       <img className="picture" src={item.imageLinks.img1} alt={item.name} />
-      <h3 className="price"> Price:£{subprice}</h3>
+      <h3 className="price"> Price:£{subprice.toFixed(2)}</h3>
       <select
         id={item.id}
         className="num"

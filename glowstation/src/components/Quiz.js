@@ -10,8 +10,7 @@ import Axios from "axios";
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
 const Quiz = (props) => {
-  console.log(props.setMoisturiser);
-  console.log(props.setSerum);
+
   //scroll functionality
   const myRef = useRef(null);
   let executeScroll = () => scrollToRef(myRef);
@@ -109,19 +108,19 @@ const Quiz = (props) => {
               <Typewriter delay={99} string="What is your skin type?" />
             </h1>
             <RadioGroup onChange={(value) => (skinType = value)} horizontal>
-              <RadioButton className="selectionBtn" rootColor="purple" value="Oily">
+              <RadioButton className="selectionBtn" pointColor="purple" rootColor="black" value="Oily">
                 Oily
               </RadioButton>
 
-              <RadioButton className="selectionBtn" rootColor="purple" value="Dry">
+              <RadioButton className="selectionBtn" pointColor="purple" rootColor="black" value="Dry">
                 Dry
               </RadioButton>
 
-              <RadioButton className="selectionBtn" rootColor="purple" value="Combination">
+              <RadioButton className="selectionBtn" pointColor="purple" rootColor="black" value="Combination">
                 Combination
               </RadioButton>
 
-              <RadioButton className="selectionBtn" rootColor="purple" value="Sensitive">
+              <RadioButton className="selectionBtn" pointColor="purple" rootColor="black" value="Sensitive">
                 Sensitive
               </RadioButton>
             </RadioGroup>
@@ -140,20 +139,20 @@ const Quiz = (props) => {
               onChange={(value) => (skinConcern222 = value)}
               horizontal
             >
-              <RadioButton className="selectionBtn!" rootColor="purple" value="Acne & Blackheads">
+              <RadioButton className="selectionBtn!" pointColor="purple" rootColor="black" value="Acne & Blackheads">
                 Reducing Acne & Blackheads
               </RadioButton>
 
-              <RadioButton className="selectionBtn" rootColor="purple" value="Texture">
+              <RadioButton className="selectionBtn" pointColor="purple" rootColor="black" value="Texture">
                 Reducing Texture
               </RadioButton>
 
-              <RadioButton className="selectionBtn" rootColor="purple" value="Visible Pores">
+              <RadioButton className="selectionBtn" pointColor="purple" rootColor="black" value="Visible Pores">
                 Minimising Visible Pores
               </RadioButton>
 
               <RadioButton
-                className="selectionBtn" rootColor="purple"
+                className="selectionBtn" pointColor="purple" rootColor="black"
                 value="Brightening & Hyperpigmentation"
               >
                 Nope
@@ -171,20 +170,20 @@ const Quiz = (props) => {
               onChange={(value) => (skinConcern222 = value)}
               horizontal
             >
-              <RadioButton className="selectionBtn" rootColor="purple" value="Hydration">
+              <RadioButton className="selectionBtn" pointColor="purple" rootColor="black" value="Hydration">
                 Fix Tight, Dehydrated Skin
               </RadioButton>
 
-              <RadioButton className="selectionBtn" rootColor="purple" value="Redness">
+              <RadioButton className="selectionBtn" pointColor="purple" rootColor="black" value="Redness">
                 Reducing Redness
               </RadioButton>
 
-              <RadioButton className="selectionBtn" rootColor="purple" value="Lines & Wrinkles">
+              <RadioButton className="selectionBtn" pointColor="purple" rootColor="black" value="Lines & Wrinkles">
                 Reduce Fine Lines and Wrinkles
               </RadioButton>
 
               <RadioButton
-                className="selectionBtn" rootColor="purple"
+                className="selectionBtn" pointColor="purple" rootColor="black"
                 value="Brightening & Hyperpigmentation"
               >
                 Brighten Skin / Reduce Dark Marks

@@ -62,7 +62,15 @@ a {
   color: black !important;
 }
 
-.addTo:hover {
+.addCart{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1.95rem;
+  height: 1.95rem;
+}
+
+.addCart:hover {
   background-color: rgb(148, 235, 148);
 }
 
@@ -88,6 +96,7 @@ a {
 }
 
 .introText {
+  font-size: 18px;
   text-align: center;
   width: 600px;
   position: relative;

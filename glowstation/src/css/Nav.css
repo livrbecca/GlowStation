@@ -1,8 +1,5 @@
 .navbar {
   background-color: white;
-  /* border-style: solid;
-  border-width: 4px;
-  border-color: rgba(210, 183, 233, 0.822); */
 }
 
 .navbar a {
@@ -18,10 +15,9 @@
 .glowNav {
   position: relative;
   font-size: 4.5rem;
-  left: 6%; 
+  left: 6%;
   font-weight: bolder;
 }
-
 
 .glowNav {
   animation: color-change 5s infinite;

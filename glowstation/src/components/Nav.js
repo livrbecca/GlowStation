@@ -11,23 +11,9 @@ const Navbar = (props) => {
       <Link to="/home">
         <h2 className="glowNav">Glow Station</h2>
       </Link>
-      <Search /> 
+      <Search />
+       
       <Nav defaultActiveKey="/home" className="LI">
-        {/* <Link className="links" to="/home">
-          Home
-        </Link> */}
-        {/* <Link className="links" to="/loading2">
-          Routine Builder
-        </Link> */}
-        {/* <Link className="links" to="/shop">
-          Shop
-        </Link> */}
-        {/* <Link className="links" to="/skineducation">
-          Skin Education
-        </Link> */}
-        {/* <Link className="links" to="/about">
-          About Glow Station
-        </Link> */}
         <Link className="links RB" to="/loading2">
           Routine Builder
         </Link>
