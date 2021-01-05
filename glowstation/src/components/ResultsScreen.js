@@ -2,6 +2,8 @@ import React from "react";
 import "../css/ResultScreen.css";
 import { Typewriter } from "react-typewriting-effect";
 import "react-typewriting-effect/dist/index.css";
+import { Link } from "react-router-dom";
+
 
 const ResultsScreen = ({
   name,
@@ -17,6 +19,9 @@ const ResultsScreen = ({
 }) => {
   return (
     <>
+    <Link to="/routinebuilder">
+    <button>Re-take</button>
+    </Link>
       <h2 style={{ textTransform: "capitalize" }} className="nameTitle">
         {name}
         <Typewriter string="'s Routine." /> &darr;
@@ -50,7 +55,7 @@ const ResultsScreen = ({
           <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
-          {/* <p>STEP THREE</p>
+          <p>STEP THREE</p>
           <p>{toner.data[0].name}</p>
           <p>£{toner.data[0].price.toFixed(2)}</p>
           <img
@@ -61,7 +66,7 @@ const ResultsScreen = ({
           <p className="iconDes">{toner.data[0].description.smallDes}</p>
 
           <button className="addButtons">Add to Wishlist</button>
-          <button className="addButtons">Add to Cart</button> */}
+          <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
           <p>STEP FOUR</p>
