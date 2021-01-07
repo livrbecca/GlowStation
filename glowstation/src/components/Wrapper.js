@@ -10,7 +10,7 @@ const Wrapper = (props) => {
   return (
     <div>
       <Link to="/home">
-        <button>Home</button>
+        <button className="miniButton">Home</button>
       </Link>
       <div className="Wrapper">
         <h1 className="aboard">

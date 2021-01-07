@@ -1,0 +1,21 @@
+.articleContainer {
+  width: 1500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin: auto;
+  margin-top: 90px;
+}
+
+.artImage {
+  width: 400px;
+  height: 320px;
+}
+
+.skinEd {
+  margin-top: 50px;
+  font-size: 70px;
+  font-weight: bolder;
+  text-align: center;
+}

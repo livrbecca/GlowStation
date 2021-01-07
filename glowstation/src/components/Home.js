@@ -15,11 +15,11 @@ const Home = (props) => {
           </h1>
           <h3>The destination for all your skincare needs.</h3>
           <br />
-         
+
           <h3>
             Complete the
             <Link to="/loading2">
-              <i>Routine Builder</i>
+              <i> Routine Builder </i>
             </Link>
             and recieve
             <b>

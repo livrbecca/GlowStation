@@ -15,59 +15,10 @@ import CartScreen from "./components/CartScreen";
 import Wrapper from "./components/Wrapper";
 import Quiz from "./components/Quiz";
 import ResultsScreen from "./components/ResultsScreen";
-
+import SkinEducation from "./components/SkinEducation";
 
 function App() {
   // search
-  // const [value, setValue] = useState("");
-  // const focusSearch = useRef(null);
-  // useEffect(() => {
-  //   focusSearch.current.focus();
-  // }, []);
-
-  // const getProductsForSearch = async (query) => {
-  //   const results = await fetch(
-  //     `http://localhost:5000/products/search?term=${query}`,
-  //     { headers: { accept: "application/json" } }
-  //   );
-  //   const productsData = await results.json();
-  //   return productsData.results;
-  // };
-
-  // const sleep = (ms) => {
-  //   return new Promise((resolve) => setTimeout(resolve, ms));
-  // };
-
-  // useEffect(() => {
-  //   let currentQuery = true;
-  //   const controller = new AbortController();
-
-  //   const loadProducts = async () => {
-  //     if (!query) return setProducts([]);
-
-  //     await sleep(350);
-  //     if (currentQuery) {
-  //       const products = await getProductsForSearch(query, controller);
-  //       setProducts(products);
-  //     }
-  //   };
-  //   loadProducts();
-
-  //   return () => {
-  //     currentQuery = false;
-  //     controller.abort();
-  //   };
-  // }, [query]);
-
-  // let searchProductsComponent = products.map((product, index) => {
-  //   return (
-  //     <ul>
-  //       <li key={index} action>
-  //         {product.product}
-  //       </li>
-  //     </ul>
-  //   );
-  // });
 
   // routine builder variables
   const [moisturiser, setMoisturiser] = useState([]);
@@ -330,6 +281,16 @@ function App() {
                 addToCart={addToCart}
               />
             </div>
+          </>
+        )}
+      />
+      <Route
+        exact
+        path="/skineducation"
+        render={() => (
+          <>
+            <Navbar wishlist={wishlist} cart={cart} />
+            <SkinEducation />
           </>
         )}
       />

@@ -12,21 +12,22 @@
 }
 
 #close {
-  font-size: 20px;
-  font-weight: bolder;
+  font-size: 21px;
+  font-weight: bold;
   margin-left: 20px;
   border: none;
   padding: 15px;
   position: relative;
-  right: -123px;
-  top: 35px;
+  right: -111px;
+  top: 3px;
   background: transparent;
+  color: white;
 }
 
 .burgerbar {
   height: 44vh;
   text-align: center;
-  background-color: rgb(217, 194, 230);
+  background-color: rgb(0, 0, 0);
   opacity: 0.85;
   color: white;
   width: 350px;
@@ -35,6 +36,12 @@
   right: -100%;
   top: 90px;
   animation: slide-open 0.45s forwards;
+}
+
+.burgerbar .links {
+  color: white!important;
+  position: relative !important;
+  top: -28px !important;
 }
 
 .burgerbar.close {

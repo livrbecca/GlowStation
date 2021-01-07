@@ -112,7 +112,7 @@ const Quiz = (props) => {
   return (
     <>
       <Link to="/home">
-        <button>Home</button>
+        <button className="miniButton">Home</button>
       </Link>
       <div className="questions">
         <div onClick={executeScroll} className="toggleOne">

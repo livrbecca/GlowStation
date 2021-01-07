@@ -20,7 +20,7 @@ const ResultsScreen = ({
   return (
     <>
     <Link to="/routinebuilder">
-    <button>Re-take</button>
+    <button className="miniButton">Re-take</button>
     </Link>
       <h2 style={{ textTransform: "capitalize" }} className="nameTitle">
         {name}

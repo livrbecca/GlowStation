@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/CartScreen.css";
 import CartProduct from "./CartProduct";
@@ -6,15 +6,17 @@ import CartProduct from "./CartProduct";
 // <Product wishlist={[]} product={item} />
 
 const CartScreen = (props) => {
-  const [subtotal, setSubtotal] = useState(0);
+  const [subtotal, setSubtotal] = useState(props.cart.length);
   const [price, setPrice] = useState(0);
   const [values, setValues] = useState([]);
-
+  console.log(subtotal + "subtotal");
   function idExists(id) {
     return values.some((e) => e.id === id);
   }
 
   function updateValues(item, count, price) {
+    console.log(price);
+
     if (!idExists(item.id)) {
       setValues([...values, { id: item.id, count: count, price: price }]);
     } else {
@@ -25,6 +27,9 @@ const CartScreen = (props) => {
         count: count,
         price: price,
       };
+
+      //setSubtotal(count);
+     calculateValues(tempValues)
       setValues(tempValues);
     }
   }
@@ -40,11 +45,10 @@ const CartScreen = (props) => {
     setPrice(amount);
   }
 
-  useEffect(() => {
-    console.log(values);
-    calculateValues();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [values]);
+  // useEffect(() => {
+  //   setSubtotal(count);
+  //   eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   return (
     <div>
@@ -63,7 +67,7 @@ const CartScreen = (props) => {
           <div className="container2">
             <h3>
               <i>
-                <Link to="/shop">continue shopping</Link>
+                <Link to="/shop"><button className="miniButton">continue shopping</button></Link>
               </i>
             </h3>
             <div className="row1">

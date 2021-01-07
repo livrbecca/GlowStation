@@ -4,10 +4,10 @@ const CartProduct = ({ item, updateValues, values }) => {
   const [quantity, setQuantity] = useState(1);
 
   const subprice = item.price * quantity;
-  
+
   const handleChange = (e) => {
-    setQuantity(Number(e.target.value))
-  }
+    setQuantity(Number(e.target.value));
+  };
 
   return (
     <div key={item.id}>
@@ -19,8 +19,13 @@ const CartProduct = ({ item, updateValues, values }) => {
         className="num"
         value={quantity}
         onChange={(e) => {
+          console.log(e.target.value);
           handleChange(e);
-          updateValues(item, Number(e.target.value), (item.price * Number(e.target.value)))
+          updateValues(
+            item,
+            Number(e.target.value),
+            item.price * Number(e.target.value)
+          );
         }}
       >
         {[...Array(item.countInStock).keys()].map((x) => (
