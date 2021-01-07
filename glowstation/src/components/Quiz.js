@@ -35,7 +35,7 @@ const Quiz = (props) => {
     response = await Axios.get(
       `http://localhost:5000/products/results?category=${category[1]}&skinType=${skinType}`
     ).then((res) => res.data);
-    console.log(response.data);
+    //console.log(response.data);
     props.setMoisturiser(response);
 
     response = await Axios.get(
@@ -73,7 +73,7 @@ const Quiz = (props) => {
     let response = await Axios.get(
       `http://localhost:5000/products/res?category=${category}&skinConcern222=${encodedConcern}`
     ).then((res) => res.data);
-    console.log(response.data);
+    //console.log(response.data);
     props.setExfoliator(response);
   }
 
@@ -87,19 +87,19 @@ const Quiz = (props) => {
     let response = await Axios.get(
       `http://localhost:5000/products/res?category=${category[0]}&skinConcern222=${encodedConcern}`
     ).then((res) => res.data);
-    console.log(response.data);
+    //console.log(response.data);
     props.setSerum(response);
 
     response = await Axios.get(
       `http://localhost:5000/products/res?category=${encodedCategory}&skinConcern222=${encodedConcern}`
     ).then((res) => res.data);
-    console.log(response.data);
+    //console.log(response.data);
     props.setToner(response);
 
     response = await Axios.get(
       `http://localhost:5000/products/res?category=${category[2]}&skinConcern222=${encodedConcern}`
     ).then((res) => res.data);
-    console.log(response.data);
+    //console.log(response.data);
     props.setMist(response);
   }
 

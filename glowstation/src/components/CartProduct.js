@@ -1,12 +1,22 @@
-import React, { useState } from "react";
+import React, {useState } from "react";
 
 const CartProduct = ({ item, updateValues, values }) => {
-  const [quantity, setQuantity] = useState(1);
+  const storage = window.localStorage.getItem(item.id);
+  console.log(storage);
+
+  const [quantity, setQuantity] = useState(storage ? storage : item.qty);
 
   const subprice = item.price * quantity;
 
+
   const handleChange = (e) => {
     setQuantity(Number(e.target.value));
+    window.localStorage.setItem(item.id, Number(e.target.value));
+    updateValues(
+      item,
+      Number(e.target.value),
+      item.price * Number(e.target.value)
+    );
   };
 
   return (
@@ -19,13 +29,7 @@ const CartProduct = ({ item, updateValues, values }) => {
         className="num"
         value={quantity}
         onChange={(e) => {
-          console.log(e.target.value);
           handleChange(e);
-          updateValues(
-            item,
-            Number(e.target.value),
-            item.price * Number(e.target.value)
-          );
         }}
       >
         {[...Array(item.countInStock).keys()].map((x) => (

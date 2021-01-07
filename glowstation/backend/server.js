@@ -57,6 +57,10 @@ app.get("/products/search", async (req, res) => {
   res.json({ message: " search results", data: searchRes });
 });
 
+// function randomQ1(resultsQ1) {
+//   return resultsQ1[Math.floor(Math.random() * resultsQ1.length)];
+// }
+
 app.get("/products/results", async (req, res) => {
   let categories, skinType;
   if (req.query.category) {
@@ -69,13 +73,27 @@ app.get("/products/results", async (req, res) => {
   const resultsQ1 = await client
     .db("glow")
     .collection("products")
-    .find({ $and: [{ category: { $in: categories } }, { skinType: skinType }] })
+    .aggregate(
+      {
+        $match: {
+          $and: [{ category: { $in: categories } }, { skinType: skinType }],
+        },
+      },
+      { $sample: { size: 1 } }
+    )
     .toArray();
 
   res.json({ message: "routine builder results", data: resultsQ1 });
+
+
+  //  $and: [{ category: { $in: categories } }, { skinType: skinType }]
   // should be something like
   // localhost:5000/products/results?category=Moisturisers&skinType=Redness
 });
+
+// function randomQ2(resultsQ2) {
+//   return resultsQ2[Math.floor(Math.random() * resultsQ2.length)];
+// }
 
 app.get("/products/res", async (req, res) => {
   let categories;
@@ -89,12 +107,17 @@ app.get("/products/res", async (req, res) => {
   const resultsQ2 = await client
     .db("glow")
     .collection("products")
-    .find({
-      $and: [
-        { category: { $in: categories } },
-        { skinConcern222: skinConcern222 },
-      ],
-    })
+    .aggregate(
+      {
+        $match: {
+          $and: [
+            { category: { $in: categories } },
+            { skinConcern222: skinConcern222 },
+          ],
+        },
+      },
+      { $sample: { size: 1 } }
+    )
     .toArray();
 
   res.json({ message: "routine builder results", data: resultsQ2 });

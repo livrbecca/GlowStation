@@ -4,7 +4,6 @@ import { Typewriter } from "react-typewriting-effect";
 import "react-typewriting-effect/dist/index.css";
 import { Link } from "react-router-dom";
 
-
 const ResultsScreen = ({
   name,
   cleanser,
@@ -17,11 +16,12 @@ const ResultsScreen = ({
   exfoliator,
   toner,
 }) => {
+  console.log(toner.data);
   return (
     <>
-    <Link to="/routinebuilder">
-    <button className="miniButton">Re-take</button>
-    </Link>
+      <Link to="/routinebuilder">
+        <button className="miniButton">Re-take</button>
+      </Link>
       <h2 style={{ textTransform: "capitalize" }} className="nameTitle">
         {name}
         <Typewriter string="'s Routine." /> &darr;

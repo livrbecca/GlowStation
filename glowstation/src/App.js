@@ -16,10 +16,10 @@ import Wrapper from "./components/Wrapper";
 import Quiz from "./components/Quiz";
 import ResultsScreen from "./components/ResultsScreen";
 import SkinEducation from "./components/SkinEducation";
+import Checkout from "./components/Checkout";
 
 function App() {
   // search
-
 
   async function SearchBar(value) {
     const results = await fetch(
@@ -303,6 +303,16 @@ function App() {
           <>
             <Navbar wishlist={wishlist} cart={cart} />
             <SkinEducation />
+          </>
+        )}
+      />
+       <Route
+        exact
+        path="/checkout"
+        render={() => (
+          <>
+            <Navbar wishlist={wishlist} cart={cart} />
+            <Checkout />
           </>
         )}
       />

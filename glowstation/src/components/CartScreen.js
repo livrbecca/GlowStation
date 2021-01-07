@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/CartScreen.css";
 import CartProduct from "./CartProduct";
@@ -6,19 +6,18 @@ import CartProduct from "./CartProduct";
 // <Product wishlist={[]} product={item} />
 
 const CartScreen = (props) => {
-  const [subtotal, setSubtotal] = useState(props.cart.length);
+  //const storage = window.localStorage.getItem(item.id);
+  const [subtotal, setSubtotal] = useState(0);
   const [price, setPrice] = useState(0);
-  const [values, setValues] = useState([]);
-  console.log(subtotal + "subtotal");
+  const [values, setValues] = useState(props.cart);
+
   function idExists(id) {
     return values.some((e) => e.id === id);
   }
 
   function updateValues(item, count, price) {
-    console.log(price);
-
     if (!idExists(item.id)) {
-      setValues([...values, { id: item.id, count: count, price: price }]);
+      setValues([...values, { id: item.id, qty: count, price: price }]);
     } else {
       const itemIndex = values.findIndex((e) => e.id === item.id);
       let tempValues = [...values];
@@ -27,9 +26,6 @@ const CartScreen = (props) => {
         count: count,
         price: price,
       };
-
-      //setSubtotal(count);
-     calculateValues(tempValues)
       setValues(tempValues);
     }
   }
@@ -38,17 +34,20 @@ const CartScreen = (props) => {
     let amount = 0;
     // eslint-disable-next-line array-callback-return
     values.map((item) => {
-      total += item.count;
+      total += item.qty;
       amount += item.price;
     });
     setSubtotal(total);
     setPrice(amount);
+    //subtotal = total;
+    //price = amount;
   }
-
-  // useEffect(() => {
-  //   setSubtotal(count);
-  //   eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
+  
+  useEffect(() => {
+    console.log(values);
+    calculateValues();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [values]);
 
   return (
     <div>
@@ -67,7 +66,7 @@ const CartScreen = (props) => {
           <div className="container2">
             <h3>
               <i>
-                <Link to="/shop"><button className="miniButton">continue shopping</button></Link>
+                <Link to="/shop">continue shopping</Link>
               </i>
             </h3>
             <div className="row1">
