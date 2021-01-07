@@ -20,6 +20,18 @@ import SkinEducation from "./components/SkinEducation";
 function App() {
   // search
 
+
+  async function SearchBar(value) {
+    const results = await fetch(
+      `http://localhost:5000/products/search?q=${value}`
+    ).then((res) => res.json());
+    if (!results.error) {
+      setProducts(results.data);
+    }
+  }
+
+  // https://localhost:5000/products/search?q={}
+
   // routine builder variables
   const [moisturiser, setMoisturiser] = useState([]);
   const [SPF, setSPF] = useState([]);
@@ -185,7 +197,7 @@ function App() {
         path="/shop"
         render={() => (
           <>
-            <Navbar wishlist={wishlist} cart={cart} />
+            <Navbar SearchBar={SearchBar} wishlist={wishlist} cart={cart} />
             <Shop filterBy={filterBy} getAllProducts={getAllProducts} />
             <div className="shopBorder">
               <Sidebar filterBy={filterBy} />

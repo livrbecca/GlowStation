@@ -1,15 +1,27 @@
-import React  from "react";
+import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import "../css/Search.css";
 
 const Search = (props) => {
- 
+ const [keyword, setKeyword] = useState("")
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.SearchBar(keyword);
+  };
+
   return (
     <div className="searchArea">
       <div className="wholeSearch">
-        <Form>
-          <Form.Group>
-            <Form.Control type="text" name="text" placeholder="Search Glow Station" />
+        <Form onSubmit={handleSubmit}>
+          <Form.Group controlId="searchKeyword">
+            <Form.Control
+              type="keyword"
+              value={keyword}
+              name="text"
+              placeholder="Search Glow Station"
+              onChange={(e) => setKeyword(e.target.value)}
+            />
           </Form.Group>
           <button className="searchB" type="submit">
             <svg
