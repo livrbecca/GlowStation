@@ -73,15 +73,15 @@ app.get("/products/results", async (req, res) => {
   const resultsQ1 = await client
     .db("glow")
     .collection("products")
-    .aggregate(
+    .aggregate([
       {
         $match: {
           $and: [{ category: { $in: categories } }, { skinType: skinType }],
         },
       },
-      { $sample: { size: [] } }
-    );
-  console.log(resultsQ1.length, resultsQ1[0]);
+      { $sample: { size: 1 } }
+    ])
+    .toArray();
 
   res.json({ message: "routine builder results", data: resultsQ1 });
 
@@ -106,7 +106,7 @@ app.get("/products/res", async (req, res) => {
   const resultsQ2 = await client
     .db("glow")
     .collection("products")
-    .aggregate(
+    .aggregate([
       {
         $match: {
           $and: [
@@ -115,9 +115,9 @@ app.get("/products/res", async (req, res) => {
           ],
         },
       },
-      { $sample: { size: [] } }
-    );
-  console.log(resultsQ2.length, resultsQ2[0]);
+      { $sample: { size: 1 } }
+    ])
+    .toArray();
   res.json({ message: "routine builder results", data: resultsQ2 });
   // should be something like
   // localhost:5000/products/res?category=Moisturisers&skinConcern222=Oily
