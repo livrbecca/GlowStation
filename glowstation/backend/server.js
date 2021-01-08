@@ -79,12 +79,11 @@ app.get("/products/results", async (req, res) => {
           $and: [{ category: { $in: categories } }, { skinType: skinType }],
         },
       },
-      { $sample: { size: 1 } }
-    )
-    .toArray();
+      { $sample: { size: [] } }
+    );
+  console.log(resultsQ1.length, resultsQ1[0]);
 
   res.json({ message: "routine builder results", data: resultsQ1 });
-
 
   //  $and: [{ category: { $in: categories } }, { skinType: skinType }]
   // should be something like
@@ -116,10 +115,9 @@ app.get("/products/res", async (req, res) => {
           ],
         },
       },
-      { $sample: { size: 1 } }
-    )
-    .toArray();
-
+      { $sample: { size: [] } }
+    );
+  console.log(resultsQ2.length, resultsQ2[0]);
   res.json({ message: "routine builder results", data: resultsQ2 });
   // should be something like
   // localhost:5000/products/res?category=Moisturisers&skinConcern222=Oily
