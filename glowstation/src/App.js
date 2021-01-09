@@ -45,6 +45,7 @@ function App() {
   const [toner, setToner] = useState([]);
 
   const [products, setProducts] = useState([]);
+  //const [searchResults, setSearchResults] = useState([])
 
   // add to cart functionality
   const [cart, setCart] = useState([]);
