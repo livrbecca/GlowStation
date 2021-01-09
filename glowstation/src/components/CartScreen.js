@@ -42,7 +42,7 @@ const CartScreen = (props) => {
     //subtotal = total;
     //price = amount;
   }
-  
+
   useEffect(() => {
     console.log(values);
     calculateValues();
@@ -66,7 +66,9 @@ const CartScreen = (props) => {
           <div className="container2">
             <h3>
               <i>
-                <Link to="/shop">continue shopping</Link>
+                <Link to="/shop">
+                  <button className="miniButton">continue shopping</button>
+                </Link>
               </i>
             </h3>
             <div className="row1">
@@ -82,7 +84,9 @@ const CartScreen = (props) => {
                 />
               ))}
             </div>
+            <Link to="/checkout">
             <button className="checkout">Checkout</button>
+            </Link>
           </div>
         )}
       </>

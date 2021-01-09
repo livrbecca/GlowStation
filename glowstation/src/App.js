@@ -18,6 +18,7 @@ import ResultsScreen from "./components/ResultsScreen";
 import SkinEducation from "./components/SkinEducation";
 import Checkout from "./components/Checkout";
 
+
 function App() {
   // search
 
@@ -306,13 +307,14 @@ function App() {
           </>
         )}
       />
-       <Route
+      <Route
         exact
         path="/checkout"
         render={() => (
           <>
             <Navbar wishlist={wishlist} cart={cart} />
             <Checkout />
+           
           </>
         )}
       />

@@ -1,0 +1,61 @@
+.heading-3 {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.cardInput{
+  font-size: 18px;
+  padding: 5px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #78757c;
+}
+
+.subT {
+  padding-bottom: 10px;
+}
+
+
+.checkoutDiv {
+  height: 430px;
+  background: #c0bbc7;
+  color: black;
+  margin: auto;
+  margin-top: 5%;
+  width: 40%;
+  border: 5px solid black;
+}
+
+.checkout-container {
+  padding: 55px 95px;
+}
+
+.promo {
+  color: black;
+  text-transform: unset;
+  font-style: italic;
+  font-weight: 0;
+}
+
+.placeOrder {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  margin-top: 50px;
+  color: black;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0px 2px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  background-color: rgb(240, 223, 223);
+}
+
+.placeOrder:hover {
+  background-color: rgb(139, 228, 139);
+}

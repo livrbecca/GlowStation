@@ -1,27 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
+import "../css/Checkout.css";
 
 const Checkout = (props) => {
+  const [buttonClicked, setButtonClicked] = useState(true);
+
+  function thankYou() {
+    setButtonClicked(false);
+  }
+
   return (
-    <div className="checkout">
-      <div className="checkout-container">
-        <h3 className="heading-3">Credit card checkout</h3>
-        <input label="Cardholder's Name" type="text" name="name" />
-        <input
-          label="Card Number"
-          type="number"
-          name="card_number"
-          img src="https://seeklogo.com/images/V/visa-logo-6F4057663D-seeklogo.com.png" alt="checkout"
-        />
-        <div className="row">
-          <div className="col">
-            <input label="Expiration Date" type="month" name="exp_date" />
-          </div>
-          <div className="col">
-            <input label="CVV" type="number" name="cvv" />
-          </div>
+    <div className="checkoutDiv">
+      {buttonClicked ? (
+        <div className="checkout-container">
+          <h3 className="heading-3">Credit card checkout</h3>
+          <h4 className="subT">Amonut Due: £</h4>
+          <input className="cardInput" placeholder="Cardholder's Name" type="text" name="name" />
+          <input className="cardInput" placeholder="Card Number" type="number" name="card_number" />
+          <input className="cardInput" placeholder="Expiration Date" type="month" name="exp_date" />
+          Expiration Date
+          <input className="cardInput" placeholder="CVV" type="number" name="cvv" /><br />
+          <input className="promo" type="text" name="cvv" /><i>Got a promo code?</i>
+          <button nClick={thankYou} className="placeOrder">
+            Place Order
+          </button>
         </div>
-        <button>Place Order</button>
-      </div>
+      ) : (
+        <div className="checkout-container">
+          <h3 className="heading-3">Purchase Complete</h3>
+          <h4 className="subT">Thank you for your order!</h4>
+          <h4 className="subT">Order Number: <i>QIF74HFO03HD</i></h4>
+        </div>
+      )}
     </div>
   );
 };

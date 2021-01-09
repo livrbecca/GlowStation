@@ -50,3 +50,7 @@
   border-color: transparent;
   border: black solid 2px;
 }
+
+.checkout:hover {
+  background-color: rgb(151, 228, 151);
+}
