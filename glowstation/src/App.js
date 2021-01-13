@@ -17,11 +17,11 @@ import Quiz from "./components/Quiz";
 import ResultsScreen from "./components/ResultsScreen";
 import SkinEducation from "./components/SkinEducation";
 import Checkout from "./components/Checkout";
-
+//import { ResultData } from "./components/ResultData";
 
 function App() {
   // search
-
+  //const [searchResults, setSearchResults] = useState([])
   async function SearchBar(value) {
     const results = await fetch(
       `http://localhost:5000/products/search?q=${value}`
@@ -30,8 +30,6 @@ function App() {
       setProducts(results.data);
     }
   }
-
-  // https://localhost:5000/products/search?q={}
 
   // routine builder variables
   const [moisturiser, setMoisturiser] = useState([]);
@@ -45,16 +43,21 @@ function App() {
   const [toner, setToner] = useState([]);
 
   const [products, setProducts] = useState([]);
-  //const [searchResults, setSearchResults] = useState([])
 
   // add to cart functionality
   const [cart, setCart] = useState([]);
 
   const addToCart = (product, quantity) => {
     product.qty += quantity;
-    console.log(product);
-    console.log(quantity);
-    setCart([...cart, product]);
+    let tempval = [...cart, product];
+
+    if ("cartItems" in window.localStorage) {
+      let cartItems = JSON.parse(window.localStorage.getItem("cartItems"));
+      tempval = [...cartItems, product];
+    }
+
+    window.localStorage.setItem("cartItems", JSON.stringify(tempval));
+    setCart([...tempval]);
   };
 
   // filter products functionality
@@ -315,10 +318,26 @@ function App() {
           <>
             <Navbar wishlist={wishlist} cart={cart} />
             <Checkout />
-           
           </>
         )}
       />
+      {/* <Route
+        render={() => (
+          <>
+            <ResultData
+              moisturiser={moisturiser}
+              SPF={SPF}
+              cleanser={cleanser}
+              mask={mask}
+              mist={mist}
+              oil={oil}
+              serum={serum}
+              exfoliator={exfoliator}
+              toner={toner}
+            />
+          </>
+        )}
+      /> */}
     </Router>
   );
 }

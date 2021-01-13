@@ -5,11 +5,12 @@ import CartProduct from "./CartProduct";
 
 // <Product wishlist={[]} product={item} />
 
-const CartScreen = (props) => {
-  //const storage = window.localStorage.getItem(item.id);
+const CartScreen = ({ cart }) => {
+  const cartItems = JSON.parse(window.localStorage.getItem("cartItems"));
   const [subtotal, setSubtotal] = useState(0);
   const [price, setPrice] = useState(0);
-  const [values, setValues] = useState(props.cart);
+  const [values, setValues] = useState(cartItems ? cartItems : cart);
+  console.log(values);
 
   function idExists(id) {
     return values.some((e) => e.id === id);
@@ -23,10 +24,11 @@ const CartScreen = (props) => {
       let tempValues = [...values];
       tempValues[itemIndex] = {
         ...tempValues[itemIndex],
-        count: count,
+        qty: count,
         price: price,
       };
       setValues(tempValues);
+      window.localStorage.setItem("cartItems", JSON.stringify(tempValues));
     }
   }
   function calculateValues() {
@@ -53,7 +55,7 @@ const CartScreen = (props) => {
     <div>
       <>
         <h2>Cart Screen</h2>
-        {props.cart.length === 0 ? (
+        {cart.length === 0 ? (
           <h2 className="listEmpty">
             Oops. Cart is empty.{" "}
             <Link to="/shop">
@@ -76,7 +78,7 @@ const CartScreen = (props) => {
                 Subtotal ({subtotal} items): £ {price.toFixed(2)}
               </h2>
 
-              {props.cart.map((item) => (
+              {cart.map((item) => (
                 <CartProduct
                   key={item.id}
                   item={item}
@@ -85,7 +87,7 @@ const CartScreen = (props) => {
               ))}
             </div>
             <Link to="/checkout">
-            <button className="checkout">Checkout</button>
+              <button className="checkout">Checkout</button>
             </Link>
           </div>
         )}

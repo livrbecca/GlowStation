@@ -1,13 +1,13 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 
 const CartProduct = ({ item, updateValues, values }) => {
   const storage = window.localStorage.getItem(item.id);
   console.log(storage);
 
+
   const [quantity, setQuantity] = useState(storage ? storage : item.qty);
 
   const subprice = item.price * quantity;
-
 
   const handleChange = (e) => {
     setQuantity(Number(e.target.value));

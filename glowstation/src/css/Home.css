@@ -3,7 +3,6 @@
   margin-left: 260px;
 }
 
-
 .alice-carousel__next-btn-item,
 .alice-carousel__prev-btn-item {
   color: black !important;
@@ -134,9 +133,7 @@
 .together {
   margin: auto;
   margin-top: 90px;
-  border-style: solid;
-  border-width: 0.3rem;
-  border-color: rgb(199, 162, 231);
+  background-color: rgba(199, 162, 231, 0.377);
   height: 500px;
   width: 1200px;
   margin-bottom: 120px;
