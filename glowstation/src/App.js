@@ -69,15 +69,13 @@ function App() {
     let response = await axios.get(
       `http://localhost:5000/products/${code}/${topic}`
     );
-    console.log(response);
-
+    
     setProducts(response.data.data);
   };
 
   const getAllProducts = async () => {
     let response = await axios.get(`http://localhost:5000/products`);
-    console.log(response);
-
+ 
     setProducts(response.data.products);
   };
 

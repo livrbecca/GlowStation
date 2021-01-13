@@ -11,7 +11,6 @@ const CartScreen = ({ cart }) => {
 
   const [price, setPrice] = useState(0);
   const [values, setValues] = useState(cartItems ? cartItems : cart);
-  console.log(values);
 
   function idExists(id) {
     return values.some((e) => e.id === id);
@@ -42,13 +41,12 @@ const CartScreen = ({ cart }) => {
     });
     setSubtotal(total);
     setPrice(amount);
-    window.localStorage.setItem("subtotal", amount)
+    window.localStorage.setItem("subtotal", amount);
     //subtotal = total;
     //price = amount;
   }
 
   useEffect(() => {
-    console.log(values);
     calculateValues();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [values]);

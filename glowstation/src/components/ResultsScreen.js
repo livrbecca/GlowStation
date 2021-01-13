@@ -17,7 +17,7 @@ const ResultsScreen = ({
   exfoliator,
   toner,
 }) => {
-  console.log(toner.data);
+
   return (
     <>
       <Link to="/routinebuilder">

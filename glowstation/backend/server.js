@@ -65,10 +65,10 @@ app.get("/products/results", async (req, res) => {
   let categories, skinType;
   if (req.query.category) {
     categories = req.query.category.split(",");
-    console.log(categories);
+    
   }
   skinType = req.query.skinType;
-  console.log(skinType);
+
 
   const resultsQ1 = await client
     .db("glow")
@@ -99,7 +99,7 @@ app.get("/products/res", async (req, res) => {
   let skinConcern222;
   if (req.query.category) {
     categories = req.query.category.split(",");
-    console.log(categories);
+    
   }
   skinConcern222 = req.query.skinConcern222;
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const CartProduct = ({ item, updateValues, values, removeFromCart }) => {
   const storage = window.localStorage.getItem(item.id);
-  console.log(storage);
+
 
 
   const [quantity, setQuantity] = useState(storage ? storage : item.qty);

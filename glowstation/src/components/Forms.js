@@ -10,7 +10,7 @@ const Forms = (props) => {
   function handleSubmit(event) {
     event.preventDefault();
     setSubmitted(true);
-    console.log(props.name);
+   
   }
 
   return (
