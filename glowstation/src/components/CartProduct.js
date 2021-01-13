@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const CartProduct = ({ item, updateValues, values }) => {
+const CartProduct = ({ item, updateValues, values, removeFromCart }) => {
   const storage = window.localStorage.getItem(item.id);
   console.log(storage);
 
@@ -38,6 +38,7 @@ const CartProduct = ({ item, updateValues, values }) => {
           </option>
         ))}
       </select>
+      <button onClick={removeFromCart} className="remove">&times;</button>
     </div>
   );
 };

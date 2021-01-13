@@ -8,6 +8,7 @@ import CartProduct from "./CartProduct";
 const CartScreen = ({ cart }) => {
   const cartItems = JSON.parse(window.localStorage.getItem("cartItems"));
   const [subtotal, setSubtotal] = useState(0);
+
   const [price, setPrice] = useState(0);
   const [values, setValues] = useState(cartItems ? cartItems : cart);
   console.log(values);
@@ -41,6 +42,7 @@ const CartScreen = ({ cart }) => {
     });
     setSubtotal(total);
     setPrice(amount);
+    window.localStorage.setItem("subtotal", amount)
     //subtotal = total;
     //price = amount;
   }

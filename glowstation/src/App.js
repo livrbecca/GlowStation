@@ -17,7 +17,6 @@ import Quiz from "./components/Quiz";
 import ResultsScreen from "./components/ResultsScreen";
 import SkinEducation from "./components/SkinEducation";
 import Checkout from "./components/Checkout";
-//import { ResultData } from "./components/ResultData";
 
 function App() {
   // search
@@ -46,6 +45,11 @@ function App() {
 
   // add to cart functionality
   const [cart, setCart] = useState([]);
+
+  const removeFromCart = (product, id) => {
+    const removed = cart.filter((id) => product.id !== id)
+    setCart(removed)
+  }
 
   const addToCart = (product, quantity) => {
     product.qty += quantity;
@@ -183,7 +187,7 @@ function App() {
         render={() => (
           <>
             <Navbar wishlist={wishlist} cart={cart} />
-            <CartScreen cart={cart} />
+            <CartScreen removeFromCart={removeFromCart} cart={cart} />
           </>
         )}
       />
@@ -321,23 +325,6 @@ function App() {
           </>
         )}
       />
-      {/* <Route
-        render={() => (
-          <>
-            <ResultData
-              moisturiser={moisturiser}
-              SPF={SPF}
-              cleanser={cleanser}
-              mask={mask}
-              mist={mist}
-              oil={oil}
-              serum={serum}
-              exfoliator={exfoliator}
-              toner={toner}
-            />
-          </>
-        )}
-      /> */}
     </Router>
   );
 }

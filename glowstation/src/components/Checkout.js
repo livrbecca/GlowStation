@@ -3,6 +3,7 @@ import "../css/Checkout.css";
 
 const Checkout = (props) => {
   const [buttonClicked, setButtonClicked] = useState(true);
+  const sub = window.localStorage.getItem("subtotal");
 
   function thankYou() {
     setButtonClicked(false);
@@ -13,7 +14,7 @@ const Checkout = (props) => {
       {buttonClicked ? (
         <div className="checkout-container">
           <h3 className="heading-3">Credit card checkout</h3>
-          <h4 className="subT">Amount Due: £</h4>
+          <h4 className="subT">Amount Due: £  { Number(sub ? sub : 0).toFixed(2)}</h4>
           <input
             className="cardInput"
             placeholder="Cardholder's Name"

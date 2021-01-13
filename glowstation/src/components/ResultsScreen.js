@@ -3,6 +3,7 @@ import "../css/ResultScreen.css";
 import { Typewriter } from "react-typewriting-effect";
 import "react-typewriting-effect/dist/index.css";
 import { Link } from "react-router-dom";
+import { Fragment } from "react";
 
 const ResultsScreen = ({
   name,
@@ -30,14 +31,21 @@ const ResultsScreen = ({
       <div className="resultDivs">
         <div className="resultBox">
           <p>STEP ONE</p>
-          <p>{cleanser.data[0].name}</p>
-          <p>£{cleanser.data[0].price.toFixed(2)}</p>
-          <img
-            className="productpic"
-            src={cleanser.data[0].imageLinks.img1}
-            alt={cleanser.data[0].name}
-          />
-          <p className="iconDes">{cleanser.data[0].description.smallDes}</p>
+          {cleanser.data.map((value, key) => {
+            return (
+              <Fragment key={key}>
+                <p>{value.name}</p>
+                <p>£{value.price.toFixed(2)}</p>
+                <img
+                  className="productpic"
+                  src={value.imageLinks.img1}
+                  alt={value.name}
+                />
+                <p className="iconDes">{value.description.smallDes}</p>
+              </Fragment>
+            );
+          })}
+
           <button className="addButtons">Add to Wishlist</button>
           <button className="addButtons">Add to Cart</button>
         </div>

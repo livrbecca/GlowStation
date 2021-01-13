@@ -35,6 +35,22 @@
   width: min-content;
 }
 
+
+.remove {
+  position: relative;
+  left: 703px;
+  top: -119px;
+  right: 0;
+  font-size: 19px;
+  width: 30px;
+  height: 30px;
+}
+
+.remove:hover{
+  background-color: rgb(235, 114, 114);
+}
+
+
 .num{
   position: relative;
   left: 830px;
