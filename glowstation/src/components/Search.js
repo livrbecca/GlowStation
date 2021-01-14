@@ -19,7 +19,7 @@ const Search = (props) => {
               type="keyword"
               value={keyword}
               name="text"
-              placeholder="Search Glow Station"
+              placeholder={`How can we help ${props.name}?`}
               onChange={(e) => setKeyword(e.target.value)}
             />
           </Form.Group>
