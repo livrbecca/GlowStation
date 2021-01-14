@@ -1,9 +1,26 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../css/Checkout.css";
 
 const Checkout = () => {
-  const sub = window.localStorage.getItem("subtotal");
+  //const sub = window.localStorage.getItem("subtotal");
   const paypal = useRef();
+
+  let [sub, setSub] = useState(window.localStorage.getItem("subtotal"));
+  console.log(sub);
+  const [input, setInput] = useState("");
+
+  function applyCode() {
+    if (input === "GLOW") {
+      setInput("GLOW");
+      sub = sub - 15% 
+      setSub(sub);
+    }
+  }
+  console.log(sub)
+
+  useEffect(() => {
+    applyCode();
+  });
 
   useEffect(() => {
     window.paypal
@@ -35,10 +52,24 @@ const Checkout = () => {
 
   return (
     <div className="checkoutDiv">
+      <form>
+      <input
+        className="checkoutText promo"
+        type="text"
+        name="promo"
+        placeholder="Enter Promo Code"
+        value={input}
+        onChange={(e)=> setInput(e.target.value)}
+      />
+      </form>
+      <button onClick={() => applyCode()} className="checkoutText">
+        Apply Code
+      </button>
+
       <h4 className="checkoutText">
-        Amount: £{ Number(sub ? sub : 0).toFixed(2)}
+        Amount: £{Number(sub ? sub : 0).toFixed(2)}
       </h4>
-      <h3 className="checkoutText">Checkout With:</h3>
+      <h3 className="checkoutText">Checkout with:</h3>
       <div ref={paypal}></div>
     </div>
   );

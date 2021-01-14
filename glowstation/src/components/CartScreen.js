@@ -58,7 +58,12 @@ const CartScreen = ({ cart }) => {
     <div>
       <>
         {checkout ? (
-          <Checkout />
+          <>
+            <button  onClick={() => {
+                    setCheckout(false);
+                  }} className="miniButton">Back</button>
+            <Checkout />
+          </>
         ) : (
           <>
             <h2>Cart Screen</h2>
