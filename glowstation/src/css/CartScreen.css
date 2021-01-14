@@ -22,19 +22,19 @@
   border-width: 2px;
   border-color: black;
   border-style: solid;
-  width: 900px;
-  height: fit-content;
+  height: 600px;
+  width: 920px;
+  overflow: scroll;
 }
 
 .container2 {
-  /* width: 1190px;
-  margin: auto; */
-  top: 50px;
+  top: 30px;
   position: relative;
   left: 60px;
-  width: min-content;
+  width: 600px;
+  height: 10px;
+  
 }
-
 
 .remove {
   position: relative;
@@ -46,18 +46,17 @@
   height: 30px;
 }
 
-.remove:hover{
+.remove:hover {
   background-color: rgb(235, 114, 114);
 }
 
-
-.num{
+.num {
   position: relative;
   left: 830px;
   top: -117px;
 }
 
-.checkout{
+.checkout {
   position: absolute;
   left: 1300px;
   top: 280px;
