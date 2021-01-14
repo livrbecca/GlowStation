@@ -36,13 +36,6 @@ const Product = (props) => {
             <RemoveWishlist removeProduct={props.removeProduct} id={id} />
           )}
 
-          <Card.Img
-            variant="top"
-            className="displayPics"
-            src={img1}
-            alt="products"
-          />
-
           <Link
             to={{
               pathname: `/product/${slugEncoded}`,
@@ -51,6 +44,12 @@ const Product = (props) => {
               },
             }}
           >
+            <Card.Img
+              variant="top"
+              className="displayPics"
+              src={img1}
+              alt="products"
+            />
             <Card.Body>
               <Card.Subtitle>{brand}</Card.Subtitle>
               <Card.Title> {name}</Card.Title>

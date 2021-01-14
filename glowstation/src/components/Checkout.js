@@ -1,26 +1,23 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { createRef, useEffect, useState } from "react";
 import "../css/Checkout.css";
 
 const Checkout = () => {
-  //const sub = window.localStorage.getItem("subtotal");
-  const paypal = useRef();
+
+  const paypal = createRef();
+  console.log(paypal)
+
+  const [clicked, setClicked] = useState(false);
 
   let [sub, setSub] = useState(window.localStorage.getItem("subtotal"));
-  console.log(sub);
+
   const [input, setInput] = useState("");
 
   function applyCode() {
     if (input === "GLOW") {
-      setInput("GLOW");
-      sub = sub - 15% 
-      setSub(sub);
+      setSub(Number(sub - sub * (15 / 100)));
     }
+    setClicked(true);
   }
-  console.log(sub)
-
-  useEffect(() => {
-    applyCode();
-  });
 
   useEffect(() => {
     window.paypal
@@ -53,19 +50,22 @@ const Checkout = () => {
   return (
     <div className="checkoutDiv">
       <form>
-      <input
-        className="checkoutText promo"
-        type="text"
-        name="promo"
-        placeholder="Enter Promo Code"
-        value={input}
-        onChange={(e)=> setInput(e.target.value)}
-      />
+        <input
+          className="checkoutText promo"
+          type="text"
+          name="promo"
+          placeholder="Enter Promo Code"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
       </form>
-      <button onClick={() => applyCode()} className="checkoutText">
+      <button
+        onClick={() => applyCode()}
+        disabled={clicked ? true : false}
+        className="checkoutText"
+      >
         Apply Code
       </button>
-
       <h4 className="checkoutText">
         Amount: £{Number(sub ? sub : 0).toFixed(2)}
       </h4>

@@ -11,7 +11,7 @@ const Navbar = (props) => {
       <Link to="/home">
         <h2 className="glowNav">Glow Station</h2>
       </Link>
-      <Search SearchBar={props.SearchBar}  />
+      <Search SearchBar={props.SearchBar} name={props.name} />
       <Nav defaultActiveKey="/home" className="LI">
         <Link className="links RB" to="/loading2">
           Routine Builder

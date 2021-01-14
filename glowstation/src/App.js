@@ -17,16 +17,20 @@ import Quiz from "./components/Quiz";
 import ResultsScreen from "./components/ResultsScreen";
 import SkinEducation from "./components/SkinEducation";
 import Checkout from "./components/Checkout";
+import SearchResults from "./components/SearchResults";
 
 function App() {
   // search
-  //const [searchResults, setSearchResults] = useState([])
+
+  const [searchResults, setSearchResults] = useState([]);
+
   async function SearchBar(value) {
     const results = await fetch(
       `http://localhost:5000/products/search?q=${value}`
     ).then((res) => res.json());
     if (!results.error) {
-      setProducts(results.data);
+      //setProducts(results.data);
+      setSearchResults(results.data);
     }
   }
 
@@ -47,9 +51,9 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const removeFromCart = (product, id) => {
-    const removed = cart.filter((id) => product.id !== id)
-    setCart(removed)
-  }
+    const removed = cart.filter((id) => product.id !== id);
+    setCart(removed);
+  };
 
   const addToCart = (product, quantity) => {
     product.qty += quantity;
@@ -69,13 +73,13 @@ function App() {
     let response = await axios.get(
       `http://localhost:5000/products/${code}/${topic}`
     );
-    
+
     setProducts(response.data.data);
   };
 
   const getAllProducts = async () => {
     let response = await axios.get(`http://localhost:5000/products`);
- 
+
     setProducts(response.data.products);
   };
 
@@ -145,6 +149,21 @@ function App() {
     <Router>
       <Route
         exact
+        path="/search"
+        render={() => (
+          <>
+            <Navbar
+              wishlist={wishlist}
+              cart={cart}
+              name={name}
+              SearchBar={SearchBar}
+            />
+            <SearchResults />
+          </>
+        )}
+      />
+      <Route
+        exact
         path="/"
         render={() => (
           <>
@@ -184,7 +203,12 @@ function App() {
         path="/cart"
         render={() => (
           <>
-            <Navbar wishlist={wishlist} cart={cart} />
+            <Navbar
+              wishlist={wishlist}
+              cart={cart}
+              name={name}
+              SearchBar={SearchBar}
+            />
             <CartScreen removeFromCart={removeFromCart} cart={cart} />
           </>
         )}
@@ -194,7 +218,12 @@ function App() {
         path="/home"
         render={() => (
           <>
-            <Navbar wishlist={wishlist} cart={cart} />
+            <Navbar
+              wishlist={wishlist}
+              cart={cart}
+              name={name}
+              SearchBar={SearchBar}
+            />
             <Home name={name} />
           </>
         )}
@@ -204,7 +233,12 @@ function App() {
         path="/shop"
         render={() => (
           <>
-            <Navbar SearchBar={SearchBar} wishlist={wishlist} cart={cart} />
+            <Navbar
+              SearchBar={SearchBar}
+              wishlist={wishlist}
+              cart={cart}
+              name={name}
+            />
             <Shop filterBy={filterBy} getAllProducts={getAllProducts} />
             <div className="shopBorder">
               <Sidebar filterBy={filterBy} />
@@ -256,7 +290,12 @@ function App() {
         path="/results"
         render={() => (
           <>
-            <Navbar wishlist={wishlist} cart={cart} />
+            <Navbar
+              wishlist={wishlist}
+              cart={cart}
+              name={name}
+              SearchBar={SearchBar}
+            />
             <ResultsScreen
               name={name}
               moisturiser={moisturiser}
@@ -280,7 +319,12 @@ function App() {
         path="/product/:name"
         render={() => (
           <>
-            <Navbar wishlist={wishlist} cart={cart} />
+            <Navbar
+              wishlist={wishlist}
+              cart={cart}
+              name={name}
+              SearchBar={SearchBar}
+            />
 
             <ProductPage cart={cart} addToCart={addToCart} />
           </>
@@ -291,7 +335,12 @@ function App() {
         path="/wishlist"
         render={() => (
           <>
-            <Navbar wishlist={wishlist} cart={cart} />
+            <Navbar
+              wishlist={wishlist}
+              cart={cart}
+              name={name}
+              SearchBar={SearchBar}
+            />
             <div>
               <Wishlist
                 name={name}
@@ -308,7 +357,12 @@ function App() {
         path="/skineducation"
         render={() => (
           <>
-            <Navbar wishlist={wishlist} cart={cart} />
+            <Navbar
+              wishlist={wishlist}
+              cart={cart}
+              name={name}
+              SearchBar={SearchBar}
+            />
             <SkinEducation />
           </>
         )}
@@ -318,7 +372,12 @@ function App() {
         path="/checkout"
         render={() => (
           <>
-            <Navbar wishlist={wishlist} cart={cart} />
+            <Navbar
+              wishlist={wishlist}
+              cart={cart}
+              name={name}
+              SearchBar={SearchBar}
+            />
             <Checkout />
           </>
         )}
