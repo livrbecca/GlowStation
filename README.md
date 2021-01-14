@@ -6,6 +6,10 @@ Glow Station is a skincare E-commerce store with a focus on skin-education. The 
 
 To run the project, in your terminal :
 
+
+1) export environment variables: `DB_USERNAME` and `DB_PASSWORD` from your MongoDB Cloud Account
+2) install dependencies 
+
 ```
 cd glowstation
 
@@ -15,7 +19,8 @@ cd backend
 
 npm install
 ```
-then in glowstation,
+
+3) then in glowstation,
 ```
 npm start
 ```
