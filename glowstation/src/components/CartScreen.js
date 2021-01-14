@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/CartScreen.css";
 import CartProduct from "./CartProduct";
+import Checkout from "./Checkout";
 
 // <Product wishlist={[]} product={item} />
 
 const CartScreen = ({ cart }) => {
+  const [checkout, setCheckout] = useState(false);
+
   const cartItems = JSON.parse(window.localStorage.getItem("cartItems"));
   const [subtotal, setSubtotal] = useState(0);
 
@@ -54,42 +57,53 @@ const CartScreen = ({ cart }) => {
   return (
     <div>
       <>
-        <h2>Cart Screen</h2>
-        {cart.length === 0 ? (
-          <h2 className="listEmpty">
-            Oops. Cart is empty.{" "}
-            <Link to="/shop">
-              <b>
-                <i>Go Shopping!</i>
-              </b>
-            </Link>
-          </h2>
+        {checkout ? (
+          <Checkout />
         ) : (
-          <div className="container2">
-            <h3>
-              <i>
+          <>
+            <h2>Cart Screen</h2>
+            {cart.length === 0 ? (
+              <h2 className="listEmpty">
+                Oops. Cart is empty.{" "}
                 <Link to="/shop">
-                  <button className="miniButton">continue shopping</button>
+                  <b>
+                    <i>Go Shopping!</i>
+                  </b>
                 </Link>
-              </i>
-            </h3>
-            <div className="row1">
-              <h2>
-                Subtotal ({subtotal} items): £ {price.toFixed(2)}
               </h2>
+            ) : (
+              <div className="container2">
+                <h3>
+                  <i>
+                    <Link to="/shop">
+                      <button className="miniButton">continue shopping</button>
+                    </Link>
+                  </i>
+                </h3>
+                <div className="row1">
+                  <h2>
+                    Subtotal ({subtotal} items): £ {price.toFixed(2)}
+                  </h2>
 
-              {cart.map((item) => (
-                <CartProduct
-                  key={item.id}
-                  item={item}
-                  updateValues={updateValues}
-                />
-              ))}
-            </div>
-            <Link to="/checkout">
-              <button className="checkout">Checkout</button>
-            </Link>
-          </div>
+                  {cart.map((item) => (
+                    <CartProduct
+                      key={item.id}
+                      item={item}
+                      updateValues={updateValues}
+                    />
+                  ))}
+                </div>
+                <button
+                  onClick={() => {
+                    setCheckout(true);
+                  }}
+                  className="checkout"
+                >
+                  Checkout
+                </button>
+              </div>
+            )}
+          </>
         )}
       </>
     </div>
