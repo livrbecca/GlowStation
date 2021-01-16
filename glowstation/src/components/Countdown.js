@@ -5,7 +5,7 @@ import "../css/Home.css";
 const Countdown = () => {
   const calculateTimeLeft = () => {
     // let year = new Date().getFullYear();
-    let difference = +new Date(`02/01/2021`) - +new Date();
+    let difference = +new Date(`02/29/2021`) - +new Date();
 
     let timeLeft = {};
     if (difference > 0) {

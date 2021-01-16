@@ -16,7 +16,12 @@ const ResultsScreen = ({
   serum,
   exfoliator,
   toner,
+  addToCart,
 }) => {
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+}
 
   return (
     <>
@@ -200,6 +205,13 @@ const ResultsScreen = ({
           <button className="addButtons">Add to Wishlist</button>
           <button className="addButtons">Add to Cart</button>
         </div>
+        <h3 className="discount">
+          Thank you for completing the Routine Builder! Use code{" "}
+          <b className="discount-name">GLOW</b> for 15% off at checkout.
+        </h3>
+        <Link to="/shop">
+          <button onClick={scrollToTop} className="miniButton-extra">Go Shopping</button>
+        </Link>
       </div>
     </>
   );
