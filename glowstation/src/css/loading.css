@@ -4,25 +4,22 @@
   margin-left: -185px;
 }
 
-.cirlce {
-  margin-left: -285px;
-  background-color: rgba(201, 140, 112, 0.589);
-  font-size: 550px;
-  height: 150px;
-  width: 150px;
-}
+
 .App-logo {
-  height: 500px;
+  height: 250px;
+  width: 250px;
   align-items: center;
-  margin-top: -180px;
+  margin-top: -50px;
   z-index: -1;
   position: relative;
-  border-radius: 50%;
+  border-radius: 90%;
+  margin: auto;
+  left: 65px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-bounce infinite 9s linear;
+    animation: App-logo-bounce infinite 10s linear;
   }
 }
 
