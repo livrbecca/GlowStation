@@ -22,15 +22,15 @@ import SearchResults from "./components/SearchResults";
 function App() {
   // search
 
-  const [searchResults, setSearchResults] = useState([]);
+  //const [searchResults, setSearchResults] = useState([]);
 
   async function SearchBar(value) {
     const results = await fetch(
       `http://localhost:5000/products/search?q=${value}`
     ).then((res) => res.json());
     if (!results.error) {
-      //setProducts(results.data);
-      setSearchResults(results.data);
+      setProducts(results.data);
+      //setSearchResults(results.data);
     }
   }
 
@@ -59,12 +59,12 @@ function App() {
     product.qty += quantity;
     let tempval = [...cart, product];
 
-    if ("cartItems" in window.localStorage) {
-      let cartItems = JSON.parse(window.localStorage.getItem("cartItems"));
+    if ("cartItems" in window.sessionStorage) {
+      let cartItems = JSON.parse(window.sessionStorage.getItem("cartItems"));
       tempval = [...cartItems, product];
     }
 
-    window.localStorage.setItem("cartItems", JSON.stringify(tempval));
+    window.sessionStorage.setItem("cartItems", JSON.stringify(tempval));
     setCart([...tempval]);
   };
 
@@ -123,7 +123,7 @@ function App() {
   function useLocalStorage(key, initialValue) {
     const [storedValue, setStoredValue] = useState(() => {
       try {
-        const item = window.localStorage.getItem(key);
+        const item = window.sessionStorage.getItem(key);
         return item ? JSON.parse(item) : initialValue;
       } catch (error) {
         console.log(error);
@@ -136,7 +136,7 @@ function App() {
         const valueToStore =
           value instanceof Function ? value(storedValue) : value;
         setStoredValue(valueToStore);
-        window.localStorage.setItem(key, JSON.stringify(valueToStore));
+        window.sessionStorage.setItem(key, JSON.stringify(valueToStore));
       } catch (error) {
         console.log(error);
       }

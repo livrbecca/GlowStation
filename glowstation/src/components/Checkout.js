@@ -8,7 +8,7 @@ const Checkout = () => {
 
   const [clicked, setClicked] = useState(false);
 
-  let [sub, setSub] = useState(window.localStorage.getItem("subtotal"));
+  let [sub, setSub] = useState(window.sessionStorage.getItem("subtotal"));
 
   const [input, setInput] = useState("");
 

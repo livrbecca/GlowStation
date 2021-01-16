@@ -4,6 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+config.js
+.config.js
+/config.js
+/backend/config.js
 
 
 # testing
@@ -19,6 +23,10 @@
 .env.test.local
 .env.production.local
 
+config.js
+.config.js
+/config.js
+/backend/config.js
 
 npm-debug.log*
 yarn-debug.log*

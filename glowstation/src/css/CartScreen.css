@@ -22,9 +22,9 @@
   border-width: 2px;
   border-color: black;
   border-style: solid;
-  height: 600px;
+  height: fit-content;
   width: 920px;
-  overflow: scroll;
+
 }
 
 .container2 {

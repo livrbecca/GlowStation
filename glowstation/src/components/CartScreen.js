@@ -9,7 +9,7 @@ import Checkout from "./Checkout";
 const CartScreen = ({ cart }) => {
   const [checkout, setCheckout] = useState(false);
 
-  const cartItems = JSON.parse(window.localStorage.getItem("cartItems"));
+  const cartItems = JSON.parse(window.sessionStorage.getItem("cartItems"));
   const [subtotal, setSubtotal] = useState(0);
 
   const [price, setPrice] = useState(0);
@@ -31,7 +31,7 @@ const CartScreen = ({ cart }) => {
         price: price,
       };
       setValues(tempValues);
-      window.localStorage.setItem("cartItems", JSON.stringify(tempValues));
+      window.sessionStorage.setItem("cartItems", JSON.stringify(tempValues));
     }
   }
   function calculateValues() {
@@ -44,7 +44,7 @@ const CartScreen = ({ cart }) => {
     });
     setSubtotal(total);
     setPrice(amount);
-    window.localStorage.setItem("subtotal", amount);
+    window.sessionStorage.setItem("subtotal", amount);
     //subtotal = total;
     //price = amount;
   }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const CartProduct = ({ item, updateValues, values, removeFromCart }) => {
-  const storage = window.localStorage.getItem(item.id);
+  const storage = window.sessionStorage.getItem(item.id);
 
 
 
@@ -11,7 +11,7 @@ const CartProduct = ({ item, updateValues, values, removeFromCart }) => {
 
   const handleChange = (e) => {
     setQuantity(Number(e.target.value));
-    window.localStorage.setItem(item.id, Number(e.target.value));
+    window.sessionStorage.setItem(item.id, Number(e.target.value));
     updateValues(
       item,
       Number(e.target.value),
