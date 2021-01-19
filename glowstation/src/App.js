@@ -295,6 +295,7 @@ function App() {
               cart={cart}
               name={name}
               SearchBar={SearchBar}
+              addToCart={addToCart}
             />
             <ResultsScreen
               name={name}

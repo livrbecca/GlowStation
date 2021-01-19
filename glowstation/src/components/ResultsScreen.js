@@ -17,11 +17,11 @@ const ResultsScreen = ({
   exfoliator,
   toner,
   addToCart,
+ addProduct,
 }) => {
-
   const scrollToTop = () => {
-    window.scrollTo(0, 0)
-}
+    window.scrollTo(0, 0);
+  };
 
   return (
     <>
@@ -47,11 +47,16 @@ const ResultsScreen = ({
                   alt={value.name}
                 />
                 <p className="iconDes">{value.description.smallDes}</p>
+                <button onClick={()=> addProduct(value.id)} className="addButtons">Add to Wishlist</button>
+                <button
+                  onClick={() => addToCart(value, 1)}
+                  className="addButtons"
+                >
+                  Add to Cart
+                </button>
               </Fragment>
             );
           })}
-          <button className="addButtons">Add to Wishlist</button>
-          <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
           <p>STEP TWO - Optional</p>
@@ -66,11 +71,16 @@ const ResultsScreen = ({
                   alt={value.name}
                 />
                 <p className="iconDes">{value.description.smallDes}</p>
+                <button onClick={()=> addProduct(value.id)} className="addButtons">Add to Wishlist</button>
+                <button
+                  onClick={() => addToCart(value, 1)}
+                  className="addButtons"
+                >
+                  Add to Cart
+                </button>
               </Fragment>
             );
           })}
-          <button className="addButtons">Add to Wishlist</button>
-          <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
           <p>STEP THREE</p>
@@ -85,11 +95,16 @@ const ResultsScreen = ({
                   alt={value.name}
                 />
                 <p className="iconDes">{value.description.smallDes}</p>
+                <button onClick={()=> addProduct(value.id)} className="addButtons">Add to Wishlist</button>
+                <button
+                  onClick={() => addToCart(value, 1)}
+                  className="addButtons"
+                >
+                  Add to Cart
+                </button>
               </Fragment>
             );
           })}
-          <button className="addButtons">Add to Wishlist</button>
-          <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
           <p>STEP FOUR</p>
@@ -104,11 +119,16 @@ const ResultsScreen = ({
                   alt={value.name}
                 />
                 <p className="iconDes">{value.description.smallDes}</p>
+                <button onClick={()=> addProduct(value.id)} className="addButtons">Add to Wishlist</button>
+                <button
+                  onClick={() => addToCart(value, 1)}
+                  className="addButtons"
+                >
+                  Add to Cart
+                </button>
               </Fragment>
             );
           })}
-          <button className="addButtons">Add to Wishlist</button>
-          <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
           <p>STEP FIVE - Optional</p>
@@ -123,11 +143,16 @@ const ResultsScreen = ({
                   alt={value.name}
                 />
                 <p className="iconDes">{value.description.smallDes}</p>
+                <button onClick={()=> addProduct(value.id)} className="addButtons">Add to Wishlist</button>
+                <button
+                  onClick={() => addToCart(value, 1)}
+                  className="addButtons"
+                >
+                  Add to Cart
+                </button>
               </Fragment>
             );
           })}
-          <button className="addButtons">Add to Wishlist</button>
-          <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
           <p>STEP SIX</p>
@@ -142,11 +167,16 @@ const ResultsScreen = ({
                   alt={value.name}
                 />
                 <p className="iconDes">{value.description.smallDes}</p>
+                <button onClick={()=> addProduct(value.id)} className="addButtons">Add to Wishlist</button>
+                <button
+                  onClick={() => addToCart(value, 1)}
+                  className="addButtons"
+                >
+                  Add to Cart
+                </button>
               </Fragment>
             );
           })}
-          <button className="addButtons">Add to Wishlist</button>
-          <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
           <p>STEP SEVEN</p>
@@ -161,11 +191,16 @@ const ResultsScreen = ({
                   alt={value.name}
                 />
                 <p className="iconDes">{value.description.smallDes}</p>
+                <button onClick={()=> addProduct(value.id)} className="addButtons">Add to Wishlist</button>
+                <button
+                  onClick={() => addToCart(value, 1)}
+                  className="addButtons"
+                >
+                  Add to Cart
+                </button>
               </Fragment>
             );
           })}
-          <button className="addButtons">Add to Wishlist</button>
-          <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
           <p>OPTIONAL</p>
@@ -180,11 +215,16 @@ const ResultsScreen = ({
                   alt={value.name}
                 />
                 <p className="iconDes">{value.description.smallDes}</p>
+                <button onClick={()=> addProduct(value.id)} className="addButtons">Add to Wishlist</button>
+                <button
+                  onClick={() => addToCart(value, 1)}
+                  className="addButtons"
+                >
+                  Add to Cart
+                </button>
               </Fragment>
             );
           })}
-          <button className="addButtons">Add to Wishlist</button>
-          <button className="addButtons">Add to Cart</button>
         </div>
         <div className="resultBox">
           <p>RECOMMENDED FOR AM USE.</p>
@@ -199,18 +239,25 @@ const ResultsScreen = ({
                   alt={value.name}
                 />
                 <p className="iconDes">{value.description.smallDes}</p>
+                <button onClick={()=> addProduct(value.id)} className="addButtons">Add to Wishlist</button>
+                <button
+                  onClick={() => addToCart(value, 1)}
+                  className="addButtons"
+                >
+                  Add to Cart
+                </button>
               </Fragment>
             );
           })}
-          <button className="addButtons">Add to Wishlist</button>
-          <button className="addButtons">Add to Cart</button>
         </div>
         <h3 className="discount">
           Thank you for completing the Routine Builder! Use code{" "}
           <b className="discount-name">GLOW</b> for 15% off at checkout.
         </h3>
         <Link to="/shop">
-          <button onClick={scrollToTop} className="miniButton-extra">Go Shopping</button>
+          <button onClick={scrollToTop} className="miniButton-extra">
+            Go Shopping
+          </button>
         </Link>
       </div>
     </>
