@@ -7,6 +7,16 @@ The main feature is the 'Routine Builder', a personalised skin assessment which 
 
 After recieving their results, users can either add those items directly to cart and checkout via Paypal, or they can navigate to the 'Shop' section for more selection and browsing.
 
+![Form](https://user-images.githubusercontent.com/69110329/105247960-853f1980-5b6d-11eb-89a3-089fc3779746.gif)
+Landing Page
+
+![image](https://user-images.githubusercontent.com/69110329/105247388-9fc4c300-5b6c-11eb-9390-482e105bc8b4.png)
+Shop page, including dual filter functionality
+
+![RB](https://user-images.githubusercontent.com/69110329/105247596-ef0af380-5b6c-11eb-833e-732ff21a4f1c.gif)
+Routine Builder questions and possible set of results.
+
+
 Other features of this project include:
 - Personalised user expierence, remembering and using the user's inputted name throughout the site.
 - Search bar functionality 
@@ -16,6 +26,29 @@ Other features of this project include:
 - Ability to recieve discounted price on products via a discount code
 - Checkout with PayPal
 - A 'Skin Education' section dedicated to further educating the user on skincare topics
+
+Possible API end points:
+
+For all products: /products
+
+To search and query the products, ingredients and brands: /products/search?q=*search term*, 
+- example: /products/search?q=Aloe
+- /products/search?q=Vitamin, 
+- /products/search?q=Hyaluronic
+
+To fetch products by category: /products/category/*category*
+- example: /products/category/Mists
+- /products/category/Oils
+- /products/category/Cleansers
+
+To fetch products by skin type: /products/skinType/*skin type*
+- example: /products/skinType/Oily
+- /products/skinType/Sensitive
+
+To fetch products by skin concern: /products/skinConcern/*skin concern*
+- example: /products/skinConcern/:Redness
+- /products/skinConcern/Texture
+
 
 To run the project, in your terminal :
 
