@@ -1,12 +1,19 @@
 import React from "react";
 import "./AddWishlist.css";
 
-const AddWishlist = () => {
+const AddWishlist = (props) => {
+  
+
+  function multitask(event) {
+   
+    props.addProduct(props.id);
+    
+  }
   return (
     <>
       <span className="mr-5"></span>
 
-      <button className="heartbtn">
+      <button onClick={(e) => multitask(e)} className="heartbtn">
         <svg
           width="1em"
           height="1em"
