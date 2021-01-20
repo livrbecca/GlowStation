@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/Sidebar.css";
+import "./Sidebar.css";
 import { SidebarData } from "./SidebarData";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";

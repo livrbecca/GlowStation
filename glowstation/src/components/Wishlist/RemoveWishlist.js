@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/AddWishlist.css";
+import "./AddWishlist.css";
 
 const RemoveWishlist = (props) => {
   return (

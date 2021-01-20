@@ -1,7 +1,7 @@
 import React from "react";
 import { EducationData } from "./EducationData";
 import Card from "react-bootstrap/Card";
-import "../css/SkinEducation.css";
+import "./SkinEducation.css";
 
 
 const SkinEducation = (props) => {

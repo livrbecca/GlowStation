@@ -1,6 +1,6 @@
 import React from "react";
-import Product from "./Product";
-import "../css/wishlist.css";
+import Product from "../ShopAndProducts/Product";
+import "./wishlist.css";
 import { Link } from "react-router-dom";
 
 const Wishlist = (props) => {

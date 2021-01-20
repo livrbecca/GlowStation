@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 // import Product from "./Product";
-import "../css/ProductPage.css";
+import "./ProductPage.css";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -98,18 +98,6 @@ const ProductPage = (props) => {
           </Col>
         </Row>
       </Container>
-      {/* // <div className="shopContainer"> */}
-      {/* <Product product={product} />
-    //   <h2 className="name">{product.name}</h2>
-    //   <h2>{product.brand}</h2>
-    //   <h2>{product.priceRange}</h2>
-    //   <h2>{product.ingredientList}</h2>
-    //   <h4>{product.description.largeDes}</h4>
-    //   <p>{product.soldAt}</p>
-    //   <img src={product.imageLinks.img1} alt="products" />
-    //   <img src={product.imageLinks.img2} alt="products" />
-    //   <img src={product.imageLinks.img3} alt="products" />
-    // </div> */}
     </>
   );
 };

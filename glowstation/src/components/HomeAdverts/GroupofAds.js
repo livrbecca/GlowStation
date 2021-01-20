@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/Home.css";
+import "./Home.css";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { Link } from "react-router-dom";

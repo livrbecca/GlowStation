@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../css/Shop.css";
+import "./Shop.css";
 
 const Shop = (props) => {
   let code = "category";

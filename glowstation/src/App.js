@@ -2,22 +2,22 @@ import React, { useEffect, useState } from "react";
 import Forms from "./components/Forms";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Loading from "./components/Loading";
-import Home from "./components/Home";
-import Navbar from "./components/Nav";
+import Home from "./components/HomeAdverts/Home";
+import Navbar from "./components/Navbar/Nav";
 //import data from "./models/products.json";
-import Shop from "./components/Shop";
-import Product from "./components/Product";
-import ProductPage from "./components/ProductPage";
-import Sidebar from "./components/Sidebar";
-import Wishlist from "./components/Wishlist";
+import Shop from "./components/ShopAndProducts/Shop";
+import Product from "./components/ShopAndProducts/Product";
+import ProductPage from "./components/ShopAndProducts/ProductPage";
+import Sidebar from "./components/ShopSideBar/Sidebar";
+import Wishlist from "./components/Wishlist/Wishlist";
 import axios from "axios";
-import CartScreen from "./components/CartScreen";
-import Wrapper from "./components/Wrapper";
-import Quiz from "./components/Quiz";
-import ResultsScreen from "./components/ResultsScreen";
-import SkinEducation from "./components/SkinEducation";
-import Checkout from "./components/Checkout";
-import SearchResults from "./components/SearchResults";
+import CartScreen from "./components/CartAndCheckout/CartScreen"
+import Wrapper from "./components/RoutineBuilder/Wrapper";
+import Quiz from "./components/RoutineBuilder/Quiz";
+import ResultsScreen from "./components/RoutineBuilder/ResultsScreen";
+import SkinEducation from "./components/SkinEducation/SkinEducation";
+import Checkout from "./components/CartAndCheckout/Checkout";
+//import SearchResults from "./components/Search/SearchResults";
 
 function App() {
   // search
@@ -47,23 +47,35 @@ function App() {
 
   const [products, setProducts] = useState([]);
 
-  // add to cart functionality
+  // add to cart states
   const [cart, setCart] = useState([]);
 
-  const removeFromCart = (product, id) => {
-    const removed = cart.filter((id) => product.id !== id);
+  //remove from cart
+  const removeFromCart = (id) => {
+    const removed = cart.filter((product) => product.id !== id);
+    window.sessionStorage.setItem("cartItems", JSON.stringify(removed));
     setCart(removed);
   };
 
   const addToCart = (product, quantity) => {
+    console.log("product", product)
     product.qty += quantity;
     let tempval = [...cart, product];
-
+    console.log("product2", product)
+    console.log(tempval);
     if ("cartItems" in window.sessionStorage) {
       let cartItems = JSON.parse(window.sessionStorage.getItem("cartItems"));
+     
+      cartItems.map((item) => {
+        if (item.id === product.id) {
+          item.qty += quantity;
+        }
+        return item;
+      });
+
       tempval = [...cartItems, product];
     }
-
+    console.log(tempval);
     window.sessionStorage.setItem("cartItems", JSON.stringify(tempval));
     setCart([...tempval]);
   };
@@ -158,7 +170,7 @@ function App() {
               name={name}
               SearchBar={SearchBar}
             />
-            <SearchResults />
+           
           </>
         )}
       />

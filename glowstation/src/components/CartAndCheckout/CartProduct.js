@@ -3,8 +3,6 @@ import React, { useState } from "react";
 const CartProduct = ({ item, updateValues, values, removeFromCart }) => {
   const storage = window.sessionStorage.getItem(item.id);
 
-
-
   const [quantity, setQuantity] = useState(storage ? storage : item.qty);
 
   const subprice = item.price * quantity;
@@ -38,7 +36,9 @@ const CartProduct = ({ item, updateValues, values, removeFromCart }) => {
           </option>
         ))}
       </select>
-      <button onClick={removeFromCart} className="remove">&times;</button>
+      <button onClick={() => removeFromCart(item.id)} className="remove">
+        &times;
+      </button>
     </div>
   );
 };

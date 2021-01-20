@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../css/loading.css";
+import "./loading.css";
 import { Redirect } from "react-router-dom";
 import "react-typewriting-effect/dist/index.css";
 

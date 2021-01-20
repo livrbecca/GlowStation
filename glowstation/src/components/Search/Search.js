@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
-
-import "../css/Search.css";
+import "./Search.css";
 
 const Search = (props) => {
   const [keyword, setKeyword] = useState("");

@@ -1,12 +1,12 @@
 import React from "react";
-import "../css/Shop.css";
+import "./Shop.css";
 // import ProductPage from "./ProductPage.js";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
-import AddWishlist from "./AddWishlist";
+import AddWishlist from "../Wishlist/AddWishlist";
 import FadeIn from "react-fade-in";
 import Rating from "./Rating";
-import RemoveWishlist from "./RemoveWishlist";
+import RemoveWishlist from "../Wishlist/RemoveWishlist";
 //import axios from "axios";
 
 const Product = (props) => {

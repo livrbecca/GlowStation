@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
-import "../css/Nav.css";
+import "./Nav.css";
 import Layout from "./Layout";
-import Search from "./Search";
+import Search from "../Search/Search";
 
 const Navbar = (props) => {
   return (

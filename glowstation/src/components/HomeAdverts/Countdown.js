@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../css/Home.css";
+import "./Home.css";
 
 const Countdown = () => {
   const calculateTimeLeft = () => {

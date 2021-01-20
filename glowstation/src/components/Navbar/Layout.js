@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import BurgerBar from "./BurgerBar";
 import Toggle from "./Toggle";
-import "../css/BurgerBar.css";
+import "./BurgerBar.css";
 
 const Layout = (props, { children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);

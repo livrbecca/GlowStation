@@ -1,25 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../css/Home.css";
+import "./Home.css";
 import Countdown from "./Countdown";
 import GroupofAds from "./GroupofAds";
 import RBadvert from "./RBadvert";
+
 
 const Home = (props) => {
   return (
     <>
       <div className="marginContainer">
-        <div className="welcomeMessage">
-          <h1 style={{ textTransform: "capitalize" }}>
-            Hey there {props.name}! welcome to Glow Station.
+        <div>
+          <h1 className="firstMessage" style={{ textTransform: "capitalize" }}>
+            Hey there {props.name}!
           </h1>
-          <h3>The destination for all your skincare needs.</h3>
+          <RBadvert />
           <br />
 
-          <h3>
+          <h3 className="promoSlogan">
             Complete the
             <Link to="/loading2">
-              <i> Routine Builder </i>
+              <button className="RBButton">
+                <i> Routine Builder </i>
+              </button>
             </Link>
             and recieve
             <b>
@@ -28,7 +31,7 @@ const Home = (props) => {
             off your first order.
           </h3>
         </div>
-        <RBadvert />
+
         <Countdown />
         <GroupofAds />
       </div>

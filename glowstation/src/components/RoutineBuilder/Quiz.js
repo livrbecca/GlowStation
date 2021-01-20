@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import "../css/Quiz.css";
+import "./Quiz.css";
 import { Typewriter } from "react-typewriting-effect";
 import "react-typewriting-effect/dist/index.css";
 import { Link } from "react-router-dom";

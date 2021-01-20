@@ -1,10 +1,9 @@
 import React, { createRef, useEffect, useState } from "react";
-import "../css/Checkout.css";
+import "./Checkout.css";
 
 const Checkout = () => {
-
   const paypal = createRef();
-  console.log(paypal)
+  console.log(paypal);
 
   const [clicked, setClicked] = useState(false);
 
@@ -12,10 +11,11 @@ const Checkout = () => {
 
   const [input, setInput] = useState("");
 
-  function applyCode() {
+  function applyCode(e) {
     if (input === "GLOW") {
       setSub(Number(sub - sub * (15 / 100)));
     }
+    setInput("");
     setClicked(true);
   }
 
@@ -53,6 +53,7 @@ const Checkout = () => {
         <input
           className="checkoutText promo"
           type="text"
+          defaultValue="Reset"
           name="promo"
           placeholder="Enter Promo Code"
           value={input}
@@ -60,7 +61,7 @@ const Checkout = () => {
         />
       </form>
       <button
-        onClick={() => applyCode()}
+        onClick={(e) => applyCode(e)}
         disabled={clicked ? true : false}
         className="checkoutText"
       >

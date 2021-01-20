@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../css/CartScreen.css";
+import "./CartScreen.css";
 import CartProduct from "./CartProduct";
+//import CartProduct from "./CartProduct";
 import Checkout from "./Checkout";
 
-// <Product wishlist={[]} product={item} />
-
-const CartScreen = ({ cart }) => {
+const CartScreen = ({ cart, removeFromCart }) => {
   const [checkout, setCheckout] = useState(false);
 
   const cartItems = JSON.parse(window.sessionStorage.getItem("cartItems"));
@@ -31,6 +30,7 @@ const CartScreen = ({ cart }) => {
         price: price,
       };
       setValues(tempValues);
+      console.log("cart screen", tempValues)
       window.sessionStorage.setItem("cartItems", JSON.stringify(tempValues));
     }
   }
@@ -95,6 +95,7 @@ const CartScreen = ({ cart }) => {
                       key={item.id}
                       item={item}
                       updateValues={updateValues}
+                      removeFromCart={removeFromCart}
                     />
                   ))}
                 </div>

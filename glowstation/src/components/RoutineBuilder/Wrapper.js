@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/Wrapper.css";
+import "./Wrapper.css";
 import { Link } from "react-router-dom";
 import { Typewriter } from "react-typewriting-effect";
 import "react-typewriting-effect/dist/index.css";
