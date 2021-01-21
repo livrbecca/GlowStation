@@ -71,16 +71,16 @@
   margin-top: 19px;
 }
 
-.card-subtitle{
+.searchSub{
   position: relative;
   width: max-content;
-  left: 300px;
+  left: 370px;
   bottom: 160px;
   font-weight: bolder;
   font-size: 22px!important;
 }
 
-.card-title{
+.searchTitle{
   position: relative;
   left: 310px;
   width: 500px;

@@ -38,9 +38,9 @@ const SearchResults = (value) => {
                     alt="products"
                   />
                   <Card.Body key={eachResult.id}>
-                    <Card.Subtitle>{eachResult.brand}</Card.Subtitle>
-                    <Card.Title> {eachResult.name}</Card.Title>
-                    <Card.Subtitle>
+                    <Card.Subtitle className="searchSub">{eachResult.brand}</Card.Subtitle>
+                    <Card.Title className="searchTitle"> {eachResult.name}</Card.Title>
+                    <Card.Subtitle className="searchSub">
                       <b>£{eachResult.price.toFixed(2)}</b>
                     </Card.Subtitle>
                     
