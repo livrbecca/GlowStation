@@ -4,9 +4,20 @@ body {
   overflow: scroll;
 }
 
+.mightLike{
+  border: black solid 3px;
+  height: 350px;
+  position: relative;
+  top: 600px;
+  width: 650px;
+  right: 130px;
+}
+
+
 .white {
   /* background-color: white; */
   margin-top: 100px;
+  width: 1500px;
 }
 
 .carouselblock {
@@ -116,8 +127,9 @@ body {
 
 .descol {
   background-color: rgb(255, 255, 255);
-  margin-right: -300px;
+  margin-right: -550px;
   height: fit-content;
+  width: 900px!important;
   margin-top: -40px;
   top: 66px;
   border-style: solid;

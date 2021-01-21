@@ -96,6 +96,9 @@ const ProductPage = (props) => {
               </Collapsible>
             </div>
           </Col>
+          <div className="mightLike">
+            <h3>You Might Like</h3>
+          </div>
         </Row>
       </Container>
     </>
