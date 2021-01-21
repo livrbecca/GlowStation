@@ -17,20 +17,25 @@ import Quiz from "./components/RoutineBuilder/Quiz";
 import ResultsScreen from "./components/RoutineBuilder/ResultsScreen";
 import SkinEducation from "./components/SkinEducation/SkinEducation";
 import Checkout from "./components/CartAndCheckout/Checkout";
-//import SearchResults from "./components/Search/SearchResults";
+import SearchResults from "./components/Search/SearchResults";
+
 
 function App() {
   // search
 
-  //const [searchResults, setSearchResults] = useState([]);
+  let [searchResults, setSearchResults] = useState([]);
+  let [value, setValue] = useState("")
 
-  async function SearchBar(value) {
-    const results = await fetch(
-      `http://localhost:5000/products/search?q=${value}`
+  async function SearchBar(val) {
+    searchResults = await fetch(
+      `http://localhost:5000/products/search?q=${val}`
     ).then((res) => res.json());
-    if (!results.error) {
-      setProducts(results.data);
-      //setSearchResults(results.data);
+    if (!searchResults.error) {
+      //setProducts(results.data);
+      setSearchResults(searchResults.data);
+   // console.log(searchResults) // gives object
+      //console.log(searchResults.data) //gives array
+      setValue(value = val)
     }
   }
 
@@ -164,16 +169,18 @@ function App() {
         path="/search"
         render={() => (
           <>
+       
             <Navbar
               wishlist={wishlist}
               cart={cart}
               name={name}
               SearchBar={SearchBar}
             />
-           
+              <SearchResults searchResults={searchResults} value={value}/>
           </>
         )}
       />
+  
       <Route
         exact
         path="/"
