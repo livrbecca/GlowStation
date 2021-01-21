@@ -1,58 +1,60 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
-import Rating from "../ShopAndProducts/Rating";
+
+import "./Search.css";
 
 const SearchResults = (value) => {
-
-
-
   //console.log("value:", value);
   //console.log("value.searchResults:", value.searchResults);
-//   console.log(slug);
-//   console.log(slugEncoded);
+  //   console.log(slug);
+  //   console.log(slugEncoded);
   return (
     <div>
-      <h2>Search Results</h2>
-      <h3>
+      <h2 className="searchTitle">Search Results</h2>
+      <h3 className="searchedValue">
         You searched for: <b>{value.value}</b>
       </h3>
-
-      {value.searchResults.map((eachResult, key) => {
-         const slugEncoded = encodeURIComponent(eachResult.slug);
-        console.log(eachResult)
-        return (
-          <>
-            <Link
-              to={{
-                pathname: `/product/${slugEncoded}`,
-                state: {
-                  product: eachResult,
-                },
-              }}
-            >
-              <Card.Img
-                variant="top"
-                className="displayPics"
-                src={eachResult.imageLinks.img1}
-                alt="products"
-               
-              />
-              <Card.Body key={eachResult.id}>
-                <Card.Subtitle>{eachResult.brand}</Card.Subtitle>
-                <Card.Title> {eachResult.name}</Card.Title>
-                <Card.Subtitle>
-                  <b>£{eachResult.price.toFixed(2)}</b>
-                </Card.Subtitle>
-                <Rating
-                  rating={eachResult.rating}
-                  numReviews={eachResult.numReviews}
-                />
-              </Card.Body>
-            </Link>
-          </>
-        );
-      })}
+      <div className="resultContainer">
+        {value.searchResults.map((eachResult, key) => {
+          const slugEncoded = encodeURIComponent(eachResult.slug);
+          console.log(eachResult);
+          return (
+            <>
+              <div className="result">
+                <Link
+                  to={{
+                    pathname: `/product/${slugEncoded}`,
+                    state: {
+                      product: eachResult,
+                    },
+                  }}
+                >
+                  {/* <h3><b>{eachResult}</b></h3> - Try*/}
+                  <Card.Img
+                    variant="top"
+                    className="searchPic"
+                    src={eachResult.imageLinks.img1}
+                    alt="products"
+                  />
+                  <Card.Body key={eachResult.id}>
+                    <Card.Subtitle>{eachResult.brand}</Card.Subtitle>
+                    <Card.Title> {eachResult.name}</Card.Title>
+                    <Card.Subtitle>
+                      <b>£{eachResult.price.toFixed(2)}</b>
+                    </Card.Subtitle>
+                    
+                    <h3 className="searchDes">
+                      {eachResult.description.largeDes}
+                    </h3>
+                   
+                  </Card.Body>
+                </Link>
+              </div>
+            </>
+          );
+        })}
+      </div>
     </div>
   );
 };

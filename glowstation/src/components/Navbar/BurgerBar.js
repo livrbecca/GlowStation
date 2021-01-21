@@ -32,7 +32,9 @@ const BurgerBar = (props) => {
         <Link className="links" to="/skineducation">
           Skin Education
         </Link>
-       
+        <Link className="links" to="/search">
+          Search
+        </Link>
         <Link to="/product"></Link>
       </Nav>
     </div>
