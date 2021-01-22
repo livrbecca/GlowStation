@@ -3,19 +3,28 @@ import "./Home.css";
 
 const RBadvert = () => {
   return (
-    <Link to="/loading2">
-    <div className="together">
-      <h2 className="largeTextAd">
-        Take the Routine <br /> Builder <br /> Today.
-      </h2>
-      <p className="simple">Skincare for all, made simple. <br /> Answer 4 easy questions to get your perfect routine. </p>
-      {/* <h3 className="miniTextAd">
-        Dry skin? <br /> Oily skin? <br /> Dark marks? <br/> Texture? <br /> We got
-        you.
-      </h3> */}
-      <img className="landing" src="landingpic.png" alt="collage" />
-    </div>
-    </Link>
+    <>
+      <Link to="/loading2">
+        <h2 className="RBheader">Take the Routine Builder</h2>
+      </Link>
+      <div className="Ent2">
+        <div className="sloganBG">
+          <h3 className="promoSlogan">
+            Complete the
+            <Link to="/loading2">
+              <button className="RBButton">
+                <i> Routine Builder </i>
+              </button>
+            </Link>
+            and recieve
+            <b>
+              <i> 15%</i>
+            </b>{" "}
+            off your first order.
+          </h3>
+        </div>
+      </div>
+    </>
   );
 };
 

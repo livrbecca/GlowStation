@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-const Countdown = () => {
+
+
+const Countdown = (props) => {
+
+
   const calculateTimeLeft = () => {
     // let year = new Date().getFullYear();
     let difference = +new Date(`02/29/2021`) - +new Date();
@@ -45,8 +49,12 @@ const Countdown = () => {
       </span>
     );
   });
-  return (
-    <div className="countDownWrapper">
+  return (<>
+ 
+    <div  className="countDownWrapper">
+      <Link to="/shop">
+      <h2 className="countdownHeader">Sale</h2>
+      </Link>
       <h1 className="C1">2021 Easter Sale Countdown!</h1>
       <h1 className="C1">HUGE 70% off ALL items</h1>
       <p>T&C's apply.</p>
@@ -61,7 +69,7 @@ const Countdown = () => {
         </h4>
       </div>
     </div>
-  );
+  </>);
 };
 
 export default Countdown;

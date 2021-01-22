@@ -11,20 +11,20 @@ import ProductPage from "./components/ShopAndProducts/ProductPage";
 import Sidebar from "./components/ShopSideBar/Sidebar";
 import Wishlist from "./components/Wishlist/Wishlist";
 import axios from "axios";
-import CartScreen from "./components/CartAndCheckout/CartScreen"
+import CartScreen from "./components/CartAndCheckout/CartScreen";
 import Wrapper from "./components/RoutineBuilder/Wrapper";
 import Quiz from "./components/RoutineBuilder/Quiz";
 import ResultsScreen from "./components/RoutineBuilder/ResultsScreen";
 import SkinEducation from "./components/SkinEducation/SkinEducation";
 import Checkout from "./components/CartAndCheckout/Checkout";
 import SearchResults from "./components/Search/SearchResults";
-
+import Countdown from "./components/HomeAdverts/Countdown";
 
 function App() {
   // search
 
   let [searchResults, setSearchResults] = useState([]);
-  let [value, setValue] = useState("")
+  let [value, setValue] = useState("");
 
   async function SearchBar(val) {
     searchResults = await fetch(
@@ -33,9 +33,9 @@ function App() {
     if (!searchResults.error) {
       //setProducts(results.data);
       setSearchResults(searchResults.data);
-   // console.log(searchResults) // gives object
+      // console.log(searchResults) // gives object
       //console.log(searchResults.data) //gives array
-      setValue(value = val)
+      setValue((value = val));
     }
   }
 
@@ -63,14 +63,14 @@ function App() {
   };
 
   const addToCart = (product, quantity) => {
-    console.log("product", product)
+    console.log("product", product);
     product.qty += quantity;
     let tempval = [...cart, product];
-    console.log("product2", product)
+    console.log("product2", product);
     console.log(tempval);
     if ("cartItems" in window.sessionStorage) {
       let cartItems = JSON.parse(window.sessionStorage.getItem("cartItems"));
-     
+
       cartItems.map((item) => {
         if (item.id === product.id) {
           item.qty += quantity;
@@ -169,18 +169,17 @@ function App() {
         path="/search"
         render={() => (
           <>
-       
             <Navbar
               wishlist={wishlist}
               cart={cart}
               name={name}
               SearchBar={SearchBar}
             />
-              <SearchResults searchResults={searchResults} value={value}/>
+            <SearchResults searchResults={searchResults} value={value} />
           </>
         )}
       />
-  
+
       <Route
         exact
         path="/"
@@ -244,6 +243,21 @@ function App() {
               SearchBar={SearchBar}
             />
             <Home name={name} />
+          </>
+        )}
+      />
+      <Route
+        exact
+        path="/sale"
+        render={() => (
+          <>
+            <Navbar
+              wishlist={wishlist}
+              cart={cart}
+              name={name}
+              SearchBar={SearchBar}
+            />
+            <Countdown />
           </>
         )}
       />
@@ -346,7 +360,13 @@ function App() {
               SearchBar={SearchBar}
             />
 
-            <ProductPage cart={cart} addToCart={addToCart} />
+            <ProductPage
+              cart={cart}
+              addToCart={addToCart}
+              products={products}
+              searchResults={searchResults}
+              value={value}
+            />
           </>
         )}
       />

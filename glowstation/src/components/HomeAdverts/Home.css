@@ -1,9 +1,137 @@
-
 .alice-carousel__next-btn-item,
 .alice-carousel__prev-btn-item {
   color: black !important;
   font-weight: bolder;
   font-size: 1.75rem;
+}
+
+.Ent {
+  margin-top: 30px;
+  background-image: url("https://user-images.githubusercontent.com/69110329/105456324-df7ad000-5c7c-11eb-9985-80cc90acc78c.jpg");
+  background-color: #cccccc;
+  height: 1000px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.Ent2 {
+  margin-top: 130px;
+  background-image: url("https://user-images.githubusercontent.com/69110329/105460907-5ebfd200-5c84-11eb-80ed-c7cd7546772b.png");
+  background-color: #cccccc50;
+  height: 570px;
+  width: 1200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  left: 370px;
+}
+
+.Ent3 {
+  margin-top: 1px;
+  background-image: url("https://user-images.githubusercontent.com/69110329/105468404-dc88db00-5c8e-11eb-8b97-5a49ea71d02f.png");
+  background-color: #cccccc50;
+  height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  bottom: 60px;
+  margin-bottom: 30px;
+}
+
+.edHeader{
+  font-size: 80px;
+  font-weight: bolder;
+  font-style: italic;
+  position: relative;
+  bottom: 130px;
+}
+
+.edHeader:hover{
+  color: rgb(235, 215, 107);
+  transition: all 0.3s ease;
+}
+
+.RBheader {
+  font-size: 80px;
+  font-weight: bolder;
+  position: relative;
+  top: 70px;
+  font-style: italic;
+
+}
+
+.countdownHeader {
+  position: relative;
+  bottom: 170px;
+  right: 800px;
+  font-size: 80px;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.shopHeader {
+  margin-top: 80px;
+  position: relative;
+  bottom: 330px;
+  left: 80px;
+  font-size: 80px;
+  font-style: italic;
+  font-weight: bolder;
+  width: min-content;
+}
+
+.shopHeader:hover {
+  color: rgb(235, 215, 107);
+  transition: all 0.3s ease;
+}
+
+.countdownHeader:hover {
+  color: rgb(235, 215, 107);
+  transition: all 0.3s ease;
+}
+
+.RBheader:hover {
+  color: rgb(235, 215, 107);
+  transition: all 0.3s ease;
+}
+
+.listDiv {
+  background-color: #dce2e2c4;
+  position: relative;
+  top: 1px;
+  height: 140px;
+}
+
+.homeQ {
+  text-align: center;
+  font-size: 50px;
+}
+
+.miniLinks {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.listDiv li {
+  float: left;
+  display: block;
+  color: black;
+  padding-right: 56px;
+  padding-left: 240px;
+  text-decoration: none;
+  font-size: 25px;
+  margin-top: 25px;
+}
+
+.listDiv li:hover {
+  font-style: italic;
+  cursor: pointer;
 }
 
 .advert1 {
@@ -13,7 +141,8 @@
   width: 450px;
   height: 650px;
   position: relative;
-  left: 730px;
+  left: -30px;
+  top: 560px;
 }
 
 .advert1:hover {
@@ -27,9 +156,9 @@
   border-color: rgb(199, 162, 231);
   width: 340px;
   height: 420px;
-  position: relative;
+  /* position: relative;
   top: -750px;
-  left: 260px;
+  left: 260px; */
 }
 
 .advert2:hover,
@@ -48,9 +177,9 @@
   border-color: rgb(199, 162, 231);
   width: 450px;
   height: 310px;
-  position: relative;
+  /* position: relative;
   left: 1280px;
-  top: -1179px;
+  top: -1179px; */
 }
 
 .advert4 {
@@ -59,9 +188,9 @@
   border-color: rgb(199, 162, 231);
   width: 450px;
   height: 310px;
-  position: relative;
+  /* position: relative;
   left: 1280px;
-  top: -1128px;
+  top: -1128px; */
 }
 
 .advert5 {
@@ -70,9 +199,9 @@
   border-color: rgb(199, 162, 231);
   width: 1200px;
   height: 710px;
-  position: relative;
+  /* position: relative;
   top: -1200px;
-  display: block;
+  display: block; */
   margin-left: auto;
   margin-right: auto;
   margin-top: 110px;
@@ -84,15 +213,28 @@
   border-color: rgb(199, 162, 231);
   width: 450px;
   height: 250px;
-  position: relative;
+  /* position: relative;
   top: -1350px;
-  left: 220px;
+  left: 220px; */
 }
 
 .firstMessage {
-  font-size: 78px;
-  margin-left: 50px;
-  margin-top: 50px;
+  margin-bottom: 70px;
+  margin-top: 40px;
+  font-size: 70px;
+}
+
+.dateTime {
+  font-size: 40px;
+  text-align: center;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.493);
+  height: 370px;
+  width: 700px;
 }
 
 .landing {
@@ -125,15 +267,18 @@
 }
 
 .promoSlogan {
+  background-color: #dce2e2c4;
   position: relative;
-  bottom: 190px;
-  left: 550px;
-  width: 990px;
+  top: 570px;
+  text-align: center;
+  height: 130px;
+  margin-top: 20px;
+  font-size: 57px;
 }
 
 .RBButton {
-  background: transparent;
-  font-size: 23px;
+  background: #ffffff;
+  font-size: 53px;
   margin-left: 9px;
   margin-right: 9px;
   font-weight: bolder;
@@ -177,8 +322,14 @@
 
 .groupOfAds {
   position: relative;
-  top: -190px;
+  top: -260px;
+  left: 130px;
   margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 1600px;
 }
 
 .countDownWrapper {
@@ -187,7 +338,7 @@
   width: 900px;
   height: 100vh;
   margin-bottom: 10px;
-  margin-top: 250px;
+  margin-top: 390px;
 }
 
 .count {
