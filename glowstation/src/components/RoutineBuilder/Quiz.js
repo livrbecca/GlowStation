@@ -24,15 +24,15 @@ const Quiz = (props) => {
   let skinConcern222 = "";
 
   async function setQ1(skinType) {
-    const category = ["Cleansers", "Moisturisers", "SPF", "Masks", "Oils"];
+    const category = ["Moisturisers", "SPF", "Masks", "Oils"];
+
+    // let response = await Axios.get(
+    //   `http://localhost:5000/products/results?category=${category[0]}&skinType=${skinType}`
+    // ).then((res) => res.data);
+
+    // props.setCleanser(response);
 
     let response = await Axios.get(
-      `http://localhost:5000/products/results?category=${category[0]}&skinType=${skinType}`
-    ).then((res) => res.data);
-  
-    props.setCleanser(response);
-
-    response = await Axios.get(
       `http://localhost:5000/products/results?category=${category[1]}&skinType=${skinType}`
     ).then((res) => res.data);
 
@@ -41,20 +41,35 @@ const Quiz = (props) => {
     response = await Axios.get(
       `http://localhost:5000/products/results?category=${category[2]}&skinType=${skinType}`
     ).then((res) => res.data);
-    
+
     props.setSPF(response);
 
     response = await Axios.get(
       `http://localhost:5000/products/results?category=${category[3]}&skinType=${skinType}`
     ).then((res) => res.data);
-   
+
     props.setMask(response);
 
     response = await Axios.get(
       `http://localhost:5000/products/results?category=${category[4]}&skinType=${skinType}`
     ).then((res) => res.data);
-   
+
     props.setOil(response);
+  }
+
+  async function test(skinType) {
+    const category = ["Cleansers"];
+
+    let response = await Axios.get(
+      `http://localhost:5000/products/results?category=${category[0]}&skinType=${skinType}`
+    ).then((res) => res.data);
+
+    response = await Axios.get(
+      `http://localhost:5000/products/results?category=${category[0]}&skinType=${skinType}`
+    ).then((res) => res.data);
+
+    props.setCleanser(response);
+    console.log(response);
   }
 
   let encodedConcern = encodeURIComponent(skinConcern222);
@@ -66,14 +81,12 @@ const Quiz = (props) => {
   );
 
   async function setQ2(skinConcern222) {
- 
-
     const category = ["Exfoliators"];
 
     let response = await Axios.get(
       `http://localhost:5000/products/res?category=${category}&skinConcern222=${encodedConcern}`
     ).then((res) => res.data);
-    
+
     props.setExfoliator(response);
   }
 
@@ -82,24 +95,22 @@ const Quiz = (props) => {
 
     const category = ["Serums", encodedCategory, "Mists"];
 
-  
-
     let response = await Axios.get(
       `http://localhost:5000/products/res?category=${category[0]}&skinConcern222=${encodedConcern}`
     ).then((res) => res.data);
-  
+
     props.setSerum(response);
 
     response = await Axios.get(
       `http://localhost:5000/products/res?category=${encodedCategory}&skinConcern222=${encodedConcern}`
     ).then((res) => res.data);
-    
+
     props.setToner(response);
 
     response = await Axios.get(
       `http://localhost:5000/products/res?category=${category[2]}&skinConcern222=${encodedConcern}`
     ).then((res) => res.data);
-    
+
     props.setMist(response);
   }
 
@@ -107,6 +118,7 @@ const Quiz = (props) => {
     setQ3(skinConcern222);
     setQ2(skinConcern222);
     setQ1(skinType);
+    test(skinType);
   }
 
   return (
@@ -147,18 +159,37 @@ const Quiz = (props) => {
               >
                 Combination
               </RadioButton>
+            </RadioGroup>
+          </div>
+        </div>
 
+        <div onClick={executeScroll} className="test">
+          <div className="box test">
+            <h1 className="test">
+              <Typewriter delay={99} string="Do you have sensitive skin?" />
+            </h1>
+            <RadioGroup onChange={(value) => (skinType = value)} horizontal>
               <RadioButton
                 className="selectionBtn"
                 pointColor="purple"
                 rootColor="black"
                 value="Sensitive"
               >
-                Sensitive
+                Yes
+              </RadioButton>
+
+              <RadioButton
+                className="selectionBtn"
+                pointColor="purple"
+                rootColor="black"
+                value="Combination"
+              >
+                No
               </RadioButton>
             </RadioGroup>
           </div>
         </div>
+
         <div ref={myRef}></div>
         <div onClick={executeScroll1} className="toggleTwo">
           <div className="box">

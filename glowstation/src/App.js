@@ -304,6 +304,12 @@ function App() {
         path="/routinebuilder"
         render={() => (
           <>
+            <Navbar
+              SearchBar={SearchBar}
+              wishlist={wishlist}
+              cart={cart}
+              name={name}
+            />
             <Quiz
               setMoisturiser={setMoisturiser}
               setSPF={setSPF}
