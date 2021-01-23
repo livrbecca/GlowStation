@@ -5,10 +5,7 @@ import { Link } from "react-router-dom";
 import "./Search.css";
 
 const SearchResults = (value) => {
-  //console.log("value:", value);
-  //console.log("value.searchResults:", value.searchResults);
-  //   console.log(slug);
-  //   console.log(slugEncoded);
+
   return (
     <div>
       <h2 className="searchTitle">Search Results</h2>
