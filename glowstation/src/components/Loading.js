@@ -7,7 +7,7 @@ const Loading = (props) => {
   const [redirect, setRedirect] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setRedirect(true), 4000);
+    setTimeout(() => setRedirect(true), 2000);
   }, [redirect]);
 
   return (
