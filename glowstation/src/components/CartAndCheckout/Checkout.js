@@ -20,31 +20,32 @@ const Checkout = () => {
   }
 
   useEffect(() => {
-    window.paypal
-      .Buttons({
-        createOrder: (data, actions, err) => {
-          return actions.order.create({
-            intent: "CAPTURE",
-            purchase_units: [
-              {
-                description: "Facial products",
-                amount: {
-                  currency_code: "GBP",
-                  value: sub ? sub : 0,
-                },
+    if (window.myButton) window.myButton.close();
+    window.myButton = window.paypal.Buttons({
+      createOrder: (data, actions, err) => {
+        return actions.order.create({
+          intent: "CAPTURE",
+          purchase_units: [
+            {
+              description: "Facial products",
+              amount: {
+                currency_code: "GBP",
+                value: sub ? sub : 0,
               },
-            ],
-          });
-        },
-        onApprove: async (data, actions) => {
-          const order = await actions.order.capture();
-          console.log(order);
-        },
-        onError: (err) => {
-          console.log(err);
-        },
-      })
-      .render(paypal.current);
+            },
+          ],
+        });
+      },
+      onApprove: async (data, actions) => {
+        const order = await actions.order.capture();
+        console.log(order);
+      },
+      onError: (err) => {
+        console.log(err);
+      },
+    });
+
+    window.myButton.render(paypal.current);
   }, [sub]);
 
   return (
