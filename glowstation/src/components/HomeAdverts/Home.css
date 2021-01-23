@@ -61,7 +61,6 @@
   position: relative;
   top: 70px;
   font-style: italic;
-
 }
 
 .countdownHeader {
@@ -102,7 +101,7 @@
 .listDiv {
   background-color: #dce2e2c4;
   position: relative;
-  top: 1px;
+  top: -2px;
   height: 140px;
 }
 
@@ -132,6 +131,8 @@
 .listDiv li:hover {
   font-style: italic;
   cursor: pointer;
+  color: rgb(114, 100, 18);
+  transition: all 0.3s ease;
 }
 
 .advert1 {
@@ -221,20 +222,20 @@
 .firstMessage {
   margin-bottom: 70px;
   margin-top: 40px;
-  font-size: 70px;
+  font-size: 80px;
 }
 
 .dateTime {
-  font-size: 40px;
+  font-size: 60px;
   text-align: center;
   position: absolute;
-  top: 48%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  background-color: rgba(0, 0, 0, 0.493);
-  height: 370px;
-  width: 700px;
+  background-color: rgba(0, 0, 0, 0.589);
+  height: 470px;
+  width: 800px;
 }
 
 .landing {

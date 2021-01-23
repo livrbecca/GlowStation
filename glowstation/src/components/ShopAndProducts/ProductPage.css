@@ -13,6 +13,28 @@ body {
   right: 130px;
 }
 
+.mPic {
+  width: 200px;
+  height: 200px;
+  margin-left: 75px;
+  position: relative;
+  bottom: 40px;
+  left: 150px;
+}
+
+.mLike{
+  font-size: 20px;
+  position: relative;
+  left: 10px;
+  top: 250px;
+  text-align: center;
+}
+
+.mTag{
+  padding: 6px;
+  font-style: italic;
+  font-size: 25px;
+}
 
 .white {
   /* background-color: white; */
