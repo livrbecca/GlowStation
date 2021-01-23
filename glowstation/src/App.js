@@ -119,7 +119,7 @@ function App() {
 
   // name props
 
-  const [name, setName] = useLocalStorage("", "");
+
 
   // wishlist functionality
 
@@ -137,10 +137,12 @@ function App() {
 
   // local storage for 'name'
 
+  const [name, setName] = useLocalStorage("", "");
+
   function useLocalStorage(key, initialValue) {
     const [storedValue, setStoredValue] = useState(() => {
       try {
-        const item = window.sessionStorage.getItem(key);
+        const item = window.localStorage.getItem(key);
         return item ? JSON.parse(item) : initialValue;
       } catch (error) {
         console.log(error);
@@ -148,12 +150,14 @@ function App() {
       }
     });
 
+
+    
     const setValue = (value) => {
       try {
         const valueToStore =
           value instanceof Function ? value(storedValue) : value;
         setStoredValue(valueToStore);
-        window.sessionStorage.setItem(key, JSON.stringify(valueToStore));
+        window.localStorage.setItem(key, JSON.stringify(valueToStore));
       } catch (error) {
         console.log(error);
       }

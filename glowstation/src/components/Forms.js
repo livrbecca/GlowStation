@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Form.css";
-import { Typewriter } from 'react-typewriting-effect'
-import 'react-typewriting-effect/dist/index.css'
+import { Typewriter } from "react-typewriting-effect";
+import "react-typewriting-effect/dist/index.css";
 
 const Forms = (props) => {
   const [setSubmitted] = useState(false);
@@ -10,24 +10,17 @@ const Forms = (props) => {
   function handleSubmit(event) {
     event.preventDefault();
     setSubmitted(true);
-   
   }
 
   return (
     <>
       <div className="train2"></div>
 
-
-   
-
-
       <div className="formP">
         <form onSubmit={(e) => handleSubmit(e)}>
           <label>
             <h1 className="siteName">
-            <Typewriter
-            stopBlinkinOnComplete="true"
-             string="Welcome to " />
+              <Typewriter stopBlinkinOnComplete="true" string="Welcome to " />
               <i className="glow">Glow Station</i>
             </h1>
             <Typewriter className="smallName" string="What's your name?" />
@@ -36,7 +29,6 @@ const Forms = (props) => {
               className="inputB"
               type="text"
               value={props.name}
-              // style={{ textTransform: "capitalize" }}
               onChange={(e) => props.setName(e.target.value)}
             />
           </label>

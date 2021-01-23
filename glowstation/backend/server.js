@@ -39,12 +39,6 @@ app.get("/products", async (req, res) => {
   });
 });
 
-// search bar attempt
-
-//.db("glow").collection("products").createIndex({name: "text", ingredientList: "text", brand: "text"})
-
-//db.products.createIndex({name: "text", ingredientList: "text", brand: "text"})
-//Created 3 indexes in mongo
 
 app.get("/products/search", async (req, res) => {
   let query = req.query.q;
