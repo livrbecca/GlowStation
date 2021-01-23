@@ -20,6 +20,9 @@ const Quiz = (props) => {
   const myRef2 = useRef(null);
   let executeScroll2 = () => scrollToRef(myRef2);
 
+  const myRef3 = useRef(null);
+  let executeScroll3 = () => scrollToRef(myRef2);
+
   let skinType = "";
   let skinConcern222 = "";
 
@@ -33,25 +36,25 @@ const Quiz = (props) => {
     // props.setCleanser(response);
 
     let response = await Axios.get(
-      `http://localhost:5000/products/results?category=${category[1]}&skinType=${skinType}`
+      `http://localhost:5000/products/results?category=${category[0]}&skinType=${skinType}`
     ).then((res) => res.data);
 
     props.setMoisturiser(response);
 
     response = await Axios.get(
-      `http://localhost:5000/products/results?category=${category[2]}&skinType=${skinType}`
+      `http://localhost:5000/products/results?category=${category[1]}&skinType=${skinType}`
     ).then((res) => res.data);
 
     props.setSPF(response);
 
     response = await Axios.get(
-      `http://localhost:5000/products/results?category=${category[3]}&skinType=${skinType}`
+      `http://localhost:5000/products/results?category=${category[2]}&skinType=${skinType}`
     ).then((res) => res.data);
 
     props.setMask(response);
 
     response = await Axios.get(
-      `http://localhost:5000/products/results?category=${category[4]}&skinType=${skinType}`
+      `http://localhost:5000/products/results?category=${category[3]}&skinType=${skinType}`
     ).then((res) => res.data);
 
     props.setOil(response);
@@ -63,6 +66,7 @@ const Quiz = (props) => {
     let response = await Axios.get(
       `http://localhost:5000/products/results?category=${category[0]}&skinType=${skinType}`
     ).then((res) => res.data);
+    props.setCleanser(response);
 
     response = await Axios.get(
       `http://localhost:5000/products/results?category=${category[0]}&skinType=${skinType}`
@@ -163,7 +167,8 @@ const Quiz = (props) => {
           </div>
         </div>
 
-        <div onClick={executeScroll} className="test">
+        <div ref={myRef}></div>
+        <div onClick={executeScroll1} className="test">
           <div className="box test">
             <h1 className="test">
               <Typewriter delay={99} string="Do you have sensitive skin?" />
@@ -190,8 +195,8 @@ const Quiz = (props) => {
           </div>
         </div>
 
-        <div ref={myRef}></div>
-        <div onClick={executeScroll1} className="toggleTwo">
+        <div ref={myRef1}></div>
+        <div onClick={executeScroll2} className="toggleTwo">
           <div className="box">
             <h1 className="Q2">
               <Typewriter
@@ -241,8 +246,8 @@ const Quiz = (props) => {
             </RadioGroup>
           </div>
         </div>
-        <div ref={myRef1}></div>
-        <div onClick={executeScroll2} className="toggleThree">
+        <div ref={myRef2}></div>
+        <div onClick={executeScroll3} className="toggleThree">
           <div className="box">
             <h1 className="Q3">
               <Typewriter delay={180} string="Select a skincare goal" />
@@ -289,16 +294,14 @@ const Quiz = (props) => {
             </RadioGroup>
           </div>
         </div>
-        <div ref={myRef2}></div>
+        <div ref={myRef3}></div>
       </div>
 
       <div className="loading3">
         <Link to="/loading3">
           {/* button to be disabled until final question answered */}
           <button
-            onClick={() =>
-              getBothResults(skinConcern222, skinType, skinConcern222)
-            }
+            onClick={() => getBothResults(skinType, skinConcern222)}
             type="submit"
             className="resultsBtn"
           >
