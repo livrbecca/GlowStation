@@ -5,6 +5,7 @@ import "./ProductPage.css";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import Card from "react-bootstrap/Card";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import Collapsible from "react-collapsible";
@@ -13,6 +14,22 @@ const ProductPage = (props) => {
   const [qty] = useState(1);
   let location = useLocation();
   let { product } = location.state;
+  let allProducts = props.products;
+  console.log(allProducts);
+
+  const filteredProducts = allProducts
+    .filter((i) => {
+      console.log(i.category);
+      return i.category[0] === product.category[0];
+    })
+    .filter((x) => x.id !== product.id);
+  console.log(filteredProducts);
+
+  const randomProduct =
+    filteredProducts[Math.floor(Math.random() * filteredProducts.length)];
+  console.log(randomProduct);
+
+  const slugEncoded = encodeURIComponent(randomProduct.slug);
 
   return (
     <>
@@ -54,7 +71,7 @@ const ProductPage = (props) => {
             </div>
           </Col>
           <Col className="descol">
-            <h3 className="priceRange">£{product.price}</h3>
+            <h3 className="priceRange">£{product.price.toFixed(2)}</h3>
             <h2 className="brand">{product.brand}</h2>
             <div className="status">Status: </div>
             <div>
@@ -96,9 +113,27 @@ const ProductPage = (props) => {
               </Collapsible>
             </div>
           </Col>
-          <div className="mightLike">
-            <h3>You Might Like</h3>
-          </div>
+          <Link
+            to={{
+              pathname: `/product/${slugEncoded}`,
+              state: {
+                product: randomProduct,
+              },
+            }}
+          >
+            <div className="mightLike">
+              <h3 className="mTag">You Might Like</h3>
+              <div>
+                <Card.Title className="mLike">{randomProduct.name}</Card.Title>
+                <Card.Img
+                  variant="top"
+                  className="mPic"
+                  src={randomProduct.imageLinks.img1}
+                  alt="products"
+                />
+              </div>
+            </div>
+          </Link>
         </Row>
       </Container>
     </>
