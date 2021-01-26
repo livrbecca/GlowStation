@@ -28,7 +28,7 @@ Other features of this project include:
 - Checkout with PayPal
 - A 'Skin Education' section dedicated to further educating the user on skincare topics
 
-## Possible API end points:
+## Possible API end points (all GET):
 
 For all products: /products
 
