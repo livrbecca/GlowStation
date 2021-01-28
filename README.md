@@ -16,6 +16,7 @@ Shop page, including dual filter functionality
 ![RB](https://user-images.githubusercontent.com/69110329/105247596-ef0af380-5b6c-11eb-833e-732ff21a4f1c.gif)
 Routine Builder questions and possible set of results.
 
+## Features
 
 Other features of this project include:
 - Personalised user expierence, remembering and using the user's inputted name throughout the site.
@@ -27,7 +28,7 @@ Other features of this project include:
 - Checkout with PayPal
 - A 'Skin Education' section dedicated to further educating the user on skincare topics
 
-Possible API end points:
+## Possible API end points (all GET):
 
 For all products: /products
 
@@ -49,6 +50,7 @@ To fetch products by skin concern: /products/skinConcern/*skin concern*
 - example: /products/skinConcern/:Redness
 - /products/skinConcern/Texture
 
+## Runnining the Project
 
 To run the project, in your terminal :
 
