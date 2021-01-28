@@ -13,23 +13,35 @@ import Collapsible from "react-collapsible";
 const ProductPage = (props) => {
   const [qty] = useState(1);
   let location = useLocation();
+
   let { product } = location.state;
+
+  // const dummyProduct = {
+  //   name: "productname",
+  //   slug: "productslug",
+  //   imageLinks: {img1 : ""}
+  // }
+
   let allProducts = props.products;
-  console.log(allProducts);
+
+  console.log("showing all products", allProducts);
 
   const filteredProducts = allProducts
     .filter((i) => {
-      console.log(i.category);
+      // console.log(i.category);
       return i.category[0] === product.category[0];
     })
     .filter((x) => x.id !== product.id);
-  console.log(filteredProducts);
+  console.log("showing filtered products ONE", filteredProducts);
 
   const randomProduct =
     filteredProducts[Math.floor(Math.random() * filteredProducts.length)];
-  console.log(randomProduct);
 
-  const slugEncoded = encodeURIComponent(randomProduct.slug);
+  // const randomProduct = dummyProduct
+    
+  console.log("showing filtered products TWO",filteredProducts);
+
+  const slugEncoded = encodeURIComponent(randomProduct && randomProduct.slug);
 
   return (
     <>
@@ -124,11 +136,11 @@ const ProductPage = (props) => {
             <div className="mightLike">
               <h3 className="mTag">You Might Like</h3>
               <div>
-                <Card.Title className="mLike">{randomProduct.name}</Card.Title>
+                <Card.Title className="mLike">{randomProduct && randomProduct.name}</Card.Title>
                 <Card.Img
                   variant="top"
                   className="mPic"
-                  src={randomProduct.imageLinks.img1}
+                  src={randomProduct && randomProduct.imageLinks.img1}
                   alt="products"
                 />
               </div>

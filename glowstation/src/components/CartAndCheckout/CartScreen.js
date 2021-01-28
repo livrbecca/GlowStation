@@ -17,7 +17,7 @@ const CartScreen = ({ cart, removeFromCart }) => {
   function idExists(id) {
     return values.some((e) => e.id === id);
   }
-
+  console.log(cart);
   function updateValues(item, count, price) {
     if (!idExists(item.id)) {
       setValues([...values, { id: item.id, qty: count, price: price }]);
@@ -30,7 +30,7 @@ const CartScreen = ({ cart, removeFromCart }) => {
         price: price,
       };
       setValues(tempValues);
-      console.log("cart screen", tempValues)
+      
       window.sessionStorage.setItem("cartItems", JSON.stringify(tempValues));
     }
   }
@@ -38,8 +38,10 @@ const CartScreen = ({ cart, removeFromCart }) => {
     let total = 0;
     let amount = 0;
     // eslint-disable-next-line array-callback-return
-    values.map((item) => {
+    cart.map((item) => {
+      
       total += item.qty;
+
       amount += item.price;
     });
     setSubtotal(total);
@@ -52,16 +54,21 @@ const CartScreen = ({ cart, removeFromCart }) => {
   useEffect(() => {
     calculateValues();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [values]);
+  }, [values, cart]);
 
   return (
     <div>
       <>
         {checkout ? (
           <>
-            <button  onClick={() => {
-                    setCheckout(false);
-                  }} className="miniButton">Back</button>
+            <button
+              onClick={() => {
+                setCheckout(false);
+              }}
+              className="miniButton"
+            >
+              Back
+            </button>
             <Checkout />
           </>
         ) : (

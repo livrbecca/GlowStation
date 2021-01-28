@@ -5,7 +5,9 @@ import Countdown from "./Countdown";
 import GroupofAds from "./GroupofAds";
 import RBadvert from "./RBadvert";
 import EntanceAd from "./EntanceAd";
-import EdAds from "./EdAds";
+
+import Alice from "./Alice";
+
 
 
 const Home = (props) => {
@@ -18,7 +20,8 @@ const Home = (props) => {
         <RBadvert />
         <Countdown />
         <GroupofAds />
-        <EdAds />
+        <Alice/>
+       
       </div>
     </>
   );

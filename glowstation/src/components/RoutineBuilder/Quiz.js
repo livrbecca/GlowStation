@@ -29,35 +29,33 @@ const Quiz = (props) => {
   async function setQ1(skinType) {
     const category = ["Moisturisers", "SPF", "Masks", "Oils"];
 
-    // let response = await Axios.get(
-    //   `http://localhost:5000/products/results?category=${category[0]}&skinType=${skinType}`
-    // ).then((res) => res.data);
-
-    // props.setCleanser(response);
-
     let response = await Axios.get(
       `http://localhost:5000/products/results?category=${category[0]}&skinType=${skinType}`
     ).then((res) => res.data);
 
     props.setMoisturiser(response);
+    console.log(response)
 
     response = await Axios.get(
       `http://localhost:5000/products/results?category=${category[1]}&skinType=${skinType}`
     ).then((res) => res.data);
 
     props.setSPF(response);
+    console.log(response)
 
     response = await Axios.get(
       `http://localhost:5000/products/results?category=${category[2]}&skinType=${skinType}`
     ).then((res) => res.data);
 
     props.setMask(response);
+    console.log(response)
 
     response = await Axios.get(
       `http://localhost:5000/products/results?category=${category[3]}&skinType=${skinType}`
     ).then((res) => res.data);
 
     props.setOil(response);
+    console.log(response)
   }
 
   async function test(skinType) {
@@ -67,6 +65,7 @@ const Quiz = (props) => {
       `http://localhost:5000/products/results?category=${category[0]}&skinType=${skinType}`
     ).then((res) => res.data);
     props.setCleanser(response);
+    console.log(response)
 
     response = await Axios.get(
       `http://localhost:5000/products/results?category=${category[0]}&skinType=${skinType}`
@@ -80,9 +79,7 @@ const Quiz = (props) => {
   const encodedAcne = encodeURIComponent("Acne & Blackheads");
   const encodedPores = encodeURIComponent("Visible Pores");
   const encodedLines = encodeURIComponent("Lines & Wrinkles");
-  const encodedBrightening = encodeURIComponent(
-    "Brightening & Hyperpigmentation"
-  );
+  const encodedBrightening = encodeURIComponent("Brightening & Hyperpigmentation");
 
   async function setQ2(skinConcern222) {
     const category = ["Exfoliators"];
@@ -92,6 +89,7 @@ const Quiz = (props) => {
     ).then((res) => res.data);
 
     props.setExfoliator(response);
+    console.log(response)
   }
 
   async function setQ3(skinConcern222) {
@@ -104,18 +102,21 @@ const Quiz = (props) => {
     ).then((res) => res.data);
 
     props.setSerum(response);
+    console.log(response)
 
     response = await Axios.get(
       `http://localhost:5000/products/res?category=${encodedCategory}&skinConcern222=${encodedConcern}`
     ).then((res) => res.data);
 
     props.setToner(response);
+    console.log(response)
 
     response = await Axios.get(
       `http://localhost:5000/products/res?category=${category[2]}&skinConcern222=${encodedConcern}`
     ).then((res) => res.data);
 
     props.setMist(response);
+    console.log(response)
   }
 
   function getBothResults() {

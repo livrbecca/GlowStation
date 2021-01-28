@@ -26,7 +26,6 @@ connect();
 app.use(cors());
 
 app.get("/products", async (req, res) => {
-  // use glowstation; db.products; find all
   const allProducts = await client
     .db("glow")
     .collection("products")
@@ -51,9 +50,7 @@ app.get("/products/search", async (req, res) => {
   res.json({ message: " search results", data: searchRes });
 });
 
-// function randomQ1(resultsQ1) {
-//   return resultsQ1[Math.floor(Math.random() * resultsQ1.length)];
-// }
+
 
 app.get("/products/results", async (req, res) => {
   let categories, skinType;
@@ -78,15 +75,9 @@ app.get("/products/results", async (req, res) => {
     .toArray();
 
   res.json({ message: "routine builder results", data: resultsQ1 });
-
-  //  $and: [{ category: { $in: categories } }, { skinType: skinType }]
-  // should be something like
-  // localhost:5000/products/results?category=Moisturisers&skinType=Redness
 });
 
-// function randomQ2(resultsQ2) {
-//   return resultsQ2[Math.floor(Math.random() * resultsQ2.length)];
-// }
+
 
 app.get("/products/res", async (req, res) => {
   let categories;
@@ -113,15 +104,17 @@ app.get("/products/res", async (req, res) => {
     ])
     .toArray();
   res.json({ message: "routine builder results", data: resultsQ2 });
-  // should be something like
-  // localhost:5000/products/res?category=Moisturisers&skinConcern222=Oily
 });
 
-//Categorys work, but only lists one product
-// error with findMany & find, only 'findOne' works
+
+
+
 //Unsure how to search 'ones with spaces and & sign
 // SOLVED: Toners%20&%20Essence works
 //SOLVED BY ADDING .toArray()
+
+
+// By category
 
 app.get("/products/category/:category", async (req, res) => {
   const matchingCategory = await client

@@ -1,9 +1,9 @@
-.alice-carousel__next-btn-item,
+/* .alice-carousel__next-btn-item,
 .alice-carousel__prev-btn-item {
   color: black !important;
   font-weight: bolder;
   font-size: 1.75rem;
-}
+} */
 
 .Ent {
   margin-top: 30px;
@@ -122,7 +122,7 @@
   display: block;
   color: black;
   padding-right: 56px;
-  padding-left: 240px;
+  padding-left: 320px;
   text-decoration: none;
   font-size: 25px;
   margin-top: 25px;
@@ -142,8 +142,8 @@
   width: 450px;
   height: 650px;
   position: relative;
-  left: -30px;
-  top: 560px;
+  left: 750px;
+
 }
 
 .advert1:hover {

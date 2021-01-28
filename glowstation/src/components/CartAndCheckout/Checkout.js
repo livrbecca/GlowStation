@@ -58,6 +58,7 @@ const Checkout = () => {
           name="promo"
           placeholder="Enter Promo Code"
           value={input}
+          autoComplete="off"
           onChange={(e) => setInput(e.target.value)}
         />
       </form>

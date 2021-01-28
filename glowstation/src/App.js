@@ -31,10 +31,7 @@ function App() {
       `http://localhost:5000/products/search?q=${val}`
     ).then((res) => res.json());
     if (!searchResults.error) {
-      //setProducts(results.data);
       setSearchResults(searchResults.data);
-      // console.log(searchResults) // gives object
-      //console.log(searchResults.data) //gives array
       setValue((value = val));
     }
   }
@@ -63,11 +60,9 @@ function App() {
   };
 
   const addToCart = (product, quantity) => {
-    console.log("product", product);
     product.qty += quantity;
     let tempval = [...cart, product];
-    console.log("product2", product);
-    console.log(tempval);
+
     if ("cartItems" in window.sessionStorage) {
       let cartItems = JSON.parse(window.sessionStorage.getItem("cartItems"));
 
@@ -78,14 +73,27 @@ function App() {
         return item;
       });
 
-      tempval = [...cartItems, product];
+      if (cartItems.find((item) => item.id === product.id)) {
+        tempval = cartItems;
+      } else {
+        tempval = [...cartItems, product];
+      }
     }
-    console.log(tempval);
+
     window.sessionStorage.setItem("cartItems", JSON.stringify(tempval));
     setCart([...tempval]);
   };
 
-  // filter products functionality
+  useEffect(() => {
+    const storageCart = window.sessionStorage.getItem("cartItems")
+    if (storageCart) {
+     
+      setCart(JSON.parse(storageCart))
+    }     
+
+    // setCart(storageCart);
+  }, []);
+
   const filterBy = async (code, topic) => {
     let response = await axios.get(
       `http://localhost:5000/products/${code}/${topic}`
@@ -105,21 +113,16 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       let response = await axios.get(`http://localhost:5000/products`);
-
       return response.data;
     };
     const dataResults = async () => {
       let res = await fetchData();
-
       setProducts(res.products);
     };
-
     dataResults();
   }, []);
 
   // name props
-
-
 
   // wishlist functionality
 
@@ -150,8 +153,6 @@ function App() {
       }
     });
 
-
-    
     const setValue = (value) => {
       try {
         const valueToStore =
