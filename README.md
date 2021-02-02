@@ -1,4 +1,4 @@
-# Personal-Project
+# Glow Station
 
 Introduction to my personal project for the Black Codher Bootcamp.
 
