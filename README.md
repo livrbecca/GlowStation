@@ -51,7 +51,7 @@ To fetch products by skin type: `GET/products/skinType/<skin_type>`
 To fetch products by skin concern: 
 
 `GET/products/skinConcern/<skin_concern>`
-- example: /products/skinConcern/:Redness
+- example: /products/skinConcern/Redness
 - /products/skinConcern/Texture
 
 ```
