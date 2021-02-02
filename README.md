@@ -59,7 +59,6 @@ To fetch products by skin concern:
 - example: /products/skinConcern/Redness
 - /products/skinConcern/Texture
 
-```
 
 ## Running the Project
 
@@ -83,7 +82,7 @@ npm install
 
 npm start
 ```
-Starting Endpoint localhost:3000/
+Starting Endpoint http://localhost:3000/
 
 
 Package informaton details about node package managers are detailed inside the glow station directory.
