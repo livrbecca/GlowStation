@@ -1,8 +1,5 @@
 # Glow Station
 
-# Tech Stack
-
-HTML, CSS, Javascript, React, Node.js, MongoDB
 
 Introduction to my personal project for the [Black Codher](https://blackcodher.com/) Bootcamp.
 
@@ -19,6 +16,10 @@ Shop page, including dual filter functionality
 
 ![RB](https://user-images.githubusercontent.com/69110329/105247596-ef0af380-5b6c-11eb-833e-732ff21a4f1c.gif)
 Routine Builder questions and possible set of results.
+
+## Tech Stack
+
+- HTML, CSS, Javascript, React, Node.js, MongoDB
 
 ## Features
 
