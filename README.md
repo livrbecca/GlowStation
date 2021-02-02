@@ -30,46 +30,55 @@ Other features of this project include:
 
 ## Possible API end points (all GET):
 
+Backend Endpoints avaiable on localhost:5000
+
 For all products: /products
 
-To search and query the products, ingredients and brands: /products/search?q=*search term*, 
+To search and query the products, ingredients and brands: `GET /products/search?q=<search_term>`, 
 - example: /products/search?q=Aloe
 - /products/search?q=Vitamin, 
 - /products/search?q=Hyaluronic
 
-To fetch products by category: /products/category/*category*
+To fetch products by category: `GET/products/category/<category>`
 - example: /products/category/Mists
 - /products/category/Oils
 - /products/category/Cleansers
 
-To fetch products by skin type: /products/skinType/*skin type*
+To fetch products by skin type: `GET/products/skinType/<skin_type>`
 - example: /products/skinType/Oily
 - /products/skinType/Sensitive
 
-To fetch products by skin concern: /products/skinConcern/*skin concern*
+To fetch products by skin concern: 
+
+`GET/products/skinConcern/<skin_concern>`
 - example: /products/skinConcern/:Redness
 - /products/skinConcern/Texture
 
-## Runnining the Project
+```
+
+## Running the Project
 
 To run the project, in your terminal :
 
-1) start the frontend
+1) start the backend
 
-```
-cd glowstation
-
-npm install
-
-npm start
-
-```
-3) start the backend
 ```
 cd backend
 
 npm install
 
 npm start
+
 ```
+3) start the frontend
+```
+cd glowstation
+
+npm install
+
+npm start
+```
+Starting Endpoint localhost:3000/
+
+
 Package informaton details about node package managers are detailed inside the glow station directory.
