@@ -1,6 +1,6 @@
 # Glow Station
 
-#Tech Stack
+# Tech Stack
 
 HTML, CSS, Javascript, React, Node.js, MongoDB
 
