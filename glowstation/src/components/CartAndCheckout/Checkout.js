@@ -46,6 +46,7 @@ const Checkout = () => {
     });
 
     window.myButton.render(paypal.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sub]);
 
   return (
