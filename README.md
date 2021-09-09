@@ -1,7 +1,7 @@
 # Glow Station
 
 
-Introduction to my personal project for the [Black Codher](https://blackcodher.com/) Bootcamp.
+
 
 Glow Station is a skincare E-commerce store with a focus on skin-education. It aims to make skincare 'simple' and easy for all, regardless of gender or skin tone.
 The main feature is the 'Routine Builder', a personalised skin assessment which allows the user to answer questions directly relating to skin. Based on the combination of answers selected, the the Routine Builder will return an easy-to-follow skincare routine for them, that can be used Morning & Night.
