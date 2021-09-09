@@ -38,7 +38,6 @@ app.get("/products", async (req, res) => {
   });
 });
 
-
 app.get("/products/search", async (req, res) => {
   let query = req.query.q;
   const searchRes = await client
@@ -50,16 +49,12 @@ app.get("/products/search", async (req, res) => {
   res.json({ message: " search results", data: searchRes });
 });
 
-
-
 app.get("/products/results", async (req, res) => {
   let categories, skinType;
   if (req.query.category) {
     categories = req.query.category.split(",");
-    
   }
   skinType = req.query.skinType;
-
 
   const resultsQ1 = await client
     .db("glow")
@@ -70,21 +65,18 @@ app.get("/products/results", async (req, res) => {
           $and: [{ category: { $in: categories } }, { skinType: skinType }],
         },
       },
-      { $sample: { size: 1 } }
+      { $sample: { size: 1 } },
     ])
     .toArray();
 
   res.json({ message: "routine builder results", data: resultsQ1 });
 });
 
-
-
 app.get("/products/res", async (req, res) => {
   let categories;
   let skinConcern222;
   if (req.query.category) {
     categories = req.query.category.split(",");
-    
   }
   skinConcern222 = req.query.skinConcern222;
 
@@ -100,19 +92,15 @@ app.get("/products/res", async (req, res) => {
           ],
         },
       },
-      { $sample: { size: 1 } }
+      { $sample: { size: 1 } },
     ])
     .toArray();
   res.json({ message: "routine builder results", data: resultsQ2 });
 });
 
-
-
-
 //Unsure how to search 'ones with spaces and & sign
 // SOLVED: Toners%20&%20Essence works
 //SOLVED BY ADDING .toArray()
-
 
 // By category
 

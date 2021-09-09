@@ -8,7 +8,9 @@ const SkinEducation = (props) => {
   return (
       <>
     <h2 className="skinEd">Skin Education</h2>
+
     <div className="articleContainer">
+
       {EducationData.map((value, key) => {
         return (
           <Card.Body className="artBody" key={key}>
@@ -19,6 +21,7 @@ const SkinEducation = (props) => {
           </Card.Body>
         );
       })}
+      
     </div>
     </>
   );
